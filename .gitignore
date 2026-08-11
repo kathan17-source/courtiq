@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+tmp/
+*.log
+*.zip
+*.pdf
+output/backtests/
+output/research/
+output/benchmarks/
+output/pdf/
+output/reproducibility/
+work/tennis-data/

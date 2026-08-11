@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: courtiq
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/health
+    autoDeployTrigger: commit
+    envVars:
+      - key: COURTIQ_ENV
+        value: production
+      - key: COURTIQ_ALLOW_DEMO
+        value: "false"
+      - key: COURTIQ_CORS_ORIGINS
+        sync: false
+      - key: COURTIQ_UPLOAD_LIMIT_BYTES
+        value: "83886080"
+      - key: COURTIQ_VIDEO_MAX_DURATION_SECONDS
+        value: "30"
+      - key: COURTIQ_VIDEO_MAX_PIXELS
+        value: "8294400"
+      - key: COURTIQ_VIDEO_MAX_FRAMES
+        value: "1800"
+      - key: COURTIQ_MAX_SIMULATIONS
+        value: "10000"

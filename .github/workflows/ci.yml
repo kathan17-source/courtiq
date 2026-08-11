@@ -1,0 +1,25 @@
+name: CourtIQ CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install backend dependencies
+        run: pip install -r backend/requirements.txt
+      - name: Python tests
+        run: python -m unittest discover -s tests
+      - name: JavaScript syntax checks
+        run: |
+          node --check outputs/tennis-ai-app/app.js
+          node --check work/backtest_courtiq_model.js

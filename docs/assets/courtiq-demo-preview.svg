@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="CourtIQ product preview">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#07130e"/>
+      <stop offset="54%" stop-color="#eff7dc"/>
+      <stop offset="100%" stop-color="#d9ff44"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#edf4e8"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#07130e" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect x="42" y="42" width="270" height="636" rx="32" fill="#06130d"/>
+  <circle cx="92" cy="94" r="28" fill="#d6ff32"/>
+  <text x="134" y="104" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" letter-spacing="8">COURTIQ</text>
+  <g fill="#c7d2c7" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">
+    <text x="78" y="190">Today</text>
+    <text x="78" y="248">Learn</text>
+    <text x="78" y="306">Analyze</text>
+    <text x="78" y="364">Train</text>
+    <text x="78" y="422">Compete</text>
+    <text x="78" y="480">Match Predictor</text>
+    <text x="78" y="538">Gear</text>
+  </g>
+  <rect x="360" y="72" width="860" height="576" rx="42" fill="url(#card)" filter="url(#shadow)"/>
+  <text x="420" y="138" fill="#6a756b" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800" letter-spacing="6">MATCH PREDICTOR</text>
+  <text x="420" y="198" fill="#07130e" font-family="Inter, Arial, sans-serif" font-size="56" font-weight="900">Who wins this matchup?</text>
+  <rect x="420" y="252" width="740" height="142" rx="32" fill="#06130d"/>
+  <text x="460" y="300" fill="#aeb9ad" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" letter-spacing="5">PLAYERS</text>
+  <rect x="460" y="326" width="250" height="44" rx="16" fill="#10281b" stroke="#345140"/>
+  <text x="482" y="356" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">Carlos Alcaraz</text>
+  <rect x="730" y="326" width="250" height="44" rx="16" fill="#10281b" stroke="#345140"/>
+  <text x="752" y="356" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">Jannik Sinner</text>
+  <rect x="1000" y="318" width="122" height="60" rx="24" fill="#d6ff32"/>
+  <text x="1025" y="356" fill="#07130e" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="900">Predict</text>
+  <rect x="420" y="430" width="350" height="152" rx="32" fill="#d6ff32"/>
+  <text x="458" y="478" fill="#07130e" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" letter-spacing="5">OUTPUT</text>
+  <text x="458" y="532" fill="#07130e" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="900">Demo only</text>
+  <text x="458" y="562" fill="#07130e" opacity="0.72" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Real metrics appear after CSV import.</text>
+  <rect x="800" y="430" width="320" height="152" rx="32" fill="#fff" stroke="#d8e2d4"/>
+  <text x="834" y="478" fill="#6a756b" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" letter-spacing="5">EXPLAINABILITY</text>
+  <text x="834" y="520" fill="#07130e" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">Surface Elo</text>
+  <text x="834" y="554" fill="#07130e" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">Hold probability</text>
+</svg>

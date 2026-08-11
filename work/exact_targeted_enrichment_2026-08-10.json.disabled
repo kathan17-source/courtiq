@@ -1,0 +1,616 @@
+{
+  "metadata": {
+    "verified_at": "2026-08-10",
+    "scope": "targeted unresolved major/current products only"
+  },
+  "products": [
+    {
+      "id": "racket-babolat-pure-aero-98-gen9-unstrung",
+      "brand": "Babolat",
+      "model": "Pure Aero 98 Gen9 Unstrung",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://media.babolat.com/image/upload/v1739968467/Product_Media/2026/Tennis/RACQUETS/Expert/101567-PURE_AERO_98_GEN9-100-1-Face.png",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-babolat-pure-aero-98-gen9-unstrung.png",
+      "image_verified": true,
+      "product_url": "https://www.babolat.com/gb/pure-aero-98-gen9-unstrung/100-101567.html",
+      "source": "Babolat exact product page: Pure Aero 98 Gen9 Unstrung",
+      "source_type": "exact_official_product",
+      "source_links": [
+        "https://www.babolat.com/gb/pure-aero-98-gen9-unstrung/100-101567.html",
+        "https://media.babolat.com/image/upload/v1739968467/Product_Media/2026/Tennis/RACQUETS/Expert/101567-PURE_AERO_98_GEN9-100-1-Face.png"
+      ],
+      "last_verified": "2026-08-10",
+      "official_url": "https://www.babolat.com/gb/pure-aero-98-gen9-unstrung/100-101567.html"
+    },
+    {
+      "id": "racket-babolat-pure-aero-gen9-unstrung",
+      "brand": "Babolat",
+      "model": "Pure Aero Gen9 Unstrung",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://media.babolat.com/image/upload/v1739969375/Product_Media/2026/Tennis/RACQUETS/Expert/101569-PURE_AERO_GEN9-100-1-Face.png",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-babolat-pure-aero-gen9-unstrung.png",
+      "image_verified": true,
+      "product_url": "https://www.babolat.com/gb/pure-aero-gen9-unstrung/100-101569.html",
+      "source": "Babolat exact product page: Pure Aero Gen9 Unstrung",
+      "source_type": "exact_official_product",
+      "source_links": [
+        "https://www.babolat.com/gb/pure-aero-gen9-unstrung/100-101569.html",
+        "https://media.babolat.com/image/upload/v1739969375/Product_Media/2026/Tennis/RACQUETS/Expert/101569-PURE_AERO_GEN9-100-1-Face.png"
+      ],
+      "last_verified": "2026-08-10",
+      "official_url": "https://www.babolat.com/gb/pure-aero-gen9-unstrung/100-101569.html"
+    },
+    {
+      "id": "racket-babolat-pure-aero-junior-25-gen9",
+      "brand": "Babolat",
+      "model": "Pure Aero Junior 25",
+      "variant": "Gen9",
+      "category": "Racket",
+      "image_url": "https://media.babolat.com/image/upload/v1739961132/Product_Media/2026/Tennis/RACQUETS/Kids_Juniors/140538-PURE_AERO_JUNIOR_25_GEN9-100-1-Face.png",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-babolat-pure-aero-junior-25-gen9.png",
+      "image_verified": true,
+      "product_url": "https://www.babolat.com/gb/pure-aero-junior-25-gen9/100-140538.html",
+      "source": "Babolat exact product page: Pure Aero Junior 25 Gen9",
+      "source_type": "exact_official_product",
+      "source_links": [
+        "https://www.babolat.com/gb/pure-aero-junior-25-gen9/100-140538.html",
+        "https://media.babolat.com/image/upload/v1739961132/Product_Media/2026/Tennis/RACQUETS/Kids_Juniors/140538-PURE_AERO_JUNIOR_25_GEN9-100-1-Face.png"
+      ],
+      "last_verified": "2026-08-10",
+      "official_url": "https://www.babolat.com/gb/pure-aero-junior-25-gen9/100-140538.html"
+    },
+    {
+      "id": "racket-babolat-pure-aero-junior-26-gen9",
+      "brand": "Babolat",
+      "model": "Pure Aero Junior 26",
+      "variant": "Gen9",
+      "category": "Racket",
+      "image_url": "https://media.babolat.com/image/upload/v1739961128/Product_Media/2026/Tennis/RACQUETS/Kids_Juniors/140520-PURE_AERO_JUNIOR_26_GEN9-100-1-Face.png",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-babolat-pure-aero-junior-26-gen9.png",
+      "image_verified": true,
+      "product_url": "https://www.babolat.com/gb/pure-aero-junior-26-gen9/100-140520.html",
+      "source": "Babolat exact product page: Pure Aero Junior 26 Gen9",
+      "source_type": "exact_official_product",
+      "source_links": [
+        "https://www.babolat.com/gb/pure-aero-junior-26-gen9/100-140520.html",
+        "https://media.babolat.com/image/upload/v1739961128/Product_Media/2026/Tennis/RACQUETS/Kids_Juniors/140520-PURE_AERO_JUNIOR_26_GEN9-100-1-Face.png"
+      ],
+      "last_verified": "2026-08-10",
+      "official_url": "https://www.babolat.com/gb/pure-aero-junior-26-gen9/100-140520.html"
+    },
+    {
+      "id": "racket-babolat-pure-aero-lite-gen9-unstrung",
+      "brand": "Babolat",
+      "model": "Pure Aero Lite Gen9 Unstrung",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://media.babolat.com/image/upload/v1739969646/Product_Media/2026/Tennis/RACQUETS/Expert/101572-PURE_AERO_LITE_GEN9-100-1-Face.png",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-babolat-pure-aero-lite-gen9-unstrung.png",
+      "image_verified": true,
+      "product_url": "https://www.babolat.com/gb/pure-aero-lite-gen9-unstrung/100-101572.html",
+      "source": "Babolat exact product page: Pure Aero Lite Gen9 Unstrung",
+      "source_type": "exact_official_product",
+      "source_links": [
+        "https://www.babolat.com/gb/pure-aero-lite-gen9-unstrung/100-101572.html",
+        "https://media.babolat.com/image/upload/v1739969646/Product_Media/2026/Tennis/RACQUETS/Expert/101572-PURE_AERO_LITE_GEN9-100-1-Face.png"
+      ],
+      "last_verified": "2026-08-10",
+      "official_url": "https://www.babolat.com/gb/pure-aero-lite-gen9-unstrung/100-101572.html"
+    },
+    {
+      "id": "racket-babolat-pure-aero-s-lite-gen9-unstrung",
+      "brand": "Babolat",
+      "model": "Pure Aero S Lite Gen9 Unstrung",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://media.babolat.com/image/upload/v1739969648/Product_Media/2026/Tennis/RACQUETS/Expert/101573-PURE_AERO_SUPER_LITE_GEN9-100-1-Face.png",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-babolat-pure-aero-s-lite-gen9-unstrung.png",
+      "image_verified": true,
+      "product_url": "https://www.babolat.com/gb/pure-aero-s-lite-gen9-unstrung/100-101573.html",
+      "source": "Babolat exact product page: Pure Aero S Lite Gen9 Unstrung",
+      "source_type": "exact_official_product",
+      "source_links": [
+        "https://www.babolat.com/gb/pure-aero-s-lite-gen9-unstrung/100-101573.html",
+        "https://media.babolat.com/image/upload/v1739969648/Product_Media/2026/Tennis/RACQUETS/Expert/101573-PURE_AERO_SUPER_LITE_GEN9-100-1-Face.png"
+      ],
+      "last_verified": "2026-08-10",
+      "official_url": "https://www.babolat.com/gb/pure-aero-s-lite-gen9-unstrung/100-101573.html"
+    },
+    {
+      "id": "racket-babolat-pure-aero-team-gen9-unstrung",
+      "brand": "Babolat",
+      "model": "Pure Aero Team Gen9 Unstrung",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://media.babolat.com/image/upload/v1739969379/Product_Media/2026/Tennis/RACQUETS/Expert/101571-PURE_AERO_TEAM_GEN9-100-1-Face.png",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-babolat-pure-aero-team-gen9-unstrung.png",
+      "image_verified": true,
+      "product_url": "https://www.babolat.com/gb/pure-aero-team-gen9-unstrung/100-101571.html",
+      "source": "Babolat exact product page: Pure Aero Team Gen9 Unstrung",
+      "source_type": "exact_official_product",
+      "source_links": [
+        "https://www.babolat.com/gb/pure-aero-team-gen9-unstrung/100-101571.html",
+        "https://media.babolat.com/image/upload/v1739969379/Product_Media/2026/Tennis/RACQUETS/Expert/101571-PURE_AERO_TEAM_GEN9-100-1-Face.png"
+      ],
+      "last_verified": "2026-08-10",
+      "official_url": "https://www.babolat.com/gb/pure-aero-team-gen9-unstrung/100-101571.html"
+    },
+    {
+      "id": "racket-babolat-pure-drive-107-gen11-unstrung",
+      "brand": "Babolat",
+      "model": "Pure Drive 107 Gen11 Unstrung",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://media.babolat.com/image/upload/f_auto,q_auto,c_pad,w_252,h_252/v1707746768/Product_Media/2025/Tennis/Racquets/Expert/101557-PD_107_GEN11_S-100-1-Face.png",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-babolat-pure-drive-107-gen11-unstrung.png",
+      "image_verified": true,
+      "product_url": "https://www.babolat.com/gb/pure-drive-107-gen11-unstrung/101557.html",
+      "source": "Babolat exact product page: Pure Drive 107 Gen11 Unstrung",
+      "source_type": "exact_official_product",
+      "source_links": [
+        "https://www.babolat.com/gb/pure-drive-107-gen11-unstrung/101557.html",
+        "https://media.babolat.com/image/upload/f_auto,q_auto,c_pad,w_252,h_252/v1707746768/Product_Media/2025/Tennis/Racquets/Expert/101557-PD_107_GEN11_S-100-1-Face.png"
+      ],
+      "last_verified": "2026-08-10",
+      "official_url": "https://www.babolat.com/gb/pure-drive-107-gen11-unstrung/101557.html"
+    },
+    {
+      "id": "racket-babolat-pure-drive-gen11-unstrung",
+      "brand": "Babolat",
+      "model": "Pure Drive + Gen11 Unstrung",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://media.babolat.com/image/upload/v1707748895/Product_Media/2025/Tennis/Racquets/Expert/101553-PD%252B_GEN11_S-100-1-Face.png",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-babolat-pure-drive-gen11-unstrung.png",
+      "image_verified": true,
+      "product_url": "https://www.babolat.com/gb/pure-drive-gen11-unstrung/100-101553.html",
+      "source": "Babolat exact product page: Pure Drive + Gen11 Unstrung",
+      "source_type": "exact_official_product",
+      "source_links": [
+        "https://www.babolat.com/gb/pure-drive-gen11-unstrung/100-101553.html",
+        "https://media.babolat.com/image/upload/v1707748895/Product_Media/2025/Tennis/Racquets/Expert/101553-PD%252B_GEN11_S-100-1-Face.png"
+      ],
+      "last_verified": "2026-08-10",
+      "official_url": "https://www.babolat.com/gb/pure-drive-gen11-unstrung/100-101553.html"
+    },
+    {
+      "id": "racket-babolat-pure-drive-junior-25-gen11",
+      "brand": "Babolat",
+      "model": "Pure Drive Junior 25",
+      "variant": "Gen11",
+      "category": "Racket",
+      "image_url": "https://media.babolat.com/image/upload/v1707732870/Product_Media/2025/Tennis/Racquets/Kids_Juniors/140533-Pure_Drive_Junior_25-100-1-Face.png",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-babolat-pure-drive-junior-25-gen11.png",
+      "image_verified": true,
+      "product_url": "https://www.babolat.com/gb/pure-drive-junior-25-gen11/100-140533.html",
+      "source": "Babolat exact product page: Pure Drive Junior 25 Gen11",
+      "source_type": "exact_official_product",
+      "source_links": [
+        "https://www.babolat.com/gb/pure-drive-junior-25-gen11/100-140533.html",
+        "https://media.babolat.com/image/upload/v1707732870/Product_Media/2025/Tennis/Racquets/Kids_Juniors/140533-Pure_Drive_Junior_25-100-1-Face.png"
+      ],
+      "last_verified": "2026-08-10",
+      "official_url": "https://www.babolat.com/gb/pure-drive-junior-25-gen11/100-140533.html"
+    },
+    {
+      "id": "racket-babolat-pure-drive-junior-26-gen11",
+      "brand": "Babolat",
+      "model": "Pure Drive Junior 26",
+      "variant": "Gen11",
+      "category": "Racket",
+      "image_url": "https://media.babolat.com/image/upload/v1707733205/Product_Media/2025/Tennis/Racquets/Kids_Juniors/140530-Pure_Drive_Junior_26-100-1-Face.png",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-babolat-pure-drive-junior-26-gen11.png",
+      "image_verified": true,
+      "product_url": "https://www.babolat.com/gb/pure-drive-junior-26-gen11/100-140530.html",
+      "source": "Babolat exact product page: Pure Drive Junior 26 Gen11",
+      "source_type": "exact_official_product",
+      "source_links": [
+        "https://www.babolat.com/gb/pure-drive-junior-26-gen11/100-140530.html",
+        "https://media.babolat.com/image/upload/v1707733205/Product_Media/2025/Tennis/Racquets/Kids_Juniors/140530-Pure_Drive_Junior_26-100-1-Face.png"
+      ],
+      "last_verified": "2026-08-10",
+      "official_url": "https://www.babolat.com/gb/pure-drive-junior-26-gen11/100-140530.html"
+    },
+    {
+      "id": "racket-babolat-pure-drive-s-lite-gen11-unstrung",
+      "brand": "Babolat",
+      "model": "Pure Drive S Lite Gen11 Unstrung",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://media.babolat.com/image/upload/v1707746772/Product_Media/2025/Tennis/Racquets/Expert/101556-PD_S_LITE_GEN11_S-100-1-Face.png",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-babolat-pure-drive-s-lite-gen11-unstrung.png",
+      "image_verified": true,
+      "product_url": "https://www.babolat.com/gb/pure-drive-s-lite-gen11-unstrung/100-101556.html",
+      "source": "Babolat exact product page: Pure Drive S Lite Gen11 Unstrung",
+      "source_type": "exact_official_product",
+      "source_links": [
+        "https://www.babolat.com/gb/pure-drive-s-lite-gen11-unstrung/100-101556.html",
+        "https://media.babolat.com/image/upload/v1707746772/Product_Media/2025/Tennis/Racquets/Expert/101556-PD_S_LITE_GEN11_S-100-1-Face.png"
+      ],
+      "last_verified": "2026-08-10",
+      "official_url": "https://www.babolat.com/gb/pure-drive-s-lite-gen11-unstrung/100-101556.html"
+    },
+    {
+      "id": "racket-head-extreme-mp-2024",
+      "brand": "HEAD",
+      "model": "Extreme MP 2024",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/0009/8235/1923/files/490463.jpg?v=1716991514",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-head-extreme-mp-2024.jpg",
+      "image_verified": true,
+      "product_url": "https://racquetguys.ca/products/head-extreme-mp-2024-draft-specs-needs-update-descrp-is-ok",
+      "retailer_url": "https://racquetguys.ca/products/head-extreme-mp-2024-draft-specs-needs-update-descrp-is-ok",
+      "source": "RacquetGuys exact product sitemap title: Head Extreme MP (2024)",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://racquetguys.ca/products/head-extreme-mp-2024-draft-specs-needs-update-descrp-is-ok",
+        "https://cdn.shopify.com/s/files/1/0009/8235/1923/files/490463.jpg?v=1716991514"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-head-extreme-pro-2024",
+      "brand": "HEAD",
+      "model": "Extreme Pro 2024",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/0009/8235/1923/files/490461.jpg?v=1716991815",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-head-extreme-pro-2024.jpg",
+      "image_verified": true,
+      "product_url": "https://racquetguys.ca/products/head-extreme-pro-2024-draft-specs-need-update-description-good",
+      "retailer_url": "https://racquetguys.ca/products/head-extreme-pro-2024-draft-specs-need-update-description-good",
+      "source": "RacquetGuys exact product sitemap title: Head Extreme Pro (2024)",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://racquetguys.ca/products/head-extreme-pro-2024-draft-specs-need-update-description-good",
+        "https://cdn.shopify.com/s/files/1/0009/8235/1923/files/490461.jpg?v=1716991815"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-head-speed-team-2024",
+      "brand": "HEAD",
+      "model": "Speed Team 2024",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/0009/8235/1923/files/Presentation-236034_Speed_TEAM_2024_2.jpg?v=1704387712",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-head-speed-team-2024.jpg",
+      "image_verified": true,
+      "product_url": "https://racquetguys.ca/products/head-speed-team-2024",
+      "retailer_url": "https://racquetguys.ca/products/head-speed-team-2024",
+      "source": "RacquetGuys exact product sitemap title: Head Speed Team (2024)",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://racquetguys.ca/products/head-speed-team-2024",
+        "https://cdn.shopify.com/s/files/1/0009/8235/1923/files/Presentation-236034_Speed_TEAM_2024_2.jpg?v=1704387712"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-tecnifibre-tfight-300-isoflex",
+      "brand": "Tecnifibre",
+      "model": "TFight 300 ISOFLEX",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://www.prodirectsport.com/cdn/shop/files/271035_main.jpg?v=1784985122",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-tecnifibre-tfight-300-isoflex.jpg",
+      "image_verified": true,
+      "product_url": "https://www.prodirectsport.com/products/tecnifibre-tfight-300-isoflex-unstrung-white-black-mens-rackets-271035/",
+      "source": "Pro:Direct Tennis exact product page: Tecnifibre TFight 300 Isoflex",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.prodirectsport.com/products/tecnifibre-tfight-300-isoflex-unstrung-white-black-mens-rackets-271035/",
+        "https://www.prodirectsport.com/cdn/shop/files/271035_main.jpg?v=1784985122"
+      ],
+      "last_verified": "2026-08-10",
+      "retailer_url": "https://www.prodirectsport.com/products/tecnifibre-tfight-300-isoflex-unstrung-white-black-mens-rackets-271035/"
+    },
+    {
+      "id": "racket-tecnifibre-tfight-305-isoflex",
+      "brand": "Tecnifibre",
+      "model": "TFight 305 ISOFLEX",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://www.prodirectsport.com/cdn/shop/files/271034_main.jpg?v=1784988986",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-tecnifibre-tfight-305-isoflex.jpg",
+      "image_verified": true,
+      "product_url": "https://www.prodirectsport.com/products/tecnifibre-tfight-305-isoflex-unstrung-white-black-mens-rackets-271034/",
+      "source": "Pro:Direct Tennis exact product page: Tecnifibre TFight 305 Isoflex",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.prodirectsport.com/products/tecnifibre-tfight-305-isoflex-unstrung-white-black-mens-rackets-271034/",
+        "https://www.prodirectsport.com/cdn/shop/files/271034_main.jpg?v=1784988986"
+      ],
+      "last_verified": "2026-08-10",
+      "retailer_url": "https://www.prodirectsport.com/products/tecnifibre-tfight-305-isoflex-unstrung-white-black-mens-rackets-271034/"
+    },
+    {
+      "id": "racket-tecnifibre-tfight-315-isoflex",
+      "brand": "Tecnifibre",
+      "model": "TFight 315 ISOFLEX",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://www.prodirectsport.com/cdn/shop/files/271033_main.jpg?v=1784988675",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-tecnifibre-tfight-315-isoflex.jpg",
+      "image_verified": true,
+      "product_url": "https://www.prodirectsport.com/products/tecnifibre-tfight-315-isoflex-unstrung-white-black-mens-rackets-271033/",
+      "source": "Pro:Direct Tennis exact product page: Tecnifibre TFight 315 Isoflex",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.prodirectsport.com/products/tecnifibre-tfight-315-isoflex-unstrung-white-black-mens-rackets-271033/",
+        "https://www.prodirectsport.com/cdn/shop/files/271033_main.jpg?v=1784988675"
+      ],
+      "last_verified": "2026-08-10",
+      "retailer_url": "https://www.prodirectsport.com/products/tecnifibre-tfight-315-isoflex-unstrung-white-black-mens-rackets-271033/"
+    },
+    {
+      "id": "racket-wilson-blade-100-v9",
+      "brand": "Wilson",
+      "model": "Blade 100",
+      "variant": "v9",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/0009/8235/1923/files/Blade_100L_V9.jpg?v=1706817924",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-wilson-blade-100-v9.jpg",
+      "image_verified": true,
+      "product_url": "https://racquetguys.ca/products/wilson-blade-100-v9",
+      "retailer_url": "https://racquetguys.ca/products/wilson-blade-100-v9",
+      "source": "RacquetGuys exact product sitemap title: Wilson Blade 100 V9",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://racquetguys.ca/products/wilson-blade-100-v9",
+        "https://cdn.shopify.com/s/files/1/0009/8235/1923/files/Blade_100L_V9.jpg?v=1706817924"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-wilson-blade-98-v9-16x19",
+      "brand": "Wilson",
+      "model": "Blade 98 v9 16x19",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/0009/8235/1923/files/cq5dam.web.1200.1200_5_bf59cf22-41d6-4739-aa53-ee08231e9736.jpg?v=1705598232",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-wilson-blade-98-v9-16x19.jpg",
+      "image_verified": true,
+      "product_url": "https://racquetguys.ca/products/wilson-blade-98-16x19-v9",
+      "retailer_url": "https://racquetguys.ca/products/wilson-blade-98-16x19-v9",
+      "source": "RacquetGuys exact product sitemap title: Wilson Blade 98 16x19 V9",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://racquetguys.ca/products/wilson-blade-98-16x19-v9",
+        "https://cdn.shopify.com/s/files/1/0009/8235/1923/files/cq5dam.web.1200.1200_5_bf59cf22-41d6-4739-aa53-ee08231e9736.jpg?v=1705598232"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-wilson-blade-98-v9-18x20",
+      "brand": "Wilson",
+      "model": "Blade 98 v9 18x20",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/0009/8235/1923/files/cq5dam.web.1200.1200_12_9387e8a0-4f29-4683-9ae7-8c011db34d3b.jpg?v=1705600391",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-wilson-blade-98-v9-18x20.jpg",
+      "image_verified": true,
+      "product_url": "https://racquetguys.ca/products/wilson-blade-98-18x20-v9",
+      "retailer_url": "https://racquetguys.ca/products/wilson-blade-98-18x20-v9",
+      "source": "RacquetGuys exact product sitemap title: Wilson Blade 98 18x20 V9",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://racquetguys.ca/products/wilson-blade-98-18x20-v9",
+        "https://cdn.shopify.com/s/files/1/0009/8235/1923/files/cq5dam.web.1200.1200_12_9387e8a0-4f29-4683-9ae7-8c011db34d3b.jpg?v=1705600391"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-wilson-shift-99-pro-v1",
+      "brand": "Wilson",
+      "model": "Shift 99 Pro",
+      "variant": "v1",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/0009/8235/1923/files/cq5dam.web.1200.1200_47_34f799bb-52b0-405a-9642-d5129d9ac452.jpg?v=1689272807",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-wilson-shift-99-pro-v1.jpg",
+      "image_verified": true,
+      "product_url": "https://racquetguys.ca/products/wilson-shift-99-pro-v1",
+      "retailer_url": "https://racquetguys.ca/products/wilson-shift-99-pro-v1",
+      "source": "RacquetGuys exact product sitemap title: Wilson Shift 99 Pro V1",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://racquetguys.ca/products/wilson-shift-99-pro-v1",
+        "https://cdn.shopify.com/s/files/1/0009/8235/1923/files/cq5dam.web.1200.1200_47_34f799bb-52b0-405a-9642-d5129d9ac452.jpg?v=1689272807"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-wilson-shift-99-v1",
+      "brand": "Wilson",
+      "model": "Shift 99",
+      "variant": "v1",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/0009/8235/1923/files/cq5dam.web.1200.1200_53_6da68d92-9520-44f1-8ace-57617736e430.jpg?v=1689273969",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-wilson-shift-99-v1.jpg",
+      "image_verified": true,
+      "product_url": "https://racquetguys.ca/products/wilson-shift-99-v1",
+      "retailer_url": "https://racquetguys.ca/products/wilson-shift-99-v1",
+      "source": "RacquetGuys exact product sitemap title: Wilson Shift 99 V1",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://racquetguys.ca/products/wilson-shift-99-v1",
+        "https://cdn.shopify.com/s/files/1/0009/8235/1923/files/cq5dam.web.1200.1200_53_6da68d92-9520-44f1-8ace-57617736e430.jpg?v=1689273969"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-yonex-ezone-100-2025",
+      "brand": "Yonex",
+      "model": "EZONE 100 2025",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://img.tennis-warehouse.com/watermark/rs.php?path=EZ10BB-1.jpg&nw=455",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-yonex-ezone-100-2025.jpg",
+      "image_verified": true,
+      "product_url": "https://www.tennis-warehouse.com/descpage-EZ10BB.html",
+      "source": "Tennis Warehouse exact product page: Yonex EZONE 100 (2025)",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.tennis-warehouse.com/descpage-EZ10BB.html",
+        "https://img.tennis-warehouse.com/watermark/rs.php?path=EZ10BB-1.jpg&nw=455"
+      ],
+      "last_verified": "2026-08-10",
+      "retailer_url": "https://www.tennis-warehouse.com/descpage-EZ10BB.html"
+    },
+    {
+      "id": "racket-yonex-ezone-100l-2025",
+      "brand": "Yonex",
+      "model": "EZONE 100L 2025",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://img.tennis-warehouse.com/watermark/rs.php?path=EZ1LBB-1.jpg&nw=455",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-yonex-ezone-100l-2025.jpg",
+      "image_verified": true,
+      "product_url": "https://www.tennis-warehouse.com/Yonex_EZONE_100L_2025/descpageRCYONEX-EZ1LBB.html",
+      "source": "Tennis Warehouse exact product page: Yonex EZONE 100L (2025)",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.tennis-warehouse.com/Yonex_EZONE_100L_2025/descpageRCYONEX-EZ1LBB.html",
+        "https://img.tennis-warehouse.com/watermark/rs.php?path=EZ1LBB-1.jpg&nw=455"
+      ],
+      "last_verified": "2026-08-10",
+      "retailer_url": "https://www.tennis-warehouse.com/Yonex_EZONE_100L_2025/descpageRCYONEX-EZ1LBB.html"
+    },
+    {
+      "id": "racket-yonex-ezone-100sl-2025",
+      "brand": "Yonex",
+      "model": "EZONE 100SL 2025",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://img.tennis-warehouse.com/watermark/rs.php?path=EZ1SLB-1.jpg&nw=455",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-yonex-ezone-100sl-2025.jpg",
+      "image_verified": true,
+      "product_url": "https://www.tennis-warehouse.com/Yonex_EZONE_100_SL_2025/descpage-EZ1SLB.html",
+      "source": "Tennis Warehouse exact product page: Yonex EZONE 100 SL (2025)",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.tennis-warehouse.com/Yonex_EZONE_100_SL_2025/descpage-EZ1SLB.html",
+        "https://img.tennis-warehouse.com/watermark/rs.php?path=EZ1SLB-1.jpg&nw=455"
+      ],
+      "last_verified": "2026-08-10",
+      "retailer_url": "https://www.tennis-warehouse.com/Yonex_EZONE_100_SL_2025/descpage-EZ1SLB.html"
+    },
+    {
+      "id": "racket-yonex-ezone-105-2025",
+      "brand": "Yonex",
+      "model": "EZONE 105 2025",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://img.tennis-warehouse.com/watermark/rs.php?path=EZ105B-1.jpg&nw=455",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-yonex-ezone-105-2025.jpg",
+      "image_verified": true,
+      "product_url": "https://www.tennis-warehouse.com/Yonex_EZONE_105_2025/descpageRCYONEX-EZ105B.html",
+      "source": "Tennis Warehouse exact product page: Yonex EZONE 105 (2025)",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.tennis-warehouse.com/Yonex_EZONE_105_2025/descpageRCYONEX-EZ105B.html",
+        "https://img.tennis-warehouse.com/watermark/rs.php?path=EZ105B-1.jpg&nw=455"
+      ],
+      "last_verified": "2026-08-10",
+      "retailer_url": "https://www.tennis-warehouse.com/Yonex_EZONE_105_2025/descpageRCYONEX-EZ105B.html"
+    },
+    {
+      "id": "racket-yonex-ezone-98-2025",
+      "brand": "Yonex",
+      "model": "EZONE 98 2025",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://img.tennis-warehouse.com/watermark/rs.php?path=EZ98BB-1.jpg&nw=455",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-yonex-ezone-98-2025.jpg",
+      "image_verified": true,
+      "product_url": "https://www.tennis-warehouse.com/Yonex_EZONE_98_2025/descpageRCYONEX-EZ98BB.html",
+      "source": "Tennis Warehouse exact product page: Yonex EZONE 98 (2025)",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.tennis-warehouse.com/Yonex_EZONE_98_2025/descpageRCYONEX-EZ98BB.html",
+        "https://img.tennis-warehouse.com/watermark/rs.php?path=EZ98BB-1.jpg&nw=455"
+      ],
+      "last_verified": "2026-08-10",
+      "retailer_url": "https://www.tennis-warehouse.com/Yonex_EZONE_98_2025/descpageRCYONEX-EZ98BB.html"
+    },
+    {
+      "id": "shoes-asics-court-ff-3-novak",
+      "brand": "ASICS",
+      "model": "Court FF 3 Novak",
+      "variant": "",
+      "category": "Shoes",
+      "image_url": "https://cdn.shopify.com/s/files/1/0009/8235/1923/files/1041A363_400_SR_RT_GLB_PNG_1280x1280-JPG.jpg?v=1749671474",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/shoes-asics-court-ff-3-novak.jpg",
+      "image_verified": true,
+      "product_url": "https://racquetguys.ca/products/asics-court-ff-3-novak-mens-tennis-shoe-blue-white-1041a363-400",
+      "retailer_url": "https://racquetguys.ca/products/asics-court-ff-3-novak-mens-tennis-shoe-blue-white-1041a363-400",
+      "source": "RacquetGuys exact product sitemap title: Asics Court FF 3 Novak Men's Tennis Shoe (Blue/White)",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://racquetguys.ca/products/asics-court-ff-3-novak-mens-tennis-shoe-blue-white-1041a363-400",
+        "https://cdn.shopify.com/s/files/1/0009/8235/1923/files/1041A363_400_SR_RT_GLB_PNG_1280x1280-JPG.jpg?v=1749671474"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "shoes-new-balance-fuelcell-996v6",
+      "brand": "New Balance",
+      "model": "FuelCell 996v6",
+      "variant": "",
+      "category": "Shoes",
+      "image_url": "https://cdn.shopify.com/s/files/1/0009/8235/1923/files/New_Balance_FuelCell_996v6_Women_s_Tennis_Shoe_White_1.jpg?v=1780337025",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/shoes-new-balance-fuelcell-996v6.jpg",
+      "image_verified": true,
+      "product_url": "https://racquetguys.ca/products/new-balance-fuelcell-996v6-womens-tennis-shoe-white-wch996v6-w6",
+      "retailer_url": "https://racquetguys.ca/products/new-balance-fuelcell-996v6-womens-tennis-shoe-white-wch996v6-w6",
+      "source": "RacquetGuys exact product sitemap title: New Balance FuelCell 996v6 Women's Tennis Shoe (White)",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://racquetguys.ca/products/new-balance-fuelcell-996v6-womens-tennis-shoe-white-wch996v6-w6",
+        "https://cdn.shopify.com/s/files/1/0009/8235/1923/files/New_Balance_FuelCell_996v6_Women_s_Tennis_Shoe_White_1.jpg?v=1780337025"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "shoes-nike-court-lite-4",
+      "brand": "Nike",
+      "model": "Court Lite 4",
+      "variant": "",
+      "category": "Shoes",
+      "image_url": "https://cdn.shopify.com/s/files/1/0009/8235/1923/files/unnamed_19_c5bd5a6f-047f-4488-8f9b-45f21800af7f.jpg?v=1749670870",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/shoes-nike-court-lite-4.jpg",
+      "image_verified": true,
+      "product_url": "https://racquetguys.ca/products/nike-court-lite-4-womens-tennis-shoe-apricot-agate-volt",
+      "retailer_url": "https://racquetguys.ca/products/nike-court-lite-4-womens-tennis-shoe-apricot-agate-volt",
+      "source": "RacquetGuys exact product sitemap title: Nike Court Lite 4 Women's Tennis Shoe (Apricot Agate/Volt)",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://racquetguys.ca/products/nike-court-lite-4-womens-tennis-shoe-apricot-agate-volt",
+        "https://cdn.shopify.com/s/files/1/0009/8235/1923/files/unnamed_19_c5bd5a6f-047f-4488-8f9b-45f21800af7f.jpg?v=1749670870"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "shoes-nike-zoom-vapor-cage-4-rafa",
+      "brand": "Nike",
+      "model": "Zoom Vapor Cage 4 Rafa",
+      "variant": "",
+      "category": "Shoes",
+      "image_url": "https://cdn.shopify.com/s/files/1/0009/8235/1923/files/Nike_Zoom_Vapor_Cage_4_Rafa_Men_s_Tennis_Shoe_LT_Photo_Blue_LT_Armonry_Blue_1.jpg?v=1780432424",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/shoes-nike-zoom-vapor-cage-4-rafa.jpg",
+      "image_verified": true,
+      "product_url": "https://racquetguys.ca/products/nike-zoom-vapor-cage-4-rafa-mens-tennis-shoe-lt-photo-blue-lt-armonry-blue",
+      "retailer_url": "https://racquetguys.ca/products/nike-zoom-vapor-cage-4-rafa-mens-tennis-shoe-lt-photo-blue-lt-armonry-blue",
+      "source": "RacquetGuys exact product sitemap title: Nike Zoom Vapor Cage 4 Rafa Men's Tennis Shoe (LT Photo Blue/LT Armonry Blue)",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://racquetguys.ca/products/nike-zoom-vapor-cage-4-rafa-mens-tennis-shoe-lt-photo-blue-lt-armonry-blue",
+        "https://cdn.shopify.com/s/files/1/0009/8235/1923/files/Nike_Zoom_Vapor_Cage_4_Rafa_Men_s_Tennis_Shoe_LT_Photo_Blue_LT_Armonry_Blue_1.jpg?v=1780432424"
+      ],
+      "last_verified": "2026-08-10"
+    }
+  ]
+}

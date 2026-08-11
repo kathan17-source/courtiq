@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#07120e" />
+  <meta name="description" content="CourtIQ combines structured tennis training, 2D pose-based movement analysis, and research-backed ATP/WTA match forecasts." />
+  <meta property="og:title" content="CourtIQ — Tennis Intelligence" />
+  <meta property="og:description" content="Tennis training tools and research-backed ATP/WTA match intelligence in one focused application." />
+  <meta property="og:type" content="website" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' file: blob: data: https:; script-src 'self' 'unsafe-inline' file:; style-src 'self' 'unsafe-inline' file:; img-src 'self' data: blob: file: https:; media-src 'self' blob: file:; object-src 'none'; base-uri 'self'; form-action 'self';" />
+  <title>CourtIQ — Tennis Intelligence</title>
+  <link rel="stylesheet" href="styles.css?v=36" />
+</head>
+<body>
+  <div class="shell">
+    <aside class="side">
+      <a class="brand" href="#entry"><span class="ball"></span><b>COURTIQ</b></a>
+      <div class="product-switch" aria-label="CourtIQ products">
+        <button data-product="train">Train</button>
+        <button data-product="predict">Predict</button>
+      </div>
+      <nav>
+        <div class="nav-group" data-nav-product="train">
+          <span>TRAIN</span>
+          <button data-page="train/overview" aria-label="Train overview"><svg viewBox="0 0 24 24"><path d="M4 13 12 5l8 8v7h-5v-5H9v5H4z"/></svg> Overview</button>
+          <button data-page="train/analyze"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M6 6l12 12M18 6 6 18"/></svg> Analyze</button>
+          <button data-page="train/plan"><svg viewBox="0 0 24 24"><path d="M5 19 19 5M9 5h10v10"/></svg> Plan</button>
+          <button data-page="train/learn"><svg viewBox="0 0 24 24"><path d="M4 5h7a4 4 0 0 1 4 4v10H8a4 4 0 0 1-4-4zM20 5h-5v14h1a4 4 0 0 0 4-4z"/></svg> Learn</button>
+          <button data-page="train/puzzles"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4zM8 8h8M8 12h5M8 16h8"/></svg> Puzzle Court</button>
+          <button data-page="train/profile"><svg viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 21a8 8 0 0 1 16 0"/></svg> Profile</button>
+        </div>
+        <div class="nav-group" data-nav-product="predict">
+          <span>PREDICT</span>
+          <button data-page="predict/overview"><svg viewBox="0 0 24 24"><path d="M4 18h16M6 15l4-5 4 3 4-7"/></svg> Overview</button>
+          <button data-page="predict/match"><svg viewBox="0 0 24 24"><path d="M6 5h12l-6 7 6 7H6l6-7z"/></svg> Match Predictor</button>
+          <button data-page="predict/players"><svg viewBox="0 0 24 24"><path d="M7 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM17 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM2 21a7 7 0 0 1 10-6M13 21a5 5 0 0 1 8-4"/></svg> Players</button>
+          <button data-page="predict/compare"><svg viewBox="0 0 24 24"><path d="M5 6h14M5 12h10M5 18h7"/></svg> Compare</button>
+          <button data-page="predict/tournaments"><svg viewBox="0 0 24 24"><path d="M12 3 4 8l8 13 8-13z"/></svg> Predictions</button>
+          <button data-page="predict/simulation"><svg viewBox="0 0 24 24"><path d="M4 6h6v4H4zM14 6h6v4h-6zM4 14h6v4H4zM14 14h6v4h-6zM10 8h4M10 16h4"/></svg> Simulation</button>
+          <button data-page="predict/model-lab"><svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16M8 16v-5M12 16V8M16 16v-8"/></svg> Model Lab</button>
+        </div>
+      </nav>
+      <div class="mini"><span>K</span><div><b>kp</b><small>Private</small></div></div>
+    </aside>
+    <main>
+      <header><button id="ask-ai">✦ Coaching help</button><span class="chip">Local profile · kp</span></header>
+      <section id="page"></section>
+    </main>
+  </div>
+  <div id="toast"></div>
+  <script src="assets/player-stats.js?v=1"></script>
+  <script type="module" src="app.js?v=45"></script>
+</body>
+</html>

@@ -1,0 +1,3827 @@
+{
+  "metadata": {
+    "verified_at": "2026-08-10",
+    "matching_policy": "exact longest brand + model + variant/generation"
+  },
+  "products": [
+    {
+      "id": "accessory-tourna-lead-tape",
+      "brand": "Tourna",
+      "model": "Lead Tape",
+      "variant": "",
+      "category": "Accessory",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/060657_1_191ea94c-4c64-453c-8ee2-b7474183a513.jpg?v=1762440242",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/accessory-tourna-lead-tape.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/tourna-lead-tape-roll-1-4-x-36-yards",
+      "retailer_url": "https://www.holabirdsports.com/products/tourna-lead-tape-roll-1-4-x-36-yards",
+      "source": "Holabird Sports exact product sitemap title: Tourna Lead Tape Roll 1/4\" x 36 Yards",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/tourna-lead-tape-roll-1-4-x-36-yards",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/060657_1_191ea94c-4c64-453c-8ee2-b7474183a513.jpg?v=1762440242"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "accessory-tourna-rosin-bag",
+      "brand": "Tourna",
+      "model": "Rosin Bag",
+      "variant": "",
+      "category": "Accessory",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/060961_1.jpg?v=1762439484",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/accessory-tourna-rosin-bag.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/tourna-rosin-bag",
+      "retailer_url": "https://www.holabirdsports.com/products/tourna-rosin-bag",
+      "source": "Holabird Sports exact product sitemap title: Tourna Rosin Bag",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/tourna-rosin-bag",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/060961_1.jpg?v=1762439484"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "accessory-tourna-stringmeter",
+      "brand": "Tourna",
+      "model": "Stringmeter",
+      "variant": "",
+      "category": "Accessory",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/060371_1.jpg?v=1762439713",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/accessory-tourna-stringmeter.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/tourna-stringmeter",
+      "retailer_url": "https://www.holabirdsports.com/products/tourna-stringmeter",
+      "source": "Holabird Sports exact product sitemap title: Tourna Stringmeter",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/tourna-stringmeter",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/060371_1.jpg?v=1762439713"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "accessory-wilson-starter-court-lines",
+      "brand": "Wilson",
+      "model": "Starter Court Lines",
+      "variant": "",
+      "category": "Accessory",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/500160_1.jpg?v=1762439870",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/accessory-wilson-starter-court-lines.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/wilson-starter-court-lines",
+      "retailer_url": "https://www.holabirdsports.com/products/wilson-starter-court-lines",
+      "source": "Holabird Sports exact product sitemap title: Wilson Starter Court Lines",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/wilson-starter-court-lines",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/500160_1.jpg?v=1762439870"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "bag-babolat-court-m-bag",
+      "brand": "Babolat",
+      "model": "Court M Bag",
+      "variant": "",
+      "category": "Bag",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/073578_102_1.jpg?v=1751555240",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/bag-babolat-court-m-bag.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/babolat-court-m-bag",
+      "retailer_url": "https://www.holabirdsports.com/products/babolat-court-m-bag",
+      "source": "Holabird Sports exact product sitemap title: Babolat Court M Bag",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/babolat-court-m-bag",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/073578_102_1.jpg?v=1751555240"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "bag-head-base-backpack",
+      "brand": "HEAD",
+      "model": "Base Backpack",
+      "variant": "",
+      "category": "Bag",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/073567_1.jpg?v=1738087587",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/bag-head-base-backpack.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/head-base-backpack-17l-black-white",
+      "retailer_url": "https://www.holabirdsports.com/products/head-base-backpack-17l-black-white",
+      "source": "Holabird Sports exact product sitemap title: HEAD Base Backpack 17L Black/White",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/head-base-backpack-17l-black-white",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/073567_1.jpg?v=1738087587"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "bag-head-pro-x-racquet-bag-l",
+      "brand": "HEAD",
+      "model": "Pro X Racquet Bag",
+      "variant": "L",
+      "category": "Bag",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/073555_1.jpg?v=1738087553",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/bag-head-pro-x-racquet-bag-l.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/head-pro-x-racquet-bag-l-9-pack-black",
+      "retailer_url": "https://www.holabirdsports.com/products/head-pro-x-racquet-bag-l-9-pack-black",
+      "source": "Holabird Sports exact product sitemap title: HEAD Pro X Racquet Bag L 9 Pack Black",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/head-pro-x-racquet-bag-l-9-pack-black",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/073555_1.jpg?v=1738087553"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "bag-head-tour-racquet-bag-xl",
+      "brand": "HEAD",
+      "model": "Tour Racquet Bag XL",
+      "variant": "",
+      "category": "Bag",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/073640_bk-_1.jpg?v=1767989745",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/bag-head-tour-racquet-bag-xl.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/head-tour-racquet-bag-xl-12-pack",
+      "retailer_url": "https://www.holabirdsports.com/products/head-tour-racquet-bag-xl-12-pack",
+      "source": "Holabird Sports exact product sitemap title: HEAD Tour Racquet Bag XL 12 Pack",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/head-tour-racquet-bag-xl-12-pack",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/073640_bk-_1.jpg?v=1767989745"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "bag-wilson-super-tour-15-pack",
+      "brand": "Wilson",
+      "model": "Super Tour 15 Pack",
+      "variant": "",
+      "category": "Bag",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/073522_1.jpg?v=1736546748",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/bag-wilson-super-tour-15-pack.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/wilson-super-tour-15-pack-red-2025",
+      "retailer_url": "https://www.holabirdsports.com/products/wilson-super-tour-15-pack-red-2025",
+      "source": "Holabird Sports exact product sitemap title: Wilson Super Tour 15 Pack Red 2025",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/wilson-super-tour-15-pack-red-2025",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/073522_1.jpg?v=1736546748"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "bag-wilson-super-tour-9-pack",
+      "brand": "Wilson",
+      "model": "Super Tour 9 Pack",
+      "variant": "",
+      "category": "Bag",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/073523_1.jpg?v=1736546764",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/bag-wilson-super-tour-9-pack.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/wilson-super-tour-9-pack-red-2025",
+      "retailer_url": "https://www.holabirdsports.com/products/wilson-super-tour-9-pack-red-2025",
+      "source": "Holabird Sports exact product sitemap title: Wilson Super Tour 9 Pack Red 2025",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/wilson-super-tour-9-pack-red-2025",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/073523_1.jpg?v=1736546764"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "bag-wilson-team-6-pack",
+      "brand": "Wilson",
+      "model": "Team 6 Pack",
+      "variant": "",
+      "category": "Bag",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/073534_1.jpg?v=1738795764",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/bag-wilson-team-6-pack.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/wilson-team-6-pack-racquet-bag-oats-2025",
+      "retailer_url": "https://www.holabirdsports.com/products/wilson-team-6-pack-racquet-bag-oats-2025",
+      "source": "Holabird Sports exact product sitemap title: Wilson Team 6 Pack Racquet Bag Oats 2025",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/wilson-team-6-pack-racquet-bag-oats-2025",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/073534_1.jpg?v=1738795764"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "bag-wilson-tour-backpack",
+      "brand": "Wilson",
+      "model": "Tour Backpack",
+      "variant": "",
+      "category": "Bag",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/073532_1.jpg?v=1738799200",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/bag-wilson-tour-backpack.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/wilson-tour-backpack-black-2025",
+      "retailer_url": "https://www.holabirdsports.com/products/wilson-tour-backpack-black-2025",
+      "source": "Holabird Sports exact product sitemap title: Wilson Tour Backpack Black 2025",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/wilson-tour-backpack-black-2025",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/073532_1.jpg?v=1738799200"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "bag-yonex-active-backpack",
+      "brand": "Yonex",
+      "model": "Active Backpack",
+      "variant": "",
+      "category": "Bag",
+      "image_url": "https://us.yonex.com/cdn/shop/files/BA82412_Black_Lime.png?v=1740370928",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/bag-yonex-active-backpack.png",
+      "image_verified": true,
+      "product_url": "https://us.yonex.com/products/active-backpack",
+      "official_url": "https://us.yonex.com/products/active-backpack",
+      "source": "Yonex USA exact official product page: ACTIVE BACKPACK",
+      "source_type": "exact_official_product",
+      "source_links": [
+        "https://us.yonex.com/products/active-backpack",
+        "https://us.yonex.com/cdn/shop/files/BA82412_Black_Lime.png?v=1740370928"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "ball-babolat-gold-championship",
+      "brand": "Babolat",
+      "model": "Gold Championship",
+      "variant": "",
+      "category": "Ball",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/020384_1.jpg?v=1762439974",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/ball-babolat-gold-championship.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/babolat-championship-ball-24-cans",
+      "retailer_url": "https://www.holabirdsports.com/products/babolat-championship-ball-24-cans",
+      "source": "Holabird Sports exact product sitemap title: Babolat Gold Championship Ball 24 Cans",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/babolat-championship-ball-24-cans",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/020384_1.jpg?v=1762439974"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "ball-dunlop-atp-championship",
+      "brand": "Dunlop",
+      "model": "ATP Championship",
+      "variant": "",
+      "category": "Ball",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/020494_1.jpg?v=1753891985",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/ball-dunlop-atp-championship.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/dunlop-atp-championship-extra-duty-24-cans",
+      "retailer_url": "https://www.holabirdsports.com/products/dunlop-atp-championship-extra-duty-24-cans",
+      "source": "Holabird Sports exact product sitemap title: Dunlop ATP Championship Extra Duty 24 Cans",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/dunlop-atp-championship-extra-duty-24-cans",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/020494_1.jpg?v=1753891985"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "ball-dunlop-atp-tour",
+      "brand": "Dunlop",
+      "model": "ATP",
+      "variant": "Tour",
+      "category": "Ball",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/020491_1.jpg?v=1762889452",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/ball-dunlop-atp-tour.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/dunlop-atp-extra-duty-24-cans",
+      "retailer_url": "https://www.holabirdsports.com/products/dunlop-atp-extra-duty-24-cans",
+      "source": "Holabird Sports exact product sitemap title: Dunlop ATP Tour Extra Duty 24 Cans",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/dunlop-atp-extra-duty-24-cans",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/020491_1.jpg?v=1762889452"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "ball-dunlop-australian-open",
+      "brand": "Dunlop",
+      "model": "Australian Open",
+      "variant": "",
+      "category": "Ball",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/020485_1.jpg?v=1762440422",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/ball-dunlop-australian-open.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/dunlop-australion-open-all-surface-hd-core-24-cans",
+      "retailer_url": "https://www.holabirdsports.com/products/dunlop-australion-open-all-surface-hd-core-24-cans",
+      "source": "Holabird Sports exact product sitemap title: Dunlop Australian Open All Surface HD Core 24 Cans",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/dunlop-australion-open-all-surface-hd-core-24-cans",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/020485_1.jpg?v=1762440422"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "ball-head-championship",
+      "brand": "HEAD",
+      "model": "Championship",
+      "variant": "",
+      "category": "Ball",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/380037_1.jpg?v=1782853515",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/ball-head-championship.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/head-championship-40-outdoor-pickleball-6-pack",
+      "retailer_url": "https://www.holabirdsports.com/products/head-championship-40-outdoor-pickleball-6-pack",
+      "source": "Holabird Sports exact product sitemap title: HEAD Championship 40 Outdoor Pickleball 6 Pack",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/head-championship-40-outdoor-pickleball-6-pack",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/380037_1.jpg?v=1782853515"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "ball-head-tour",
+      "brand": "HEAD",
+      "model": "Tour",
+      "variant": "",
+      "category": "Ball",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/073644_bk-_1.jpg?v=1767989744",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/ball-head-tour.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/head-tour-backpack-25l",
+      "retailer_url": "https://www.holabirdsports.com/products/head-tour-backpack-25l",
+      "source": "Holabird Sports exact product sitemap title: HEAD Tour Backpack 25L",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/head-tour-backpack-25l",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/073644_bk-_1.jpg?v=1767989744"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "ball-wilson-championship-extra-duty",
+      "brand": "Wilson",
+      "model": "Championship Extra Duty",
+      "variant": "",
+      "category": "Ball",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/023024_1.jpg?v=1762439479",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/ball-wilson-championship-extra-duty.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/wilson-championship-extra-duty-24-cans",
+      "retailer_url": "https://www.holabirdsports.com/products/wilson-championship-extra-duty-24-cans",
+      "source": "Holabird Sports exact product sitemap title: Wilson Championship Extra Duty 24 Cans",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/wilson-championship-extra-duty-24-cans",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/023024_1.jpg?v=1762439479"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "ball-wilson-triniti",
+      "brand": "Wilson",
+      "model": "Triniti",
+      "variant": "",
+      "category": "Ball",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/020513_1.jpg?v=1762440983",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/ball-wilson-triniti.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/wilson-triniti-club-72-balls",
+      "retailer_url": "https://www.holabirdsports.com/products/wilson-triniti-club-72-balls",
+      "source": "Holabird Sports exact product sitemap title: Wilson Triniti Club 72 Balls",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/wilson-triniti-club-72-balls",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/020513_1.jpg?v=1762440983"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "ball-wilson-us-open",
+      "brand": "Wilson",
+      "model": "US Open",
+      "variant": "",
+      "category": "Ball",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/090845_1.jpg?v=1768342007",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/ball-wilson-us-open.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/wilson-us-open-19",
+      "retailer_url": "https://www.holabirdsports.com/products/wilson-us-open-19",
+      "source": "Holabird Sports exact product sitemap title: Wilson US Open 19",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/wilson-us-open-19",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/090845_1.jpg?v=1768342007"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "ball-yonex-tour",
+      "brand": "Yonex",
+      "model": "Tour",
+      "variant": "",
+      "category": "Ball",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/020559_1.jpg?v=1762451781",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/ball-yonex-tour.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/yonex-tour-tennis-ball-24-cans",
+      "retailer_url": "https://www.holabirdsports.com/products/yonex-tour-tennis-ball-24-cans",
+      "source": "Holabird Sports exact product sitemap title: Yonex Tour Tennis Ball 24 Cans",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/yonex-tour-tennis-ball-24-cans",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/020559_1.jpg?v=1762451781"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "dampener-head-djokovic-dampener",
+      "brand": "HEAD",
+      "model": "Djokovic Dampener",
+      "variant": "",
+      "category": "Dampener",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/060405_1.jpg?v=1762439765",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/dampener-head-djokovic-dampener.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/head-djokovic-dampener",
+      "retailer_url": "https://www.holabirdsports.com/products/head-djokovic-dampener",
+      "source": "Holabird Sports exact product sitemap title: HEAD Djokovic Dampener",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/head-djokovic-dampener",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/060405_1.jpg?v=1762439765"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "dampener-wilson-pro-feel-dampener",
+      "brand": "Wilson",
+      "model": "Pro Feel Dampener",
+      "variant": "",
+      "category": "Dampener",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/060411_101_1.jpg?v=1770390374",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/dampener-wilson-pro-feel-dampener.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/wilson-pro-feel-dampener",
+      "retailer_url": "https://www.holabirdsports.com/products/wilson-pro-feel-dampener",
+      "source": "Holabird Sports exact product sitemap title: Wilson Pro Feel Dampener",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/wilson-pro-feel-dampener",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/060411_101_1.jpg?v=1770390374"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "grip-babolat-syntec-pro-replacement-grip",
+      "brand": "Babolat",
+      "model": "Syntec Pro Replacement Grip",
+      "variant": "",
+      "category": "Grip",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/060509_101_1.jpg?v=1762440601",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/grip-babolat-syntec-pro-replacement-grip.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/babolat-syntec-pro-replacement-grip",
+      "retailer_url": "https://www.holabirdsports.com/products/babolat-syntec-pro-replacement-grip",
+      "source": "Holabird Sports exact product sitemap title: Babolat Syntec Pro Replacement Grip",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/babolat-syntec-pro-replacement-grip",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/060509_101_1.jpg?v=1762440601"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "grip-babolat-syntec-team-replacement-grip",
+      "brand": "Babolat",
+      "model": "Syntec Team Replacement Grip",
+      "variant": "",
+      "category": "Grip",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/060699_149_1.jpg?v=1762440532",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/grip-babolat-syntec-team-replacement-grip.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/babolat-syntec-team-replacement-grip",
+      "retailer_url": "https://www.holabirdsports.com/products/babolat-syntec-team-replacement-grip",
+      "source": "Holabird Sports exact product sitemap title: Babolat Syntec Team Replacement Grip",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/babolat-syntec-team-replacement-grip",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/060699_149_1.jpg?v=1762440532"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "grip-babolat-vs-original-overgrip-3-pack",
+      "brand": "Babolat",
+      "model": "VS Original Overgrip 3 Pack",
+      "variant": "",
+      "category": "Grip",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/060146_232_1.jpg?v=1762439589",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/grip-babolat-vs-original-overgrip-3-pack.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/babolat-vs-original-overgrip-3-pack",
+      "retailer_url": "https://www.holabirdsports.com/products/babolat-vs-original-overgrip-3-pack",
+      "source": "Holabird Sports exact product sitemap title: Babolat VS Original Overgrip 3 Pack",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/babolat-vs-original-overgrip-3-pack",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/060146_232_1.jpg?v=1762439589"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "grip-gamma-hi-tech-replacement-grip",
+      "brand": "Gamma",
+      "model": "Hi-Tech Replacement Grip",
+      "variant": "",
+      "category": "Grip",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/060242_blk_1.jpg?v=1762439506",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/grip-gamma-hi-tech-replacement-grip.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/gamma-hi-tech-replacement-grip",
+      "retailer_url": "https://www.holabirdsports.com/products/gamma-hi-tech-replacement-grip",
+      "source": "Holabird Sports exact product sitemap title: Gamma Hi-Tech Replacement Grip",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/gamma-hi-tech-replacement-grip",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/060242_blk_1.jpg?v=1762439506"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "grip-gamma-supreme-overgrip-15-pack",
+      "brand": "Gamma",
+      "model": "Supreme Overgrip 15 Pack",
+      "variant": "",
+      "category": "Grip",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/060197_2.jpg?v=1762439616",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/grip-gamma-supreme-overgrip-15-pack.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/gamma-supreme-overgrip-15-pack",
+      "retailer_url": "https://www.holabirdsports.com/products/gamma-supreme-overgrip-15-pack",
+      "source": "Holabird Sports exact product sitemap title: Gamma Supreme Overgrip 15 Pack",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/gamma-supreme-overgrip-15-pack",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/060197_2.jpg?v=1762439616"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "grip-gamma-supreme-overgrip-3-pack",
+      "brand": "Gamma",
+      "model": "Supreme Overgrip 3 Pack",
+      "variant": "",
+      "category": "Grip",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/060143_blk_1.jpg?v=1762439586",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/grip-gamma-supreme-overgrip-3-pack.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/gamma-supreme-overgrip-3-pack",
+      "retailer_url": "https://www.holabirdsports.com/products/gamma-supreme-overgrip-3-pack",
+      "source": "Holabird Sports exact product sitemap title: Gamma Supreme Overgrip 3 Pack",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/gamma-supreme-overgrip-3-pack",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/060143_blk_1.jpg?v=1762439586"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "grip-head-hydrosorb-comfort-replacement-grip",
+      "brand": "HEAD",
+      "model": "Hydrosorb Comfort Replacement Grip",
+      "variant": "",
+      "category": "Grip",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/060500_blk_1.jpg?v=1762439873",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/grip-head-hydrosorb-comfort-replacement-grip.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/head-hydrosorb-comfort-replacement-grip",
+      "retailer_url": "https://www.holabirdsports.com/products/head-hydrosorb-comfort-replacement-grip",
+      "source": "Holabird Sports exact product sitemap title: HEAD HydroSorb Comfort Replacement Grip",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/head-hydrosorb-comfort-replacement-grip",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/060500_blk_1.jpg?v=1762439873"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "grip-head-hydrosorb-pro-replacement-grip",
+      "brand": "HEAD",
+      "model": "Hydrosorb Pro Replacement Grip",
+      "variant": "",
+      "category": "Grip",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/060499_nv-_1.jpg?v=1773759918",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/grip-head-hydrosorb-pro-replacement-grip.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/head-hydrosorb-pro-replacement-grip",
+      "retailer_url": "https://www.holabirdsports.com/products/head-hydrosorb-pro-replacement-grip",
+      "source": "Holabird Sports exact product sitemap title: HEAD HydroSorb Pro Replacement Grip",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/head-hydrosorb-pro-replacement-grip",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/060499_nv-_1.jpg?v=1773759918"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "grip-head-prestige-pro-overgrip",
+      "brand": "HEAD",
+      "model": "Prestige Pro Overgrip",
+      "variant": "",
+      "category": "Grip",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/060310_blk_1.jpg?v=1762439680",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/grip-head-prestige-pro-overgrip.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/head-prestige-pro-overgrip-3-pack",
+      "retailer_url": "https://www.holabirdsports.com/products/head-prestige-pro-overgrip-3-pack",
+      "source": "Holabird Sports exact product sitemap title: HEAD Prestige Pro Overgrip 3 Pack",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/head-prestige-pro-overgrip-3-pack",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/060310_blk_1.jpg?v=1762439680"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "grip-head-prime-tour-overgrip-3-pack",
+      "brand": "HEAD",
+      "model": "Prime Tour Overgrip 3 Pack",
+      "variant": "",
+      "category": "Grip",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/060725_pu-_1.jpg?v=1781197511",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/grip-head-prime-tour-overgrip-3-pack.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/head-prime-tour-overgrip-3-pack",
+      "retailer_url": "https://www.holabirdsports.com/products/head-prime-tour-overgrip-3-pack",
+      "source": "Holabird Sports exact product sitemap title: HEAD Prime Tour Overgrip 3 Pack",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/head-prime-tour-overgrip-3-pack",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/060725_pu-_1.jpg?v=1781197511"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "grip-head-xtreme-soft-overgrip",
+      "brand": "HEAD",
+      "model": "Xtreme Soft Overgrip",
+      "variant": "",
+      "category": "Grip",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/060306_blk_1.jpg?v=1762439675",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/grip-head-xtreme-soft-overgrip.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/head-xtreme-soft-overgrip-3-pack",
+      "retailer_url": "https://www.holabirdsports.com/products/head-xtreme-soft-overgrip-3-pack",
+      "source": "Holabird Sports exact product sitemap title: HEAD Xtreme Soft Overgrip 3 Pack",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/head-xtreme-soft-overgrip-3-pack",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/060306_blk_1.jpg?v=1762439675"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "grip-volkl-v-dry-overgrip",
+      "brand": "Volkl",
+      "model": "V-Dry Overgrip",
+      "variant": "",
+      "category": "Grip",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/060492_nav_1.jpg?v=1759237545",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/grip-volkl-v-dry-overgrip.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/volkl-v-dry-overgrip-3-pack",
+      "retailer_url": "https://www.holabirdsports.com/products/volkl-v-dry-overgrip-3-pack",
+      "source": "Holabird Sports exact product sitemap title: Volkl V-Dry Overgrip 3 Pack",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/volkl-v-dry-overgrip-3-pack",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/060492_nav_1.jpg?v=1759237545"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "grip-volkl-v-tac-overgrip",
+      "brand": "Volkl",
+      "model": "V-Tac Overgrip",
+      "variant": "",
+      "category": "Grip",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/060468_blk_1.jpg?v=1762439839",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/grip-volkl-v-tac-overgrip.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/volkl-v-tac-overgrip-3-pack",
+      "retailer_url": "https://www.holabirdsports.com/products/volkl-v-tac-overgrip-3-pack",
+      "source": "Holabird Sports exact product sitemap title: Volkl V-Tac Overgrip 3 Pack",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/volkl-v-tac-overgrip-3-pack",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/060468_blk_1.jpg?v=1762439839"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "grip-wilson-pro-overgrip-12-pack",
+      "brand": "Wilson",
+      "model": "Pro Overgrip 12 Pack",
+      "variant": "",
+      "category": "Grip",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/060303_blk_1.jpg?v=1762441413",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/grip-wilson-pro-overgrip-12-pack.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/wilson-pro-overgrip-12-pack",
+      "retailer_url": "https://www.holabirdsports.com/products/wilson-pro-overgrip-12-pack",
+      "source": "Holabird Sports exact product sitemap title: Wilson Pro Overgrip 12 Pack",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/wilson-pro-overgrip-12-pack",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/060303_blk_1.jpg?v=1762441413"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "grip-wilson-pro-overgrip-3-pack",
+      "brand": "Wilson",
+      "model": "Pro Overgrip 3 Pack",
+      "variant": "",
+      "category": "Grip",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/060142_blk_1.jpg?v=1762439586",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/grip-wilson-pro-overgrip-3-pack.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/wilson-pro-overgrip-3-pack",
+      "retailer_url": "https://www.holabirdsports.com/products/wilson-pro-overgrip-3-pack",
+      "source": "Holabird Sports exact product sitemap title: Wilson Pro Overgrip 3 Pack",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/wilson-pro-overgrip-3-pack",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/060142_blk_1.jpg?v=1762439586"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "grip-wilson-sublime-replacement-grip",
+      "brand": "Wilson",
+      "model": "Sublime Replacement Grip",
+      "variant": "",
+      "category": "Grip",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/060479_wht_1.jpg?v=1770390374",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/grip-wilson-sublime-replacement-grip.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/wilson-sublime-replacement-grip",
+      "retailer_url": "https://www.holabirdsports.com/products/wilson-sublime-replacement-grip",
+      "source": "Holabird Sports exact product sitemap title: Wilson Sublime Replacement Grip",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/wilson-sublime-replacement-grip",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/060479_wht_1.jpg?v=1770390374"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-babolat-boost-aero",
+      "brand": "Babolat",
+      "model": "Boost Aero",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103346_1.jpg?v=1771287269",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-babolat-boost-aero.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/babolat-boost-aero-2026",
+      "retailer_url": "https://www.holabirdsports.com/products/babolat-boost-aero-2026",
+      "source": "Holabird Sports exact product sitemap title: Babolat Boost Aero 2026",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/babolat-boost-aero-2026",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103346_1.jpg?v=1771287269"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-babolat-boost-drive",
+      "brand": "Babolat",
+      "model": "Boost Drive",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103214_1.jpg?v=1741716406",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-babolat-boost-drive.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/babolat-boost-drive-2025",
+      "retailer_url": "https://www.holabirdsports.com/products/babolat-boost-drive-2025",
+      "source": "Holabird Sports exact product sitemap title: Babolat Boost Drive 2025",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/babolat-boost-drive-2025",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103214_1.jpg?v=1741716406"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-babolat-boost-strike",
+      "brand": "Babolat",
+      "model": "Boost Strike",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103102_1.jpg?v=1762453351",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-babolat-boost-strike.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/babolat-boost-strike",
+      "retailer_url": "https://www.holabirdsports.com/products/babolat-boost-strike",
+      "source": "Holabird Sports exact product sitemap title: Babolat Boost Strike",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/babolat-boost-strike",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103102_1.jpg?v=1762453351"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-babolat-evo-aero",
+      "brand": "Babolat",
+      "model": "Evo Aero",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103344_1.jpg?v=1771287268",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-babolat-evo-aero.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/babolat-evo-aero-2026",
+      "retailer_url": "https://www.holabirdsports.com/products/babolat-evo-aero-2026",
+      "source": "Holabird Sports exact product sitemap title: Babolat EVO Aero 2026",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/babolat-evo-aero-2026",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103344_1.jpg?v=1771287268"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-babolat-evo-drive",
+      "brand": "Babolat",
+      "model": "Evo Drive",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103211_1.jpg?v=1741716406",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-babolat-evo-drive.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/babolat-evo-drive-2025",
+      "retailer_url": "https://www.holabirdsports.com/products/babolat-evo-drive-2025",
+      "source": "Holabird Sports exact product sitemap title: Babolat EVO Drive 2025",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/babolat-evo-drive-2025",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103211_1.jpg?v=1741716406"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-babolat-pure-aero",
+      "brand": "Babolat",
+      "model": "Pure Aero",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103279_1.jpg?v=1771434387",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-babolat-pure-aero.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/babolat-pure-aero-2026",
+      "retailer_url": "https://www.holabirdsports.com/products/babolat-pure-aero-2026",
+      "source": "Holabird Sports exact product sitemap title: Babolat Pure Aero 2026",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/babolat-pure-aero-2026",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103279_1.jpg?v=1771434387"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-babolat-pure-aero-98",
+      "brand": "Babolat",
+      "model": "Pure Aero 98",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103278_1.jpg?v=1771279585",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-babolat-pure-aero-98.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/babolat-pure-aero-98-2026",
+      "retailer_url": "https://www.holabirdsports.com/products/babolat-pure-aero-98-2026",
+      "source": "Holabird Sports exact product sitemap title: Babolat Pure Aero 98 2026",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/babolat-pure-aero-98-2026",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103278_1.jpg?v=1771279585"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-babolat-pure-aero-lite",
+      "brand": "Babolat",
+      "model": "Pure Aero",
+      "variant": "Lite",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/103004_1.jpg?v=1762447860",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-babolat-pure-aero-lite.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/babolat-pure-aero-lite-2023",
+      "retailer_url": "https://www.holabirdsports.com/products/babolat-pure-aero-lite-2023",
+      "source": "Holabird Sports exact product sitemap title: Babolat Pure Aero Lite 2023",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/babolat-pure-aero-lite-2023",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/103004_1.jpg?v=1762447860"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-babolat-pure-aero-team",
+      "brand": "Babolat",
+      "model": "Pure Aero",
+      "variant": "Team",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/102959_1.jpg?v=1762446262",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-babolat-pure-aero-team.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/babolat-pure-aero-team-2023",
+      "retailer_url": "https://www.holabirdsports.com/products/babolat-pure-aero-team-2023",
+      "source": "Holabird Sports exact product sitemap title: Babolat Pure Aero Team 2023",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/babolat-pure-aero-team-2023",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/102959_1.jpg?v=1762446262"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-babolat-pure-drive",
+      "brand": "Babolat",
+      "model": "Pure Drive",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103404_1.jpg?v=1784923537",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-babolat-pure-drive.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/babolat-pure-drive-spectra",
+      "retailer_url": "https://www.holabirdsports.com/products/babolat-pure-drive-spectra",
+      "source": "Holabird Sports exact product sitemap title: Babolat Pure Drive Spectra",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/babolat-pure-drive-spectra",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103404_1.jpg?v=1784923537"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-babolat-pure-drive-2025",
+      "brand": "Babolat",
+      "model": "Pure Drive 2025",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103138_1.jpg?v=1736805966",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-babolat-pure-drive-2025.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/babolat-pure-drive-2025",
+      "retailer_url": "https://www.holabirdsports.com/products/babolat-pure-drive-2025",
+      "source": "Holabird Sports exact product sitemap title: Babolat Pure Drive 2025",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/babolat-pure-drive-2025",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103138_1.jpg?v=1736805966"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-babolat-pure-drive-98-2025",
+      "brand": "Babolat",
+      "model": "Pure Drive 98 2025",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103137_1.jpg?v=1736805973",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-babolat-pure-drive-98-2025.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/babolat-pure-drive-98-2025",
+      "retailer_url": "https://www.holabirdsports.com/products/babolat-pure-drive-98-2025",
+      "source": "Holabird Sports exact product sitemap title: Babolat Pure Drive 98 2025",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/babolat-pure-drive-98-2025",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103137_1.jpg?v=1736805973"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-babolat-pure-drive-lite-2025",
+      "brand": "Babolat",
+      "model": "Pure Drive Lite 2025",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103141_1.jpg?v=1736805975",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-babolat-pure-drive-lite-2025.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/babolat-pure-drive-lite-2025",
+      "retailer_url": "https://www.holabirdsports.com/products/babolat-pure-drive-lite-2025",
+      "source": "Holabird Sports exact product sitemap title: Babolat Pure Drive Lite 2025",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/babolat-pure-drive-lite-2025",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103141_1.jpg?v=1736805975"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-babolat-pure-drive-team-2025",
+      "brand": "Babolat",
+      "model": "Pure Drive Team 2025",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103140_1.jpg?v=1736805934",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-babolat-pure-drive-team-2025.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/babolat-pure-drive-team-2025",
+      "retailer_url": "https://www.holabirdsports.com/products/babolat-pure-drive-team-2025",
+      "source": "Holabird Sports exact product sitemap title: Babolat Pure Drive Team 2025",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/babolat-pure-drive-team-2025",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103140_1.jpg?v=1736805934"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-babolat-pure-strike-100",
+      "brand": "Babolat",
+      "model": "Pure Strike 100",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103254_1.jpg?v=1755292047",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-babolat-pure-strike-100.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/babolat-pure-strike-100-16x20-carbon-grey",
+      "retailer_url": "https://www.holabirdsports.com/products/babolat-pure-strike-100-16x20-carbon-grey",
+      "source": "Holabird Sports exact product sitemap title: Babolat Pure Strike 100 16x20 Carbon Grey",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/babolat-pure-strike-100-16x20-carbon-grey",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103254_1.jpg?v=1755292047"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-babolat-pure-strike-97",
+      "brand": "Babolat",
+      "model": "Pure Strike 97",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103251_1.jpg?v=1755292047",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-babolat-pure-strike-97.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/babolat-pure-strike-97-carbon-grey",
+      "retailer_url": "https://www.holabirdsports.com/products/babolat-pure-strike-97-carbon-grey",
+      "source": "Holabird Sports exact product sitemap title: Babolat Pure Strike 97 Carbon Grey",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/babolat-pure-strike-97-carbon-grey",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103251_1.jpg?v=1755292047"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-babolat-pure-strike-98-16x19",
+      "brand": "Babolat",
+      "model": "Pure Strike 98 16x19",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103253_1.jpg?v=1755292047",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-babolat-pure-strike-98-16x19.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/babolat-pure-strike-98-16x19-carbon-grey",
+      "retailer_url": "https://www.holabirdsports.com/products/babolat-pure-strike-98-16x19-carbon-grey",
+      "source": "Holabird Sports exact product sitemap title: Babolat Pure Strike 98 16x19 Carbon Grey",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/babolat-pure-strike-98-16x19-carbon-grey",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103253_1.jpg?v=1755292047"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-babolat-pure-strike-98-18x20",
+      "brand": "Babolat",
+      "model": "Pure Strike 98 18x20",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103252_1.jpg?v=1755292047",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-babolat-pure-strike-98-18x20.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/babolat-pure-strike-98-18x20-carbon-grey",
+      "retailer_url": "https://www.holabirdsports.com/products/babolat-pure-strike-98-18x20-carbon-grey",
+      "source": "Holabird Sports exact product sitemap title: Babolat Pure Strike 98 18x20 Carbon Grey",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/babolat-pure-strike-98-18x20-carbon-grey",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103252_1.jpg?v=1755292047"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-diadem-nova-lite-v3",
+      "brand": "Diadem",
+      "model": "Nova Lite",
+      "variant": "V3",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103208_1.jpg?v=1740758737",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-diadem-nova-lite-v3.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/diadem-nova-lite-v3",
+      "retailer_url": "https://www.holabirdsports.com/products/diadem-nova-lite-v3",
+      "source": "Holabird Sports exact product sitemap title: Diadem Nova Lite v3",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/diadem-nova-lite-v3",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103208_1.jpg?v=1740758737"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-dunlop-cx-200",
+      "brand": "Dunlop",
+      "model": "CX 200",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103085_1.jpg?v=1762452053",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-dunlop-cx-200.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/dunlop-cx-200-2024",
+      "retailer_url": "https://www.holabirdsports.com/products/dunlop-cx-200-2024",
+      "source": "Holabird Sports exact product sitemap title: Dunlop CX 200",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/dunlop-cx-200-2024",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103085_1.jpg?v=1762452053"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-dunlop-cx-200-tour-16x19",
+      "brand": "Dunlop",
+      "model": "CX 200 Tour 16x19",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103084_1.jpg?v=1762452053",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-dunlop-cx-200-tour-16x19.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/dunlop-cx-200-tour-16x19-2024",
+      "retailer_url": "https://www.holabirdsports.com/products/dunlop-cx-200-tour-16x19-2024",
+      "source": "Holabird Sports exact product sitemap title: Dunlop CX 200 Tour 16x19",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/dunlop-cx-200-tour-16x19-2024",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103084_1.jpg?v=1762452053"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-dunlop-cx-200-tour-18x20",
+      "brand": "Dunlop",
+      "model": "CX 200 Tour 18x20",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103083_1.jpg?v=1762452052",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-dunlop-cx-200-tour-18x20.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/dunlop-cx-200-tour-18x20-2024",
+      "retailer_url": "https://www.holabirdsports.com/products/dunlop-cx-200-tour-18x20-2024",
+      "source": "Holabird Sports exact product sitemap title: Dunlop CX 200 Tour 18x20",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/dunlop-cx-200-tour-18x20-2024",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103083_1.jpg?v=1762452052"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-dunlop-cx-400-tour",
+      "brand": "Dunlop",
+      "model": "CX 400",
+      "variant": "Tour",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103088_1.jpg?v=1762452055",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-dunlop-cx-400-tour.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/dunlop-cx-400-tour",
+      "retailer_url": "https://www.holabirdsports.com/products/dunlop-cx-400-tour",
+      "source": "Holabird Sports exact product sitemap title: Dunlop CX 400 Tour",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/dunlop-cx-400-tour",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103088_1.jpg?v=1762452055"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-dunlop-fx-500",
+      "brand": "Dunlop",
+      "model": "FX 500",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103313_1.jpg?v=1761772124",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-dunlop-fx-500.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/dunlop-fx-500-2026",
+      "retailer_url": "https://www.holabirdsports.com/products/dunlop-fx-500-2026",
+      "source": "Holabird Sports exact product sitemap title: Dunlop FX 500 2026",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/dunlop-fx-500-2026",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103313_1.jpg?v=1761772124"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-dunlop-fx-500-tour",
+      "brand": "Dunlop",
+      "model": "FX 500",
+      "variant": "Tour",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103312_1.jpg?v=1761772122",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-dunlop-fx-500-tour.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/dunlop-fx-500-tour-98",
+      "retailer_url": "https://www.holabirdsports.com/products/dunlop-fx-500-tour-98",
+      "source": "Holabird Sports exact product sitemap title: Dunlop FX 500 Tour 98",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/dunlop-fx-500-tour-98",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103312_1.jpg?v=1761772122"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-dunlop-lx-1000",
+      "brand": "Dunlop",
+      "model": "LX 1000",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103135_1.jpg?v=1762455244",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-dunlop-lx-1000.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/dunlop-lx-1000-2024",
+      "retailer_url": "https://www.holabirdsports.com/products/dunlop-lx-1000-2024",
+      "source": "Holabird Sports exact product sitemap title: Dunlop LX 1000",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/dunlop-lx-1000-2024",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103135_1.jpg?v=1762455244"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-dunlop-sx-300",
+      "brand": "Dunlop",
+      "model": "SX 300",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103193_1.jpg?v=1736978759",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-dunlop-sx-300.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/dunlop-sx-300-2025",
+      "retailer_url": "https://www.holabirdsports.com/products/dunlop-sx-300-2025",
+      "source": "Holabird Sports exact product sitemap title: Dunlop SX 300",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/dunlop-sx-300-2025",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103193_1.jpg?v=1736978759"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-dunlop-sx-300-tour",
+      "brand": "Dunlop",
+      "model": "SX 300",
+      "variant": "Tour",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103192_1.jpg?v=1736978762",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-dunlop-sx-300-tour.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/dunlop-sx-300-tour-2025",
+      "retailer_url": "https://www.holabirdsports.com/products/dunlop-sx-300-tour-2025",
+      "source": "Holabird Sports exact product sitemap title: Dunlop SX 300 Tour",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/dunlop-sx-300-tour-2025",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103192_1.jpg?v=1736978762"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-head-boom-mp",
+      "brand": "HEAD",
+      "model": "Boom",
+      "variant": "MP",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103303_1.jpg?v=1771859248",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-head-boom-mp.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/head-boom-mp-2026",
+      "retailer_url": "https://www.holabirdsports.com/products/head-boom-mp-2026",
+      "source": "Holabird Sports exact product sitemap title: HEAD Boom MP 2026",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/head-boom-mp-2026",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103303_1.jpg?v=1771859248"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-head-boom-pro-2024",
+      "brand": "HEAD",
+      "model": "Boom Pro 2024",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103048_1.jpg?v=1762452916",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-head-boom-pro-2024.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/head-boom-pro-2024",
+      "retailer_url": "https://www.holabirdsports.com/products/head-boom-pro-2024",
+      "source": "Holabird Sports exact product sitemap title: HEAD Boom Pro 2024",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/head-boom-pro-2024",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103048_1.jpg?v=1762452916"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-head-extreme-mp",
+      "brand": "HEAD",
+      "model": "Extreme",
+      "variant": "MP",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103380_1.jpg?v=1782065658",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-head-extreme-mp.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/head-extreme-mp-2026",
+      "retailer_url": "https://www.holabirdsports.com/products/head-extreme-mp-2026",
+      "source": "Holabird Sports exact product sitemap title: HEAD Extreme MP 2026",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/head-extreme-mp-2026",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103380_1.jpg?v=1782065658"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-head-gravity-mp",
+      "brand": "HEAD",
+      "model": "Gravity",
+      "variant": "MP",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103178_1.jpg?v=1734038009",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-head-gravity-mp.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/head-gravity-mp-l-2025",
+      "retailer_url": "https://www.holabirdsports.com/products/head-gravity-mp-l-2025",
+      "source": "Holabird Sports exact product sitemap title: HEAD Gravity MP L 2025",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/head-gravity-mp-l-2025",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103178_1.jpg?v=1734038009"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-head-gravity-mp-2025",
+      "brand": "HEAD",
+      "model": "Gravity MP 2025",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103177_1.jpg?v=1734038010",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-head-gravity-mp-2025.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/head-gravity-mp-2025",
+      "retailer_url": "https://www.holabirdsports.com/products/head-gravity-mp-2025",
+      "source": "Holabird Sports exact product sitemap title: HEAD Gravity MP 2025",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/head-gravity-mp-2025",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103177_1.jpg?v=1734038010"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-head-gravity-pro-2025",
+      "brand": "HEAD",
+      "model": "Gravity Pro 2025",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103175_1.jpg?v=1734038008",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-head-gravity-pro-2025.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/head-gravity-pro-2025",
+      "retailer_url": "https://www.holabirdsports.com/products/head-gravity-pro-2025",
+      "source": "Holabird Sports exact product sitemap title: HEAD Gravity Pro 2025",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/head-gravity-pro-2025",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103175_1.jpg?v=1734038008"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-head-prestige-pro-2023",
+      "brand": "HEAD",
+      "model": "Prestige Pro 2023",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103015_1.jpg?v=1762450945",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-head-prestige-pro-2023.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/head-prestige-pro-2023",
+      "retailer_url": "https://www.holabirdsports.com/products/head-prestige-pro-2023",
+      "source": "Holabird Sports exact product sitemap title: HEAD Prestige Pro 2023",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/head-prestige-pro-2023",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103015_1.jpg?v=1762450945"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-head-radical-mp-2025",
+      "brand": "HEAD",
+      "model": "Radical MP 2025",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103183_1.jpg?v=1740495953",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-head-radical-mp-2025.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/head-radical-mp-2025",
+      "retailer_url": "https://www.holabirdsports.com/products/head-radical-mp-2025",
+      "source": "Holabird Sports exact product sitemap title: HEAD Radical MP 2025",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/head-radical-mp-2025",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103183_1.jpg?v=1740495953"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-head-radical-pro-2025",
+      "brand": "HEAD",
+      "model": "Radical Pro 2025",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103182_1.jpg?v=1740495965",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-head-radical-pro-2025.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/head-radical-pro-2025",
+      "retailer_url": "https://www.holabirdsports.com/products/head-radical-pro-2025",
+      "source": "Holabird Sports exact product sitemap title: HEAD Radical Pro 2025",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/head-radical-pro-2025",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103182_1.jpg?v=1740495965"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-head-radical-team-2025",
+      "brand": "HEAD",
+      "model": "Radical Team 2025",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103184_1.jpg?v=1740495936",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-head-radical-team-2025.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/head-radical-team-2025",
+      "retailer_url": "https://www.holabirdsports.com/products/head-radical-team-2025",
+      "source": "Holabird Sports exact product sitemap title: HEAD Radical Team 2025",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/head-radical-team-2025",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103184_1.jpg?v=1740495936"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-head-speed-mp",
+      "brand": "HEAD",
+      "model": "Speed",
+      "variant": "MP",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103294_1.jpg?v=1767636855",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-head-speed-mp.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/head-speed-mp-2026",
+      "retailer_url": "https://www.holabirdsports.com/products/head-speed-mp-2026",
+      "source": "Holabird Sports exact product sitemap title: HEAD Speed MP 2026",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/head-speed-mp-2026",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103294_1.jpg?v=1767636855"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-head-speed-pro",
+      "brand": "HEAD",
+      "model": "Speed",
+      "variant": "Pro",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103292_1.jpg?v=1767636849",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-head-speed-pro.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/head-speed-pro-2026",
+      "retailer_url": "https://www.holabirdsports.com/products/head-speed-pro-2026",
+      "source": "Holabird Sports exact product sitemap title: HEAD Speed Pro 2026",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/head-speed-pro-2026",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103292_1.jpg?v=1767636849"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-head-speed-pro-2024",
+      "brand": "HEAD",
+      "model": "Speed Pro 2024",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103054_1.jpg?v=1762452132",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-head-speed-pro-2024.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/head-speed-pro-2024",
+      "retailer_url": "https://www.holabirdsports.com/products/head-speed-pro-2024",
+      "source": "Holabird Sports exact product sitemap title: HEAD Speed Pro 2024",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/head-speed-pro-2024",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103054_1.jpg?v=1762452132"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-prokennex-black-ace-pro",
+      "brand": "ProKennex",
+      "model": "Black Ace",
+      "variant": "Pro",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103393_1.jpg?v=1783530409",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-prokennex-black-ace-pro.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/prokennex-black-ace-pro-97-305g",
+      "retailer_url": "https://www.holabirdsports.com/products/prokennex-black-ace-pro-97-305g",
+      "source": "Holabird Sports exact product sitemap title: ProKennex Black Ace Pro 97 305g",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/prokennex-black-ace-pro-97-305g",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103393_1.jpg?v=1783530409"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-prokennex-ki-10",
+      "brand": "ProKennex",
+      "model": "Ki 10",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/102966_1.jpg?v=1762447079",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-prokennex-ki-10.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/prokennex-ki-10-305g-2023",
+      "retailer_url": "https://www.holabirdsports.com/products/prokennex-ki-10-305g-2023",
+      "source": "Holabird Sports exact product sitemap title: ProKennex Ki 10 305g",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/prokennex-ki-10-305g-2023",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/102966_1.jpg?v=1762447079"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-solinco-blackout-285",
+      "brand": "Solinco",
+      "model": "Blackout 285",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/102924_1.jpg?v=1762444704",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-solinco-blackout-285.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/solinco-blackout-285",
+      "retailer_url": "https://www.holabirdsports.com/products/solinco-blackout-285",
+      "source": "Holabird Sports exact product sitemap title: Solinco Blackout 285",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/solinco-blackout-285",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/102924_1.jpg?v=1762444704"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-solinco-blackout-300",
+      "brand": "Solinco",
+      "model": "Blackout 300",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/102925_1.jpg?v=1762444705",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-solinco-blackout-300.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/solinco-blackout-300",
+      "retailer_url": "https://www.holabirdsports.com/products/solinco-blackout-300",
+      "source": "Holabird Sports exact product sitemap title: Solinco Blackout 300",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/solinco-blackout-300",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/102925_1.jpg?v=1762444705"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-solinco-whiteout-305-18x20",
+      "brand": "Solinco",
+      "model": "Whiteout 305 18x20",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/103009_1.jpg?v=1762448923",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-solinco-whiteout-305-18x20.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/solinco-whiteout-305-18x20",
+      "retailer_url": "https://www.holabirdsports.com/products/solinco-whiteout-305-18x20",
+      "source": "Holabird Sports exact product sitemap title: Solinco Whiteout 305 18x20",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/solinco-whiteout-305-18x20",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/103009_1.jpg?v=1762448923"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-volkl-c10-pro",
+      "brand": "Volkl",
+      "model": "C10",
+      "variant": "Pro",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103290_1.jpg?v=1762279591",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-volkl-c10-pro.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/volkl-c10-pro-version-10-330g",
+      "retailer_url": "https://www.holabirdsports.com/products/volkl-c10-pro-version-10-330g",
+      "source": "Holabird Sports exact product sitemap title: Volkl C10 Pro Version 10 330g",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/volkl-c10-pro-version-10-330g",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103290_1.jpg?v=1762279591"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-volkl-vostra-v8-300g",
+      "brand": "Volkl",
+      "model": "Vostra V8 300g",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103063_1.jpg?v=1762451970",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-volkl-vostra-v8-300g.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/volkl-vostra-v8-300g-v13802",
+      "retailer_url": "https://www.holabirdsports.com/products/volkl-vostra-v8-300g-v13802",
+      "source": "Holabird Sports exact product sitemap title: Volkl Vostra V8 300g",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/volkl-vostra-v8-300g-v13802",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103063_1.jpg?v=1762451970"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-wilson-blade-100l",
+      "brand": "Wilson",
+      "model": "Blade 100L",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103333_1.jpg?v=1774890543",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-wilson-blade-100l.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/wilson-blade-100l-v10",
+      "retailer_url": "https://www.holabirdsports.com/products/wilson-blade-100l-v10",
+      "source": "Holabird Sports exact product sitemap title: Wilson Blade 100L v10",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/wilson-blade-100l-v10",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103333_1.jpg?v=1774890543"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-wilson-blade-100l-v9",
+      "brand": "Wilson",
+      "model": "Blade 100L",
+      "variant": "v9",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103074_1.jpg?v=1762452393",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-wilson-blade-100l-v9.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/wilson-blade-100l-v9",
+      "retailer_url": "https://www.holabirdsports.com/products/wilson-blade-100l-v9",
+      "source": "Holabird Sports exact product sitemap title: Wilson Blade 100L v9",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/wilson-blade-100l-v9",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103074_1.jpg?v=1762452393"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-wilson-blade-104-v9",
+      "brand": "Wilson",
+      "model": "Blade 104",
+      "variant": "v9",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103073_1.jpg?v=1762452392",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-wilson-blade-104-v9.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/wilson-blade-104-v9",
+      "retailer_url": "https://www.holabirdsports.com/products/wilson-blade-104-v9",
+      "source": "Holabird Sports exact product sitemap title: Wilson Blade 104 v9",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/wilson-blade-104-v9",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103073_1.jpg?v=1762452392"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-wilson-blade-98",
+      "brand": "Wilson",
+      "model": "Blade 98",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103071_1.jpg?v=1762452392",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-wilson-blade-98.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/wilson-blade-98-18x20-v9",
+      "retailer_url": "https://www.holabirdsports.com/products/wilson-blade-98-18x20-v9",
+      "source": "Holabird Sports exact product sitemap title: Wilson Blade 98 (18x20) v9",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/wilson-blade-98-18x20-v9",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103071_1.jpg?v=1762452392"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-wilson-clash-100-pro-v3",
+      "brand": "Wilson",
+      "model": "Clash 100",
+      "variant": "v3",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103144_1.jpg?v=1734477220",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-wilson-clash-100-pro-v3.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/wilson-clash-100-v3",
+      "retailer_url": "https://www.holabirdsports.com/products/wilson-clash-100-v3",
+      "source": "Holabird Sports exact product sitemap title: Wilson Clash 100 v3",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/wilson-clash-100-v3",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103144_1.jpg?v=1734477220"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-wilson-clash-100l-v3",
+      "brand": "Wilson",
+      "model": "Clash 100L",
+      "variant": "v3",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103145_1.jpg?v=1734477220",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-wilson-clash-100l-v3.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/wilson-clash-100l-v3",
+      "retailer_url": "https://www.holabirdsports.com/products/wilson-clash-100l-v3",
+      "source": "Holabird Sports exact product sitemap title: Wilson Clash 100L v3",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/wilson-clash-100l-v3",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103145_1.jpg?v=1734477220"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-wilson-pro-staff-97",
+      "brand": "Wilson",
+      "model": "Pro Staff 97",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103319_1.jpg?v=1768332554",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-wilson-pro-staff-97.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/wilson-pro-staff-97-classic",
+      "retailer_url": "https://www.holabirdsports.com/products/wilson-pro-staff-97-classic",
+      "source": "Holabird Sports exact product sitemap title: Wilson Pro Staff 97 Classic",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/wilson-pro-staff-97-classic",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103319_1.jpg?v=1768332554"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-wilson-pro-staff-97-v14",
+      "brand": "Wilson",
+      "model": "Pro Staff 97",
+      "variant": "v14",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103338_1.jpg?v=1774890542",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-wilson-pro-staff-97-v14.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/wilson-pro-staff-97-v14-session-soire-roland-garros-2026",
+      "retailer_url": "https://www.holabirdsports.com/products/wilson-pro-staff-97-v14-session-soire-roland-garros-2026",
+      "source": "Holabird Sports exact product sitemap title: Wilson Pro Staff 97 v14 Session Soire Roland Garros 2026",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/wilson-pro-staff-97-v14-session-soire-roland-garros-2026",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103338_1.jpg?v=1774890542"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-wilson-rf-01",
+      "brand": "Wilson",
+      "model": "RF 01",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103118_1.jpg?v=1762454934",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-wilson-rf-01.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/wilson-rf-01",
+      "retailer_url": "https://www.holabirdsports.com/products/wilson-rf-01",
+      "source": "Holabird Sports exact product sitemap title: Wilson RF 01",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/wilson-rf-01",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103118_1.jpg?v=1762454934"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-wilson-ultra-100-v5",
+      "brand": "Wilson",
+      "model": "Ultra 100",
+      "variant": "v5",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103231_1.jpg?v=1750792042",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-wilson-ultra-100-v5.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/wilson-ultra-100-v5",
+      "retailer_url": "https://www.holabirdsports.com/products/wilson-ultra-100-v5",
+      "source": "Holabird Sports exact product sitemap title: Wilson Ultra 100 v5",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/wilson-ultra-100-v5",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103231_1.jpg?v=1750792042"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-wilson-ultra-100l-v5",
+      "brand": "Wilson",
+      "model": "Ultra 100L",
+      "variant": "v5",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103232_1.jpg?v=1750792043",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-wilson-ultra-100l-v5.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/wilson-ultra-100l-v5",
+      "retailer_url": "https://www.holabirdsports.com/products/wilson-ultra-100l-v5",
+      "source": "Holabird Sports exact product sitemap title: Wilson Ultra 100L v5",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/wilson-ultra-100l-v5",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103232_1.jpg?v=1750792043"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-yonex-ezone-100",
+      "brand": "Yonex",
+      "model": "Ezone 100",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://us.yonex.com/cdn/shop/files/EZ08100_Blast_Blue_1.jpg?v=1739910270",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-yonex-ezone-100.jpg",
+      "image_verified": true,
+      "product_url": "https://us.yonex.com/products/ezone-100",
+      "official_url": "https://us.yonex.com/products/ezone-100",
+      "source": "Yonex USA exact official product page: EZONE 100",
+      "source_type": "exact_official_product",
+      "source_links": [
+        "https://us.yonex.com/products/ezone-100",
+        "https://us.yonex.com/cdn/shop/files/EZ08100_Blast_Blue_1.jpg?v=1739910270"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-yonex-ezone-98",
+      "brand": "Yonex",
+      "model": "Ezone 98",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://us.yonex.com/cdn/shop/files/EZ0898_BlastBlue_5868.jpg?v=1739481973",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-yonex-ezone-98.jpg",
+      "image_verified": true,
+      "product_url": "https://us.yonex.com/products/ezone-98",
+      "official_url": "https://us.yonex.com/products/ezone-98",
+      "source": "Yonex USA exact official product page: EZONE 98",
+      "source_type": "exact_official_product",
+      "source_links": [
+        "https://us.yonex.com/products/ezone-98",
+        "https://us.yonex.com/cdn/shop/files/EZ0898_BlastBlue_5868.jpg?v=1739481973"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-yonex-ezone-ace",
+      "brand": "Yonex",
+      "model": "Ezone Ace",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://us.yonex.com/cdn/shop/files/ezone08-ace-1.jpg?v=1778779733",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-yonex-ezone-ace.jpg",
+      "image_verified": true,
+      "product_url": "https://us.yonex.com/products/ezone-ace",
+      "official_url": "https://us.yonex.com/products/ezone-ace",
+      "source": "Yonex USA exact official product page: EZONE ACE (STRUNG)",
+      "source_type": "exact_official_product",
+      "source_links": [
+        "https://us.yonex.com/products/ezone-ace",
+        "https://us.yonex.com/cdn/shop/files/ezone08-ace-1.jpg?v=1778779733"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-yonex-percept-100",
+      "brand": "Yonex",
+      "model": "Percept 100",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://us.yonex.com/cdn/shop/files/ALL_01PE100_472-2.jpg?v=1755875147",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-yonex-percept-100.jpg",
+      "image_verified": true,
+      "product_url": "https://us.yonex.com/products/percept-100",
+      "official_url": "https://us.yonex.com/products/percept-100",
+      "source": "Yonex USA exact official product page: PERCEPT 100",
+      "source_type": "exact_official_product",
+      "source_links": [
+        "https://us.yonex.com/products/percept-100",
+        "https://us.yonex.com/cdn/shop/files/ALL_01PE100_472-2.jpg?v=1755875147"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-yonex-vcore-100",
+      "brand": "Yonex",
+      "model": "VCORE 100",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/103265_1.jpg?v=1764713169",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-yonex-vcore-100.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/yonex-vcore-100-300g-ruby-red",
+      "retailer_url": "https://www.holabirdsports.com/products/yonex-vcore-100-300g-ruby-red",
+      "source": "Holabird Sports exact product sitemap title: Yonex VCORE 100 300g Ruby Red",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/yonex-vcore-100-300g-ruby-red",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/103265_1.jpg?v=1764713169"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "racket-yonex-vcore-98",
+      "brand": "Yonex",
+      "model": "VCORE 98",
+      "variant": "",
+      "category": "Racket",
+      "image_url": "https://us.yonex.com/cdn/shop/files/ALL_08VC98_338-2.jpg?v=1765566022",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/racket-yonex-vcore-98.jpg",
+      "image_verified": true,
+      "product_url": "https://us.yonex.com/products/vcore-98",
+      "official_url": "https://us.yonex.com/products/vcore-98",
+      "source": "Yonex USA exact official product page: VCORE 98",
+      "source_type": "exact_official_product",
+      "source_links": [
+        "https://us.yonex.com/products/vcore-98",
+        "https://us.yonex.com/cdn/shop/files/ALL_08VC98_338-2.jpg?v=1765566022"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "shoes-adidas-adizero-ubersonic-5",
+      "brand": "Adidas",
+      "model": "Adizero Ubersonic 5",
+      "variant": "",
+      "category": "Shoes",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/119116_3.jpg?v=1779480526",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/shoes-adidas-adizero-ubersonic-5.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/adidas-adizero-ubersonic-5-womens-frozen-purple-white-aurora-ink",
+      "retailer_url": "https://www.holabirdsports.com/products/adidas-adizero-ubersonic-5-womens-frozen-purple-white-aurora-ink",
+      "source": "Holabird Sports exact product sitemap title: adidas Adizero Ubersonic 5 Women's Frozen Purple/White/Aurora Ink",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/adidas-adizero-ubersonic-5-womens-frozen-purple-white-aurora-ink",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/119116_3.jpg?v=1779480526"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "shoes-adidas-avacourt-2",
+      "brand": "Adidas",
+      "model": "Avacourt 2",
+      "variant": "",
+      "category": "Shoes",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/118193_3.jpg?v=1743019632",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/shoes-adidas-avacourt-2.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/adidas-avacourt-2-womens-lucid-lemon-zero-metallic-white",
+      "retailer_url": "https://www.holabirdsports.com/products/adidas-avacourt-2-womens-lucid-lemon-zero-metallic-white",
+      "source": "Holabird Sports exact product sitemap title: adidas AvaCourt 2 Women's Lucid Lemon/Zero Metallic/White",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/adidas-avacourt-2-womens-lucid-lemon-zero-metallic-white",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/118193_3.jpg?v=1743019632"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "shoes-adidas-barricade",
+      "brand": "Adidas",
+      "model": "Barricade",
+      "variant": "",
+      "category": "Shoes",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/121598_3.jpg?v=1779387248",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/shoes-adidas-barricade.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/adidas-barricade-junior-core-black-white",
+      "retailer_url": "https://www.holabirdsports.com/products/adidas-barricade-junior-core-black-white",
+      "source": "Holabird Sports exact product sitemap title: adidas Barricade Junior Core Black/White",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/adidas-barricade-junior-core-black-white",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/121598_3.jpg?v=1779387248"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "shoes-adidas-defiant-speed-2",
+      "brand": "Adidas",
+      "model": "Defiant Speed 2",
+      "variant": "",
+      "category": "Shoes",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/119128_3.jpg?v=1784322530",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/shoes-adidas-defiant-speed-2.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/adidas-defiant-speed-2-mens-distilled-pink-white",
+      "retailer_url": "https://www.holabirdsports.com/products/adidas-defiant-speed-2-mens-distilled-pink-white",
+      "source": "Holabird Sports exact product sitemap title: adidas Defiant Speed 2 Men's Distilled Pink/White",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/adidas-defiant-speed-2-mens-distilled-pink-white",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/119128_3.jpg?v=1784322530"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "shoes-adidas-solematch-control",
+      "brand": "Adidas",
+      "model": "Solematch Control",
+      "variant": "",
+      "category": "Shoes",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/119123_3.jpg?v=1784322469",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/shoes-adidas-solematch-control.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/adidas-solematch-control-mens-white-maroon-tech-grey-metallic",
+      "retailer_url": "https://www.holabirdsports.com/products/adidas-solematch-control-mens-white-maroon-tech-grey-metallic",
+      "source": "Holabird Sports exact product sitemap title: adidas SoleMatch Control Men's White/Maroon/Tech Grey Metallic",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/adidas-solematch-control-mens-white-maroon-tech-grey-metallic",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/119123_3.jpg?v=1784322469"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "shoes-asics-court-ff",
+      "brand": "ASICS",
+      "model": "Court FF",
+      "variant": "",
+      "category": "Shoes",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/117184_3.jpg?v=1762447705",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/shoes-asics-court-ff.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/asics-court-ff-3-mens-white-black",
+      "retailer_url": "https://www.holabirdsports.com/products/asics-court-ff-3-mens-white-black",
+      "source": "Holabird Sports exact product sitemap title: ASICS Court FF 3 Men's White/Black",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/asics-court-ff-3-mens-white-black",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/117184_3.jpg?v=1762447705"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "shoes-asics-gel-dedicate-8",
+      "brand": "ASICS",
+      "model": "GEL-Dedicate 8",
+      "variant": "",
+      "category": "Shoes",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/117417_3.jpg?v=1762449376",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/shoes-asics-gel-dedicate-8.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/asics-gel-dedicate-8-mens-white-black",
+      "retailer_url": "https://www.holabirdsports.com/products/asics-gel-dedicate-8-mens-white-black",
+      "source": "Holabird Sports exact product sitemap title: ASICS GEL-Dedicate 8 Men's White/Black",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/asics-gel-dedicate-8-mens-white-black",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/117417_3.jpg?v=1762449376"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "shoes-asics-gel-resolution-x",
+      "brand": "ASICS",
+      "model": "GEL-Resolution X",
+      "variant": "",
+      "category": "Shoes",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/121605_3.jpg?v=1780679128",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/shoes-asics-gel-resolution-x.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/asics-gel-resolution-x-junior-white-midnight",
+      "retailer_url": "https://www.holabirdsports.com/products/asics-gel-resolution-x-junior-white-midnight",
+      "source": "Holabird Sports exact product sitemap title: ASICS GEL-Resolution X Junior White/Midnight",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/asics-gel-resolution-x-junior-white-midnight",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/121605_3.jpg?v=1780679128"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "shoes-asics-gel-resolution-x-clay",
+      "brand": "ASICS",
+      "model": "GEL-Resolution X Clay",
+      "variant": "",
+      "category": "Shoes",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/118121_3.jpg?v=1736521558",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/shoes-asics-gel-resolution-x-clay.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/asics-gel-resolution-x-clay-mens-white-black",
+      "retailer_url": "https://www.holabirdsports.com/products/asics-gel-resolution-x-clay-mens-white-black",
+      "source": "Holabird Sports exact product sitemap title: ASICS GEL-Resolution X Clay Men's White/Black",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/asics-gel-resolution-x-clay-mens-white-black",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/118121_3.jpg?v=1736521558"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "shoes-asics-solution-speed-ff",
+      "brand": "ASICS",
+      "model": "Solution Speed FF",
+      "variant": "",
+      "category": "Shoes",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/118822_3.jpg?v=1767726518",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/shoes-asics-solution-speed-ff.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/asics-solution-speed-ff-4-mens-white-black",
+      "retailer_url": "https://www.holabirdsports.com/products/asics-solution-speed-ff-4-mens-white-black",
+      "source": "Holabird Sports exact product sitemap title: ASICS Solution Speed FF 4 Men's White/Black",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/asics-solution-speed-ff-4-mens-white-black",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/118822_3.jpg?v=1767726518"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "shoes-babolat-jet-mach",
+      "brand": "Babolat",
+      "model": "Jet Mach",
+      "variant": "",
+      "category": "Shoes",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/119746_3.jpg?v=1784916905",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/shoes-babolat-jet-mach.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/babolat-jet-mach-4-mens-spectra",
+      "retailer_url": "https://www.holabirdsports.com/products/babolat-jet-mach-4-mens-spectra",
+      "source": "Holabird Sports exact product sitemap title: Babolat Jet Mach 4 Men's Spectra",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/babolat-jet-mach-4-mens-spectra",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/119746_3.jpg?v=1784916905"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "shoes-babolat-jet-mach-3",
+      "brand": "Babolat",
+      "model": "Jet Mach 3",
+      "variant": "",
+      "category": "Shoes",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/121566_3.jpg?v=1737147976",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/shoes-babolat-jet-mach-3.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/babolat-jet-mach-3-junior-sodalite-blue",
+      "retailer_url": "https://www.holabirdsports.com/products/babolat-jet-mach-3-junior-sodalite-blue",
+      "source": "Holabird Sports exact product sitemap title: Babolat Jet Mach 3 Junior Sodalite Blue",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/babolat-jet-mach-3-junior-sodalite-blue",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/121566_3.jpg?v=1737147976"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "shoes-babolat-jet-tere-2",
+      "brand": "Babolat",
+      "model": "Jet Tere 2",
+      "variant": "",
+      "category": "Shoes",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/118583_3.jpg?v=1737137403",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/shoes-babolat-jet-tere-2.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/babolat-jet-tere-2-mens-black-white",
+      "retailer_url": "https://www.holabirdsports.com/products/babolat-jet-tere-2-mens-black-white",
+      "source": "Holabird Sports exact product sitemap title: Babolat Jet Tere 2 Men's Black/White",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/babolat-jet-tere-2-mens-black-white",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/118583_3.jpg?v=1737137403"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "shoes-babolat-movea-2",
+      "brand": "Babolat",
+      "model": "Movea 2",
+      "variant": "",
+      "category": "Shoes",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/450162_3.jpg?v=1784041512",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/shoes-babolat-movea-2.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/babolat-movea-2-mens-brown-cream",
+      "retailer_url": "https://www.holabirdsports.com/products/babolat-movea-2-mens-brown-cream",
+      "source": "Holabird Sports exact product sitemap title: Babolat Movea 2 Men's Brown/Cream",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/babolat-movea-2-mens-brown-cream",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/450162_3.jpg?v=1784041512"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "shoes-babolat-propulse-fury-3",
+      "brand": "Babolat",
+      "model": "Propulse Fury 3",
+      "variant": "",
+      "category": "Shoes",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/119375_3.jpg?v=1775596310",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/shoes-babolat-propulse-fury-3.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/babolat-propulse-fury-3-mens-sunny-lime",
+      "retailer_url": "https://www.holabirdsports.com/products/babolat-propulse-fury-3-mens-sunny-lime",
+      "source": "Holabird Sports exact product sitemap title: Babolat Propulse Fury 3 Men's Sunny Lime",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/babolat-propulse-fury-3-mens-sunny-lime",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/119375_3.jpg?v=1775596310"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "shoes-babolat-sfx-4",
+      "brand": "Babolat",
+      "model": "SFX 4",
+      "variant": "",
+      "category": "Shoes",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/118591_3.jpg?v=1737137433",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/shoes-babolat-sfx-4.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/babolat-sfx-4-womens-white-silver",
+      "retailer_url": "https://www.holabirdsports.com/products/babolat-sfx-4-womens-white-silver",
+      "source": "Holabird Sports exact product sitemap title: Babolat SFX 4 Women's White/Silver",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/babolat-sfx-4-womens-white-silver",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/118591_3.jpg?v=1737137433"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "shoes-diadora-b-icon-2",
+      "brand": "Diadora",
+      "model": "B.Icon 2",
+      "variant": "",
+      "category": "Shoes",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/117709_3.jpg?v=1762452412",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/shoes-diadora-b-icon-2.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/diadora-b-icon-2-ag-womens-surf-spray-black",
+      "retailer_url": "https://www.holabirdsports.com/products/diadora-b-icon-2-ag-womens-surf-spray-black",
+      "source": "Holabird Sports exact product sitemap title: Diadora B.Icon 2 AG Women's Surf Spray/Black",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/diadora-b-icon-2-ag-womens-surf-spray-black",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/117709_3.jpg?v=1762452412"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "shoes-head-motion-pro",
+      "brand": "HEAD",
+      "model": "Motion",
+      "variant": "Pro",
+      "category": "Shoes",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/370252_3.jpg?v=1738620603",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/shoes-head-motion-pro.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/head-motion-pro-pickleball-womens-plum-white",
+      "retailer_url": "https://www.holabirdsports.com/products/head-motion-pro-pickleball-womens-plum-white",
+      "source": "Holabird Sports exact product sitemap title: HEAD Motion Pro Pickleball Women's Plum/White",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/head-motion-pro-pickleball-womens-plum-white",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/370252_3.jpg?v=1738620603"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "shoes-head-revolt-pro-4-5",
+      "brand": "HEAD",
+      "model": "Revolt Pro 4.5",
+      "variant": "",
+      "category": "Shoes",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/118361_3.jpg?v=1742504944",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/shoes-head-revolt-pro-4-5.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/head-revolt-pro-4-5-womens-black-plum",
+      "retailer_url": "https://www.holabirdsports.com/products/head-revolt-pro-4-5-womens-black-plum",
+      "source": "Holabird Sports exact product sitemap title: HEAD Revolt Pro 4.5 Women's Black/Plum",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/head-revolt-pro-4-5-womens-black-plum",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/118361_3.jpg?v=1742504944"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "shoes-head-sprint-pro-4-0",
+      "brand": "HEAD",
+      "model": "Sprint Pro 4.0",
+      "variant": "",
+      "category": "Shoes",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/121586_3.jpg?v=1769105261",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/shoes-head-sprint-pro-4-0.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/head-sprint-pro-4-0-junior-blueberry-teal",
+      "retailer_url": "https://www.holabirdsports.com/products/head-sprint-pro-4-0-junior-blueberry-teal",
+      "source": "Holabird Sports exact product sitemap title: HEAD Sprint Pro 4.0 Junior Blueberry/Teal",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/head-sprint-pro-4-0-junior-blueberry-teal",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/121586_3.jpg?v=1769105261"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "shoes-head-sprint-team-4-0",
+      "brand": "HEAD",
+      "model": "Sprint Team 4.0",
+      "variant": "",
+      "category": "Shoes",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/118367_3.jpg?v=1738343227",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/shoes-head-sprint-team-4-0.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/head-sprint-team-4-0-womens-white-coral",
+      "retailer_url": "https://www.holabirdsports.com/products/head-sprint-team-4-0-womens-white-coral",
+      "source": "Holabird Sports exact product sitemap title: HEAD Sprint Team 4.0 Women's White/Coral",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/head-sprint-team-4-0-womens-white-coral",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/118367_3.jpg?v=1738343227"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "shoes-k-swiss-express-light-3",
+      "brand": "K-Swiss",
+      "model": "Express Light 3",
+      "variant": "",
+      "category": "Shoes",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/450088_3.jpg?v=1770229181",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/shoes-k-swiss-express-light-3.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/k-swiss-express-light-3-womens-white-soft-neon-blue-neon-bubble-gum",
+      "retailer_url": "https://www.holabirdsports.com/products/k-swiss-express-light-3-womens-white-soft-neon-blue-neon-bubble-gum",
+      "source": "Holabird Sports exact product sitemap title: K-Swiss Express Light 3 Padel Women's White/SoftNeonBlue/NeonBubbleGum",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/k-swiss-express-light-3-womens-white-soft-neon-blue-neon-bubble-gum",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/450088_3.jpg?v=1770229181"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "shoes-k-swiss-hypercourt-express",
+      "brand": "K-Swiss",
+      "model": "Hypercourt Express",
+      "variant": "",
+      "category": "Shoes",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/118878_3.jpg?v=1770408927",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/shoes-k-swiss-hypercourt-express.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/k-swiss-hypercourt-express-3-mens-black-white",
+      "retailer_url": "https://www.holabirdsports.com/products/k-swiss-hypercourt-express-3-mens-black-white",
+      "source": "Holabird Sports exact product sitemap title: K-Swiss Hypercourt Express 3 Men's Black/White",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/k-swiss-hypercourt-express-3-mens-black-white",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/118878_3.jpg?v=1770408927"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "shoes-k-swiss-hypercourt-express-2",
+      "brand": "K-Swiss",
+      "model": "Hypercourt Express 2",
+      "variant": "",
+      "category": "Shoes",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/115644_3.jpg?v=1762440740",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/shoes-k-swiss-hypercourt-express-2.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/k-swiss-hypercourt-express-2-womens-white-black",
+      "retailer_url": "https://www.holabirdsports.com/products/k-swiss-hypercourt-express-2-womens-white-black",
+      "source": "Holabird Sports exact product sitemap title: K-Swiss Hypercourt Express 2 Women's White/Black",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/k-swiss-hypercourt-express-2-womens-white-black",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/115644_3.jpg?v=1762440740"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "shoes-k-swiss-hypercourt-supreme-2",
+      "brand": "K-Swiss",
+      "model": "Hypercourt Supreme 2",
+      "variant": "",
+      "category": "Shoes",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/118283_3.jpg?v=1734559605",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/shoes-k-swiss-hypercourt-supreme-2.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/k-swiss-hypercourt-supreme-2-mens-white-black",
+      "retailer_url": "https://www.holabirdsports.com/products/k-swiss-hypercourt-supreme-2-mens-white-black",
+      "source": "Holabird Sports exact product sitemap title: K-Swiss Hypercourt Supreme 2 Men's White/Black",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/k-swiss-hypercourt-supreme-2-mens-white-black",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/118283_3.jpg?v=1734559605"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "shoes-k-swiss-ultrashot",
+      "brand": "K-Swiss",
+      "model": "Ultrashot",
+      "variant": "",
+      "category": "Shoes",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/119279_3.jpg?v=1781125567",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/shoes-k-swiss-ultrashot.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/k-swiss-ultrashot-light-mens-white-carbon-baltic",
+      "retailer_url": "https://www.holabirdsports.com/products/k-swiss-ultrashot-light-mens-white-carbon-baltic",
+      "source": "Holabird Sports exact product sitemap title: K-Swiss Ultrashot Light Men's White/Carbon/Baltic",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/k-swiss-ultrashot-light-mens-white-carbon-baltic",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/119279_3.jpg?v=1781125567"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "shoes-k-swiss-ultrashot-4",
+      "brand": "K-Swiss",
+      "model": "Ultrashot 4",
+      "variant": "",
+      "category": "Shoes",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/118528_3.jpg?v=1753823132",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/shoes-k-swiss-ultrashot-4.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/k-swiss-ultrashot-4-mens-white-peacoat",
+      "retailer_url": "https://www.holabirdsports.com/products/k-swiss-ultrashot-4-mens-white-peacoat",
+      "source": "Holabird Sports exact product sitemap title: K-Swiss Ultrashot 4 Men's White/Peacoat",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/k-swiss-ultrashot-4-mens-white-peacoat",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/118528_3.jpg?v=1753823132"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "shoes-mizuno-wave-enforce-tour",
+      "brand": "Mizuno",
+      "model": "Wave Enforce",
+      "variant": "Tour",
+      "category": "Shoes",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/118097_3.jpg?v=1736287902",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/shoes-mizuno-wave-enforce-tour.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/mizuno-wave-enforce-tour-2-ac-mens-white-black",
+      "retailer_url": "https://www.holabirdsports.com/products/mizuno-wave-enforce-tour-2-ac-mens-white-black",
+      "source": "Holabird Sports exact product sitemap title: Mizuno Wave Enforce Tour 2 AC Men's White/Black",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/mizuno-wave-enforce-tour-2-ac-mens-white-black",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/118097_3.jpg?v=1736287902"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "shoes-new-balance-696v6",
+      "brand": "New Balance",
+      "model": "696v6",
+      "variant": "",
+      "category": "Shoes",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/118031_3.jpg?v=1762454338",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/shoes-new-balance-696v6.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/new-balance-696v6-womens-white-black",
+      "retailer_url": "https://www.holabirdsports.com/products/new-balance-696v6-womens-white-black",
+      "source": "Holabird Sports exact product sitemap title: New Balance 696v6 Women's White/Black",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/new-balance-696v6-womens-white-black",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/118031_3.jpg?v=1762454338"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "shoes-new-balance-806",
+      "brand": "New Balance",
+      "model": "806",
+      "variant": "",
+      "category": "Shoes",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/112946_3.jpg?v=1762439900",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/shoes-new-balance-806.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/new-balance-806-mens",
+      "retailer_url": "https://www.holabirdsports.com/products/new-balance-806-mens",
+      "source": "Holabird Sports exact product sitemap title: New Balance 806 Men's White",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/new-balance-806-mens",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/112946_3.jpg?v=1762439900"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "shoes-new-balance-coco-cg2",
+      "brand": "New Balance",
+      "model": "Coco CG2",
+      "variant": "",
+      "category": "Shoes",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/121491_3_5bd5e4af-783e-4e29-a57f-4cba7ee59e8e.jpg?v=1762455308",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/shoes-new-balance-coco-cg2.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/new-balance-coco-cg2-junior-white-black",
+      "retailer_url": "https://www.holabirdsports.com/products/new-balance-coco-cg2-junior-white-black",
+      "source": "Holabird Sports exact product sitemap title: New Balance Coco CG2 Junior White/Black",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/new-balance-coco-cg2-junior-white-black",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/121491_3_5bd5e4af-783e-4e29-a57f-4cba7ee59e8e.jpg?v=1762455308"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "shoes-nike-gp-challenge-1",
+      "brand": "Nike",
+      "model": "GP Challenge 1",
+      "variant": "",
+      "category": "Shoes",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/118674_3.jpg?v=1754510899",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/shoes-nike-gp-challenge-1.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/nike-gp-challenge-1-osaka-womens-picante-red-black",
+      "retailer_url": "https://www.holabirdsports.com/products/nike-gp-challenge-1-osaka-womens-picante-red-black",
+      "source": "Holabird Sports exact product sitemap title: Nike GP Challenge 1 Osaka Women's Picante Red/Black",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/nike-gp-challenge-1-osaka-womens-picante-red-black",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/118674_3.jpg?v=1754510899"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "shoes-nike-gp-challenge-pro",
+      "brand": "Nike",
+      "model": "GP Challenge",
+      "variant": "Pro",
+      "category": "Shoes",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/118403_3.jpg?v=1747339743",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/shoes-nike-gp-challenge-pro.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/nike-gp-challenge-pro-premium-womens-dusty-cactus-dark-team-red",
+      "retailer_url": "https://www.holabirdsports.com/products/nike-gp-challenge-pro-premium-womens-dusty-cactus-dark-team-red",
+      "source": "Holabird Sports exact product sitemap title: Nike GP Challenge Pro Premium Women's Dusty Cactus/Dark Team Red",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/nike-gp-challenge-pro-premium-womens-dusty-cactus-dark-team-red",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/118403_3.jpg?v=1747339743"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "shoes-nike-vapor-pro-3",
+      "brand": "Nike",
+      "model": "Vapor Pro 3",
+      "variant": "",
+      "category": "Shoes",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/118225_3.jpg?v=1736283968",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/shoes-nike-vapor-pro-3.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/nike-vapor-pro-3-mens-black-white",
+      "retailer_url": "https://www.holabirdsports.com/products/nike-vapor-pro-3-mens-black-white",
+      "source": "Holabird Sports exact product sitemap title: Nike Vapor Pro 3 Men's Black/White",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/nike-vapor-pro-3-mens-black-white",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/118225_3.jpg?v=1736283968"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "shoes-on-the-roger-advantage-pro",
+      "brand": "On",
+      "model": "THE ROGER Advantage",
+      "variant": "Pro",
+      "category": "Shoes",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/118237_3.jpg?v=1742332212",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/shoes-on-the-roger-advantage-pro.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/on-the-roger-advantage-pro-womens-white-chambray",
+      "retailer_url": "https://www.holabirdsports.com/products/on-the-roger-advantage-pro-womens-white-chambray",
+      "source": "Holabird Sports exact product sitemap title: On The Roger Advantage Pro Women's White/Chambray",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/on-the-roger-advantage-pro-womens-white-chambray",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/118237_3.jpg?v=1742332212"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "shoes-on-the-roger-clubhouse-pro",
+      "brand": "On",
+      "model": "THE ROGER Clubhouse",
+      "variant": "Pro",
+      "category": "Shoes",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/121519_3.jpg?v=1762454877",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/shoes-on-the-roger-clubhouse-pro.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/on-the-roger-clubhouse-pro-junior-black-eclipse",
+      "retailer_url": "https://www.holabirdsports.com/products/on-the-roger-clubhouse-pro-junior-black-eclipse",
+      "source": "Holabird Sports exact product sitemap title: On The Roger Clubhouse Pro Junior Black/Eclipse",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/on-the-roger-clubhouse-pro-junior-black-eclipse",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/121519_3.jpg?v=1762454877"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "shoes-on-the-roger-pro",
+      "brand": "On",
+      "model": "THE ROGER",
+      "variant": "Pro",
+      "category": "Shoes",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/118636_3.jpg?v=1761055577",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/shoes-on-the-roger-pro.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/on-the-roger-pro-womens-orchid-ice",
+      "retailer_url": "https://www.holabirdsports.com/products/on-the-roger-pro-womens-orchid-ice",
+      "source": "Holabird Sports exact product sitemap title: On The Roger Pro Women's Orchid/Ice",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/on-the-roger-pro-womens-orchid-ice",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/118636_3.jpg?v=1761055577"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "shoes-on-the-roger-pro-2",
+      "brand": "On",
+      "model": "THE ROGER Pro 2",
+      "variant": "",
+      "category": "Shoes",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/118645_3.jpg?v=1749741178",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/shoes-on-the-roger-pro-2.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/on-the-roger-pro-2-clay-mens-ice-pink",
+      "retailer_url": "https://www.holabirdsports.com/products/on-the-roger-pro-2-clay-mens-ice-pink",
+      "source": "Holabird Sports exact product sitemap title: On The Roger Pro 2 Clay Men's Ice/Pink",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/on-the-roger-pro-2-clay-mens-ice-pink",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/118645_3.jpg?v=1749741178"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-babolat-rpm-blast",
+      "brand": "Babolat",
+      "model": "RPM Blast",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/011447_1.jpg?v=1762439722",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-babolat-rpm-blast.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/babolat-rpm-blast-16",
+      "retailer_url": "https://www.holabirdsports.com/products/babolat-rpm-blast-16",
+      "source": "Holabird Sports exact product sitemap title: Babolat RPM Blast 16",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/babolat-rpm-blast-16",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/011447_1.jpg?v=1762439722"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-babolat-rpm-rough",
+      "brand": "Babolat",
+      "model": "RPM Rough",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/012309_105_1.jpg?v=1762440703",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-babolat-rpm-rough.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/babolat-rpm-rough-17",
+      "retailer_url": "https://www.holabirdsports.com/products/babolat-rpm-rough-17",
+      "source": "Holabird Sports exact product sitemap title: Babolat RPM Rough 17",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/babolat-rpm-rough-17",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/012309_105_1.jpg?v=1762440703"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-babolat-rpm-soft",
+      "brand": "Babolat",
+      "model": "RPM Soft",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/012359_107_1.jpg?v=1762443483",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-babolat-rpm-soft.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/babolat-rpm-soft-16-1-30",
+      "retailer_url": "https://www.holabirdsports.com/products/babolat-rpm-soft-16-1-30",
+      "source": "Holabird Sports exact product sitemap title: Babolat RPM Soft 16 1.30",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/babolat-rpm-soft-16-1-30",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/012359_107_1.jpg?v=1762443483"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-babolat-touch-vs",
+      "brand": "Babolat",
+      "model": "Touch VS",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/011609_1.jpg?v=1760457907",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-babolat-touch-vs.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/babolat-vs-touch-bt7-15l",
+      "retailer_url": "https://www.holabirdsports.com/products/babolat-vs-touch-bt7-15l",
+      "source": "Holabird Sports exact product sitemap title: Babolat Touch VS 15L",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/babolat-vs-touch-bt7-15l",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/011609_1.jpg?v=1760457907"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-babolat-xcel",
+      "brand": "Babolat",
+      "model": "Xcel",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/011246_104_1.jpg?v=1755529579",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-babolat-xcel.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/babolat-xcel-17",
+      "retailer_url": "https://www.holabirdsports.com/products/babolat-xcel-17",
+      "source": "Holabird Sports exact product sitemap title: Babolat Xcel 17",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/babolat-xcel-17",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/011246_104_1.jpg?v=1755529579"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-babolat-xcel-16",
+      "brand": "Babolat",
+      "model": "Xcel 16",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/011248_104_1.jpg?v=1755529579",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-babolat-xcel-16.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/babolat-xcel-16",
+      "retailer_url": "https://www.holabirdsports.com/products/babolat-xcel-16",
+      "source": "Holabird Sports exact product sitemap title: Babolat Xcel 16",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/babolat-xcel-16",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/011248_104_1.jpg?v=1755529579"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-diadem-flash-16",
+      "brand": "Diadem",
+      "model": "Flash 16",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/012480_1.jpg?v=1740758711",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-diadem-flash-16.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/diadem-flash-16-1-30-white",
+      "retailer_url": "https://www.holabirdsports.com/products/diadem-flash-16-1-30-white",
+      "source": "Holabird Sports exact product sitemap title: Diadem Flash 16 1.30 White",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/diadem-flash-16-1-30-white",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/012480_1.jpg?v=1740758711"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-diadem-solstice-power-16",
+      "brand": "Diadem",
+      "model": "Solstice Power 16",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/012054_1.jpg?v=1762440107",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-diadem-solstice-power-16.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/diadem-solstice-power-16-1-30",
+      "retailer_url": "https://www.holabirdsports.com/products/diadem-solstice-power-16-1-30",
+      "source": "Holabird Sports exact product sitemap title: Diadem Solstice Power 16 1.30",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/diadem-solstice-power-16-1-30",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/012054_1.jpg?v=1762440107"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-gamma-live-wire-16",
+      "brand": "Gamma",
+      "model": "Live Wire 16",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/010319_1.jpg?v=1762439557",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-gamma-live-wire-16.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/gamma-live-wire-16",
+      "retailer_url": "https://www.holabirdsports.com/products/gamma-live-wire-16",
+      "source": "Holabird Sports exact product sitemap title: Gamma Live Wire 16",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/gamma-live-wire-16",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/010319_1.jpg?v=1762439557"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-gamma-moto-16",
+      "brand": "Gamma",
+      "model": "Moto 16",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/011713_blk_1.jpg?v=1762439873",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-gamma-moto-16.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/gamma-moto-16",
+      "retailer_url": "https://www.holabirdsports.com/products/gamma-moto-16",
+      "source": "Holabird Sports exact product sitemap title: Gamma Moto 16",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/gamma-moto-16",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/011713_blk_1.jpg?v=1762439873"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-gamma-professional-16",
+      "brand": "Gamma",
+      "model": "Professional 16",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/010644_1.jpg?v=1762439585",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-gamma-professional-16.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/gamma-professional-16",
+      "retailer_url": "https://www.holabirdsports.com/products/gamma-professional-16",
+      "source": "Holabird Sports exact product sitemap title: Gamma Professional 16",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/gamma-professional-16",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/010644_1.jpg?v=1762439585"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-gamma-synthetic-gut-16",
+      "brand": "Gamma",
+      "model": "Synthetic Gut 16",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/010033_blk_1.jpg?v=1762439521",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-gamma-synthetic-gut-16.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/gamma-synthetic-gut-16",
+      "retailer_url": "https://www.holabirdsports.com/products/gamma-synthetic-gut-16",
+      "source": "Holabird Sports exact product sitemap title: Gamma Synthetic Gut 16",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/gamma-synthetic-gut-16",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/010033_blk_1.jpg?v=1762439521"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-gamma-tnt2-16",
+      "brand": "Gamma",
+      "model": "TNT2 16",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/010742_blk_1.jpg?v=1762439597",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-gamma-tnt2-16.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/gamma-tnt2-16",
+      "retailer_url": "https://www.holabirdsports.com/products/gamma-tnt2-16",
+      "source": "Holabird Sports exact product sitemap title: Gamma TNT2 16",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/gamma-tnt2-16",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/010742_blk_1.jpg?v=1762439597"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-head-hawk-power-17",
+      "brand": "HEAD",
+      "model": "Hawk Power 17",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/012419_1.jpg?v=1762449162",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-head-hawk-power-17.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/head-hawk-power-17-1-25",
+      "retailer_url": "https://www.holabirdsports.com/products/head-hawk-power-17-1-25",
+      "source": "Holabird Sports exact product sitemap title: HEAD Hawk Power 17 1.25",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/head-hawk-power-17-1-25",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/012419_1.jpg?v=1762449162"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-head-hawk-touch-17",
+      "brand": "HEAD",
+      "model": "Hawk Touch 17",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/011944_gld_1.jpg?v=1785265570",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-head-hawk-touch-17.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/head-hawk-touch-17-1-25",
+      "retailer_url": "https://www.holabirdsports.com/products/head-hawk-touch-17-1-25",
+      "source": "Holabird Sports exact product sitemap title: HEAD Hawk Touch 17 1.25",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/head-hawk-touch-17-1-25",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/011944_gld_1.jpg?v=1785265570"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-head-lynx-17",
+      "brand": "HEAD",
+      "model": "Lynx 17",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/012515_ant_1.jpg?v=1771621541",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-head-lynx-17.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/head-lynx-17-1-25",
+      "retailer_url": "https://www.holabirdsports.com/products/head-lynx-17-1-25",
+      "source": "Holabird Sports exact product sitemap title: HEAD Lynx 17 1.25",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/head-lynx-17-1-25",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/012515_ant_1.jpg?v=1771621541"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-head-lynx-tour",
+      "brand": "HEAD",
+      "model": "Lynx",
+      "variant": "Tour",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/012266_blk_1.jpg?v=1762440706",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-head-lynx-tour.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/head-lynx-tour-16-1-30",
+      "retailer_url": "https://www.holabirdsports.com/products/head-lynx-tour-16-1-30",
+      "source": "Holabird Sports exact product sitemap title: HEAD Lynx Tour 16 1.30",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/head-lynx-tour-16-1-30",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/012266_blk_1.jpg?v=1762440706"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-head-lynx-tour-17",
+      "brand": "HEAD",
+      "model": "Lynx Tour 17",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/012267_blk_1.jpg?v=1762440708",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-head-lynx-tour-17.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/head-lynx-tour-17-1-25",
+      "retailer_url": "https://www.holabirdsports.com/products/head-lynx-tour-17-1-25",
+      "source": "Holabird Sports exact product sitemap title: HEAD Lynx Tour 17 1.25",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/head-lynx-tour-17-1-25",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/012267_blk_1.jpg?v=1762440708"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-head-rip-control-16",
+      "brand": "HEAD",
+      "model": "Rip Control 16",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/010266_nat_1.jpg?v=1762439557",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-head-rip-control-16.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/head-rip-control-16",
+      "retailer_url": "https://www.holabirdsports.com/products/head-rip-control-16",
+      "source": "Holabird Sports exact product sitemap title: HEAD RIP Control 16",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/head-rip-control-16",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/010266_nat_1.jpg?v=1762439557"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-head-sonic-pro-17",
+      "brand": "HEAD",
+      "model": "Sonic Pro 17",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/011206_blk_1.jpg?v=1762439667",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-head-sonic-pro-17.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/head-sonic-pro-17",
+      "retailer_url": "https://www.holabirdsports.com/products/head-sonic-pro-17",
+      "source": "Holabird Sports exact product sitemap title: HEAD Sonic Pro 17",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/head-sonic-pro-17",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/011206_blk_1.jpg?v=1762439667"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-head-velocity-mlt",
+      "brand": "HEAD",
+      "model": "Velocity MLT",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/011979_blk_1.jpg?v=1762440042",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-head-velocity-mlt.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/head-velocity-mlt-17",
+      "retailer_url": "https://www.holabirdsports.com/products/head-velocity-mlt-17",
+      "source": "Holabird Sports exact product sitemap title: HEAD Velocity MLT 17",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/head-velocity-mlt-17",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/011979_blk_1.jpg?v=1762440042"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-head-velocity-mlt-16",
+      "brand": "HEAD",
+      "model": "Velocity MLT 16",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/011978_blk_1.jpg?v=1762440041",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-head-velocity-mlt-16.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/head-velocity-mlt-16",
+      "retailer_url": "https://www.holabirdsports.com/products/head-velocity-mlt-16",
+      "source": "Holabird Sports exact product sitemap title: HEAD Velocity MLT 16",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/head-velocity-mlt-16",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/011978_blk_1.jpg?v=1762440041"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-luxilon-4g",
+      "brand": "Luxilon",
+      "model": "4G",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/011691_1.jpg?v=1762439848",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-luxilon-4g.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/luxilon-4g-16l-1-25",
+      "retailer_url": "https://www.holabirdsports.com/products/luxilon-4g-16l-1-25",
+      "source": "Holabird Sports exact product sitemap title: Luxilon 4G 16L (1.25)",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/luxilon-4g-16l-1-25",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/011691_1.jpg?v=1762439848"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-luxilon-alu-power",
+      "brand": "Luxilon",
+      "model": "ALU Power",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/010833_1.jpg?v=1762439612",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-luxilon-alu-power.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/luxilon-big-banger-alu-power-rough-16l-1-25",
+      "retailer_url": "https://www.holabirdsports.com/products/luxilon-big-banger-alu-power-rough-16l-1-25",
+      "source": "Holabird Sports exact product sitemap title: Luxilon ALU Power Rough 16L (1.25)",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/luxilon-big-banger-alu-power-rough-16l-1-25",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/010833_1.jpg?v=1762439612"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-luxilon-alu-power-125",
+      "brand": "Luxilon",
+      "model": "ALU Power 125",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/012413_1.jpg?v=1762449066",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-luxilon-alu-power-125.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/luxilon-alu-power-125-660reel-ocean-blue-purple",
+      "retailer_url": "https://www.holabirdsports.com/products/luxilon-alu-power-125-660reel-ocean-blue-purple",
+      "source": "Holabird Sports exact product sitemap title: Luxilon ALU Power 125 16L 660'Reel Ocean Blue/Purple",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/luxilon-alu-power-125-660reel-ocean-blue-purple",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/012413_1.jpg?v=1762449066"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-luxilon-element",
+      "brand": "Luxilon",
+      "model": "Element",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/012392_1.jpg?v=1762446524",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-luxilon-element.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/luxilon-element-16l-1-28",
+      "retailer_url": "https://www.holabirdsports.com/products/luxilon-element-16l-1-28",
+      "source": "Holabird Sports exact product sitemap title: Luxilon Element 16L 1.28",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/luxilon-element-16l-1-28",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/012392_1.jpg?v=1762446524"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-solinco-confidential-16",
+      "brand": "Solinco",
+      "model": "Confidential 16",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/012286_1.jpg?v=1762440658",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-solinco-confidential-16.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/solinco-confidential-16-1-30",
+      "retailer_url": "https://www.holabirdsports.com/products/solinco-confidential-16-1-30",
+      "source": "Holabird Sports exact product sitemap title: Solinco Confidential 16 1.30",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/solinco-confidential-16-1-30",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/012286_1.jpg?v=1762440658"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-solinco-hyper-g",
+      "brand": "Solinco",
+      "model": "Hyper-G",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/012008_1.jpg?v=1762440064",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-solinco-hyper-g.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/solinco-hyper-g-16l-1-25",
+      "retailer_url": "https://www.holabirdsports.com/products/solinco-hyper-g-16l-1-25",
+      "source": "Holabird Sports exact product sitemap title: Solinco Hyper-G 16L 1.25",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/solinco-hyper-g-16l-1-25",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/012008_1.jpg?v=1762440064"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-solinco-hyper-g-16",
+      "brand": "Solinco",
+      "model": "Hyper-G 16",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/012007_1.jpg?v=1762440064",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-solinco-hyper-g-16.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/solinco-hyper-g-16-1-30",
+      "retailer_url": "https://www.holabirdsports.com/products/solinco-hyper-g-16-1-30",
+      "source": "Holabird Sports exact product sitemap title: Solinco Hyper-G 16 1.30",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/solinco-hyper-g-16-1-30",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/012007_1.jpg?v=1762440064"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-solinco-hyper-g-soft-16",
+      "brand": "Solinco",
+      "model": "Hyper-G Soft 16",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/012329_1.jpg?v=1762441033",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-solinco-hyper-g-soft-16.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/solinco-hyper-g-soft-16-1-30",
+      "retailer_url": "https://www.holabirdsports.com/products/solinco-hyper-g-soft-16-1-30",
+      "source": "Holabird Sports exact product sitemap title: Solinco Hyper-G Soft 16 1.30",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/solinco-hyper-g-soft-16-1-30",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/012329_1.jpg?v=1762441033"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-solinco-mach-10-16",
+      "brand": "Solinco",
+      "model": "Mach-10 16",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/012482_1.jpg?v=1741039511",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-solinco-mach-10-16.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/solinco-mach-10-16-1-30",
+      "retailer_url": "https://www.holabirdsports.com/products/solinco-mach-10-16-1-30",
+      "source": "Holabird Sports exact product sitemap title: Solinco Mach-10 16 1.30",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/solinco-mach-10-16-1-30",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/012482_1.jpg?v=1741039511"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-solinco-revolution-16",
+      "brand": "Solinco",
+      "model": "Revolution 16",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/011968_1.jpg?v=1762440027",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-solinco-revolution-16.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/solinco-revolution-16-1-30-656-reel",
+      "retailer_url": "https://www.holabirdsports.com/products/solinco-revolution-16-1-30-656-reel",
+      "source": "Holabird Sports exact product sitemap title: Solinco Revolution 16 1.30 656' Reel",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/solinco-revolution-16-1-30-656-reel",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/011968_1.jpg?v=1762440027"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-solinco-tour-bite",
+      "brand": "Solinco",
+      "model": "Tour Bite",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/011501_1.jpg?v=1762439746",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-solinco-tour-bite.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/solinco-tour-bite-17-1-20",
+      "retailer_url": "https://www.holabirdsports.com/products/solinco-tour-bite-17-1-20",
+      "source": "Holabird Sports exact product sitemap title: Solinco Tour Bite 17 1.20",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/solinco-tour-bite-17-1-20",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/011501_1.jpg?v=1762439746"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-solinco-tour-bite-16",
+      "brand": "Solinco",
+      "model": "Tour Bite 16",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/011895_1.jpg?v=1762439965",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-solinco-tour-bite-16.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/solinco-tour-bite-16-1-30",
+      "retailer_url": "https://www.holabirdsports.com/products/solinco-tour-bite-16-1-30",
+      "source": "Holabird Sports exact product sitemap title: Solinco Tour Bite 16 1.30",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/solinco-tour-bite-16-1-30",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/011895_1.jpg?v=1762439965"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-solinco-tour-bite-soft-16",
+      "brand": "Solinco",
+      "model": "Tour Bite Soft 16",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/011728_1.jpg?v=1762439880",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-solinco-tour-bite-soft-16.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/solinco-tour-bite-soft-16-1-30",
+      "retailer_url": "https://www.holabirdsports.com/products/solinco-tour-bite-soft-16-1-30",
+      "source": "Holabird Sports exact product sitemap title: Solinco Tour Bite Soft 16 1.30",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/solinco-tour-bite-soft-16-1-30",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/011728_1.jpg?v=1762439880"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-tecnifibre-ice-code-17",
+      "brand": "Tecnifibre",
+      "model": "Ice Code 17",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/012237_1.jpg?v=1762440510",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-tecnifibre-ice-code-17.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/tecnifibre-ice-code-17",
+      "retailer_url": "https://www.holabirdsports.com/products/tecnifibre-ice-code-17",
+      "source": "Holabird Sports exact product sitemap title: Tecnifibre Ice Code 17",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/tecnifibre-ice-code-17",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/012237_1.jpg?v=1762440510"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-tecnifibre-multifeel-16",
+      "brand": "Tecnifibre",
+      "model": "Multifeel 16",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/011062_blk_1.jpg?v=1762439643",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-tecnifibre-multifeel-16.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/tecnifibre-multifeel-16-1-30",
+      "retailer_url": "https://www.holabirdsports.com/products/tecnifibre-multifeel-16-1-30",
+      "source": "Holabird Sports exact product sitemap title: Tecnifibre Multifeel 16 1.30",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/tecnifibre-multifeel-16-1-30",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/011062_blk_1.jpg?v=1762439643"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-tecnifibre-nrg2-16",
+      "brand": "Tecnifibre",
+      "model": "NRG2 16",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/010132_1.jpg?v=1756404477",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-tecnifibre-nrg2-16.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/tecnifibre-nrg2-16",
+      "retailer_url": "https://www.holabirdsports.com/products/tecnifibre-nrg2-16",
+      "source": "Holabird Sports exact product sitemap title: Tecnifibre NRG2 16 1.30",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/tecnifibre-nrg2-16",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/010132_1.jpg?v=1756404477"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-tecnifibre-razor-code-17",
+      "brand": "Tecnifibre",
+      "model": "Razor Code 17",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/012442_wht_1.jpg?v=1762451283",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-tecnifibre-razor-code-17.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/tecnifibre-razor-code-17-1-25",
+      "retailer_url": "https://www.holabirdsports.com/products/tecnifibre-razor-code-17-1-25",
+      "source": "Holabird Sports exact product sitemap title: Tecnifibre Razor Code 17 1.25",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/tecnifibre-razor-code-17-1-25",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/012442_wht_1.jpg?v=1762451283"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-tecnifibre-triax-16",
+      "brand": "Tecnifibre",
+      "model": "Triax 16",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/012321_nat_1.jpg?v=1756393527",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-tecnifibre-triax-16.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/tecnifibre-triax-16-1-33",
+      "retailer_url": "https://www.holabirdsports.com/products/tecnifibre-triax-16-1-33",
+      "source": "Holabird Sports exact product sitemap title: Tecnifibre Triax 16 1.33",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/tecnifibre-triax-16-1-33",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/012321_nat_1.jpg?v=1756393527"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-tecnifibre-x-one-biphase-16",
+      "brand": "Tecnifibre",
+      "model": "X-One Biphase 16",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/010937_nat_1.jpg?v=1756393528",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-tecnifibre-x-one-biphase-16.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/tecnifibre-x-one-biphase-16",
+      "retailer_url": "https://www.holabirdsports.com/products/tecnifibre-x-one-biphase-16",
+      "source": "Holabird Sports exact product sitemap title: Tecnifibre X-One Biphase 16 1.30",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/tecnifibre-x-one-biphase-16",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/010937_nat_1.jpg?v=1756393528"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-volkl-cyclone-16",
+      "brand": "Volkl",
+      "model": "Cyclone 16",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/011461_blu_1.jpg?v=1762439732",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-volkl-cyclone-16.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/volkl-cyclone-16",
+      "retailer_url": "https://www.holabirdsports.com/products/volkl-cyclone-16",
+      "source": "Holabird Sports exact product sitemap title: Volkl Cyclone 16",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/volkl-cyclone-16",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/011461_blu_1.jpg?v=1762439732"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-volkl-cyclone-tour-16",
+      "brand": "Volkl",
+      "model": "Cyclone Tour 16",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/011703_ant_1.jpg?v=1762439858",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-volkl-cyclone-tour-16.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/volkl-cyclone-tour-16",
+      "retailer_url": "https://www.holabirdsports.com/products/volkl-cyclone-tour-16",
+      "source": "Holabird Sports exact product sitemap title: Volkl Cyclone Tour 16",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/volkl-cyclone-tour-16",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/011703_ant_1.jpg?v=1762439858"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-wilson-duo-control",
+      "brand": "Wilson",
+      "model": "Duo Control",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/012165_1.jpg?v=1762440338",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-wilson-duo-control.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/wilson-duo-control-4gr-125-nxt-control-16",
+      "retailer_url": "https://www.holabirdsports.com/products/wilson-duo-control-4gr-125-nxt-control-16",
+      "source": "Holabird Sports exact product sitemap title: Wilson Duo Control 4GR 125 + NXT Control 16",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/wilson-duo-control-4gr-125-nxt-control-16",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/012165_1.jpg?v=1762440338"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-wilson-duo-power",
+      "brand": "Wilson",
+      "model": "Duo Power",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/012152_1.jpg?v=1762440336",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-wilson-duo-power.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/wilson-duo-power-alu-power-125-nxt-power-16",
+      "retailer_url": "https://www.holabirdsports.com/products/wilson-duo-power-alu-power-125-nxt-power-16",
+      "source": "Holabird Sports exact product sitemap title: Wilson Duo Power ALU Power 125 + NXT Power 16",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/wilson-duo-power-alu-power-125-nxt-power-16",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/012152_1.jpg?v=1762440336"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-wilson-natural-gut-16",
+      "brand": "Wilson",
+      "model": "Natural Gut 16",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/012072_1.jpg?v=1762440215",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-wilson-natural-gut-16.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/wilson-natural-gut-16",
+      "retailer_url": "https://www.holabirdsports.com/products/wilson-natural-gut-16",
+      "source": "Holabird Sports exact product sitemap title: Wilson Natural Gut 16",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/wilson-natural-gut-16",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/012072_1.jpg?v=1762440215"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-wilson-nxt",
+      "brand": "Wilson",
+      "model": "NXT",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/011838_1.jpg?v=1762439946",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-wilson-nxt.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/wilson-nxt-power-16",
+      "retailer_url": "https://www.holabirdsports.com/products/wilson-nxt-power-16",
+      "source": "Holabird Sports exact product sitemap title: Wilson NXT Power 16",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/wilson-nxt-power-16",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/011838_1.jpg?v=1762439946"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-wilson-nxt-16",
+      "brand": "Wilson",
+      "model": "NXT 16",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/010537_1.jpg?v=1762439543",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-wilson-nxt-16.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/wilson-nxt-16",
+      "retailer_url": "https://www.holabirdsports.com/products/wilson-nxt-16",
+      "source": "Holabird Sports exact product sitemap title: Wilson NXT 16",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/wilson-nxt-16",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/010537_1.jpg?v=1762439543"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-wilson-nxt-17",
+      "brand": "Wilson",
+      "model": "NXT 17",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/010539_1.jpg?v=1762439544",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-wilson-nxt-17.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/wilson-nxt-17",
+      "retailer_url": "https://www.holabirdsports.com/products/wilson-nxt-17",
+      "source": "Holabird Sports exact product sitemap title: Wilson NXT 17",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/wilson-nxt-17",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/010539_1.jpg?v=1762439544"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-wilson-revolve",
+      "brand": "Wilson",
+      "model": "Revolve",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/011940_wht_1.jpg?v=1762440021",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-wilson-revolve.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/wilson-revolve-17",
+      "retailer_url": "https://www.holabirdsports.com/products/wilson-revolve-17",
+      "source": "Holabird Sports exact product sitemap title: Wilson Revolve 17",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/wilson-revolve-17",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/011940_wht_1.jpg?v=1762440021"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-wilson-revolve-16",
+      "brand": "Wilson",
+      "model": "Revolve 16",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/012521_blk_1.jpg?v=1760735638",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-wilson-revolve-16.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/wilson-revolve-16",
+      "retailer_url": "https://www.holabirdsports.com/products/wilson-revolve-16",
+      "source": "Holabird Sports exact product sitemap title: Wilson Revolve 16",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/wilson-revolve-16",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/012521_blk_1.jpg?v=1760735638"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-wilson-revolve-spin-16",
+      "brand": "Wilson",
+      "model": "Revolve Spin 16",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/012076_blk_1.jpg?v=1762440183",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-wilson-revolve-spin-16.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/wilson-revolve-spin-16",
+      "retailer_url": "https://www.holabirdsports.com/products/wilson-revolve-spin-16",
+      "source": "Holabird Sports exact product sitemap title: Wilson Revolve Spin 16",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/wilson-revolve-spin-16",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/012076_blk_1.jpg?v=1762440183"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-wilson-sensation",
+      "brand": "Wilson",
+      "model": "Sensation",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/011636_1.jpg?v=1762439815",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-wilson-sensation.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/wilson-sensation-control-16",
+      "retailer_url": "https://www.holabirdsports.com/products/wilson-sensation-control-16",
+      "source": "Holabird Sports exact product sitemap title: Wilson Sensation Control 16",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/wilson-sensation-control-16",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/011636_1.jpg?v=1762439815"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-wilson-sensation-16",
+      "brand": "Wilson",
+      "model": "Sensation 16",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/010243_blu_1.jpg?v=1762439533",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-wilson-sensation-16.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/wilson-sensation-16",
+      "retailer_url": "https://www.holabirdsports.com/products/wilson-sensation-16",
+      "source": "Holabird Sports exact product sitemap title: Wilson Sensation 16",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/wilson-sensation-16",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/010243_blu_1.jpg?v=1762439533"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-wilson-sensation-17",
+      "brand": "Wilson",
+      "model": "Sensation 17",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/010464_1.jpg?v=1762439538",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-wilson-sensation-17.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/wilson-sensation-17",
+      "retailer_url": "https://www.holabirdsports.com/products/wilson-sensation-17",
+      "source": "Holabird Sports exact product sitemap title: Wilson Sensation 17",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/wilson-sensation-17",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/010464_1.jpg?v=1762439538"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-wilson-synthetic-gut-power-16",
+      "brand": "Wilson",
+      "model": "Synthetic Gut Power 16",
+      "variant": "",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/products/011836_blk_1.jpg?v=1762439955",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-wilson-synthetic-gut-power-16.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/wilson-synthetic-gut-power-16",
+      "retailer_url": "https://www.holabirdsports.com/products/wilson-synthetic-gut-power-16",
+      "source": "Holabird Sports exact product sitemap title: Wilson Synthetic Gut Power 16",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/wilson-synthetic-gut-power-16",
+        "https://cdn.shopify.com/s/files/1/2006/8755/products/011836_blk_1.jpg?v=1762439955"
+      ],
+      "last_verified": "2026-08-10"
+    },
+    {
+      "id": "string-yonex-polytour-pro",
+      "brand": "Yonex",
+      "model": "PolyTour",
+      "variant": "Pro",
+      "category": "String",
+      "image_url": "https://cdn.shopify.com/s/files/1/2006/8755/files/012171_pur_1.jpg?v=1773331563",
+      "image_local_path": "outputs/tennis-ai-app/assets/gear/string-yonex-polytour-pro.jpg",
+      "image_verified": true,
+      "product_url": "https://www.holabirdsports.com/products/yonex-poly-tour-pro-1-20-17",
+      "retailer_url": "https://www.holabirdsports.com/products/yonex-poly-tour-pro-1-20-17",
+      "source": "Holabird Sports exact product sitemap title: Yonex POLYTOUR Pro 17 1.20",
+      "source_type": "exact_retailer_product",
+      "source_links": [
+        "https://www.holabirdsports.com/products/yonex-poly-tour-pro-1-20-17",
+        "https://cdn.shopify.com/s/files/1/2006/8755/files/012171_pur_1.jpg?v=1773331563"
+      ],
+      "last_verified": "2026-08-10"
+    }
+  ]
+}
