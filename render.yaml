@@ -2,6 +2,7 @@ services:
   - type: web
     name: courtiq
     runtime: docker
+    plan: free
     dockerfilePath: ./Dockerfile
     healthCheckPath: /api/health
     autoDeployTrigger: commit
