@@ -4,14 +4,11 @@ import csv
 import hashlib
 import json
 import math
-import random
-import statistics
 from collections import defaultdict, deque
 from dataclasses import dataclass, field
 from datetime import UTC, date, datetime
 from pathlib import Path
 from typing import Iterable
-
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "work/tennis-data"

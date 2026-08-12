@@ -4,14 +4,13 @@ import logging
 from pathlib import Path
 
 from fastapi import FastAPI, HTTPException, Request
-from fastapi.middleware.cors import CORSMiddleware
 from fastapi.exceptions import RequestValidationError
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, JSONResponse
 
 from backend.app.api.routes import router
 from backend.app.config import get_settings
 from backend.app.middleware import ProductionGuardMiddleware
-
 
 settings = get_settings()
 logging.basicConfig(level=settings.log_level)

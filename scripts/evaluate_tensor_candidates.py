@@ -2,15 +2,12 @@ from __future__ import annotations
 
 import importlib
 import json
-import math
 import time
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Iterable
 
 import numpy as np
 import pandas as pd
-
 
 ROOT = Path(__file__).resolve().parents[1]
 FEATURE_ROWS_PATH = ROOT / "output/backtests/courtiq_feature_rows_atp.csv"
@@ -132,7 +129,6 @@ def roc_auc(probs: np.ndarray, labels: np.ndarray) -> float:
 
 
 def expected_calibration_error(probs: np.ndarray, labels: np.ndarray, buckets: int = 10) -> float:
-    total = len(labels)
     error = 0.0
     for bucket in range(buckets):
         low, high = bucket / buckets, (bucket + 1) / buckets

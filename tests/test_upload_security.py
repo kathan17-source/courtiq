@@ -5,7 +5,11 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 
 from backend.app.config import get_settings
-from backend.app.services.security import SecurityValidationError, validate_video_signature, validate_video_upload_metadata
+from backend.app.services.security import (
+    SecurityValidationError,
+    validate_video_signature,
+    validate_video_upload_metadata,
+)
 
 
 class UploadSecurityTests(unittest.TestCase):

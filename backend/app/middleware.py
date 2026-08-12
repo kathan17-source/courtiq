@@ -10,7 +10,6 @@ from starlette.responses import JSONResponse, Response
 from backend.app.config import Settings
 from backend.app.services.security import RequestLimiter, safe_request_id
 
-
 LOGGER = logging.getLogger("courtiq.api")
 
 

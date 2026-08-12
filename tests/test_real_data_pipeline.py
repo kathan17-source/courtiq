@@ -1,12 +1,12 @@
 from __future__ import annotations
 
-from datetime import date
-from pathlib import Path
 import tempfile
 import unittest
+from datetime import date
+from pathlib import Path
 
-from scripts.train_match_model import RawMatch, load_matches, player_key, process_matches, split_rows_with_rules
 from backend.app.services.model_store import load_model_from_path, normalize_player_key
+from scripts.train_match_model import RawMatch, load_matches, player_key, process_matches, split_rows_with_rules
 
 
 class RealDataPipelineTests(unittest.TestCase):

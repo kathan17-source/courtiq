@@ -3,7 +3,11 @@ from __future__ import annotations
 from datetime import date
 
 from scripts.final_modeling_pass import build_feature_rows
-from scripts.tensor_v3_exact_scoring import exact_match_probability, exact_tiebreak_probability, posterior_match_probability
+from scripts.tensor_v3_exact_scoring import (
+    exact_match_probability,
+    exact_tiebreak_probability,
+    posterior_match_probability,
+)
 from tests.test_final_modeling_pass import synthetic_match_on
 
 

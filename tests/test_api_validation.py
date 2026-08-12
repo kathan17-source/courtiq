@@ -4,6 +4,7 @@ import unittest
 
 try:
     from fastapi.testclient import TestClient
+
     from backend.app.main import app
 except ModuleNotFoundError:  # local bundled runtime may not have FastAPI installed
     TestClient = None

@@ -2,6 +2,8 @@
 
 **Live Demo:** https://courtiq-77cz.onrender.com/
 
+[![CourtIQ CI](https://github.com/kathan17-source/courtiq/actions/workflows/ci.yml/badge.svg)](https://github.com/kathan17-source/courtiq/actions/workflows/ci.yml)
+
 A publicly deployed, research-backed tennis analytics prototype combining:
 
 - historical match-data ingestion
@@ -155,9 +157,12 @@ No broad open-source license currently applies to this repository. Source code i
 ## Canonical validation
 
 ```bash
-node --check outputs/tennis-ai-app/app.js
-.venv/bin/python -m pytest -q
+make lint
+make test
+make check
 ```
+
+Use `make run` to start the local app. `make check` runs the Python lint, JavaScript syntax, and Python test suites; `make format-check` is available when reviewing Python formatting without changing files.
 
 ## Core algorithms
 

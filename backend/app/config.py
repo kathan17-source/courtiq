@@ -5,6 +5,7 @@ from functools import lru_cache
 from os import getenv
 from pathlib import Path
 
+
 def _env(primary: str, fallback: str, default: str) -> str:
     return getenv(primary) or getenv(fallback) or default
 

@@ -1,10 +1,9 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from math import acos, degrees, sqrt
+from math import acos, degrees, isfinite, sqrt
 from pathlib import Path
 from statistics import mean
-from math import isfinite
 
 from backend.app.config import Settings
 from backend.app.services.security import SecurityValidationError
@@ -171,7 +170,6 @@ def content_detection(
     upper_ratio = upper_frames / max(processed, 1)
     lower_ratio = lower_frames / max(processed, 1)
     shoulder_values = metrics.get("shoulder_tilt", [])
-    hip_values = metrics.get("hip_tilt", [])
     elbow_values = metrics.get("left_elbow", []) + metrics.get("right_elbow", [])
 
     def value_range(values: list[float]) -> float:

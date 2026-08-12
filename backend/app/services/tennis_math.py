@@ -1,7 +1,7 @@
 from __future__ import annotations
 
-from math import exp
 from functools import lru_cache
+from math import exp
 from random import Random
 
 

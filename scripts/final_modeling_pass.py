@@ -22,7 +22,12 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from backend.app.services.tennis_math import clamp, game_win_probability, match_win_from_set, set_win_probability_from_hold
+from backend.app.services.tennis_math import (
+    clamp,
+    game_win_probability,
+    match_win_from_set,
+    set_win_probability_from_hold,
+)
 
 DATA_DIR = ROOT / "work/tennis-data"
 MODEL_PATH = ROOT / "output/models/courtiq_model_atp.json"
@@ -1348,7 +1353,6 @@ def main() -> int:
     ENHANCED_ROWS_PATH.parent.mkdir(parents=True, exist_ok=True)
     frame.to_csv(ENHANCED_ROWS_PATH, index=False)
 
-    test_2025 = frame[frame["year"] == 2025]
     current_disk = artifact_metrics_on_saved_rows(MODEL_PATH)
     if current_disk.get("status") == "incompatible_feature_rows" and MODEL_PATH.exists():
         current_payload = json.loads(MODEL_PATH.read_text(encoding="utf-8"))
@@ -1359,8 +1363,6 @@ def main() -> int:
         "status": "retired_invalid_temporal_leakage",
         "documentation": str(RETIRED_BASELINE_NOTE),
     }
-    current_reference_metrics = current_disk if current_disk.get("status") == "evaluated" else {"log_loss": FROZEN_STACKED_BENCHMARK["log_loss"], "brier_score": FROZEN_STACKED_BENCHMARK["brier_score"]}
-
     candidates = {}
     for name, features in candidate_sets(feature_cols).items():
         candidates[name] = {

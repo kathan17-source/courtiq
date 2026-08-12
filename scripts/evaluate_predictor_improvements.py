@@ -10,7 +10,6 @@ from typing import Any
 import numpy as np
 import pandas as pd
 
-
 ROOT = Path(__file__).resolve().parents[1]
 FEATURE_ROWS_PATH = ROOT / "output/backtests/courtiq_feature_rows_atp.csv"
 MODEL_PATH = ROOT / "output/models/courtiq_model_atp.json"
