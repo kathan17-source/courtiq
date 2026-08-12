@@ -5,7 +5,7 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 from time import perf_counter
 
-from fastapi import APIRouter, File, HTTPException, Query, Request, UploadFile
+from fastapi import APIRouter, File, HTTPException, Path as ApiPath, Query, Request, UploadFile
 
 from backend.app.config import get_settings
 from backend.app.schemas.prediction import PredictionRequest, PredictionResponse, TournamentSimulationRequest
@@ -13,8 +13,8 @@ from backend.app.schemas.players import PlayerSearchResponse, PlayerSummary
 from backend.app.services.prediction_service import predict_match
 from backend.app.services.model_store import ModelUnavailableError, has_current_model, has_tour_model, load_current_model, load_tour_model
 from backend.app.services.roster_service import get_player_by_id, model_has_tour, search_players, tours_for_player_name
-from backend.app.services.security import SecurityValidationError, validate_video_upload_metadata
-from backend.app.services.simulation_service import benchmark_simulations, simulate_tournament_draw
+from backend.app.services.security import SecurityValidationError, validate_video_signature, validate_video_upload_metadata
+from backend.app.services.simulation_service import simulate_tournament_draw
 from backend.app.services.video_analysis import analyze_pose_video, probe_video
 
 
@@ -72,22 +72,6 @@ def model_metrics() -> dict:
     }
 
 
-@router.get("/observability/health")
-def observability_health() -> dict:
-    return {
-        "status": "ok",
-        "measurements_expected": [
-            "request latency",
-            "prediction latency",
-            "simulation latency",
-            "video validation duration",
-            "model failure count",
-            "database failure count",
-        ],
-        "exporter": "structured logs in local build; wire to OpenTelemetry in production",
-    }
-
-
 @router.get("/health")
 def api_health() -> dict:
     atp_loaded = has_tour_model("atp")
@@ -105,7 +89,7 @@ def api_health() -> dict:
 @router.get("/players/search", response_model=PlayerSearchResponse)
 def players_search(
     q: str = Query(default="", max_length=80),
-    tour: str | None = Query(default=None),
+    tour: str | None = Query(default=None, pattern="^(atp|wta)$"),
     limit: int = Query(default=30, ge=1, le=100),
     offset: int = Query(default=0, ge=0, le=10000),
 ) -> PlayerSearchResponse:
@@ -113,7 +97,7 @@ def players_search(
 
 
 @router.get("/players/{player_id}", response_model=PlayerSummary)
-def player_profile(player_id: str) -> PlayerSummary:
+def player_profile(player_id: str = ApiPath(..., min_length=2, max_length=120)) -> PlayerSummary:
     player = get_player_by_id(player_id)
     if player is None:
         raise HTTPException(status_code=404, detail="Player not found in current local roster.")
@@ -121,7 +105,7 @@ def player_profile(player_id: str) -> PlayerSummary:
 
 
 @router.get("/players/{player_id}/ratings")
-def player_ratings(player_id: str) -> dict:
+def player_ratings(player_id: str = ApiPath(..., min_length=2, max_length=120)) -> dict:
     player = get_player_by_id(player_id)
     if player is None:
         raise HTTPException(status_code=404, detail="Player not found in current local roster.")
@@ -134,7 +118,7 @@ def player_ratings(player_id: str) -> dict:
 
 
 @router.get("/players/{player_id}/form")
-def player_form(player_id: str) -> dict:
+def player_form(player_id: str = ApiPath(..., min_length=2, max_length=120)) -> dict:
     player = get_player_by_id(player_id)
     if player is None:
         raise HTTPException(status_code=404, detail="Player not found in current local roster.")
@@ -180,7 +164,10 @@ def predict(payload: PredictionRequest) -> PredictionResponse:
 
 
 @router.get("/head-to-head")
-def head_to_head(player1: str, player2: str) -> dict:
+def head_to_head(
+    player1: str = Query(..., min_length=2, max_length=80),
+    player2: str = Query(..., min_length=2, max_length=80),
+) -> dict:
     return {
         "player1": player1,
         "player2": player2,
@@ -235,16 +222,6 @@ async def analyze_video(request: Request, file: UploadFile = File(...)) -> dict:
     }
 
 
-@router.get("/simulate/benchmark")
-def simulation_benchmark() -> dict:
-    results = benchmark_simulations()
-    return {
-        "seed": results[0].seed,
-        "results": [result.__dict__ for result in results],
-        "note": "Local deterministic benchmark for algorithmic cost; do not run huge simulations in the request path.",
-    }
-
-
 async def stream_video_upload(file: UploadFile, directory: Path) -> tuple[object, Path]:
     total = 0
     safe_name = None
@@ -261,17 +238,19 @@ async def stream_video_upload(file: UploadFile, directory: Path) -> tuple[object
         )
         final_path = directory / safe_name.safe_filename
         temp_path.replace(final_path)
+        validate_video_signature(final_path, safe_name.extension)
         return safe_name, final_path
     finally:
         await file.close()
 
 
 @router.post("/simulate/tournament")
-def tournament_simulation(payload: TournamentSimulationRequest) -> dict:
+async def tournament_simulation(payload: TournamentSimulationRequest) -> dict:
     if payload.simulations > settings.max_simulations:
         raise HTTPException(status_code=400, detail=f"simulations must not exceed {settings.max_simulations}")
     try:
-        return simulate_tournament_draw(
+        return await asyncio.to_thread(
+            simulate_tournament_draw,
             players=payload.players, tour=payload.tour, event=payload.event,
             simulations=payload.simulations, seed=payload.seed,
         )

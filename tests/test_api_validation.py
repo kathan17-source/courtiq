@@ -36,11 +36,12 @@ class ApiValidationTests(unittest.TestCase):
         self.assertEqual(docs.status_code, 200)
         self.assertIn("text/html", docs.headers["content-type"])
 
-    def test_frontend_deep_path_falls_back_to_app(self) -> None:
-        response = self.client.get("/train/gear")
-        self.assertEqual(response.status_code, 200)
-        self.assertIn("text/html", response.headers["content-type"])
-        self.assertIn("CourtIQ", response.text)
+    def test_unknown_and_sensitive_paths_return_controlled_404(self) -> None:
+        for path in ("/train/gear", "/.env", "/.git/config", "/Dockerfile", "/tests/test_api_validation.py", "/assets/"):
+            with self.subTest(path=path):
+                response = self.client.get(path)
+                self.assertEqual(response.status_code, 404)
+                self.assertNotIn("/Users/", response.text)
 
     def test_predict_uses_loaded_atp_model_by_default(self) -> None:
         response = self.client.post(
@@ -83,6 +84,48 @@ class ApiValidationTests(unittest.TestCase):
             },
         )
         self.assertEqual(response.status_code, 422)
+
+    def test_request_models_reject_unknown_fields(self) -> None:
+        payload = {
+            "player1": "Carlos Alcaraz", "player2": "Jannik Sinner",
+            "event": "Wimbledon", "tour": "atp", "unexpected": "ignored-before-hardening",
+        }
+        self.assertEqual(self.client.post("/api/predict", json=payload).status_code, 422)
+
+    def test_security_headers_and_api_cache_policy(self) -> None:
+        response = self.client.get("/api/health")
+        self.assertEqual(response.headers["cache-control"], "no-store")
+        self.assertEqual(response.headers["x-content-type-options"], "nosniff")
+        self.assertEqual(response.headers["x-frame-options"], "DENY")
+        self.assertIn("frame-ancestors 'none'", response.headers["content-security-policy"])
+        self.assertNotIn("unsafe-eval", response.headers["content-security-policy"])
+
+    def test_unrelated_origin_get_and_preflight_are_not_allowed(self) -> None:
+        get_response = self.client.get("/api/health", headers={"origin": "https://evil.example"})
+        self.assertNotIn("access-control-allow-origin", get_response.headers)
+        preflight = self.client.options(
+            "/api/predict",
+            headers={
+                "origin": "https://evil.example",
+                "access-control-request-method": "POST",
+                "access-control-request-headers": "content-type",
+            },
+        )
+        self.assertEqual(preflight.status_code, 400)
+        self.assertNotIn("access-control-allow-origin", preflight.headers)
+
+    def test_non_upload_body_limit_rejects_before_parsing(self) -> None:
+        response = self.client.post(
+            "/api/predict",
+            content=b"{}",
+            headers={"content-type": "application/json", "content-length": str(2 * 1024 * 1024 + 1)},
+        )
+        self.assertEqual(response.status_code, 413)
+
+    def test_request_id_is_sanitized(self) -> None:
+        response = self.client.get("/api/health", headers={"x-request-id": "bad id/forged"})
+        self.assertNotEqual(response.headers["x-request-id"], "bad id/forged")
+        self.assertRegex(response.headers["x-request-id"], r"^[A-Za-z0-9_-]{1,64}$")
 
     def test_unknown_event_requires_explicit_surface(self) -> None:
         payload = {"player1": "Carlos Alcaraz", "player2": "Jannik Sinner", "event": "Unknown Invitational", "tour": "atp"}

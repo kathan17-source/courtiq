@@ -17,6 +17,7 @@ RUN pip install --no-cache-dir --upgrade pip \
 
 COPY backend ./backend
 COPY outputs/tennis-ai-app/index.html outputs/tennis-ai-app/app.js outputs/tennis-ai-app/styles.css ./outputs/tennis-ai-app/
+COPY outputs/tennis-ai-app/favicon.svg outputs/tennis-ai-app/robots.txt ./outputs/tennis-ai-app/
 COPY outputs/tennis-ai-app/js ./outputs/tennis-ai-app/js
 COPY outputs/tennis-ai-app/assets/player-stats.js ./outputs/tennis-ai-app/assets/player-stats.js
 COPY output/models/courtiq_model_atp.json output/models/courtiq_model_wta.json ./output/models/

@@ -1,9 +1,10 @@
 from __future__ import annotations
 
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 
 
 class PlayerSummary(BaseModel):
+    model_config = ConfigDict(extra="forbid")
     id: str
     name: str
     tour: str
@@ -19,5 +20,6 @@ class PlayerSummary(BaseModel):
 
 
 class PlayerSearchResponse(BaseModel):
+    model_config = ConfigDict(extra="forbid")
     query: str
     results: list[PlayerSummary]

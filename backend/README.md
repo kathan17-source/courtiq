@@ -12,12 +12,11 @@ The production-facing API now lives under `backend/app`.
 - `GET /health`
 - `GET /api/model/version`
 - `GET /api/model/metrics`
-- `GET /api/observability/health`
 - `GET /api/players/search`
 - `POST /api/predict`
 - `GET /api/head-to-head`
 - `POST /api/video/validate-upload`
-- `GET /api/simulate/benchmark`
+- `POST /api/simulate/tournament`
 
 ## Database
 

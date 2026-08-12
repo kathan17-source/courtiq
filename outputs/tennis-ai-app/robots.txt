@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# CourtIQ uses client-side hash routes; crawlers primarily index the entry document.

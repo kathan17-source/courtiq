@@ -20,6 +20,9 @@ app = FastAPI(
     title=settings.app_name,
     version="0.2.0",
     description="CourtIQ tennis analytics API: players, ratings, prediction and model metadata.",
+    docs_url=None if settings.environment != "development" else "/docs",
+    redoc_url=None if settings.environment != "development" else "/redoc",
+    openapi_url=None if settings.environment != "development" else "/openapi.json",
 )
 
 app.add_middleware(
@@ -35,25 +38,29 @@ app.include_router(router, prefix="/api")
 
 @app.get("/health")
 def health() -> dict:
-    return {
-        "status": "ok",
-        "environment": settings.environment,
-        "model_version": settings.model_version,
-    }
+    return {"status": "ok"}
 
 
 FRONTEND_DIR = Path(__file__).resolve().parents[2] / "outputs" / "tennis-ai-app"
 FRONTEND_INDEX = FRONTEND_DIR / "index.html"
 
 
+PUBLIC_FRONTEND_FILES = {"app.js", "styles.css", "favicon.svg", "robots.txt"}
+
+
 def frontend_file_response(path: str = "") -> FileResponse:
     if not FRONTEND_INDEX.exists():
         raise HTTPException(status_code=404, detail="CourtIQ frontend build not found.")
-    requested = (FRONTEND_DIR / path).resolve()
+    normalized = path.strip("/")
+    if normalized and normalized not in PUBLIC_FRONTEND_FILES and not normalized.startswith(("js/", "assets/")):
+        raise HTTPException(status_code=404, detail="Resource not found.")
+    requested = (FRONTEND_DIR / normalized).resolve()
     frontend_root = FRONTEND_DIR.resolve()
     if requested.is_file() and requested.is_relative_to(frontend_root):
         return FileResponse(requested)
-    return FileResponse(FRONTEND_INDEX)
+    if not normalized:
+        return FileResponse(FRONTEND_INDEX)
+    raise HTTPException(status_code=404, detail="Resource not found.")
 
 
 @app.get("/", include_in_schema=False)

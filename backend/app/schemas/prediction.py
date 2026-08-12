@@ -1,13 +1,14 @@
 from __future__ import annotations
 
 from datetime import date
-from pydantic import BaseModel, Field, field_validator, model_validator
+from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
 
 
 class PredictionRequest(BaseModel):
+    model_config = ConfigDict(extra="forbid", str_strip_whitespace=True)
     player1: str = Field(..., min_length=2, max_length=80)
     player2: str = Field(..., min_length=2, max_length=80)
-    event: str = Field(default="Wimbledon", max_length=120)
+    event: str = Field(default="Wimbledon", min_length=2, max_length=120)
     surface: str | None = Field(default=None)
     as_of: date | None = Field(default=None)
     tour: str = Field(default="atp")
@@ -44,6 +45,7 @@ class PredictionRequest(BaseModel):
 
 
 class TournamentSimulationRequest(BaseModel):
+    model_config = ConfigDict(extra="forbid", str_strip_whitespace=True)
     tour: str
     event: str = Field(..., min_length=2, max_length=120)
     surface: str | None = None
@@ -86,6 +88,7 @@ class TournamentSimulationRequest(BaseModel):
 
 
 class PredictionFactor(BaseModel):
+    model_config = ConfigDict(extra="forbid")
     feature: str
     advantage: str
     impact: float
@@ -93,6 +96,7 @@ class PredictionFactor(BaseModel):
 
 
 class PredictionResponse(BaseModel):
+    model_config = ConfigDict(extra="forbid")
     player1: str
     player2: str
     event: str

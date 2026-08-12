@@ -50,7 +50,6 @@ const skillCache = new Map();
 // app does not pretend local demo values are real historical tennis data.
 const PLAYER_STATS = window.COURTIQ_PLAYER_STATS || {};
 const API_BASE = window.COURTIQ_API_BASE
-  || localStorage.cqApiBase
   || (location.protocol === 'http:' || location.protocol === 'https:' ? location.origin : 'http://127.0.0.1:8000');
 const apiClient = createApiClient(API_BASE);
 const DATA_STATUS = Object.keys(PLAYER_STATS).length

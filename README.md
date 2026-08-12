@@ -191,7 +191,6 @@ Implemented routes include:
 - `GET /health`
 - `GET /api/model/version`
 - `GET /api/model/metrics`
-- `GET /api/observability/health`
 - `GET /api/players/search`
 - `GET /api/players/{player_id}`
 - `GET /api/players/{player_id}/ratings`
@@ -199,7 +198,7 @@ Implemented routes include:
 - `POST /api/predict`
 - `GET /api/head-to-head`
 - `POST /api/video/validate-upload`
-- `GET /api/simulate/benchmark`
+- `POST /api/simulate/tournament`
 
 Without a validated historical model, `/api/predict` returns `503` by default. For UI testing only, send `allow_demo: true` or set `COURTIQ_ALLOW_DEMO=true`.
 
@@ -252,3 +251,4 @@ node --check work/backtest_courtiq_model.js
 - `DEMO.md` — concise product and technical walkthroughs.
 - `ALGORITHMS.md` — formulas, assumptions, complexity and limitations.
 - `PRODUCTION_READINESS.md` — security, reliability and operational review.
+- `SECURITY.md` — active HTTP boundaries, controls and accepted security limitations.
