@@ -40,7 +40,7 @@ The backend serves the frontend and API from one origin, loads separate validate
 - Same-tour match guard in the predictor.
 - Versioned ATP/WTA prediction artifacts with schema and integrity validation.
 - FastAPI prediction, model-health, player-search and video-analysis endpoints.
-- Product-level UI flows for learning, training, prediction, gear, puzzles and analysis.
+- Product-level UI flows for learning, training, prediction, tournament simulation, puzzles and analysis.
 
 ## 3. What is simulated/demo
 

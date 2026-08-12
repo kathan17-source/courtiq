@@ -16,6 +16,7 @@ The production-facing API now lives under `backend/app`.
 - `POST /api/predict`
 - `GET /api/head-to-head`
 - `POST /api/video/validate-upload`
+- `POST /api/video/analyze`
 - `POST /api/simulate/tournament`
 
 ## Database
@@ -28,8 +29,8 @@ backend/database/schema.sql
 
 The schema is designed for real player rosters, match results, point/match statistics, model versions, predictions, backtests and video-analysis jobs.
 
-## Next integration step
+## Model inference
 
-Connect `prediction_service.py` to database-backed player ratings and historical features instead of placeholder ratings.
+Production prediction loads the checked-in, separately validated ATP and WTA artifacts. It uses their chronological ratings and model coefficients; it does not use placeholder ratings. `COURTIQ_ALLOW_DEMO` remains disabled in production.
 
-Keep `COURTIQ_ALLOW_DEMO=false` outside local demos.
+PostgreSQL is a documented future persistence target, not a dependency of the currently deployed inference path.

@@ -457,243 +457,6 @@ function groupedUpcomingPredictions(rows = UPCOMING_PREDICTIONS, tour = state.se
   return [...groups.entries()];
 }
 
-const GEAR_ITEMS = [
-  { type: 'Racket', brand: 'Babolat', name: 'Pure Drive', price: '₹19,999', specs: '100 in² · 300 g · 16×19', level: 'Intermediate+', style: 'Power baseline frame', impact: 'Easy depth and pace; control drops if the swing path gets too flat.', pro: 'Power-first baseline players' },
-  { type: 'Racket', brand: 'Babolat', name: 'Pure Drive 98', price: '₹22,999', specs: '98 in² · 305 g · 16×20', level: 'Advanced', style: 'Power/control', impact: 'Sharper targeting than Pure Drive 100, but needs cleaner timing.', pro: 'Aggressive advanced hitters' },
-  { type: 'Racket', brand: 'Babolat', name: 'Pure Aero', price: '₹20,999', specs: '100 in² · 300 g · 16×19', level: 'Intermediate+', style: 'Spin power', impact: 'Helps create shape and net clearance for heavy topspin patterns.', pro: 'Rafael Nadal family style' },
-  { type: 'Racket', brand: 'Babolat', name: 'Pure Aero 98', price: '₹23,999', specs: '98 in² · 305 g · 16×20', level: 'Advanced', style: 'Spin/control', impact: 'More precision on fast swings; less free forgiveness than the 100.', pro: 'Carlos Alcaraz family style' },
-  { type: 'Racket', brand: 'Babolat', name: 'Pure Strike 100', price: '₹20,999', specs: '100 in² · 300 g · 16×19', level: 'Intermediate+', style: 'Attack control', impact: 'Rewards taking the ball early and driving through targets.', pro: 'First-strike baseliners' },
-  { type: 'Racket', brand: 'Babolat', name: 'Evo Drive', price: '₹13,999', specs: '104 in² · 270 g · 16×17', level: 'Beginner–club', style: 'Comfort power', impact: 'Forgiving sweet spot, easier timing, less plow-through against heavy pace.', pro: 'Best for players building clean contact' },
-  { type: 'Racket', brand: 'Babolat', name: 'Evo Aero', price: '₹12,999', specs: '102 in² · 275 g · 16×18', level: 'Beginner–intermediate', style: 'Easy spin', impact: 'Makes topspin easier without demanding a heavy advanced frame.', pro: 'Developing spin players' },
-  { type: 'Racket', brand: 'Babolat', name: 'Boost Aero', price: '₹8,999', specs: '102 in² · 260 g · 16×19', level: 'Beginner budget', style: 'Light spin', impact: 'Easy to swing and learn with, but less stable against big hitters.', pro: 'First serious racket' },
-  { type: 'Racket', brand: 'Wilson', name: 'Clash 100', price: '₹19,999', specs: '100 in² · 295 g · 16×19', level: 'Intermediate', style: 'Comfort control', impact: 'Soft response for long practice volume with enough modern spin.', pro: 'Arm-friendly all-court players' },
-  { type: 'Racket', brand: 'Wilson', name: 'Clash 100L', price: '₹16,999', specs: '100 in² · 280 g · 16×19', level: 'Beginner–intermediate', style: 'Arm-friendly control', impact: 'Comfortable response; good if elbow or shoulder feels stressed.', pro: 'Regular training volume' },
-  { type: 'Racket', brand: 'Wilson', name: 'Blade 98', price: '₹22,999', specs: '98 in² · 305 g · 16×19', level: 'Advanced', style: 'Control + feel', impact: 'Rewards early preparation and clean contact; not a free-power frame.', pro: 'Blade-style control frames are common on tour' },
-  { type: 'Racket', brand: 'Wilson', name: 'Blade 100L', price: '₹18,999', specs: '100 in² · 285 g · 16×19', level: 'Intermediate', style: 'Lighter feel', impact: 'Blade control feel with easier swing speed and less arm demand.', pro: 'Improving juniors/adults' },
-  { type: 'Racket', brand: 'Wilson', name: 'Ultra 100', price: '₹20,999', specs: '100 in² · 300 g · 16×19', level: 'Intermediate+', style: 'Power', impact: 'Launches the ball with easy pace; pair with spin to control depth.', pro: 'Big-serving baseliners' },
-  { type: 'Racket', brand: 'Wilson', name: 'Shift 99', price: '₹21,999', specs: '99 in² · 300 g · 16×20', level: 'Intermediate+', style: 'Modern spin', impact: 'Useful when you want spin and height without losing too much control.', pro: 'Heavy-shape modern hitters' },
-  { type: 'Racket', brand: 'Wilson', name: 'Pro Staff 97', price: '₹24,999', specs: '97 in² · 315 g · 16×19', level: 'Advanced', style: 'Precision feel', impact: 'Great feedback and control; demanding if preparation is late.', pro: 'Roger Federer family style' },
-  { type: 'Racket', brand: 'Wilson', name: 'RF 01', price: '₹28,999', specs: '98 in² · 300 g · 16×19', level: 'Advanced', style: 'Attacking feel', impact: 'Fast through contact with premium directional control.', pro: 'Roger Federer signature line' },
-  { type: 'Racket', brand: 'HEAD', name: 'Speed MP', price: '₹23,999', specs: '100 in² · 300 g · 16×19', level: 'Intermediate+', style: 'All-court control', impact: 'Balanced power/control, stable on redirects, reliable for early ball striking.', pro: 'Jannik Sinner family style' },
-  { type: 'Racket', brand: 'HEAD', name: 'Speed Pro', price: '₹25,999', specs: '100 in² · 310 g · 18×20', level: 'Advanced', style: 'Control stability', impact: 'More plow-through and lower launch; needs full preparation.', pro: 'Novak Djokovic family style' },
-  { type: 'Racket', brand: 'HEAD', name: 'Radical MP', price: '₹22,999', specs: '98 in² · 300 g · 16×19', level: 'Intermediate+', style: 'All-court precision', impact: 'Fast handling and clean direction changes for varied players.', pro: 'Versatile attacking players' },
-  { type: 'Racket', brand: 'HEAD', name: 'Gravity MP', price: '₹21,999', specs: '100 in² · 295 g · 16×20', level: 'Intermediate', style: 'Control comfort', impact: 'Large sweet spot feel with controlled launch for long rallies.', pro: 'Baseline patience players' },
-  { type: 'Racket', brand: 'HEAD', name: 'Boom MP', price: '₹19,999', specs: '100 in² · 295 g · 16×19', level: 'Intermediate', style: 'Easy power', impact: 'Good pop and comfort when you want depth without forcing.', pro: 'Club attackers' },
-  { type: 'Racket', brand: 'HEAD', name: 'Extreme MP', price: '₹21,999', specs: '100 in² · 300 g · 16×19', level: 'Intermediate+', style: 'Spin power', impact: 'Higher launch and heavier shape for kick serves and topspin rallies.', pro: 'Spin-first baseliners' },
-  { type: 'Racket', brand: 'Yonex', name: 'Ezone 100', price: '₹21,999', specs: '100 in² · 300 g · 16×19', level: 'Intermediate+', style: 'Power + sweet spot', impact: 'Bigger effective hitting area; helps flatter players add margin.', pro: 'Naomi Osaka family style' },
-  { type: 'Racket', brand: 'Yonex', name: 'Ezone 98', price: '₹22,999', specs: '98 in² · 305 g · 16×19', level: 'Advanced', style: 'Controlled power', impact: 'Cleaner precision than the 100 with a faster, heavier swing.', pro: 'Attacking advanced baseliners' },
-  { type: 'Racket', brand: 'Yonex', name: 'VCORE 100', price: '₹21,999', specs: '100 in² · 300 g · 16×19', level: 'Intermediate+', style: 'Spin', impact: 'Helps lift the ball high and dip it late into the court.', pro: 'Casper Ruud family style' },
-  { type: 'Racket', brand: 'Yonex', name: 'VCORE 98', price: '₹22,999', specs: '98 in² · 305 g · 16×19', level: 'Advanced', style: 'Spin precision', impact: 'Spin-friendly but more demanding; best with confident racket speed.', pro: 'Aggressive spin hitters' },
-  { type: 'Racket', brand: 'Yonex', name: 'Percept 100', price: '₹22,999', specs: '100 in² · 300 g · 16×19', level: 'Intermediate+', style: 'Control feel', impact: 'Comfortable response with accuracy for players who build points.', pro: 'Feel-first baseliners' },
-  { type: 'Racket', brand: 'Yonex', name: 'Ezone Ace', price: '₹7,999', specs: '102 in² · 260 g · 16×19', level: 'Beginner budget', style: 'Starter power', impact: 'Easy swing speed for beginners learning timing and contact.', pro: 'Budget first racket' },
-  { type: 'Racket', brand: 'Tecnifibre', name: 'TFight 300', price: '₹20,999', specs: '98 in² · 300 g · 16×19', level: 'Advanced', style: 'Speed/control', impact: 'Fast through the ball with crisp response for aggressive timing.', pro: 'Daniil Medvedev family style' },
-  { type: 'Racket', brand: 'Tecnifibre', name: 'TFight 305', price: '₹22,999', specs: '98 in² · 305 g · 18×19', level: 'Advanced', style: 'Tour control', impact: 'Lower launch and better directional confidence for clean strikers.', pro: 'Pro-level ball redirectors' },
-  { type: 'Racket', brand: 'Tecnifibre', name: 'TF-X1 300', price: '₹18,999', specs: '100 in² · 300 g · 16×19', level: 'Intermediate+', style: 'Power comfort', impact: 'More free depth and a softer feel than classic control frames.', pro: 'Club power players' },
-  { type: 'Racket', brand: 'Dunlop', name: 'CX 200', price: '₹17,999', specs: '98 in² · 305 g · 16×19', level: 'Advanced', style: 'Control value', impact: 'Precise feedback at a lower price than many tour frames.', pro: 'Clean-contact competitors' },
-  { type: 'Racket', brand: 'Dunlop', name: 'FX 500', price: '₹16,999', specs: '100 in² · 300 g · 16×19', level: 'Intermediate+', style: 'Power value', impact: 'Easy pace and depth for players who like first-strike tennis.', pro: 'Budget power frame' },
-  { type: 'Racket', brand: 'Dunlop', name: 'SX 300', price: '₹16,999', specs: '100 in² · 300 g · 16×19', level: 'Intermediate+', style: 'Spin value', impact: 'Higher launch and margin for heavy cross-court patterns.', pro: 'Value spin frame' },
-  { type: 'Racket', brand: 'Prince', name: 'Warrior 100', price: '₹10,999', specs: '100 in² · 285 g · 16×19', level: 'Budget value', style: 'Easy spin/value', impact: 'Cheap way to get modern specs without a heavy advanced frame.', pro: 'Best cheap pick for improving players' },
-  { type: 'Racket', brand: 'Prince', name: 'Phantom 100X 305', price: '₹22,999', specs: '100 in² · 305 g · 16×18', level: 'Advanced', style: 'Flexible control', impact: 'Soft, controlled feel for players who generate their own pace.', pro: 'Classic feel players' },
-  { type: 'Racket', brand: 'Prince', name: 'Tour 100P', price: '₹20,999', specs: '100 in² · 305 g · 18×20', level: 'Advanced', style: 'Precise control', impact: 'Predictable launch for point builders who like compact targets.', pro: 'Control/value advanced pick' },
-  { type: 'Ball', brand: 'Wilson', name: 'US Open', price: '₹899', specs: 'Hard court · 3 balls', level: 'Match', style: 'Firm + fast', impact: 'Skids through quicker; good for flat hitters and fast-court practice.', pro: 'Hard-court match feel' },
-  { type: 'Ball', brand: 'Wilson', name: 'Championship Extra Duty', price: '₹499', specs: 'Hard court · 3 balls', level: 'Budget practice', style: 'Firm value', impact: 'Good for regular hard-court sessions where budget matters.', pro: 'Value hard-court can' },
-  { type: 'Ball', brand: 'Wilson', name: 'Triniti', price: '₹699', specs: 'Pressureless-style · 3 balls', level: 'Practice', style: 'Longer life', impact: 'Keeps bounce longer, but feels different from fresh match balls.', pro: 'Ball machine/practice baskets' },
-  { type: 'Ball', brand: 'Wilson', name: 'Roland Garros Clay', price: '₹899', specs: 'Clay · 3 balls', level: 'Match', style: 'Clay control', impact: 'Better felt behavior for slower, dirtier clay conditions.', pro: 'Clay-court match prep' },
-  { type: 'Ball', brand: 'HEAD', name: 'Tour', price: '₹799', specs: 'Clay/all court · 3 balls', level: 'Practice/match', style: 'Higher bounce', impact: 'Rallies feel heavier; useful for clay and leg conditioning.', pro: 'Good clay conditioning ball' },
-  { type: 'Ball', brand: 'HEAD', name: 'Tour XT', price: '₹849', specs: 'Tournament · 3 balls', level: 'Match', style: 'Premium feel', impact: 'Stable bounce for match play and longer hitting sessions.', pro: 'Tournament-style practice' },
-  { type: 'Ball', brand: 'HEAD', name: 'Championship', price: '₹449', specs: 'All court · 3 balls', level: 'Budget practice', style: 'Value bounce', impact: 'Good everyday ball when you need quantity for drills.', pro: 'Budget team practice' },
-  { type: 'Ball', brand: 'Dunlop', name: 'Australian Open', price: '₹749', specs: 'All court · 3 balls', level: 'Match', style: 'Durable bounce', impact: 'Balanced speed and durability; good for repeated practice sets.', pro: 'Reliable all-court option' },
-  { type: 'Ball', brand: 'Dunlop', name: 'ATP Tour', price: '₹799', specs: 'Tournament · 3 balls', level: 'Match', style: 'Premium response', impact: 'Lively feel with reliable bounce for competitive sets.', pro: 'Match-play can' },
-  { type: 'Ball', brand: 'Dunlop', name: 'ATP Championship', price: '₹499', specs: 'All court · 3 balls', level: 'Budget match', style: 'Durable value', impact: 'Useful when you want decent match feel without premium pricing.', pro: 'Club match value' },
-  { type: 'Ball', brand: 'Dunlop', name: 'Fort All Court', price: '₹699', specs: 'All court · 3 balls', level: 'Practice/match', style: 'Classic durability', impact: 'Heavier, durable feel for long practice blocks.', pro: 'Club staple ball' },
-  { type: 'Ball', brand: 'Babolat', name: 'Team All Court', price: '₹599', specs: 'All court · 3 balls', level: 'Practice/match', style: 'Balanced', impact: 'Good middle ground for practice sets on mixed surfaces.', pro: 'All-court club use' },
-  { type: 'Ball', brand: 'Babolat', name: 'Gold Championship', price: '₹499', specs: 'All court · 3 balls', level: 'Budget practice', style: 'Value', impact: 'Affordable option for baskets, drills and high-volume hitting.', pro: 'Budget training can' },
-  { type: 'Ball', brand: 'Yonex', name: 'Tour', price: '₹799', specs: 'Tournament · 4 balls', level: 'Match', style: 'Consistent bounce', impact: 'Good for players who like a controlled, predictable response.', pro: 'Tournament practice' },
-  { type: 'String', brand: 'Babolat', name: 'RPM Blast', price: '₹2,499', specs: 'Poly · spin/control', level: 'Advanced', style: 'Spin grip', impact: 'Adds bite and control; can feel harsh if tension is too high.', pro: 'Heavy topspin players' },
-  { type: 'String', brand: 'Babolat', name: 'RPM Rough', price: '₹2,499', specs: 'Textured poly · spin', level: 'Advanced', style: 'Extra bite', impact: 'More grab on the ball; durability and comfort depend on tension.', pro: 'Spin-focused hitters' },
-  { type: 'String', brand: 'Babolat', name: 'RPM Soft', price: '₹1,899', specs: 'Softer mono · control', level: 'Intermediate', style: 'Comfort control', impact: 'More forgiving than stiff polys while keeping control feel.', pro: 'Poly transition players' },
-  { type: 'String', brand: 'Babolat', name: 'Xcel', price: '₹2,199', specs: 'Multifilament · comfort', level: 'All levels', style: 'Arm comfort', impact: 'Soft depth and comfort; less spin bite than polyester.', pro: 'Arm-friendly setup' },
-  { type: 'String', brand: 'Babolat', name: 'Touch VS', price: '₹5,999', specs: 'Natural gut · power/feel', level: 'Premium', style: 'Feel + power', impact: 'Elite comfort and power, but expensive and weather-sensitive.', pro: 'Premium hybrid setups' },
-  { type: 'String', brand: 'Wilson', name: 'NXT', price: '₹2,199', specs: 'Multifilament · comfort', level: 'All levels', style: 'Comfort + depth', impact: 'More power and comfort; breaks faster than polyester.', pro: 'Good for arm protection' },
-  { type: 'String', brand: 'Wilson', name: 'Sensation', price: '₹999', specs: 'Multifilament · value', level: 'Beginner–club', style: 'Comfort value', impact: 'Soft feel at a lower price; not for heavy string breakers.', pro: 'Budget comfort setup' },
-  { type: 'String', brand: 'Wilson', name: 'Revolve', price: '₹1,499', specs: 'Poly · spin', level: 'Intermediate+', style: 'Spin/control', impact: 'Helps snapback and spin, but keep tension sensible for comfort.', pro: 'Spin learners moving to poly' },
-  { type: 'String', brand: 'Luxilon', name: 'ALU Power', price: '₹2,699', specs: 'Poly · tour control', level: 'Advanced', style: 'Crisp control', impact: 'Premium control and response; best for strong, fast swings.', pro: 'Tour-level hybrid/main string' },
-  { type: 'String', brand: 'Luxilon', name: '4G', price: '₹2,499', specs: 'Poly · tension hold', level: 'Advanced', style: 'Stable control', impact: 'Better tension maintenance, firmer response, strong directional control.', pro: 'Control-focused competitors' },
-  { type: 'String', brand: 'Luxilon', name: 'Element', price: '₹2,299', specs: 'Softer poly · feel', level: 'Intermediate+', style: 'Feel control', impact: 'More comfort than many polys with useful control.', pro: 'Comfort-minded poly users' },
-  { type: 'String', brand: 'HEAD', name: 'Lynx Tour', price: '₹1,699', specs: 'Shaped poly · control', level: 'Intermediate+', style: 'Spin/control', impact: 'Predictable response for players who swing fast through the ball.', pro: 'Modern topspin baseliners' },
-  { type: 'String', brand: 'HEAD', name: 'Velocity MLT', price: '₹1,099', specs: 'Multifilament · comfort', level: 'All levels', style: 'Comfort value', impact: 'Soft response and easy depth for club players.', pro: 'Arm-friendly value' },
-  { type: 'String', brand: 'Solinco', name: 'Hyper-G', price: '₹1,299', specs: 'Shaped poly · spin', level: 'Intermediate+', style: 'Spin bite', impact: 'Grabs the ball well and rewards vertical racket speed.', pro: 'Heavy spin players' },
-  { type: 'String', brand: 'Solinco', name: 'Tour Bite', price: '₹1,399', specs: 'Shaped poly · control', level: 'Advanced', style: 'Sharp control', impact: 'Firm, controlled response for big cuts at the ball.', pro: 'Aggressive baseliners' },
-  { type: 'String', brand: 'Yonex', name: 'PolyTour Pro', price: '₹1,499', specs: 'Poly · control', level: 'Intermediate+', style: 'Smooth control', impact: 'Controlled, reliable response without extreme harshness.', pro: 'All-court competitors' },
-  { type: 'Shoes', brand: 'ASICS', name: 'Gel Resolution', price: '₹12,999', specs: 'Hard/clay models', level: 'Competitive', style: 'Lateral stability', impact: 'Better braking and support for aggressive movers.', pro: 'Best for hard training days' },
-  { type: 'Shoes', brand: 'ASICS', name: 'Court FF', price: '₹14,999', specs: 'Premium stability', level: 'Competitive+', style: 'Explosive support', impact: 'Stable for hard stops, slides and repeated direction changes.', pro: 'Novak Djokovic family line' },
-  { type: 'Shoes', brand: 'ASICS', name: 'Solution Speed FF', price: '₹11,999', specs: 'Lightweight speed', level: 'Competitive', style: 'Fast movement', impact: 'Quick first step with less heavy-duty support than Resolution.', pro: 'Fast all-court movers' },
-  { type: 'Shoes', brand: 'Nike', name: 'Vapor Pro', price: '₹11,999', specs: 'Lightweight match shoe', level: 'Competitive', style: 'Speed', impact: 'Fast first step and low court feel; less tank-like support.', pro: 'Speed-first players' },
-  { type: 'Shoes', brand: 'Nike', name: 'Vapor Lite', price: '₹7,999', specs: 'Lightweight value', level: 'Beginner–club', style: 'Speed value', impact: 'Easy entry into tennis shoes without premium pricing.', pro: 'Budget speed shoe' },
-  { type: 'Shoes', brand: 'Nike', name: 'GP Challenge', price: '₹12,999', specs: 'Support/speed', level: 'Competitive', style: 'Balanced', impact: 'More support than pure speed shoes for players who slide and brake hard.', pro: 'Aggressive movers' },
-  { type: 'Shoes', brand: 'Adidas', name: 'Barricade', price: '₹10,999', specs: 'Durability/stability', level: 'Competitive', style: 'Support', impact: 'Strong for heavy movers who burn through shoes.', pro: 'Long practice blocks' },
-  { type: 'Shoes', brand: 'Adidas', name: 'Adizero Ubersonic', price: '₹11,999', specs: 'Speed shoe', level: 'Competitive', style: 'Light movement', impact: 'Fast, low feel for quick players; less armored than Barricade.', pro: 'Speed-first baseline movers' },
-  { type: 'Shoes', brand: 'Adidas', name: 'Solematch Control', price: '₹8,999', specs: 'Support value', level: 'Club', style: 'Stable value', impact: 'Good support for regular club tennis without premium price.', pro: 'Value support shoe' },
-  { type: 'Shoes', brand: 'New Balance', name: 'Fresh Foam X 996', price: '₹10,999', specs: 'Lightweight speed', level: 'Competitive', style: 'Cushioned speed', impact: 'Good underfoot comfort while staying quick around the baseline.', pro: 'Fast practice/match shoe' },
-  { type: 'Shoes', brand: 'New Balance', name: 'Coco CG2', price: '₹13,999', specs: 'Signature support', level: 'Competitive+', style: 'Explosive support', impact: 'Built for powerful cuts and quick recovery steps.', pro: 'Coco Gauff signature line' },
-  { type: 'Shoes', brand: 'K-Swiss', name: 'Hypercourt Express', price: '₹8,999', specs: 'Comfort value', level: 'Club', style: 'Comfortable support', impact: 'Easy break-in and comfortable for regular practice.', pro: 'Club comfort staple' },
-  { type: 'Shoes', brand: 'K-Swiss', name: 'Ultrashot', price: '₹10,999', specs: 'Stability/durability', level: 'Competitive', style: 'Support', impact: 'Better for hard movers who need outsole life and side support.', pro: 'Durability-focused players' },
-  { type: 'Shoes', brand: 'Babolat', name: 'Jet Mach', price: '₹11,999', specs: 'Speed shoe', level: 'Competitive', style: 'Fast response', impact: 'Light and explosive for players who attack short balls quickly.', pro: 'Speed attackers' },
-  { type: 'Shoes', brand: 'Babolat', name: 'Propulse Fury', price: '₹10,999', specs: 'Support shoe', level: 'Competitive', style: 'Stability', impact: 'More support and durability for hard training blocks.', pro: 'Heavy movers' },
-  { type: 'Shoes', brand: 'On', name: 'THE ROGER Pro', price: '₹15,999', specs: 'Premium match shoe', level: 'Competitive+', style: 'Responsive support', impact: 'Premium court feel with controlled support for aggressive movement.', pro: 'Iga Swiatek / Ben Shelton family line' }
-];
-
-const FEATURED_GEAR_ITEMS = [...GEAR_ITEMS];
-
-function addLargeGearCatalog() {
-  const seen = new Set(GEAR_ITEMS.map(item => `${item.type}|${item.brand}|${item.name}`));
-  const add = item => {
-    const key = `${item.type}|${item.brand}|${item.name}`;
-    if (!seen.has(key)) {
-      seen.add(key);
-      GEAR_ITEMS.push(item);
-    }
-  };
-
-  const racketFamilies = [
-    ['Wilson', ['Blade', 'Clash', 'Ultra', 'Shift', 'Pro Staff', 'RF', 'Burn', 'Triad']],
-    ['Babolat', ['Pure Drive', 'Pure Aero', 'Pure Strike', 'Evo Drive', 'Evo Aero', 'Boost Drive', 'Boost Aero']],
-    ['HEAD', ['Speed', 'Radical', 'Gravity', 'Boom', 'Extreme', 'Prestige', 'Instinct', 'Challenge']],
-    ['Yonex', ['Ezone', 'VCORE', 'Percept', 'Astrel', 'Ezone Ace']],
-    ['Tecnifibre', ['TFight', 'TF-X1', 'Tempo', 'T-Rebound']],
-    ['Dunlop', ['CX', 'FX', 'SX', 'LX', 'Nitro']],
-    ['Prince', ['Phantom', 'Tour', 'Warrior', 'Ripstick', 'Beast', 'Textreme']],
-    ['Volkl', ['V-Cell', 'Vostra', 'Organix', 'Power Bridge']],
-    ['ProKennex', ['Ki', 'Q+', 'Black Ace', 'Kinetic']],
-    ['Artengo', ['TR', 'TR Pro', 'TR Lite']],
-    ['Diadem', ['Nova', 'Elevate', 'Axis']],
-    ['Lacoste', ['L20', 'L23', 'LT']],
-    ['Gamma', ['RZR', 'Quick Kids', 'Obsidian']]
-  ];
-  const racketVariants = ['100', '100L', '100UL', '98', '98L', '97', 'Pro', 'MP', 'Team', 'Tour', 'Lite', 'Plus', 'Junior 26', 'Junior 25'];
-  const racketSpecs = [
-    ['100 in² · 300 g · 16×19', 'Intermediate+', 'All-court', 'Balanced response for rally depth, spin and controlled power.'],
-    ['100 in² · 285 g · 16×19', 'Beginner–intermediate', 'Easy swing', 'Lighter swing weight helps developing players accelerate cleanly.'],
-    ['98 in² · 305 g · 16×19', 'Advanced', 'Control', 'Smaller head rewards precise contact and confident preparation.'],
-    ['102 in² · 270 g · 16×19', 'Beginner–club', 'Forgiving', 'Larger face and low weight make timing easier under pressure.'],
-    ['100 in² · 310 g · 18×20', 'Advanced', 'Stability', 'Heavier control frame for clean strikers who create their own pace.']
-  ];
-
-  racketFamilies.forEach(([brand, families]) => {
-    families.forEach(family => {
-      racketVariants.forEach((variant, index) => {
-        const [specs, level, style, impact] = racketSpecs[index % racketSpecs.length];
-        add({
-          type: 'Racket',
-          brand,
-          name: `${family} ${variant}`,
-          price: index % 5 === 0 ? '₹8,999–₹13,999' : index % 3 === 0 ? '₹14,999–₹19,999' : '₹20,999–₹29,999',
-          specs,
-          level,
-          style,
-          impact,
-          pro: `${brand} ${family} official-family option`
-        });
-      });
-    });
-  });
-
-  const ballFamilies = [
-    ['Wilson', ['US Open', 'Roland Garros', 'Triniti', 'Championship', 'Team Practice', 'Starter Play']],
-    ['HEAD', ['Tour', 'Tour XT', 'Pro', 'Championship', 'Team', 'Tip Green']],
-    ['Dunlop', ['Australian Open', 'ATP Tour', 'ATP Championship', 'Fort All Court', 'Grand Prix', 'Stage 1 Green']],
-    ['Babolat', ['Team All Court', 'Gold Championship', 'French Open', 'Team Clay', 'Red Foam', 'Orange']],
-    ['Yonex', ['Tour', 'Championship', 'Muscle Power', 'Training']],
-    ['Prince', ['Tour', 'Championship', 'NX Tour', 'Practice']],
-    ['Tecnifibre', ['X-One', 'Court', 'Club', 'Stage 1']]
-  ];
-  const ballPacks = ['3-ball can', '4-ball can', 'case 24 cans', 'practice bucket', 'clay duty', 'extra duty', 'regular duty'];
-  ballFamilies.forEach(([brand, families]) => {
-    families.forEach(family => {
-      ballPacks.forEach((pack, index) => add({
-        type: 'Ball',
-        brand,
-        name: `${family} ${pack}`,
-        price: index < 2 ? '₹399–₹999' : index === 2 ? '₹8,999–₹14,999' : '₹999–₹4,999',
-        specs: pack.includes('case') ? 'Case · match/practice' : pack.includes('bucket') ? 'Practice bucket' : pack,
-        level: pack.includes('Stage') || family.includes('Starter') ? 'Beginner/junior' : pack.includes('Tour') || family.includes('Open') ? 'Match' : 'Practice',
-        style: pack.includes('clay') ? 'Clay feel' : pack.includes('extra') ? 'Hard-court durability' : 'All-court',
-        impact: pack.includes('clay') ? 'Controls fluff and bounce better on clay.' : pack.includes('extra') ? 'Handles abrasive hard courts longer.' : 'Useful for matching practice ball feel to your surface.',
-        pro: `${brand} official ball-family option`
-      }));
-    });
-  });
-
-  const stringFamilies = [
-    ['Babolat', ['RPM Blast', 'RPM Rough', 'RPM Soft', 'Xcel', 'Touch VS', 'Addiction', 'Synthetic Gut']],
-    ['Wilson', ['NXT', 'Sensation', 'Revolve', 'Natural Gut', 'Synthetic Gut Power', 'Duo Control']],
-    ['Luxilon', ['ALU Power', '4G', 'Element', 'Savage', 'Original', 'Eco Power']],
-    ['HEAD', ['Lynx Tour', 'Lynx', 'Velocity MLT', 'Hawk', 'Reflex MLT', 'Synthetic Gut PPS']],
-    ['Solinco', ['Hyper-G', 'Tour Bite', 'Confidential', 'Outlast', 'Vanquish', 'Revolution']],
-    ['Yonex', ['PolyTour Pro', 'PolyTour Strike', 'PolyTour Rev', 'Rexis Speed', 'Rexis Comfort']],
-    ['Tecnifibre', ['X-One Biphase', 'Razor Code', 'Ice Code', 'Triax', 'NRG2', 'Multifeel']],
-    ['Dunlop', ['Explosive Spin', 'Explosive Bite', 'Iconic All', 'Silk Pro']],
-    ['Gamma', ['Moto', 'Live Wire', 'TNT2', 'Ocho']]
-  ];
-  const gauges = ['16', '16L', '17', '18'];
-  const tensions = ['low tension', 'mid tension', 'high control', 'hybrid cross'];
-  stringFamilies.forEach(([brand, families]) => {
-    families.forEach(family => {
-      gauges.forEach(gauge => {
-        tensions.forEach((setup, index) => add({
-          type: 'String',
-          brand,
-          name: `${family} ${gauge} ${setup}`,
-          price: family.includes('Gut') || family.includes('VS') ? '₹4,999–₹7,999' : index === 3 ? '₹1,999–₹3,499' : '₹899–₹2,499',
-          specs: `${gauge} gauge · ${setup}`,
-          level: family.includes('Gut') || family.includes('X-One') ? 'Premium' : family.includes('Blast') || family.includes('ALU') || family.includes('Hyper') ? 'Advanced' : 'All levels',
-          style: family.includes('NXT') || family.includes('Xcel') || family.includes('Velocity') ? 'Comfort' : family.includes('RPM') || family.includes('Hyper') || family.includes('Lynx') ? 'Spin/control' : 'Balanced',
-          impact: setup.includes('low') ? 'Adds easier depth and comfort.' : setup.includes('high') ? 'Adds control but can feel firmer.' : setup.includes('hybrid') ? 'Balances comfort, power and control.' : 'Reliable all-around string response.',
-          pro: `${brand} official string-family option`
-        }));
-      });
-    });
-  });
-
-  const shoeFamilies = [
-    ['ASICS', ['Gel Resolution', 'Court FF', 'Solution Speed FF', 'Game FF', 'Dedicate']],
-    ['Nike', ['Vapor Pro', 'Vapor Lite', 'GP Challenge', 'Zoom NXT', 'Court Lite']],
-    ['Adidas', ['Barricade', 'Adizero Ubersonic', 'Solematch Control', 'CourtJam Control', 'Defiant Speed']],
-    ['New Balance', ['Fresh Foam X 996', 'Coco CG2', 'FuelCell 996', 'Lav', '806']],
-    ['K-Swiss', ['Hypercourt Express', 'Ultrashot', 'SpeedTrac', 'Express Light', 'Bigshot Light']],
-    ['Babolat', ['Jet Mach', 'Propulse Fury', 'SFX', 'Pulsion']],
-    ['On', ['THE ROGER Pro', 'THE ROGER Clubhouse Pro', 'THE ROGER Advantage']],
-    ['Wilson', ['Rush Pro', 'Kaos Swift', 'Hurakn Pro', 'RKA']],
-    ['Yonex', ['Power Cushion Eclipsion', 'Sonicage', 'Fusionrev', 'Lumio']]
-  ];
-  const shoeCuts = ['men hard court', 'women hard court', 'clay outsole', 'all court', 'wide fit', 'junior'];
-  shoeFamilies.forEach(([brand, families]) => {
-    families.forEach(family => {
-      shoeCuts.forEach((cut, index) => add({
-        type: 'Shoes',
-        brand,
-        name: `${family} ${cut}`,
-        price: index === 5 ? '₹4,999–₹7,999' : index === 4 ? '₹8,999–₹12,999' : '₹7,999–₹15,999',
-        specs: cut,
-        level: index === 5 ? 'Junior' : family.includes('Resolution') || family.includes('Barricade') || family.includes('Court FF') ? 'Competitive+' : 'Club–competitive',
-        style: cut.includes('clay') ? 'Clay traction' : cut.includes('wide') ? 'Comfort fit' : family.includes('Speed') || family.includes('Vapor') || family.includes('Ubersonic') ? 'Speed' : 'Support',
-        impact: cut.includes('clay') ? 'Better grip and controlled sliding on clay.' : cut.includes('wide') ? 'More room for wider feet during long sessions.' : 'Court-specific support for braking, recovery and direction changes.',
-        pro: `${brand} official shoe-family option`
-      }));
-    });
-  });
-}
-
-// Keep the shopper-facing catalog to explicitly listed products only.
-// addLargeGearCatalog intentionally not called: it creates synthetic variants
-// that should never be shown as real inventory.
-const GEAR_INDEX = window.COURTIQ_GEAR_INDEX || { metadata: {}, products: [] };
-const BOOTSTRAP_GEAR_ITEMS = GEAR_ITEMS.map(normalizeLegacyGearItem);
-const REAL_GEAR_ITEMS = (Array.isArray(GEAR_INDEX.products) && GEAR_INDEX.products.length
-  ? GEAR_INDEX.products.map(normalizeIndexedGearItem)
-  : BOOTSTRAP_GEAR_ITEMS);
-const FEATURED_REAL_GEAR_ITEMS = REAL_GEAR_ITEMS.slice(0, 12);
-
 const SECURITY_ITEMS = [
   'Device-local profile by default',
   'Opponent-consent check before match video analysis',
@@ -735,6 +498,9 @@ const state = {
   backendPrediction: null,
   predictionLoading: false,
   predictionError: '',
+  simulationResult: null,
+  simulationLoading: false,
+  simulationError: '',
   learnLevel: ['Beginner', 'Intermediate', 'Advanced'].includes(localStorage.cqLearnLevel) ? localStorage.cqLearnLevel : 'Beginner',
   learnCategory: '',
   learnOpenLesson: '',
@@ -1022,14 +788,26 @@ const PRODUCT_LABELS = {
 };
 
 const MODEL_METRICS = {
-  version: 'courtiq-real-20260809154449-enhanced_runtime_safe',
-  dataRange: 'ATP artifact · training cutoff 2023 · held-out 2025 evaluation',
-  matches: 78091,
-  accuracy: '65.50%',
-  auc: '0.7132',
-  logLoss: '0.6185',
-  brier: '0.2154',
-  ece: '0.0271'
+  ATP: {
+    version: 'courtiq-real-20260809154449-enhanced_runtime_safe',
+    dataRange: 'ATP artifact · training cutoff 2023 · held-out 2025 evaluation',
+    matches: 78091,
+    accuracy: '65.50%',
+    auc: '0.7132',
+    logLoss: '0.6185',
+    brier: '0.2154',
+    ece: '0.0271'
+  },
+  WTA: {
+    version: 'courtiq-real-20260809153454',
+    dataRange: 'WTA artifact · chronological held-out evaluation',
+    matches: 45179,
+    accuracy: '64.69%',
+    auc: '0.7069',
+    logLoss: '0.6232',
+    brier: '0.2172',
+    ece: '0.0117'
+  }
 };
 
 function escapeHtml(value) {
@@ -1043,335 +821,6 @@ function escapeHtml(value) {
 
 function normalizeKey(value) {
   return String(value || '').toLowerCase().replace(/[^a-z]/g, '');
-}
-
-const GEAR_COLORS = {
-  babolat: '#3159ff',
-  wilson: '#e23636',
-  head: '#101713',
-  yonex: '#21a45b',
-  prince: '#43247d',
-  dunlop: '#f4c11f',
-  asics: '#285bcc',
-  nike: '#111713',
-  adidas: '#111713',
-  tecnifibre: '#e33535',
-  luxilon: '#8a8f98',
-  solinco: '#7fd321',
-  newbalance: '#c9162e',
-  kswiss: '#174ea6',
-  on: '#111713',
-  volkl: '#f1c232',
-  prokennex: '#2f6f4e',
-  artengo: '#1574d4',
-  diadem: '#7b42f6',
-  lacoste: '#148547',
-  gamma: '#f2b705'
-};
-
-function normalizeLegacyGearItem(item) {
-  return {
-    id: productKey(item),
-    brand: item.brand,
-    model: item.name,
-    variant: '',
-    category: item.type,
-    subcategory: item.style || '',
-    gender: 'unisex',
-    image_url: item.imageUrl || '',
-    image_local_path: item.imageLocalPath || '',
-    image_verified: Boolean(item.imageVerified),
-    product_url: item.productUrl || '',
-    official_url: '',
-    retailer_url: '',
-    price: item.priceVerified ? item.price : null,
-    currency: '',
-    availability: 'unknown',
-    status: 'unknown',
-    active: true,
-    specs: { summary: item.specs || '' },
-    style: item.style || '',
-    game_impact: item.impact || '',
-    best_for: item.pro || '',
-    source: 'CourtIQ legacy bootstrap seed',
-    source_type: 'bootstrap_seed',
-    source_links: [],
-    last_verified: null
-  };
-}
-
-function normalizeIndexedGearItem(item) {
-  const legacy = item.name ? normalizeLegacyGearItem(item) : {};
-  return {
-    ...legacy,
-    ...item,
-    brand: item.brand || legacy.brand || '',
-    model: item.model || item.name || legacy.model || '',
-    variant: item.variant || legacy.variant || '',
-    category: item.category || item.type || legacy.category || 'Accessory',
-    specs: typeof item.specs === 'string' ? { summary: item.specs } : (item.specs || legacy.specs || {}),
-    image_url: item.image_url || item.imageUrl || '',
-    image_local_path: item.image_local_path || item.imageLocalPath || '',
-    product_url: item.product_url || item.productUrl || '',
-    official_url: item.official_url || '',
-    retailer_url: item.retailer_url || '',
-    game_impact: item.game_impact || item.impact || legacy.game_impact || '',
-    best_for: item.best_for || item.pro || legacy.best_for || '',
-    source_links: Array.isArray(item.source_links) ? item.source_links : []
-  };
-}
-
-const BRAND_OFFICIAL_URLS = {
-  Babolat: 'https://www.babolat.com/',
-  Wilson: 'https://www.wilson.com/en-us/tennis',
-  HEAD: 'https://www.head.com/en/tennis',
-  Yonex: 'https://www.yonex.com/tennis',
-  Tecnifibre: 'https://www.tecnifibre.com/',
-  Dunlop: 'https://dunlopsports.com/tennis/',
-  Prince: 'https://princetennis.com/',
-  ASICS: 'https://www.asics.com/',
-  Nike: 'https://www.nike.com/tennis',
-  Adidas: 'https://www.adidas.com/tennis',
-  Puma: 'https://us.puma.com/us/en/sports/tennis',
-  'New Balance': 'https://www.newbalance.com/tennis/',
-  'K-Swiss': 'https://kswiss.com/',
-  On: 'https://www.on.com/',
-  Solinco: 'https://www.solincosports.com/',
-  Luxilon: 'https://www.luxilon.com/',
-  Volkl: 'https://www.volkltennis.com/',
-  ProKennex: 'https://prokennex.com/',
-  Artengo: 'https://www.decathlon.com/',
-  Diadem: 'https://diademsports.com/',
-  Lacoste: 'https://www.lacoste.com/',
-  Gamma: 'https://www.gammasports.com/'
-};
-
-function svgText(value) {
-  return String(value ?? '')
-    .replaceAll('&', '&amp;')
-    .replaceAll('<', '&lt;')
-    .replaceAll('>', '&gt;')
-    .replaceAll('"', '&quot;');
-}
-
-function svgUri(svg) {
-  return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
-}
-
-function gearName(item) {
-  return [item.model || item.name, item.variant].filter(Boolean).join(' ').trim();
-}
-
-function gearCategory(item) {
-  return item.category || item.type || 'Gear';
-}
-
-function gearTitle(item) {
-  return `${item.brand || ''} ${gearName(item)}`.trim();
-}
-
-function productKey(item) {
-  return String(item.id || `${item.brand} ${gearName(item)}`)
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-|-$/g, '');
-}
-
-function gearProductImage(item) {
-  if (item.image_local_path) return item.image_local_path;
-  if (item.image_verified && item.image_url) return item.image_url;
-  return '';
-}
-
-function gearMissingImageMarkup(item, hidden = false) {
-  return `<div class="gear-photo-missing"${hidden ? ' hidden' : ''}>
-    <span>Photo pending</span>
-    <b>${escapeHtml(gearTitle(item))}</b>
-    <small>Exact verified product image not stored yet.</small>
-  </div>`;
-}
-
-function gearExtraVisualMarkup(item) {
-  if (normalizeKey(gearCategory(item)) !== 'ball') return '';
-  return `<span class="ball-can-visual" aria-hidden="true"></span><span class="loose-ball-visual" aria-hidden="true"></span>`;
-}
-
-const GEAR_PROFILE = {
-  level: 'Competitive',
-  targetWeight: 270,
-  surface: 'Hard court',
-  favoriteTypes: ['Racket', 'Shoes', 'String'],
-  favoriteStyles: ['control', 'spin', 'speed', 'comfort', 'light', 'support'],
-  preferredBrands: ['Prince', 'Babolat', 'Wilson', 'HEAD', 'Yonex']
-};
-
-function gearInterest() {
-  try {
-    return JSON.parse(localStorage.cqGearInterest || '{"brands":{},"types":{},"styles":{},"queries":[]}');
-  } catch {
-    return { brands: {}, types: {}, styles: {}, queries: [] };
-  }
-}
-
-function saveGearInterest(interest) {
-  localStorage.cqGearInterest = JSON.stringify(interest);
-}
-
-function rememberGearInterest(item, query = '') {
-  const interest = gearInterest();
-  if (item) {
-    interest.brands[item.brand] = (interest.brands[item.brand] || 0) + 3;
-    const category = gearCategory(item);
-    interest.types[category] = (interest.types[category] || 0) + 2;
-    String(`${item.style} ${item.game_impact || item.impact} ${item.best_for || item.pro}`).toLowerCase().split(/[^a-z0-9]+/).filter(Boolean).forEach(token => {
-      if (['spin', 'control', 'power', 'comfort', 'speed', 'support', 'clay', 'hard', 'budget', 'advanced', 'light'].includes(token)) {
-        interest.styles[token] = (interest.styles[token] || 0) + 1;
-      }
-    });
-  }
-  if (query && query.length > 1) {
-    interest.queries = [query, ...(interest.queries || []).filter(saved => saved !== query)].slice(0, 8);
-  }
-  saveGearInterest(interest);
-}
-
-function gearSpecsSummary(specs) {
-  if (!specs) return '';
-  if (typeof specs === 'string') return specs;
-  if (specs.summary) return specs.summary;
-  const parts = [];
-  if (specs.head_size_sq_in) parts.push(`${specs.head_size_sq_in} in²`);
-  if (specs.unstrung_weight_g) parts.push(`${specs.unstrung_weight_g} g`);
-  if (specs.string_pattern) parts.push(specs.string_pattern.replace('x', '×'));
-  if (specs.gauge) parts.push(`${specs.gauge} gauge`);
-  return parts.join(' · ');
-}
-
-function weightFromSpecs(specs) {
-  const match = gearSpecsSummary(specs).match(/(\d{3})\s*g/);
-  return match ? Number(match[1]) : null;
-}
-
-function gearScore(item, interest = gearInterest()) {
-  const text = `${gearName(item)} ${item.subcategory || ''} ${item.style || ''} ${item.game_impact || item.impact || ''} ${gearSpecsSummary(item.specs)}`.toLowerCase();
-  let score = 0;
-  if (GEAR_PROFILE.preferredBrands.includes(item.brand)) score += 9;
-  if (GEAR_PROFILE.favoriteTypes.includes(gearCategory(item))) score += 7;
-  GEAR_PROFILE.favoriteStyles.forEach(style => {
-    if (text.includes(style)) score += 4;
-  });
-  if (text.includes('competitive')) score += 5;
-  if (text.includes('hard')) score += 3;
-  const weight = weightFromSpecs(item.specs);
-  if (weight) score += Math.max(0, 8 - Math.abs(weight - GEAR_PROFILE.targetWeight) / 5);
-  score += (interest.brands?.[item.brand] || 0) * 2;
-  score += (interest.types?.[gearCategory(item)] || 0) * 2;
-  Object.entries(interest.styles || {}).forEach(([style, value]) => {
-    if (text.includes(style)) score += value;
-  });
-  (interest.queries || []).forEach(query => {
-    if (normalizeKey(`${item.brand} ${gearName(item)} ${item.style}`).includes(normalizeKey(query))) score += 6;
-  });
-  return score;
-}
-
-function sortedGearItems(items = GEAR_ITEMS) {
-  const interest = gearInterest();
-  return [...items].sort((a, b) => gearScore(b, interest) - gearScore(a, interest));
-}
-
-function gearRecommendationReason(item) {
-  const weight = weightFromSpecs(item.specs);
-  if (weight && Math.abs(weight - GEAR_PROFILE.targetWeight) <= 15) return `Close to your ${GEAR_PROFILE.targetWeight} g preference`;
-  if (GEAR_PROFILE.preferredBrands.includes(item.brand)) return `${item.brand} matches your saved brand preference`;
-  if (String(item.game_impact || item.impact).toLowerCase().includes('comfort')) return 'Comfort-focused option for regular training';
-  if (String(item.game_impact || item.impact).toLowerCase().includes('spin')) return 'Good fit for a spin/control setup';
-  return 'Recommended from your recent gear activity';
-}
-
-function gearPriceLabel(item) {
-  if (item.price && item.last_verified) return item.currency ? `${item.currency} ${item.price}` : item.price;
-  if (item.product_url || item.retailer_url) return 'See current price';
-  return 'Price unavailable';
-}
-
-function gearSourceLinks(item) {
-  return [item.product_url, item.official_url, item.retailer_url, ...(item.source_links || [])]
-    .filter(Boolean)
-    .filter((url, index, list) => list.indexOf(url) === index);
-}
-
-function gearSearchText(item) {
-  return normalizeKey(`${item.brand} ${gearName(item)} ${gearCategory(item)} ${item.subcategory || ''} ${item.style || ''} ${item.game_impact || ''} ${item.best_for || ''} ${gearSpecsSummary(item.specs)}`);
-}
-
-function gearSearchScore(item, rawQuery = '') {
-  const query = normalizeKey(rawQuery);
-  if (!query) return 1;
-  const name = normalizeKey(`${item.brand} ${gearName(item)}`);
-  const text = gearSearchText(item);
-  const tokens = query.split(/\s+/).filter(Boolean);
-  if (query === name) return 1000;
-  if (name.startsWith(query)) return 850;
-  if (tokens.every(token => text.includes(token))) return 650 + tokens.length;
-  if (text.includes(query)) return 450;
-  const textTokens = text.split(/\s+/).filter(Boolean);
-  if (tokens.length && tokens.every(token => Math.min(...textTokens.map(candidate => editDistance(token, candidate))) <= 2)) return 220;
-  if (tokens.some(token => editDistance(token, name.slice(0, token.length + 3)) <= 2)) return 120;
-  return 0;
-}
-
-function filterGearIndexItems({ query = '', type = 'All', brand = 'All brands' } = {}) {
-  return REAL_GEAR_ITEMS
-    .map(item => ({ item, score: gearSearchScore(item, query) }))
-    .filter(entry => entry.score > 0)
-    .filter(entry => type === 'All' || gearCategory(entry.item) === type)
-    .filter(entry => brand === 'All brands' || entry.item.brand === brand)
-    .sort((a, b) => b.score - a.score || gearScore(b.item) - gearScore(a.item))
-    .map(entry => entry.item);
-}
-
-function paginateGearResults(items, page = state.gearPage || 1, pageSize = state.gearPageSize || 24) {
-  const safePage = Math.max(1, Number(page) || 1);
-  const safePageSize = Math.max(1, Math.min(96, Number(pageSize) || 24));
-  return {
-    items: items.slice(0, safePage * safePageSize),
-    total: items.length,
-    hasMore: safePage * safePageSize < items.length
-  };
-}
-
-function gearCardMarkup(item, extraClass = '', note = '') {
-  const image = gearProductImage(item);
-  const itemType = String(gearCategory(item) || 'Gear');
-  const detailLine = gearSpecsSummary(item.specs) || item.subcategory || itemType;
-  const productUrl = item.product_url || item.official_url || item.retailer_url || '';
-  const brandUrl = item.official_url || BRAND_OFFICIAL_URLS[item.brand] || '';
-  const priceLabel = gearPriceLabel(item);
-  const status = item.status && item.status !== 'unknown' ? item.status : '';
-  return `<article class="gear-card product-card ${extraClass}" data-product-key="${escapeHtml(productKey(item))}" data-type="${escapeHtml(itemType)}" data-brand="${escapeHtml(item.brand)}">
-    <div class="gear-visual visual-${normalizeKey(itemType)} brand-${normalizeKey(item.brand)} ${image ? 'has-product-photo' : 'needs-product-photo'}">
-      ${image
-        ? `<img class="gear-photo" src="${escapeHtml(image)}" alt="${escapeHtml(gearTitle(item) + ' product photo')}" loading="lazy" onerror="this.hidden=true;this.closest('.gear-visual').classList.remove('has-product-photo');this.closest('.gear-visual').classList.add('needs-product-photo');this.nextElementSibling.hidden=false;">${gearMissingImageMarkup(item, true)}`
-        : gearMissingImageMarkup(item)}
-      ${gearExtraVisualMarkup(item)}
-      <span class="visual-brand">${escapeHtml(item.brand)}</span>
-      <strong>${escapeHtml(gearName(item))}</strong>
-    </div>
-    <div class="product-top"><span class="eyebrow">${escapeHtml(itemType)}</span><b>${escapeHtml(priceLabel)}</b></div>
-    <h2>${escapeHtml(gearTitle(item))}</h2>
-    <p>${escapeHtml(detailLine)}</p>
-    <p>${escapeHtml(item.game_impact || item.impact || item.best_for || 'Product details need source verification.')}</p>
-    ${status ? `<small class="source-note">Status: ${escapeHtml(status)}</small>` : ''}
-    ${note ? `<div class="recommendation-reason">${escapeHtml(note)}</div>` : ''}
-    <div class="gear-actions">
-      <button type="button" class="detail-btn" data-key="${escapeHtml(productKey(item))}">Details</button>
-      <button type="button" class="store-btn" data-key="${escapeHtml(productKey(item))}" data-product="${escapeHtml(gearTitle(item))}">Find store</button>
-      ${productUrl
-        ? `<a class="official-link" target="_blank" rel="noopener noreferrer" href="${escapeHtml(productUrl)}">View Product ↗</a>`
-        : brandUrl ? `<a class="official-link secondary-link" target="_blank" rel="noopener noreferrer" href="${escapeHtml(brandUrl)}">Visit ${escapeHtml(item.brand)} ↗</a>` : ''}
-    </div>
-  </article>`;
 }
 
 function editDistance(a, b) {
@@ -1909,6 +1358,23 @@ async function runBackendPrediction() {
   return payload;
 }
 
+async function runTournamentSimulation() {
+  const players = rosterFor(state.selectedTour).slice(0, 8);
+  return apiFetchJson('/api/simulate/tournament', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      tour: state.selectedTour.toLowerCase(),
+      event: selectedSlam().name,
+      surface: selectedSlam().surface.toLowerCase(),
+      players,
+      draw_size: players.length,
+      simulations: 2000,
+      seed: 42
+    })
+  });
+}
+
 function handleTopInput(slot, value) {
   state.activeSlot = slot;
   const inferredTour = inferTourFromText(value);
@@ -2007,7 +1473,7 @@ function backendPredictionMarkup() {
     </section>
     <section class="forecast-report">
       ${forecastBar(chance)}
-      <div class="model-version">${escapeHtml(prediction.model_version || MODEL_METRICS.version)}</div>
+      <div class="model-version">${escapeHtml(prediction.model_version || MODEL_METRICS[state.selectedTour].version)}</div>
     </section>
   </div>`;
 }
@@ -2122,7 +1588,7 @@ function forecastBar(p1Chance) {
 
 function predictOverviewPage() {
   const p = state.backendPrediction;
-  const p1Chance = p ? Math.round(Number(p.player1_win_probability || 0) * 1000) / 10 : 51.1;
+  const p1Chance = p ? Math.round(Number(p.player1_win_probability || 0) * 1000) / 10 : null;
   return `<section class="product-hero predict-product">
       <span class="eyebrow">PREDICT</span>
       <h1>Professional tennis intelligence.</h1>
@@ -2132,10 +1598,10 @@ function predictOverviewPage() {
       <article class="featured-match">
         <span class="eyebrow">FEATURED MATCHUP</span>
         <h2>${escapeHtml(state.player1)} vs ${escapeHtml(state.player2)}</h2>
-        ${forecastBar(p1Chance)}
+        ${p1Chance == null ? '<div class="forecast-empty"><p>Run a prediction to generate a matchup forecast.</p></div>' : forecastBar(p1Chance)}
         <button class="primary-action" data-page="predict/match">Run full analysis</button>
       </article>
-      <article class="map-card" data-page="predict/tournaments"><span>LIVE</span><h2>Verified prediction feed</h2><p>Upcoming matches grouped by tournament when schedule-backed data is available.</p></article>
+      <article class="map-card" data-page="predict/tournaments"><span>SCHEDULE FEED</span><h2>Verified prediction feed</h2><p>Upcoming matches grouped by tournament when schedule-backed data is available.</p></article>
       <article class="map-card" data-page="predict/simulation"><span>SIM</span><h2>Tournament simulation</h2><p>Run bracket-style projections from the production predictor.</p></article>
       <article class="map-card" data-page="predict/players"><span>ATP</span><h2>Player search</h2><p>Search active players and compare surface strengths.</p></article>
     </section>`;
@@ -2170,41 +1636,39 @@ function comparePage() {
 }
 
 function simulationPage() {
-  const tour = playerTour(state.player1);
-  const field = rosterFor(tour).slice(0, 12).map(name => {
-    const profile = playerProfile(name);
-    const surface = selectedSlam().surface.toLowerCase();
-    return [name, Math.round((profile[surface] || 70) + profile.form * 0.4 + profile.serve * 0.2)];
-  }).sort((a, b) => b[1] - a[1]);
-  const top = field[0]?.[1] || 1;
+  const field = rosterFor(state.selectedTour).slice(0, 8);
+  const result = state.simulationResult;
+  const ranked = result
+    ? field.map(name => [name, Number(result.probabilities?.[name]?.Champion || 0)])
+      .sort((a, b) => b[1] - a[1])
+    : [];
   return `${pageHeader('SIMULATION', 'Tournament projection.', 'A bracket-ready view for the selected tour and Grand Slam surface.')}
     ${tourSelectorMarkup()}
     <section class="simulation-board">
-      <article class="sim-control"><span class="eyebrow">${escapeHtml(selectedSlam().name)}</span><h2>${PRODUCT_LABELS.predict} simulation</h2><p>Uses the same player records available to the app. Start with matchup predictions, then expand into full bracket runs.</p><button id="run-sim" class="primary-action">Run simulation</button></article>
+      <article class="sim-control"><span class="eyebrow">${escapeHtml(selectedSlam().name)}</span><h2>${PRODUCT_LABELS.predict} simulation</h2><p>Runs 2,000 seeded brackets through the production ATP/WTA prediction service for this eight-player field.</p><button id="run-sim" class="primary-action" ${state.simulationLoading ? 'disabled' : ''}>${state.simulationLoading ? 'Running…' : 'Run simulation'}</button>${state.simulationError ? `<p class="api-error">${escapeHtml(state.simulationError)}</p>` : ''}</article>
       <article class="champion-list">
-        <span class="eyebrow">CHAMPION PROBABILITY</span>
-        ${field.slice(0, 8).map(([name, score], index) => {
-          const chance = Math.max(4, Math.round((score / field.reduce((sum, item) => sum + item[1], 0)) * 1000) / 10);
-          return `<div><b>${index + 1}. ${escapeHtml(name)}</b><span>${chance}%</span><i style="width:${Math.round((score / top) * 100)}%"></i></div>`;
-        }).join('')}
+        <span class="eyebrow">${result ? 'MODEL-SIMULATED CHAMPION PROBABILITY' : 'SIMULATION OUTPUT'}</span>
+        ${result ? ranked.map(([name, probability], index) => `<div><b>${index + 1}. ${escapeHtml(name)}</b><span>${(probability * 100).toFixed(1)}%</span><i style="width:${Math.round(probability * 100)}%"></i></div>`).join('') : '<div class="simulation-empty"><p>Run the production simulation to generate tournament probabilities.</p></div>'}
       </article>
     </section>`;
 }
 
 function modelPage() {
+  const metrics = MODEL_METRICS[state.selectedTour];
   return `${pageHeader('MODEL LAB', 'How CourtIQ predicts.', 'Transparent performance, real split boundaries and model quality without pretending every forecast is certain.')}
+    ${tourSelectorMarkup()}
     <section class="model-lab">
       <article class="model-terminal">
-        <span class="eyebrow">PRODUCTION MODEL</span>
-        <h2>${MODEL_METRICS.version}</h2>
-        <p>${MODEL_METRICS.dataRange}</p>
+        <span class="eyebrow">DEPLOYED ${state.selectedTour} MODEL</span>
+        <h2>${metrics.version}</h2>
+        <p>${metrics.dataRange}</p>
         <div class="metric-wall">
-          <b><small>Matches</small>${MODEL_METRICS.matches.toLocaleString()}</b>
-          <b><small>Accuracy</small>${MODEL_METRICS.accuracy}</b>
-          <b><small>ROC-AUC</small>${MODEL_METRICS.auc}</b>
-          <b><small>Log loss</small>${MODEL_METRICS.logLoss}</b>
-          <b><small>Brier</small>${MODEL_METRICS.brier}</b>
-          <b><small>ECE</small>${MODEL_METRICS.ece}</b>
+          <b><small>Matches</small>${metrics.matches.toLocaleString()}</b>
+          <b><small>Accuracy</small>${metrics.accuracy}</b>
+          <b><small>ROC-AUC</small>${metrics.auc}</b>
+          <b><small>Log loss</small>${metrics.logLoss}</b>
+          <b><small>Brier</small>${metrics.brier}</b>
+          <b><small>ECE</small>${metrics.ece}</b>
         </div>
       </article>
       <article class="calibration-card">
@@ -2688,110 +2152,13 @@ function competePage() {
     </section>`;
 }
 
-function gearPage() {
-  const categories = ['All', 'Racket', 'Shoes', 'Ball', 'String', 'Bag', 'Grip', 'Dampener', 'Accessory'];
-  const categoryLabels = { Racket: 'Rackets', Ball: 'Balls', String: 'Strings', Shoes: 'Shoes', Bag: 'Bags', Grip: 'Grips', Dampener: 'Dampeners', Accessory: 'Accessories', All: 'All' };
-  if (state.gearMode === 'All') state.gearMode = 'Both';
-  if (!['Both', 'Online', 'Nearby Stores'].includes(state.gearMode)) state.gearMode = 'Both';
-  const brands = ['All brands', ...Array.from(new Set(REAL_GEAR_ITEMS.map(item => item.brand).filter(Boolean))).sort()];
-  if (!categories.includes(state.gearType)) state.gearType = 'All';
-  if (!brands.includes(state.gearBrand)) state.gearBrand = 'All brands';
-  const personalized = sortedGearItems(REAL_GEAR_ITEMS);
-  const topPicks = personalized.slice(0, 8);
-  const recentInterest = gearInterest();
-  const watchedBrands = Object.entries(recentInterest.brands || {}).sort((a, b) => b[1] - a[1]).map(([brand]) => brand).slice(0, 4);
-  const continueItems = watchedBrands.length
-    ? personalized.filter(item => watchedBrands.includes(item.brand)).slice(0, 8)
-    : FEATURED_REAL_GEAR_ITEMS.slice(0, 8);
-  const brandSections = brands
-    .filter(brand => brand !== 'All brands')
-    .map(brand => ({
-      brand,
-      items: personalized.filter(item => item.brand === brand).slice(0, 8),
-      count: REAL_GEAR_ITEMS.filter(item => item.brand === brand).length
-    }))
-    .filter(section => section.items.length);
-  const meta = GEAR_INDEX.metadata || {};
-  const totalProducts = Number(meta.total_products || REAL_GEAR_ITEMS.length);
-  const imageCount = Number(meta.products_with_real_images || 0);
-  const sourceCount = Array.isArray(meta.source_files) ? meta.source_files.length : 0;
-
-  return `<section class="gear-hero">
-      <div>
-        <span class="eyebrow">GEAR</span>
-        <h1>Find the right setup.</h1>
-        <p>Search a refreshable product index by brand, category, surface and playing style. Results adapt to the filters you actually use.</p>
-      </div>
-    </section>
-    <section class="gear-shell">
-      <article class="gear-index-status">
-        <div><span class="eyebrow">PRODUCT INDEX</span><h2>${escapeHtml(totalProducts)} indexed items</h2></div>
-        <p>${escapeHtml(sourceCount)} source file${sourceCount === 1 ? '' : 's'} loaded · ${escapeHtml(imageCount)} verified product images stored · old seed data is fallback only.</p>
-      </article>
-      <div class="gear-toolbar">
-        <label>City / country<input id="city-input" value="${escapeHtml(state.gearLocation)}" autocomplete="off" placeholder="Ahmedabad, London, New York…"></label>
-        <label>Search products
-          <span class="input-with-clear">
-            <input id="gear-search" value="${escapeHtml(state.gearQuery)}" placeholder="Pure Drive, Wilson Blade, clay shoes…" autocomplete="off">
-            <button type="button" id="clear-gear-search" aria-label="Clear gear search">×</button>
-          </span>
-        </label>
-        <label>Buying mode<select id="buying-mode">
-          ${['Both', 'Online', 'Nearby Stores'].map(mode => `<option value="${escapeHtml(mode)}" ${state.gearMode === mode ? 'selected' : ''}>${escapeHtml(mode)}</option>`).join('')}
-        </select></label>
-      </div>
-      <div class="gear-filters">
-        ${categories.map(type => `<button type="button" class="gear-filter ${type === state.gearType ? 'active' : ''}" data-gear-type="${type}">${categoryLabels[type]}</button>`).join('')}
-        <select id="brand-filter">${brands.map(brand => `<option value="${escapeHtml(brand)}" ${state.gearBrand === brand ? 'selected' : ''}>${escapeHtml(brand)}</option>`).join('')}</select>
-        <button id="reset-gear-memory" type="button" class="ghost-action compact">Reset gear learning</button>
-      </div>
-      <article id="gear-search-results" class="gear-section search-results-section">
-        <div class="brand-section-head">
-          <div><span class="eyebrow">SEARCH RESULTS</span><h2>Browse the index</h2></div>
-          <p>Exact, prefix, token and fuzzy matching. Images and current prices appear only when source-backed.</p>
-        </div>
-        <div class="gear-grid"></div>
-        <button type="button" id="load-more-gear" class="ghost-action compact" hidden>Load more products</button>
-      </article>
-      <article class="gear-recommendations gear-section" data-brand-section="recommendations">
-        <div class="brand-section-head">
-          <div><span class="eyebrow">RECOMMENDED</span><h2>Best matches</h2></div>
-        </div>
-        <div class="gear-grid recommendation-grid">
-          ${topPicks.map(item => gearCardMarkup(item, 'recommended-card', gearRecommendationReason(item))).join('')}
-        </div>
-      </article>
-      <article class="gear-section" data-brand-section="continue">
-        <div class="brand-section-head">
-          <div><span class="eyebrow">RECENT ACTIVITY</span><h2>${watchedBrands.length ? watchedBrands.join(', ') : 'Popular gear'}</h2></div>
-        </div>
-        <div class="gear-grid">
-          ${continueItems.map(item => gearCardMarkup(item, 'interest-card')).join('')}
-        </div>
-      </article>
-      <div class="brand-catalog">
-        ${brandSections.slice(0, 8).map(section => `<section class="gear-section brand-section" data-brand-section="${escapeHtml(section.brand)}">
-          <div class="brand-section-head">
-            <div><span class="eyebrow">BRAND PREVIEW</span><h2>${escapeHtml(section.brand)}</h2></div>
-          </div>
-          <div class="gear-grid">${section.items.map(item => gearCardMarkup(item)).join('')}</div>
-        </section>`).join('')}
-      </div>
-      <article id="store-output" class="store-output">
-        <span class="eyebrow">SHOPPING</span>
-        <h2>Select a product</h2>
-        <p>Choose a product. CourtIQ opens a real store/map search using your selected city and buying mode.</p>
-      </article>
-    </section>`;
-}
-
 function profilePage() {
-  return `${pageHeader('PROFILE', 'Your private tennis profile.', 'Save preferences once so training, gear, hydration and analysis feel personal without repeating questions.')}
+  return `${pageHeader('PROFILE', 'Your device-local tennis profile.', 'Save training preferences on this device without implying an authenticated account.')}
     <section class="feature-grid">
       <article class="feature-card">
         <span class="eyebrow">PLAYER</span>
         <h2>Competitive · right-handed</h2>
-        <p>Favorite stroke, level, surface, city, height, weight and equipment preferences live here.</p>
+        <p>Training preferences and playing context live here.</p>
       </article>
       <article class="feature-card dark">
         <span class="eyebrow">LOCAL RECORDS</span>
@@ -2800,7 +2167,7 @@ function profilePage() {
       </article>
       <article class="feature-card dark">
         <span class="eyebrow">DEVICE-LOCAL PROFILE</span>
-        <h2>Private on this browser</h2>
+        <h2>Stored on this device</h2>
         <p>This prototype has no authenticated account. Profile defaults remain in this browser until local data is cleared.</p>
       </article>
     </section>
@@ -2969,104 +2336,6 @@ function bindAnalysisReportControls(root = document) {
     const added = addAnalysisToPlan();
     toast(added ? 'Added to training plan.' : 'Analyze a clip first.');
   });
-}
-
-function updateGearCards() {
-  const rawQuery = $('#gear-search')?.value?.trim() || state.gearQuery || '';
-  const type = $('.gear-filter.active')?.dataset.gearType || state.gearType || 'All';
-  const brand = $('#brand-filter')?.value || state.gearBrand || 'All brands';
-  const results = $('#gear-search-results');
-  const resultsGrid = $('#gear-search-results .gear-grid');
-  const loadMore = $('#load-more-gear');
-  state.gearQuery = rawQuery;
-  state.gearType = type;
-  state.gearBrand = brand;
-  state.gearLocation = $('#city-input')?.value?.trim() || state.gearLocation || '';
-  state.gearMode = $('#buying-mode')?.value || state.gearMode || 'Both';
-  saveState();
-
-  if (rawQuery.length > 1) rememberGearInterest(null, rawQuery);
-
-  if (results && resultsGrid) {
-    const matches = filterGearIndexItems({ query: rawQuery, type, brand });
-    const page = paginateGearResults(matches);
-    results.hidden = false;
-    resultsGrid.innerHTML = page.items.length
-      ? page.items.map(item => gearCardMarkup(item, 'search-result-card')).join('')
-      : `<article class="analysis-empty"><h2>No product found</h2><p>Try a brand, model family, category, surface, weight or style term.</p></article>`;
-    const heading = $('#gear-search-results h2');
-    const copy = $('#gear-search-results .brand-section-head p');
-    if (heading) heading.textContent = rawQuery ? `Results for “${rawQuery}”` : 'Browse the index';
-    if (copy) copy.textContent = `${page.items.length} of ${page.total} shown. Images and prices appear only when source-backed.`;
-    if (loadMore) {
-      loadMore.hidden = !page.hasMore;
-      loadMore.textContent = `Load more products (${page.total - page.items.length} left)`;
-    }
-  }
-
-  const query = normalizeKey(rawQuery);
-  $$('.product-card').forEach(card => {
-    const matchesQuery = normalizeKey(card.textContent).includes(query);
-    const matchesType = type === 'All' || card.dataset.type === type;
-    const matchesBrand = brand === 'All brands' || card.dataset.brand === brand;
-    const show = matchesQuery && matchesType && matchesBrand;
-    card.style.display = show ? '' : 'none';
-  });
-
-  $$('[data-brand-section]').forEach(section => {
-    const visibleCards = $$('.product-card', section).filter(card => card.style.display !== 'none');
-    const special = ['recommendations', 'continue'].includes(section.dataset.brandSection);
-    section.hidden = query ? section.id !== 'gear-search-results' : (!special && visibleCards.length === 0);
-  });
-}
-
-function gearItemByKey(key) {
-  return REAL_GEAR_ITEMS.find(item => productKey(item) === key);
-}
-
-function showProductDetail(key = '') {
-  const output = $('#store-output');
-  const item = gearItemByKey(key);
-  if (!output || !item) return;
-  rememberGearInterest(item);
-  const specs = gearSpecsSummary(item.specs) || 'Specs unavailable';
-  const links = gearSourceLinks(item);
-  output.innerHTML = `<span class="eyebrow">PRODUCT DETAIL</span>
-    <h2>${escapeHtml(gearTitle(item))}</h2>
-    <p><b>Category:</b> ${escapeHtml(gearCategory(item))}${item.subcategory ? ` · ${escapeHtml(item.subcategory)}` : ''}</p>
-    <p><b>Specs:</b> ${escapeHtml(specs)}</p>
-    <p><b>Status:</b> ${escapeHtml(item.status || 'unknown')} · <b>Availability:</b> ${escapeHtml(item.availability || 'unknown')}</p>
-    <p><b>Price:</b> ${escapeHtml(gearPriceLabel(item))}</p>
-    <p>${escapeHtml(item.game_impact || item.best_for || 'No source-backed game note yet.')}</p>
-    <div class="store-actions">
-      ${links.length ? links.map((url, index) => `<a target="_blank" rel="noopener noreferrer" href="${escapeHtml(url)}">${index === 0 ? 'Source' : 'Source ' + (index + 1)} ↗</a>`).join('') : '<span>No exact product source link stored yet.</span>'}
-    </div>`;
-}
-
-function showStorePath(product, key = '') {
-  const output = $('#store-output');
-  const city = $('#city-input')?.value?.trim() || state.gearLocation || 'your city';
-  const mode = $('#buying-mode')?.value || state.gearMode || 'Both';
-
-  const item = gearItemByKey(key);
-  if (item) rememberGearInterest(item);
-
-  const searchText = `${product} tennis store ${city}`;
-  const url = mode === 'Online'
-    ? `https://www.google.com/search?q=${encodeURIComponent(`${product} tennis buy online official retailer`)}`
-    : `https://www.google.com/maps/search/${encodeURIComponent(searchText)}`;
-
-  window.open(url, '_blank', 'noopener,noreferrer');
-
-  if (!output) return;
-  output.innerHTML = `<span class="eyebrow">SHOPPING</span>
-    <h2>${escapeHtml(product)}</h2>
-    <p><b>${escapeHtml(mode)}:</b> Opened a real ${mode === 'Online' ? 'web search' : 'map search'} for “${escapeHtml(searchText)}”. Only trust a listing if it clearly shows this exact product or brand category.</p>
-    <div class="store-actions">
-      <a target="_blank" rel="noopener noreferrer" href="${escapeHtml(url)}">Open again ↗</a>
-      ${item && (item.product_url || item.official_url || item.retailer_url) ? `<a target="_blank" rel="noopener noreferrer" href="${escapeHtml(item.product_url || item.official_url || item.retailer_url)}">View Product ↗</a>` : item && BRAND_OFFICIAL_URLS[item.brand] ? `<a target="_blank" rel="noopener noreferrer" href="${escapeHtml(BRAND_OFFICIAL_URLS[item.brand])}">Visit ${escapeHtml(item.brand)} ↗</a>` : ''}
-    </div>`;
-  toast('Opening store search.');
 }
 
 const pages = {
@@ -3287,6 +2556,8 @@ function bindPageEvents() {
     state.slam = event.target.value;
     state.backendPrediction = null;
     state.predictionError = '';
+    state.simulationResult = null;
+    state.simulationError = '';
     saveState();
     render();
   });
@@ -3317,6 +2588,22 @@ function bindPageEvents() {
 
   $('#predict')?.addEventListener('click', runPredictionClick);
   $('#retry-predict')?.addEventListener('click', runPredictionClick);
+  $('#run-sim')?.addEventListener('click', async () => {
+    state.simulationLoading = true;
+    state.simulationError = '';
+    state.simulationResult = null;
+    render();
+    try {
+      state.simulationResult = await runTournamentSimulation();
+      toast('Tournament simulation ready.');
+    } catch (error) {
+      state.simulationError = readableApiError(error);
+      toast('Tournament simulation could not run.');
+    } finally {
+      state.simulationLoading = false;
+      render();
+    }
+  });
 
   $$('[data-tour]').forEach(button => {
     button.onclick = event => {
@@ -3338,6 +2625,8 @@ function bindPageEvents() {
       state.search = '';
       state.backendPrediction = null;
       state.predictionError = '';
+      state.simulationResult = null;
+      state.simulationError = '';
       saveState();
       render();
     };
@@ -3498,69 +2787,6 @@ function bindPageEvents() {
     saveState();
     resetPuzzle(nextPuzzleId());
   });
-  $('#city-input')?.addEventListener('input', event => {
-    state.gearLocation = event.target.value;
-    saveState();
-  });
-  $('#city-input')?.addEventListener('keydown', event => {
-    if (event.key === 'Enter') {
-      event.preventDefault();
-      state.gearLocation = event.target.value.trim();
-      saveState();
-      toast('Location updated.');
-    }
-  });
-  $('#gear-search')?.addEventListener('input', () => {
-    state.gearPage = 1;
-    updateGearCards();
-  });
-  $('#gear-search')?.addEventListener('keydown', event => {
-    if (event.key === 'Enter') {
-      event.preventDefault();
-      updateGearCards();
-    }
-  });
-  $('#clear-gear-search')?.addEventListener('click', () => {
-    state.gearQuery = '';
-    state.gearPage = 1;
-    const input = $('#gear-search');
-    if (input) input.value = '';
-    updateGearCards();
-  });
-  $('#buying-mode')?.addEventListener('change', updateGearCards);
-  $('#brand-filter')?.addEventListener('change', () => {
-    state.gearPage = 1;
-    updateGearCards();
-  });
-  $('#load-more-gear')?.addEventListener('click', () => {
-    state.gearPage = (state.gearPage || 1) + 1;
-    updateGearCards();
-  });
-  $('#reset-gear-memory')?.addEventListener('click', () => {
-    localStorage.removeItem('cqGearInterest');
-    state.gearQuery = '';
-    state.gearBrand = 'All brands';
-    state.gearType = 'All';
-    toast('Gear preferences reset.');
-    render();
-  });
-  $$('.gear-filter').forEach(button => {
-    button.onclick = () => {
-      $$('.gear-filter').forEach(filter => filter.classList.remove('active'));
-      button.classList.add('active');
-      state.gearType = button.dataset.gearType || 'All';
-      state.gearPage = 1;
-      updateGearCards();
-    };
-  });
-  const pageRoot = $('#page');
-  if (pageRoot) pageRoot.onclick = event => {
-    const storeButton = event.target.closest('.store-btn');
-    if (storeButton) showStorePath(storeButton.dataset.product, storeButton.dataset.key);
-    const detailButton = event.target.closest('.detail-btn');
-    if (detailButton) showProductDetail(detailButton.dataset.key);
-  };
-
   $('#ask-ai')?.addEventListener('click', () => toast('Coaching guidance is available in Learn and Analyze.'));
 	}
 

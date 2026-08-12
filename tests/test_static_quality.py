@@ -10,12 +10,12 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class StaticQualityTests(unittest.TestCase):
-    def test_gear_images_do_not_hotlink_unverified_products(self) -> None:
+    def test_retired_gear_system_is_absent_from_public_frontend(self) -> None:
         app_js = (ROOT / "outputs/tennis-ai-app/app.js").read_text(encoding="utf-8")
-        router_js = (ROOT / "outputs/tennis-ai-app/js/router.js").read_text(encoding="utf-8")
-        self.assertNotIn("VERIFIED_GEAR_IMAGES", app_js)
-        self.assertNotIn("tennis-warehouse.com", app_js)
-        self.assertNotIn("PRODUCT IMAGE PENDING", app_js)
+        self.assertFalse((ROOT / "outputs/tennis-ai-app/assets/gear").exists())
+        self.assertNotIn("GEAR_ITEMS", app_js)
+        self.assertNotIn("function gearPage", app_js)
+        self.assertNotIn("cqGearInterest", app_js)
 
     def test_no_duplicate_old_export_folder(self) -> None:
         self.assertFalse((ROOT / "outputs/CourtIQ_Tennis_App 2").exists())
@@ -250,17 +250,15 @@ class StaticQualityTests(unittest.TestCase):
         )
         subprocess.run(["node", "-e", script], cwd=ROOT, check=True)
 
-    def test_gear_is_hidden_but_catalog_assets_are_preserved(self) -> None:
+    def test_public_prediction_copy_requires_real_backend_results(self) -> None:
         app_js = (ROOT / "outputs/tennis-ai-app/app.js").read_text(encoding="utf-8")
-        router_js = (ROOT / "outputs/tennis-ai-app/js/router.js").read_text(encoding="utf-8")
         index_html = (ROOT / "outputs/tennis-ai-app/index.html").read_text(encoding="utf-8")
-        gear_index = (ROOT / "outputs/tennis-ai-app/assets/gear/gear-index.js").read_text(encoding="utf-8")
-        self.assertNotIn("assets/gear/gear-index.js", index_html)
-        self.assertIn("window.COURTIQ_GEAR_INDEX", gear_index)
-        self.assertIn("bootstrap_seed.json", gear_index)
-        self.assertNotIn("['train/gear', 'gear'", app_js)
-        self.assertNotIn('data-page="train/gear"', index_html)
-        self.assertIn("raw === 'gear' || raw === 'train/gear'", router_js)
+        self.assertNotIn("51.1", app_js)
+        self.assertIn("Run a prediction to generate a matchup forecast.", app_js)
+        self.assertIn("/api/simulate/tournament", app_js)
+        self.assertIn("MODEL-SIMULATED CHAMPION PROBABILITY", app_js)
+        self.assertNotIn(">LIVE<", app_js)
+        self.assertNotIn("Local profile · kp", index_html)
 
     def test_profile_security_is_dark_compact_not_fake_settings(self) -> None:
         app_js = (ROOT / "outputs/tennis-ai-app/app.js").read_text(encoding="utf-8")

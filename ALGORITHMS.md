@@ -172,10 +172,14 @@ Method:
 
 Complexity: O(N) for N predictions.
 
+Current held-out artifact metrics:
+
+- ATP: accuracy 0.6550, log loss 0.6185 and Brier score 0.2154.
+- WTA: accuracy 0.6469, log loss 0.6232 and Brier score 0.2172.
+
 Limitations:
 
-- Needs enough held-out historical matches.
-- This local checkout has no imported CSV dataset, so calibration metrics are pending.
+- Calibration estimates still depend on representative held-out historical matches and can drift as player populations change.
 
 ## 9. Pose joint-angle calculation
 

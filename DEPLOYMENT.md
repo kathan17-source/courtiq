@@ -10,7 +10,7 @@ uvicorn backend.app.main:app --host 0.0.0.0 --port $PORT
 
 1. Push this repository to a Git provider supported by Render.
 2. In Render, choose **New → Blueprint** and select the repository. Render reads `render.yaml` and builds the root `Dockerfile`.
-3. Set `COURTIQ_CORS_ORIGINS` to the final HTTPS origin, for example `https://courtiq.onrender.com`. Same-origin browser requests do not require CORS, so leaving it empty is also safe until a separate frontend exists.
+3. Keep `COURTIQ_CORS_ORIGINS` empty for the current same-origin deployment at `https://courtiq-77cz.onrender.com/`. Add only an exact trusted HTTPS origin if a separate frontend is introduced.
 4. Create the service. Wait for `/api/health` to report `status: ok` with both model flags true.
 5. Open the service URL. Hash routes such as `/#train/plan` are handled by the existing frontend.
 
@@ -27,7 +27,7 @@ Then open `http://127.0.0.1:8000/` and check `http://127.0.0.1:8000/api/health`.
 
 ## C. Custom domain
 
-Add the domain in the hosting platform, create the DNS record it provides, and wait for HTTPS issuance. Set `COURTIQ_CORS_ORIGINS` to the exact origin, such as `https://courtiq.app`. CourtIQ uses same-origin relative API behavior and does not embed the temporary host name.
+Add a chosen domain in the hosting platform, create the DNS record it provides, and wait for HTTPS issuance. If a separate frontend origin is introduced, set `COURTIQ_CORS_ORIGINS` to that exact origin. CourtIQ otherwise uses same-origin relative API behavior.
 
 ## D. Environment variables
 

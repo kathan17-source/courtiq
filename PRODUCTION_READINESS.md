@@ -26,7 +26,7 @@ CourtIQ is publicly deployed as a controlled prototype. It loads versioned ATP a
 | CORS | CORS origins are explicit and configured by `COURTIQ_CORS_ORIGINS`. Wildcard CORS is avoided. |
 | Security headers | Added `nosniff`, `DENY` frame policy, no-referrer policy, permissions policy and HSTS outside development. |
 | Upload filenames | Original filenames are never trusted. Video uploads receive UUID-based server filenames. |
-| Upload validation | Video upload metadata validates MIME type, extension and size. Unsupported formats fail safely. |
+| Upload validation | Video uploads validate MIME type, extension, size and supported container signature before decoding. Unsupported formats fail safely. |
 | Temp cleanup | Uploads stream to UUID-named temporary files and are deleted on success and error paths. Production should still isolate media work in a bounded worker. |
 | SQL safety | Current code does not build raw SQL from user input. The schema now includes constraints and indexes for upload-job lifecycle cleanup. |
 | Secrets | `.env.example` documents required config. Real secrets must not be committed. |
@@ -111,15 +111,15 @@ Current model state:
 - Unknown event names require an explicit surface; they do not silently default to hard court.
 - Current-state artifacts cannot reconstruct a genuinely historical player snapshot for arbitrary `as_of` dates.
 
-Production requirements before claiming accuracy:
+Requirements for future model releases:
 
-- Load one versioned model artifact at process startup.
-- Fail startup if the model artifact version is stale or incompatible.
+- Preserve separate versioned ATP/WTA artifact validation at startup.
+- Reject stale or incompatible artifacts.
 - Store feature-version metadata with predictions.
 - Run chronological walk-forward evaluation only.
 - Report accuracy, log loss, Brier score, ROC-AUC and calibration from saved backtest rows.
 
-## Monte Carlo benchmark
+## Monte Carlo validation
 
 Benchmark command:
 
@@ -127,15 +127,7 @@ Benchmark command:
 python3 scripts/benchmark_simulation.py
 ```
 
-Saved output: `output/benchmarks/simulation_benchmark.json`
-
-Latest local result:
-
-| Simulations | Seed | Player 1 probability | Runtime |
-|---:|---:|---:|---:|
-| 1,000 | 42 | 0.64300 | 1.07 ms |
-| 10,000 | 42 | 0.63930 | 10.21 ms |
-Operational decision: public requests are bounded at 10,000 simulations. Tournament requests are bounded to 128 players and precompute each pair once.
+Results are intentionally not checked in as machine-independent performance claims. Public requests are bounded at 10,000 simulations. Tournament requests are bounded to 128 players and precompute each pair once.
 
 ## Observability
 
@@ -175,8 +167,8 @@ Browser flows must be exercised against the supported local HTTP server, never t
 - Artifacts are file-backed rather than served from a governed model registry.
 - The static frontend is not a hardened production SPA.
 - In-process rate limiting resets on process restart and does not work across multiple replicas.
-- Upload validation is metadata-level; full media scanning/transcoding isolation is not implemented.
-- No real third-party tournament/shop/feed API integration is currently connected.
+- Upload validation includes metadata, container signatures and bounded probing; full antivirus/transcoding isolation is not implemented.
+- No verified live schedule feed is currently connected.
 - CI installs backend dependencies, but this local workstation does not have all optional Python packages installed globally.
 
 ## Deployment assumptions
@@ -190,4 +182,4 @@ Browser flows must be exercised against the supported local HTTP server, never t
 
 ## Final answer to “Would this survive real users?”
 
-For a controlled beta with limited users, yes, after deploying behind HTTPS with explicit CORS and dependency installation. For open public traffic, not yet. It still needs real authentication, production observability, a migration runner, a populated real-data model, isolated video processing and deployed browser QA.
+For a controlled public prototype, yes: HTTPS deployment, explicit same-origin CORS, validated ATP/WTA artifacts, bounded inputs, CI and live browser QA are active. A broader multi-user service would still need authentication where accounts are introduced, production observability, shared persistence/rate limiting, migrations and isolated video processing.

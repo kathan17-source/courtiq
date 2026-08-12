@@ -15,7 +15,7 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[1]
 FEATURE_ROWS_PATH = ROOT / "output/backtests/courtiq_feature_rows_atp.csv"
 MODEL_PATH = ROOT / "output/models/courtiq_model_atp.json"
-LOGISTIC_BASELINE_PATH = ROOT / "output/models/courtiq_logistic_baseline.json"
+PRE_PROMOTION_BACKUP_PATH = ROOT / "output/models/courtiq_pre_promotion_backup.json"
 REPORT_PATH = ROOT / "output/backtests/tensor_candidate_report.json"
 
 CURRENT_BENCHMARK = {
@@ -472,8 +472,8 @@ def main() -> int:
     if changed and winner["model"] == "Time-safe stacked ensemble":
         ensemble_result = report["models"]["time_safe_stacked_ensemble"]
         production_payload = ensemble_result["production_payload"]
-        if not LOGISTIC_BASELINE_PATH.exists():
-            LOGISTIC_BASELINE_PATH.write_text(json.dumps(current_artifact, indent=2, sort_keys=True), encoding="utf-8")
+        if not PRE_PROMOTION_BACKUP_PATH.exists():
+            PRE_PROMOTION_BACKUP_PATH.write_text(json.dumps(current_artifact, indent=2, sort_keys=True), encoding="utf-8")
         promoted = dict(current_artifact)
         promoted["model_version"] = str(current_artifact.get("model_version", "courtiq-real")) + "-stacked"
         promoted["model"] = {
@@ -487,11 +487,11 @@ def main() -> int:
         promoted["metrics"] = ensemble_result["metrics"]
         promoted["promotion_source"] = {
             "report": str(REPORT_PATH),
-            "baseline_artifact": str(LOGISTIC_BASELINE_PATH),
+            "pre_promotion_backup": str(PRE_PROMOTION_BACKUP_PATH),
             "validation_rule": "stacker oof 2020-2023; calibration 2024; final test 2025 untouched",
         }
         MODEL_PATH.write_text(json.dumps(promoted, indent=2, sort_keys=True), encoding="utf-8")
-        report["promotion_decision"]["baseline_artifact"] = str(LOGISTIC_BASELINE_PATH)
+        report["promotion_decision"]["pre_promotion_backup"] = str(PRE_PROMOTION_BACKUP_PATH)
 
     REPORT_PATH.parent.mkdir(parents=True, exist_ok=True)
     REPORT_PATH.write_text(json.dumps(report, indent=2, sort_keys=True), encoding="utf-8")

@@ -14,7 +14,7 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[1]
 FEATURE_ROWS_PATH = ROOT / "output/backtests/courtiq_feature_rows_atp.csv"
 MODEL_PATH = ROOT / "output/models/courtiq_model_atp.json"
-LOGISTIC_BASELINE_PATH = ROOT / "output/models/courtiq_logistic_baseline.json"
+PRE_PROMOTION_BACKUP_PATH = ROOT / "output/models/courtiq_pre_promotion_backup.json"
 REPORT_PATH = ROOT / "output/backtests/predictor_improvement_report.json"
 
 CURRENT_PRODUCTION_BENCHMARK = {
@@ -305,8 +305,8 @@ def promote_if_better(artifact: dict[str, Any], candidate: dict[str, Any], candi
     )
     if not better:
         return False
-    if not LOGISTIC_BASELINE_PATH.exists():
-        LOGISTIC_BASELINE_PATH.write_text(json.dumps(artifact, indent=2, sort_keys=True), encoding="utf-8")
+    if not PRE_PROMOTION_BACKUP_PATH.exists():
+        PRE_PROMOTION_BACKUP_PATH.write_text(json.dumps(artifact, indent=2, sort_keys=True), encoding="utf-8")
     promoted = dict(artifact)
     base_version = str(artifact.get("model_version", "courtiq-real")).split("-stacked")[0]
     promoted["model_version"] = f"{base_version}-{candidate_name}"
@@ -321,7 +321,7 @@ def promote_if_better(artifact: dict[str, Any], candidate: dict[str, Any], candi
     promoted["promotion_source"] = {
         "report": str(REPORT_PATH),
         "selection_rule": "candidate selected by 2018-2023 walk-forward validation; final calibration 2024; final comparison 2025",
-        "previous_artifact": str(LOGISTIC_BASELINE_PATH),
+        "pre_promotion_backup": str(PRE_PROMOTION_BACKUP_PATH),
     }
     MODEL_PATH.write_text(json.dumps(promoted, indent=2, sort_keys=True), encoding="utf-8")
     return True

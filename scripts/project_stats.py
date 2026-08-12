@@ -52,14 +52,6 @@ def load_backtest() -> dict:
     return {"status": "missing"}
 
 
-def count_frontend_products() -> int:
-    app_js = (ROOT / "outputs/tennis-ai-app/app.js").read_text(encoding="utf-8")
-    match = re.search(r"const GEAR_ITEMS = \[(.*?)\];", app_js, re.S)
-    if not match:
-        return 0
-    return len(re.findall(r"\bname:", match.group(1)))
-
-
 def discover_tests() -> int:
     suite = unittest.defaultTestLoader.discover(str(ROOT / "tests"))
     count = 0
@@ -81,7 +73,6 @@ def main() -> None:
         "backtest_status": backtest.get("status", "missing"),
         "model_features_defined": len(FEATURE_NAMES),
         "automated_tests_discovered": discover_tests(),
-        "frontend_gear_products_defined": count_frontend_products(),
         "python_source_files": count_files(("*.py",)),
         "javascript_source_files": count_files(("*.js",)),
         "database_tables_defined": len(re.findall(r"CREATE TABLE IF NOT EXISTS", (ROOT / "backend/database/schema.sql").read_text(encoding="utf-8"))),

@@ -4,8 +4,8 @@ This is a concise walkthrough of the public product and its technical foundation
 
 ## 60-second product walkthrough
 
-1. Open `outputs/tennis-ai-app/index.html`.
-2. Explain the product in one sentence: “CourtIQ is a tennis analytics platform that combines match prediction, player development, video-analysis UX and gear recommendations.”
+1. Open https://courtiq-77cz.onrender.com/ or run `python scripts/run_courtiq.py` and open `http://127.0.0.1:8000`.
+2. Explain the product in one sentence: “CourtIQ is a tennis analytics platform that combines ATP/WTA match prediction, player development and 2D pose-based movement analysis.”
 3. Go to **Match Predictor**.
 4. Select two same-tour players and a Grand Slam.
 5. Run the prediction.
@@ -15,8 +15,8 @@ This is a concise walkthrough of the public product and its technical foundation
    - `backend/app/services/tennis_math.py` for game/set/match probability.
    - `scripts/train_models.py` for the reproducible ATP/WTA training entry point.
 8. Review the active artifacts in `output/models/`, including their explicit training cutoffs and held-out metrics.
-9. Show `output/benchmarks/core_benchmarks.json` and `output/benchmarks/simulation_benchmark.json` for measured local performance.
-10. If asked for a tournament simulation, show the measured `tournament_simulation_10k_brackets` benchmark in `core_benchmarks.json`; the current UI does not yet expose this as a full production endpoint.
+9. Open **Simulation**, run an eight-player tournament, and explain that the displayed champion probabilities come from the production simulation endpoint.
+10. Use the benchmark scripts only for machine-local engineering checks; the repository does not publish their output as a production latency guarantee.
 
 ## 3-minute technical walkthrough
 
@@ -48,7 +48,7 @@ The prediction math blends Elo prior, surface rating, hold probability and tenni
 
 ### 2:15–2:35 — Tournament simulation
 
-The Monte Carlo path is deterministic with a seed. Local benchmarks show 100,000 match simulations in roughly 96 ms and 10,000 lightweight bracket simulations in roughly 203 ms on this machine.
+The Monte Carlo path is deterministic with a seed. The public UI submits a bounded draw to the production simulation endpoint and displays only its returned probabilities.
 
 ### 2:35–2:50 — Computer vision
 
