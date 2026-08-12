@@ -9,8 +9,10 @@ from fastapi import APIRouter, File, HTTPException, Query, Request, UploadFile
 from fastapi import Path as ApiPath
 
 from backend.app.config import get_settings
+from backend.app.schemas.coaching import CoachingHelpRequest, CoachingHelpResponse
 from backend.app.schemas.players import PlayerSearchResponse, PlayerSummary
 from backend.app.schemas.prediction import PredictionRequest, PredictionResponse, TournamentSimulationRequest
+from backend.app.services.coaching_service import CoachingServiceError, generate_coaching_help
 from backend.app.services.model_store import (
     ModelUnavailableError,
     has_current_model,
@@ -93,7 +95,17 @@ def api_health() -> dict:
         "wta_model_loaded": wta_loaded,
         "model_version": load_tour_model("atp").version if atp_loaded else settings.model_version,
         "api_base": "/api",
+        "coaching_help_configured": bool(settings.gemini_api_key),
     }
+
+
+@router.post("/coaching/help", response_model=CoachingHelpResponse)
+async def coaching_help(payload: CoachingHelpRequest) -> CoachingHelpResponse:
+    try:
+        answer = await asyncio.to_thread(generate_coaching_help, payload.question, payload.context, settings)
+    except CoachingServiceError as exc:
+        raise HTTPException(status_code=exc.status_code, detail=exc.message) from exc
+    return CoachingHelpResponse(answer=answer)
 
 
 @router.get("/players/search", response_model=PlayerSearchResponse)

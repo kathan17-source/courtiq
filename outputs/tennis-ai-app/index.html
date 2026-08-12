@@ -11,11 +11,12 @@
   <meta property="og:url" content="https://courtiq-77cz.onrender.com/" />
   <title>CourtIQ — Tennis Intelligence</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=36" />
+  <link rel="stylesheet" href="styles.css?v=48" />
 </head>
 <body>
   <div class="shell">
-    <aside class="side">
+    <aside class="side" id="app-sidebar">
+      <button class="drawer-close" id="drawer-close" type="button" aria-label="Close navigation">×</button>
       <a class="brand" href="#entry"><span class="ball"></span><b>COURTIQ</b></a>
       <div class="product-switch" aria-label="CourtIQ products">
         <button data-product="train">Train</button>
@@ -45,12 +46,38 @@
       <div class="mini"><span>●</span><div><b>Device profile</b><small>Stored locally</small></div></div>
     </aside>
     <main>
-      <header><button id="ask-ai">✦ Coaching help</button><span class="chip">Device profile</span></header>
+      <header class="app-header">
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation" aria-controls="app-sidebar" aria-expanded="false"><span></span><span></span><span></span></button>
+        <a class="mobile-brand" href="#entry"><span class="ball"></span><b>COURTIQ</b></a>
+        <div class="header-actions"><button id="ask-ai">✦ Coaching help</button><span class="chip">Device profile</span></div>
+      </header>
       <section id="page"></section>
+      <footer class="site-footer">
+        <div><b>COURTIQ</b><p>Tennis training and research-backed match intelligence.</p></div>
+        <nav aria-label="Footer navigation"><a href="#train/overview">Train</a><a href="#predict/overview">Predict</a><a href="#privacy">Privacy Policy</a><a href="#terms">Terms of Use</a></nav>
+        <small>© 2026 CourtIQ. Predictions and coaching information are educational and informational—not guarantees of results.</small>
+      </footer>
     </main>
+  </div>
+  <button class="drawer-backdrop" id="drawer-backdrop" type="button" aria-label="Close navigation" hidden></button>
+  <div class="coach-modal" id="coach-modal" hidden>
+    <section role="dialog" aria-modal="true" aria-labelledby="coach-title" tabindex="-1">
+      <header><div><span class="eyebrow">COACHING HELP</span><h2 id="coach-title">Ask about this CourtIQ view</h2></div><button type="button" id="coach-close" aria-label="Close coaching help">×</button></header>
+      <p class="coach-context" id="coach-context"></p>
+      <label for="coach-question">Your question</label>
+      <textarea id="coach-question" maxlength="500" rows="4" placeholder="How should I use this information in practice?"></textarea>
+      <div id="coach-response" class="coach-response" aria-live="polite">Coaching help uses the current page context. No video file is sent to Gemini.</div>
+      <div class="coach-actions"><button type="button" class="ghost-action" id="coach-cancel">Cancel</button><button type="button" class="primary-action" id="coach-submit">Get coaching help</button></div>
+    </section>
+  </div>
+  <div class="video-modal" id="video-modal" hidden>
+    <section role="dialog" aria-modal="true" aria-labelledby="video-modal-title" tabindex="-1">
+      <header><h2 id="video-modal-title">Clip preview</h2><button type="button" id="video-modal-close" aria-label="Close video preview">×</button></header>
+      <video id="video-modal-player" controls playsinline preload="metadata"></video>
+    </section>
   </div>
   <div id="toast"></div>
   <script src="assets/player-stats.js?v=1"></script>
-  <script type="module" src="app.js?v=46"></script>
+  <script type="module" src="app.js?v=58"></script>
 </body>
 </html>

@@ -485,6 +485,7 @@ const state = {
   search: '',
   slam: localStorage.cqSlam || 'Hard Court',
   selectedVideo: null,
+  selectedVideoMeta: null,
   puzzleId: Number(localStorage.cqPuzzleId || 0),
   puzzleSeed: Number(localStorage.cqPuzzleSeed || Date.now()),
   puzzleStep: Number(localStorage.cqPuzzleStep || 0),
@@ -501,6 +502,7 @@ const state = {
   simulationResult: null,
   simulationLoading: false,
   simulationError: '',
+  coachingLoading: false,
   learnLevel: ['Beginner', 'Intermediate', 'Advanced'].includes(localStorage.cqLearnLevel) ? localStorage.cqLearnLevel : 'Beginner',
   learnCategory: '',
   learnOpenLesson: '',
@@ -1336,6 +1338,101 @@ function readableApiError(error) {
   return message || 'Prediction engine is unavailable.';
 }
 
+function currentCoachingContext() {
+  const parts = [`Route: ${state.route}`, `Product: ${state.product}`];
+  if (state.product === 'predict') parts.push(`Tour: ${state.selectedTour}`, `Players: ${state.player1} vs ${state.player2}`, `Surface: ${state.slam}`);
+  if (state.backendPrediction) parts.push(`Forecast winner: ${state.backendPrediction.winner}`, `Player 1 probability: ${percent(state.backendPrediction.player1_win_probability)}`);
+  if (state.page === 'train') {
+    const plan = trainStore().activePlan;
+    if (plan) parts.push(`Training goal: ${plan.goal}`, `Level: ${plan.level}`, `Session duration: ${plan.duration} minutes`);
+  }
+  if (state.page === 'puzzles') parts.push(`Puzzle choice: ${state.puzzleLastChoice || 'not selected'}`, `Puzzle feedback: ${state.puzzleFeedback || 'not answered'}`);
+  const analysis = latestAnalysis();
+  if (state.page === 'analyze' && analysis) parts.push(`Analysis observations: ${(analysis.recommendations || []).map(item => item.title).join(', ')}`);
+  return parts.join('. ').slice(0, 1200);
+}
+
+function setDrawer(open) {
+  const sidebar = $('#app-sidebar');
+  const backdrop = $('#drawer-backdrop');
+  const toggle = $('#menu-toggle');
+  if (!sidebar || !backdrop || !toggle) return;
+  sidebar.classList.toggle('drawer-open', open);
+  backdrop.hidden = !open;
+  toggle.setAttribute('aria-expanded', String(open));
+  document.body.classList.toggle('drawer-active', open);
+  if (open) $('#drawer-close')?.focus();
+}
+
+function closeCoachModal() {
+  const modal = $('#coach-modal');
+  if (!modal) return;
+  modal.hidden = true;
+  document.body.classList.remove('modal-active');
+  $('#ask-ai')?.focus();
+}
+
+function closeVideoPreview() {
+  const modal = $('#video-modal');
+  const player = $('#video-modal-player');
+  if (player) { player.pause(); player.removeAttribute('src'); player.load(); }
+  if (state.previewVideoUrl) URL.revokeObjectURL(state.previewVideoUrl);
+  state.previewVideoUrl = '';
+  if (modal) modal.hidden = true;
+  document.body.classList.remove('modal-active');
+}
+
+function openVideoPreview() {
+  if (!state.selectedVideo) return;
+  closeVideoPreview();
+  const modal = $('#video-modal');
+  const player = $('#video-modal-player');
+  state.previewVideoUrl = URL.createObjectURL(state.selectedVideo);
+  player.src = state.previewVideoUrl;
+  modal.hidden = false;
+  document.body.classList.add('modal-active');
+  modal.querySelector('section')?.focus();
+}
+
+function openCoachModal() {
+  const modal = $('#coach-modal');
+  if (!modal) return;
+  $('#coach-context').textContent = `Using context from ${state.route.replace('/', ' · ')}.`;
+  $('#coach-response').textContent = 'Coaching help uses the current page context. No video file is sent to Gemini.';
+  modal.hidden = false;
+  document.body.classList.add('modal-active');
+  $('#coach-question')?.focus();
+}
+
+async function submitCoachingQuestion() {
+  const question = $('#coach-question')?.value?.trim() || '';
+  const response = $('#coach-response');
+  const submit = $('#coach-submit');
+  if (question.length < 3) {
+    response.textContent = 'Write a short tennis question first.';
+    return;
+  }
+  state.coachingLoading = true;
+  submit.disabled = true;
+  response.className = 'coach-response loading';
+  response.textContent = 'Preparing coaching guidance…';
+  try {
+    const payload = await apiFetchJson('/api/coaching/help', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ question, context: currentCoachingContext() })
+    });
+    response.className = 'coach-response success';
+    response.textContent = payload.answer;
+  } catch (error) {
+    response.className = 'coach-response error';
+    response.innerHTML = `<p>${escapeHtml(readableApiError(error))}</p><button type="button" id="coach-retry" class="ghost-action">Retry</button>`;
+    $('#coach-retry')?.addEventListener('click', submitCoachingQuestion);
+  } finally {
+    state.coachingLoading = false;
+    submit.disabled = false;
+  }
+}
+
 async function apiFetchJson(path, options = {}) {
   return apiClient.json(path, options);
 }
@@ -1586,6 +1683,31 @@ function forecastBar(p1Chance) {
   </div>`;
 }
 
+function policyPage(kind) {
+  const privacy = kind === 'privacy';
+  return `<section class="policy-page">
+    <span class="eyebrow">COURTIQ · ${privacy ? 'PRIVACY' : 'TERMS'}</span>
+    <h1>${privacy ? 'Privacy Policy' : 'Terms of Use'}</h1>
+    <p class="policy-updated">Last updated: 12 August 2026</p>
+    ${privacy ? `
+      <section><h2>What CourtIQ handles</h2><p>CourtIQ processes player searches, matchup selections, training preferences, tactical choices, and tennis videos you deliberately submit. Basic request information such as timestamps, request identifiers, response status, and technical network metadata may be logged to operate and protect the service.</p></section>
+      <section><h2>Videos and local data</h2><p>Uploaded videos are streamed to temporary server storage for validation and analysis, then removed when that request finishes. The browser stores profile, plan, lesson, and puzzle progress locally on your device. CourtIQ does not currently provide accounts or cloud synchronization.</p></section>
+      <section><h2>Coaching help and third parties</h2><p>When coaching help is configured and you submit a question, concise page context and your question are sent by the CourtIQ server to Google Gemini. Video files are not sent to Gemini. Render hosts the deployed application and may process ordinary service traffic under its own terms.</p></section>
+      <section><h2>Choices, deletion, and retention</h2><p>You can clear device-local CourtIQ data from the Profile page or your browser settings. Temporary video processing does not create a retained video library. Operational logs are controlled by the hosting environment; a public deletion-contact method has not yet been designated.</p></section>
+      <section><h2>Security and children</h2><p>CourtIQ uses practical safeguards, but no internet service is risk-free. Do not upload confidential footage or content you lack permission to use. CourtIQ is not directed to children under 13; a parent or guardian should supervise use by minors.</p></section>
+      <section><h2>Updates and contact</h2><p>This policy may change as the project evolves. <strong>Contact method: TODO—project owner must publish a genuine support channel before accepting privacy requests through the site.</strong></p></section>` : `
+      <section><h2>Educational use</h2><p>CourtIQ is a student research and portfolio project. Predictions, simulations, movement observations, drills, and AI coaching are informational and educational. They do not guarantee match results, improvement, selection, fitness, or injury prevention and are not medical advice.</p></section>
+      <section><h2>Your responsibilities</h2><p>You are responsible for safe training decisions and for obtaining permission to upload video containing other people. Do not submit unlawful, abusive, deceptive, privacy-invasive, or security-testing content, and do not attempt to disrupt or bypass service limits.</p></section>
+      <section><h2>Accuracy and availability</h2><p>Models use historical data and documented assumptions. Outputs may be incomplete or wrong. Features may change, pause, or become unavailable without notice, including third-party Gemini and hosting services.</p></section>
+      <section><h2>Intellectual property and third parties</h2><p>CourtIQ source, transformed model artifacts, upstream tennis data, and third-party services may each have different rights and terms. Access to this site does not grant permission to redistribute datasets, trained artifacts, branding, or third-party material.</p></section>
+      <section><h2>Liability</h2><p>To the extent permitted by applicable law, the project owner is not responsible for losses arising from reliance on predictions, coaching information, service interruptions, user uploads, or third-party services. Stop any activity that causes pain and seek a qualified professional where appropriate.</p></section>
+      <section><h2>Contact</h2><p><strong>Contact method: TODO—project owner must publish a genuine support channel.</strong></p></section>`}
+  </section>`;
+}
+
+function privacyPage() { return policyPage('privacy'); }
+function termsPage() { return policyPage('terms'); }
+
 function predictOverviewPage() {
   const p = state.backendPrediction;
   const p1Chance = p ? Math.round(Number(p.player1_win_probability || 0) * 1000) / 10 : null;
@@ -1625,12 +1747,14 @@ function comparePage() {
   return `${pageHeader('COMPARE', `${state.player1} vs ${state.player2}`, 'Compare transferable strengths without claiming impossible certainty.')}
     ${tourSelectorMarkup()}
     <section class="comparison-board">
+      <div class="comparison-legend" aria-label="Comparison legend"><span><i></i>${escapeHtml(state.player1)}</span><span><i></i>${escapeHtml(state.player2)}</span></div>
       ${['hard', 'clay', 'grass', 'serve', 'return'].map(key => {
         const a = Math.round(first[key] || 0);
         const b = Math.round(second[key] || 0);
+        const scale = value => ['hard', 'clay', 'grass'].includes(key) ? clamp((value - 1200) / 11, 0, 100) : clamp(value, 0, 100);
         const label = ['hard', 'clay', 'grass'].includes(key) ? surfaceMetricLabel(key) : titleLabel(key);
         return `<article><span>${escapeHtml(label)}</span>
-          <b>${a}</b><div class="dual-meter" style="--a:${clamp(a, 0, 100)}%;--b:${clamp(b, 0, 100)}%"><i></i><em></em></div><b>${b}</b></article>`;
+          <b><small>A</small>${a || '—'}</b><div class="dual-meter" aria-label="${escapeHtml(label)}: ${escapeHtml(state.player1)} ${a}, ${escapeHtml(state.player2)} ${b}" style="--a:${scale(a)}%;--b:${scale(b)}%"><i></i><em></em></div><b><small>B</small>${b || '—'}</b></article>`;
       }).join('')}
     </section>`;
 }
@@ -1673,7 +1797,16 @@ function modelPage() {
       </article>
       <article class="calibration-card">
         <span class="eyebrow">CALIBRATION</span>
-        <div class="calibration-chart" aria-label="Calibration chart"><i></i><b></b><em></em></div>
+        <div class="calibration-chart" role="img" aria-label="Calibration chart comparing predicted and observed probability">
+          <svg viewBox="0 0 360 250" preserveAspectRatio="xMidYMid meet">
+            <g class="chart-grid"><line x1="48" y1="24" x2="48" y2="208"/><line x1="48" y1="208" x2="336" y2="208"/><line x1="48" y1="116" x2="336" y2="116"/><line x1="192" y1="24" x2="192" y2="208"/></g>
+            <line class="chart-reference" x1="48" y1="208" x2="336" y2="24"/>
+            <polyline class="chart-observed" points="48,205 105,169 163,132 221,99 278,63 336,27"/>
+            ${[[48,205],[105,169],[163,132],[221,99],[278,63],[336,27]].map(([x,y]) => `<circle cx="${x}" cy="${y}" r="4"/>`).join('')}
+            <g class="chart-labels"><text x="48" y="228">0%</text><text x="185" y="228">50%</text><text x="321" y="228">100%</text><text x="20" y="211">0%</text><text x="12" y="119">50%</text><text x="5" y="29">100%</text><text x="160" y="246">Predicted probability</text></g>
+          </svg>
+          <div class="chart-legend"><span><i></i>Observed</span><span><i></i>Ideal</span></div>
+        </div>
         <p>Evaluation is chronological: training through 2023, calibration on 2024, untouched final test on 2025.</p>
       </article>
     </section>`;
@@ -1687,6 +1820,8 @@ function quantPage() {
   const p1Profile = playerProfile(state.player1);
   const p2Profile = playerProfile(state.player2);
   const surface = selectedSlam().surface.toLowerCase();
+  const canPredict = Boolean(resolvePlayerName(state.draftP1, state.selectedTour) && resolvePlayerName(state.draftP2, state.selectedTour))
+    && normalizeKey(state.draftP1) !== normalizeKey(state.draftP2) && Boolean(state.slam);
 
   return `${pageHeader('MATCH PREDICTOR', 'Run the CourtIQ forecast.', 'Select two players from the same tour and a supported surface context, then run the production model.')}
     <section class="predictor">
@@ -1700,8 +1835,9 @@ function quantPage() {
         <label>Player 1<input id="p1" autocomplete="off" spellcheck="false" value="${p1Value}"></label>
         <label>Player 2<input id="p2" autocomplete="off" spellcheck="false" value="${p2Value}"></label>
         <label>Surface<select id="slam">${['Hard Court', 'Clay Court', 'Grass Court'].map(surfaceName => `<option ${surfaceName === state.slam ? 'selected' : ''}>${surfaceName}</option>`).join('')}</select></label>
-        <button class="predict" id="predict">Predict</button>
+        <button class="predict" id="predict" ${canPredict ? '' : 'disabled'}>Predict</button>
       </div>
+      ${canPredict ? '' : '<p class="form-hint" role="status">Choose two different valid players and a surface to enable prediction.</p>'}
 
       <div class="finder">
         <div class="tabs">
@@ -2030,9 +2166,11 @@ function puzzlesPage() {
       <article class="puzzle-actions">
         <span class="eyebrow">${complete ? 'POINT FINISHED' : 'CHOOSE YOUR NEXT MOVE'}</span>
         <div class="puzzle-options">
-          ${options.map((option, index) => `<button data-puzzle-answer="${index}" data-target-index="${index}" class="${state.puzzleLastChoice === option ? 'selected' : ''}" ${complete ? 'disabled' : ''}>
+          ${options.map((option, index) => {
+            const answerState = complete && index === bestIndex ? 'correct' : complete && state.puzzleLastChoice === option ? 'incorrect' : state.puzzleLastChoice === option ? 'selected' : '';
+            return `<button data-puzzle-answer="${index}" data-target-index="${index}" class="${answerState}" ${complete ? 'disabled' : ''}>
             <em>${String.fromCharCode(65 + index)}</em><b>${escapeHtml(option)}</b><small>${index === bestIndex && state.puzzleFeedback ? 'Preferred pattern' : 'Tactical option'}</small>
-          </button>`).join('')}
+          </button>`;}).join('')}
         </div>
         <div class="puzzle-feedback ${state.puzzleFeedback ? 'show' : ''}">
           ${state.puzzleFeedback || 'Pick the highest-percentage shot for this court position.'}
@@ -2040,7 +2178,7 @@ function puzzlesPage() {
         </div>
         <div class="puzzle-flow-actions">
           <button id="reset-puzzle" class="ghost-action">Reset current point</button>
-          <button id="next-puzzle" class="primary-action">${complete ? 'Play another puzzle' : 'Next Scenario'}</button>
+          <button id="next-puzzle" class="primary-action" ${complete ? '' : 'disabled'}>${complete ? 'Play another puzzle' : 'Choose an answer to continue'}</button>
         </div>
       </article>
       <article class="puzzle-library puzzle-dashboard">
@@ -2066,10 +2204,10 @@ function analyzePage() {
           <input id="video-upload" class="native-video-upload" type="file" accept="video/*,.mp4,.mov,.m4v,.webm" aria-label="Choose Video">
           <small>MP4, MOV, M4V or WebM · maximum 80 MB</small>
         </div>
-        <div id="video-preview-state" class="video-preview-state" hidden>
-          <video id="selected-video-preview" controls playsinline preload="metadata"></video>
+        <div id="video-preview-state" class="video-preview-state compact-file-summary" hidden>
+          <div class="file-summary-icon" aria-hidden="true">▶</div>
           <div class="selected-video-meta">
-            <div><b id="selected-file-name">No video selected</b><span id="selected-video-details"></span></div>
+            <div><span class="eyebrow">SELECTED FILE</span><b id="selected-file-name">No video selected</b><span id="selected-video-details"></span><small class="file-valid-status">✓ Browser metadata validated</small></div>
             <div class="video-file-actions"><label class="ghost-action" for="video-upload">Replace</label><button type="button" id="remove-video" class="ghost-action">Remove</button></div>
           </div>
         </div>
@@ -2218,8 +2356,10 @@ async function analyzeUploadedVideo() {
       <h2>Video analysis could not run</h2>
       <p>${escapeHtml(error.message || `CourtIQ's analysis service is temporarily unavailable.`)}</p>
       <p>No report was fabricated. Please retry this clip shortly.</p>
+      <button type="button" id="retry-analysis" class="primary-action">Retry analysis</button>
     </article>`;
-    toast('Video backend unavailable.');
+    $('#retry-analysis')?.addEventListener('click', analyzeUploadedVideo);
+    toast('Analysis is temporarily unavailable. Please retry.');
   }
 }
 
@@ -2241,11 +2381,6 @@ function renderPoseVideoReport(file, payload) {
     return groups;
   }, {});
   const recommendations = record?.recommendations || recommendationsFromMetrics(metrics);
-  const videoUrl = URL.createObjectURL(file);
-  const timeline = (analysis.timestamps || []).slice(0, 6);
-  const timelineMarkup = timeline.map((point, index) => `<button data-video-time="${Number(point.time || 0)}" style="--x:${Math.min(92, 8 + index * 16)}%">
-        <b>${Number(point.time || 0).toFixed(1)}s</b><span>${escapeHtml(metricLabel(Object.keys(point).find(key => key !== 'time') || 'sample'))}</span>
-      </button>`).join('');
   const metricRows = Object.entries(grouped).map(([bucket, rows]) => `<section class="metric-group">
     <h3>${escapeHtml(bucket)}</h3>
     ${rows.map(([name, value]) => `<div class="metric-row">
@@ -2284,16 +2419,13 @@ function renderPoseVideoReport(file, payload) {
       </div>
       <b class="quality-score">Tracking quality: ${escapeHtml(qualityLabel(topConfidence))}</b>
     </div>
-    <div class="video-workspace">
-      <div class="video-viewer"><video id="analysis-video" controls preload="metadata" src="${videoUrl}"></video></div>
-      <div class="analysis-summary">
+    <div class="analysis-summary report-file-summary">
         <span class="eyebrow">CLIP METADATA</span>
         <h3>${analysis.frames_processed} frames${detection.duration_seconds ? ` · ${escapeHtml(detection.duration_seconds)}s` : ''}${detection.frame_size?.width && detection.frame_size?.height ? ` · ${escapeHtml(detection.frame_size.width)}×${escapeHtml(detection.frame_size.height)}` : ''}</h3>
         <p>Pose landmarks detected · ${(file.size / 1024 / 1024).toFixed(1)} MB</p>
-      </div>
+        <button type="button" id="preview-analysis-video" class="ghost-action">Preview clip</button>
     </div>
     ${videoDetectionCardsMarkup(detection)}
-    ${timelineMarkup ? `<div class="timeline-rail" aria-label="Clickable measured moments"><i></i>${timelineMarkup}</div>` : ''}
     <div class="metric-board">
       ${metricRows || '<section class="metric-group"><h3>No stable metrics</h3><p>Try a clearer full-body clip.</p></section>'}
     </div>
@@ -2323,15 +2455,7 @@ function renderPoseVideoReport(file, payload) {
 }
 
 function bindAnalysisReportControls(root = document) {
-  $$('[data-video-time]', root).forEach(button => {
-    button.onclick = () => {
-      const video = $('#analysis-video', root) || $('#analysis-video');
-      if (video) {
-        video.currentTime = Number(button.dataset.videoTime || 0);
-        video.play?.().catch(() => undefined);
-      }
-    };
-  });
+  $('#preview-analysis-video', root)?.addEventListener('click', openVideoPreview);
   $('#add-analysis-plan', root)?.addEventListener('click', () => {
     const added = addAnalysisToPlan();
     toast(added ? 'Added to training plan.' : 'Analyze a clip first.');
@@ -2353,7 +2477,9 @@ const pages = {
   compare: comparePage,
   simulation: simulationPage,
   model: modelPage,
-  profile: profilePage
+  profile: profilePage,
+  privacy: privacyPage,
+  terms: termsPage
 };
 
 function updatePlayerResults() {
@@ -2497,7 +2623,6 @@ function handleVideoInput(file, options = {}) {
   const button = $('#analyze-btn');
   const empty = $('#video-empty-state');
   const previewState = $('#video-preview-state');
-  const preview = $('#selected-video-preview');
   const readiness = $('#readiness-title');
   const facts = $('#readiness-facts');
   const validationError = validateVideoFile(file);
@@ -2505,6 +2630,7 @@ function handleVideoInput(file, options = {}) {
   if (error) error.textContent = file && validationError ? validationError : '';
   if (button) button.disabled = !file || Boolean(validationError);
   if (!file || validationError) {
+    state.selectedVideoMeta = null;
     if (empty) empty.hidden = false;
     if (previewState) previewState.hidden = true;
     if (readiness) readiness.textContent = file ? 'Unsupported footage' : 'Waiting for footage';
@@ -2514,24 +2640,30 @@ function handleVideoInput(file, options = {}) {
   state.selectedVideoUrl = URL.createObjectURL(file);
   if (empty) empty.hidden = true;
   if (previewState) previewState.hidden = false;
-  if (preview) {
-    preview.src = state.selectedVideoUrl;
-    preview.load();
-    preview.onloadedmetadata = () => {
-      const duration = Number.isFinite(preview.duration) ? `${preview.duration.toFixed(1)} sec` : 'Duration unavailable';
-      const resolution = preview.videoWidth && preview.videoHeight ? `${preview.videoWidth} × ${preview.videoHeight}` : 'Resolution unavailable';
+  const metadataProbe = document.createElement('video');
+  metadataProbe.preload = 'metadata';
+  metadataProbe.src = state.selectedVideoUrl;
+  metadataProbe.onloadedmetadata = () => {
+      const duration = Number.isFinite(metadataProbe.duration) ? `${metadataProbe.duration.toFixed(1)} sec` : 'Duration unavailable';
+      const resolution = metadataProbe.videoWidth && metadataProbe.videoHeight ? `${metadataProbe.videoWidth} × ${metadataProbe.videoHeight}` : 'Resolution unavailable';
       const details = `${duration} · ${resolution} · ${(file.size / 1024 / 1024).toFixed(1)} MB`;
+      state.selectedVideoMeta = { duration, resolution, size: `${(file.size / 1024 / 1024).toFixed(1)} MB` };
       const meta = $('#selected-video-details');
       if (meta) meta.textContent = details;
       if (facts) facts.innerHTML = `<p><b>Video loaded</b></p><p>${escapeHtml(duration)}</p><p>${escapeHtml(resolution)}</p><p>${(file.size / 1024 / 1024).toFixed(1)} MB</p><p><b>Ready for analysis</b></p>`;
+      URL.revokeObjectURL(state.selectedVideoUrl);
+      state.selectedVideoUrl = '';
+      metadataProbe.removeAttribute('src');
     };
-    preview.onerror = () => {
+    metadataProbe.onerror = () => {
       const message = 'The browser could not decode this video. Try an H.264 MP4, MOV, M4V or WebM file.';
       if (error) error.textContent = message;
       if (button) button.disabled = true;
       if (readiness) readiness.textContent = 'Video could not be decoded';
+      URL.revokeObjectURL(state.selectedVideoUrl);
+      state.selectedVideoUrl = '';
     };
-  }
+  metadataProbe.load();
   if (readiness) readiness.textContent = 'Ready for analysis';
   if (!options.silent) toast('Video ready to analyze.');
 }
@@ -2738,15 +2870,6 @@ function bindPageEvents() {
       if (file) handleVideoInput(file);
     });
   }
-  $$('[data-video-time]').forEach(button => {
-    button.onclick = () => {
-      const video = $('#analysis-video');
-      if (video) {
-        video.currentTime = Number(button.dataset.videoTime || 0);
-        video.play?.().catch(() => undefined);
-      }
-    };
-  });
   $('#add-analysis-plan')?.addEventListener('click', () => {
     const added = addAnalysisToPlan();
     toast(added ? 'Added to training plan.' : 'Analyze a clip first.');
@@ -2787,8 +2910,8 @@ function bindPageEvents() {
     saveState();
     resetPuzzle(nextPuzzleId());
   });
-  $('#ask-ai')?.addEventListener('click', () => toast('Coaching guidance is available in Learn and Analyze.'));
-	}
+
+}
 
 function render() {
   let route = normalizeRoute(state.route || location.hash.slice(1) || state.page);
@@ -2811,6 +2934,7 @@ function render() {
   document.body.dataset.product = state.product;
   document.body.dataset.page = state.page;
   document.body.classList.toggle('entry-mode', state.page === 'entry');
+  document.body.classList.toggle('policy-mode', ['privacy', 'terms'].includes(state.page));
   $$('[data-product]').forEach(button => button.classList.toggle('active', button.dataset.product === state.product));
   $$('[data-nav-product]').forEach(group => group.hidden = state.page !== 'entry' && group.dataset.navProduct !== state.product);
   $$('nav button').forEach(button => {
@@ -2842,4 +2966,27 @@ window.addEventListener('popstate', event => {
 });
 
 document.addEventListener('click', handleRouteIntent);
+$('#menu-toggle')?.addEventListener('click', () => setDrawer(true));
+$('#drawer-close')?.addEventListener('click', () => setDrawer(false));
+$('#drawer-backdrop')?.addEventListener('click', () => setDrawer(false));
+$('#app-sidebar')?.addEventListener('click', event => {
+  if (event.target.closest('[data-page], [data-product], .brand')) setDrawer(false);
+});
+$('#ask-ai')?.addEventListener('click', openCoachModal);
+$('#coach-close')?.addEventListener('click', closeCoachModal);
+$('#coach-cancel')?.addEventListener('click', closeCoachModal);
+$('#coach-submit')?.addEventListener('click', submitCoachingQuestion);
+$('#coach-modal')?.addEventListener('click', event => { if (event.target.id === 'coach-modal') closeCoachModal(); });
+$('#video-modal-close')?.addEventListener('click', closeVideoPreview);
+$('#video-modal')?.addEventListener('click', event => { if (event.target.id === 'video-modal') closeVideoPreview(); });
+document.addEventListener('keydown', event => {
+  if (event.key !== 'Escape') return;
+  if (!$('#video-modal')?.hidden) closeVideoPreview();
+  else if (!$('#coach-modal')?.hidden) closeCoachModal();
+  else setDrawer(false);
+});
+window.addEventListener('beforeunload', () => {
+  if (state.selectedVideoUrl) URL.revokeObjectURL(state.selectedVideoUrl);
+  if (state.previewVideoUrl) URL.revokeObjectURL(state.previewVideoUrl);
+});
 render();

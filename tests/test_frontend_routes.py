@@ -156,6 +156,8 @@ def test_analyze_and_prediction_feed_routes_render_current_controls():
     assert "video-upload" in analyze_function
     assert 'accept="video/*,.mp4,.mov,.m4v,.webm"' in analyze_function
     assert "analyze-btn" in analyze_function
+    assert "selected-video-preview" not in analyze_function
+    assert "compact-file-summary" in analyze_function
     assert "Choose what should be checked first" not in analyze_function
     assert "focus-pill" not in analyze_function
 
@@ -176,6 +178,19 @@ def test_puzzle_route_remains_and_gear_route_is_removed():
     assert "['train/gear', 'gear'" not in source
     assert "raw === 'gear' || raw === 'train/gear'" in ROUTER_JS.read_text()
     assert 'data-page="train/gear"' not in INDEX_HTML.read_text()
+
+
+def test_mobile_navigation_footer_and_coaching_shell_are_present():
+    html = INDEX_HTML.read_text()
+    source = APP_JS.read_text()
+
+    for expected in ("menu-toggle", "drawer-backdrop", "coach-modal", "Privacy Policy", "Terms of Use"):
+        assert expected in html
+    for expected in ("function setDrawer", "function openCoachModal", "/api/coaching/help"):
+        assert expected in source
+    router = ROUTER_JS.read_text()
+    assert "['privacy', 'privacy'" in router
+    assert "['terms', 'terms'" in router
 
 
 def test_plan_native_selects_survive_route_navigation_regression():

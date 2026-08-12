@@ -37,6 +37,9 @@ class Settings:
     allowed_video_extensions: tuple[str, ...] = (".mp4", ".mov", ".m4v", ".webm")
     allowed_video_mime_types: tuple[str, ...] = ("video/mp4", "video/quicktime", "video/x-m4v", "video/webm")
     log_level: str = getenv("COURTIQ_LOG_LEVEL", "INFO")
+    gemini_api_key: str = getenv("GEMINI_API_KEY", "")
+    gemini_model: str = getenv("COURTIQ_GEMINI_MODEL", "gemini-3.5-flash")
+    gemini_timeout_seconds: float = min(30.0, max(2.0, float(getenv("COURTIQ_GEMINI_TIMEOUT_SECONDS", "12"))))
 
 
 @lru_cache

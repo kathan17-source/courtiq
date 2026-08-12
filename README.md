@@ -164,6 +164,22 @@ make check
 
 Use `make run` to start the local app. `make check` runs the Python lint, JavaScript syntax, and Python test suites; `make format-check` is available when reviewing Python formatting without changing files.
 
+## Responsive UI and coaching help
+
+CourtIQ uses a desktop sidebar and a keyboard-accessible mobile navigation drawer. The current Train and Predict interfaces adapt through phone, tablet, and desktop layouts without a separate frontend build step. Privacy and Terms are available at `#privacy` and `#terms`.
+
+Optional coaching help is proxied only through the backend. Set `GEMINI_API_KEY` in the server environment; optional `COURTIQ_GEMINI_MODEL` and `COURTIQ_GEMINI_TIMEOUT_SECONDS` values are documented in `.env.example`. Never place the key in frontend files. Without a key, the UI reports that coaching help is not configured while the rest of CourtIQ continues normally.
+
+Local development and verification:
+
+```bash
+python -m pip install -r requirements-dev.txt
+make run
+make check
+```
+
+Render continues to use the root `Dockerfile` and `render.yaml`. Add `GEMINI_API_KEY` in Render's environment settings only if coaching help should be enabled in production.
+
 ## Core algorithms
 
 Documented in `ALGORITHMS.md`:

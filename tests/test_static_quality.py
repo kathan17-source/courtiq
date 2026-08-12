@@ -48,11 +48,13 @@ class StaticQualityTests(unittest.TestCase):
         self.assertNotIn("headers: { 'Content-Type': 'multipart/form-data'", app_js)
         self.assertNotIn("addEventListener('click', buildLocalVideoReport)", app_js)
 
-    def test_video_picker_is_native_visible_and_preview_is_persistent(self) -> None:
+    def test_video_picker_uses_compact_metadata_summary_and_cleans_object_urls(self) -> None:
         app_js = (ROOT / "outputs/tennis-ai-app/app.js").read_text(encoding="utf-8")
         css = (ROOT / "outputs/tennis-ai-app/styles.css").read_text(encoding="utf-8")
         self.assertIn("native-video-upload", app_js)
-        self.assertIn("controls playsinline preload=\"metadata\"", app_js)
+        self.assertIn("compact-file-summary", app_js)
+        self.assertIn("document.createElement('video')", app_js)
+        self.assertNotIn('id="selected-video-preview"', app_js)
         self.assertIn("URL.createObjectURL(file)", app_js)
         self.assertIn("URL.revokeObjectURL(state.selectedVideoUrl)", app_js)
         self.assertIn("button.disabled = !file || Boolean(validationError)", app_js)
@@ -106,7 +108,7 @@ class StaticQualityTests(unittest.TestCase):
         app_js = (ROOT / "outputs/tennis-ai-app/app.js").read_text(encoding="utf-8")
         for expected in (
             "handleVideoInput",
-            "data-video-time",
+            "preview-analysis-video",
             "startTrainingSession",
             "completeTrainingSession",
             "updatePlanCompletion",

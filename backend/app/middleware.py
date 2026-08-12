@@ -30,6 +30,7 @@ class ProductionGuardMiddleware(BaseHTTPMiddleware):
             "/api/video/analyze": RequestLimiter(5),
             "/api/simulate/tournament": RequestLimiter(20),
             "/api/predict": RequestLimiter(60),
+            "/api/coaching/help": RequestLimiter(12),
         }
 
     def secure(self, response: Response, request_id: str, path: str) -> Response:

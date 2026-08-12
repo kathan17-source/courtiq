@@ -21,6 +21,22 @@ class ApiValidationTests(unittest.TestCase):
         response = self.client.get("/api/health")
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.json()["status"], "ok")
+        self.assertIn("coaching_help_configured", response.json())
+
+    def test_coaching_help_is_server_side_and_fails_safely_without_key(self) -> None:
+        response = self.client.post(
+            "/api/coaching/help",
+            json={"question": "How should I recover after serving?", "context": "Serve training, beginner"},
+        )
+        self.assertEqual(response.status_code, 503)
+        self.assertEqual(response.json()["error"]["message"], "Coaching help is not configured yet.")
+
+    def test_coaching_help_validates_bounds_and_unknown_fields(self) -> None:
+        self.assertEqual(self.client.post("/api/coaching/help", json={"question": "x"}).status_code, 422)
+        oversized = {"question": "How should I serve?", "context": "x" * 1201}
+        self.assertEqual(self.client.post("/api/coaching/help", json=oversized).status_code, 422)
+        unknown = {"question": "How should I serve?", "secret": "no"}
+        self.assertEqual(self.client.post("/api/coaching/help", json=unknown).status_code, 422)
 
     def test_launcher_serves_frontend_root_and_assets(self) -> None:
         response = self.client.get("/")
