@@ -5,4 +5,4 @@ pydantic==2.11.7
 python-multipart==0.0.32
 numpy==2.5.2
 opencv-python-headless==4.10.0.84
-mediapipe==0.10.14
+mediapipe==1.0.0
