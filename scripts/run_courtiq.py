@@ -15,7 +15,7 @@ def main() -> int:
         import uvicorn
     except ImportError:
         print("CourtIQ backend dependencies are missing.")
-        print("Install them first: python -m pip install -r backend/requirements.txt")
+        print("Install them first: python -m pip install -r requirements.txt")
         return 1
 
     host = os.getenv("COURTIQ_HOST", "127.0.0.1")
