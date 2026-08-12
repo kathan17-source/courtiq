@@ -150557,7 +150557,7 @@
   },
   "previous_model_version": "courtiq-real-20260809152750-enhanced_runtime_safe",
   "promotion_source": {
-    "report": "/Users/kathanpatel/Documents/Codex/2026-06-19/like-what-type-of-projects-can/output/backtests/courtiq_backtest_report_atp.json",
+    "report": "output/backtests/courtiq_backtest_report_atp.json",
     "selection_rule": "strongest runtime-compatible corrected model selected from 2019-2023 walk-forward log loss, calibrated on 2024, benchmarked on 2025"
   },
   "temporal_policy_version": "atp_tournament_date_round_safe_v1",

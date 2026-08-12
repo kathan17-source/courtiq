@@ -1023,14 +1023,14 @@ const PRODUCT_LABELS = {
 };
 
 const MODEL_METRICS = {
-  version: 'courtiq-real-20260809082050-stacked',
-  dataRange: '2000–2026 ATP match CSVs supplied locally',
+  version: 'courtiq-real-20260809154449-enhanced_runtime_safe',
+  dataRange: 'ATP artifact · training cutoff 2023 · held-out 2025 evaluation',
   matches: 78091,
-  accuracy: '70.36%',
-  auc: '0.7753',
-  logLoss: '0.5677',
-  brier: '0.1931',
-  ece: '0.0123'
+  accuracy: '65.50%',
+  auc: '0.7132',
+  logLoss: '0.6185',
+  brier: '0.2154',
+  ece: '0.0271'
 };
 
 function escapeHtml(value) {

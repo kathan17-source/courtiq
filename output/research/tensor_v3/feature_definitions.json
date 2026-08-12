@@ -1,0 +1,111 @@
+{
+  "M0": {
+    "component": "leakage-safe rating/ranking baseline",
+    "candidate_features": [
+      "overall_elo_diff",
+      "surface_elo_diff",
+      "surface_elo_shrunk_diff",
+      "ranking_diff",
+      "ranking_points_diff",
+      "rank_known",
+      "matches_diff"
+    ]
+  },
+  "M1": {
+    "component": "uncertainty-aware surface rating",
+    "candidate_features": [
+      "rating_rd_diff",
+      "rating_uncertainty_sum",
+      "surface_sample_diff",
+      "match_count_log_diff"
+    ]
+  },
+  "M2": {
+    "component": "shrunk first/second serve and opponent-adjusted return",
+    "candidate_features": [
+      "serve_strength_diff",
+      "return_strength_diff",
+      "serve_return_edge",
+      "first_in_diff",
+      "first_won_diff",
+      "second_won_diff",
+      "ace_rate_diff",
+      "df_rate_diff",
+      "return_point_won_diff",
+      "serve_point_won_diff",
+      "stat_sample_diff",
+      "latent_serve_skill_diff",
+      "latent_return_skill_diff",
+      "latent_surface_serve_skill_diff",
+      "latent_surface_return_skill_diff",
+      "latent_uncertainty_sum"
+    ]
+  },
+  "M3": {
+    "component": "multi-timescale residual state",
+    "candidate_features": [
+      "form_5_diff",
+      "form_10_diff",
+      "form_20_diff",
+      "surface_form_diff",
+      "residual_form_short_diff",
+      "residual_form_medium_diff",
+      "surface_residual_form_diff"
+    ]
+  },
+  "M4": {
+    "component": "cached structural scoring expert",
+    "candidate_features": [
+      "structural_match_logit",
+      "latent_exact_match_logit",
+      "best_of_5"
+    ]
+  },
+  "M5": {
+    "component": "dominance and workload",
+    "candidate_features": [
+      "score_dominance_diff",
+      "set_dominance_diff",
+      "tiebreak_strength_diff",
+      "days_rest_diff",
+      "recovery_curve_diff",
+      "workload_3d_diff",
+      "workload_7d_diff",
+      "workload_14d_diff"
+    ]
+  },
+  "M6": {
+    "component": "H2H surprise and common-opponent residual",
+    "candidate_features": [
+      "h2h_prior_diff",
+      "surface_h2h_prior_diff",
+      "common_opponent_result_residual_diff",
+      "common_opponent_serve_residual_diff",
+      "common_opponent_return_residual_diff",
+      "common_opponent_surface_residual_diff",
+      "common_opponent_match_weight"
+    ]
+  },
+  "M7": {
+    "component": "simple temporal graph",
+    "candidate_features": []
+  },
+  "M8": {
+    "component": "retained structural ensemble",
+    "candidate_features": [
+      "age_diff",
+      "height_diff",
+      "lefty_matchup",
+      "same_hand",
+      "is_indoor",
+      "level_g",
+      "level_m",
+      "level_500",
+      "level_250",
+      "round_final",
+      "round_sf",
+      "round_qf",
+      "data_strength_diff"
+    ]
+  }
+}

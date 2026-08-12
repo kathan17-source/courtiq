@@ -32,8 +32,7 @@ Do not use the `file://` page for predictor testing; the HTTP launcher serves th
 ## Quick demo
 
 - App: `http://127.0.0.1:8000`
-- 60-second path: `DEMO.md`
-- Interview notes: `INTERVIEW_NOTES.md`
+- Product walkthrough: `DEMO.md`
 - Algorithms: `ALGORITHMS.md`
 - Production-readiness report: `PRODUCTION_READINESS.md`
 
@@ -117,7 +116,7 @@ flowchart TD
   Report --> Frontend
 ```
 
-60-second architecture explanation: `docs/interview_architecture.md`.
+Architecture details: `docs/current_architecture.md` and `docs/architecture_diagrams.md`.
 
 ## Tech stack
 
@@ -158,6 +157,7 @@ If WTA files are absent, the WTA command exits clearly instead of fabricating a 
 ## Model and product boundaries
 
 - The checked-in ATP artifact reports a 2025 held-out accuracy of 0.655, log loss 0.6185, Brier score 0.2154 and ROC-AUC 0.7132. The WTA artifact reports 0.6469, 0.6232, 0.2172 and 0.7069 respectively. These are artifact metadata, not guarantees for future matches.
+- The retired ~70% ATP result is invalid because same-tournament temporal leakage contaminated that evaluation. The final [TENSOR v3 report](output/research/tensor_v3/FINAL_RESEARCH_REPORT.md) and [temporal-sensitivity methodology](output/research/temporal_sensitivity/METHODOLOGY.md) preserve the authoritative research record.
 - Artifact state is serialized at a stated cutoff. An `as_of` request does not reconstruct historical player state; the API returns an explicit diagnostic when that limitation applies.
 - Live prediction cannot know pre-match rest, workload or head-to-head inputs from a player name alone. Those fields use documented neutral defaults rather than fabricated observations; see `docs/feature_availability.md`.
 - Analyze uses a single-camera 2D pose estimate. It does not measure ball speed, spin, forces, injury risk or clinical biomechanics.
@@ -247,9 +247,8 @@ node --check work/backtest_courtiq_model.js
 - Gear photos should use rights-safe official or licensed product media only.
 - Browser/server QA should use the HTTP launcher, not the `file://` fallback.
 
-## Interview material
+## Project documentation
 
-- `DEMO.md` — 60-second and 3-minute demo paths.
-- `INTERVIEW_NOTES.md` — talking points, resume bullets and skeptical Q&A.
+- `DEMO.md` — concise product and technical walkthroughs.
 - `ALGORITHMS.md` — formulas, assumptions, complexity and limitations.
 - `PRODUCTION_READINESS.md` — security, reliability and operational review.

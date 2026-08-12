@@ -1,0 +1,38 @@
+{
+  "method": "same fixed enhanced_runtime_safe specification; train <=2023, calibrate 2024, test 2025",
+  "metrics": {
+    "round_safe": {
+      "accuracy": 0.655,
+      "brier_score": 0.2154,
+      "ece": 0.0271,
+      "held_out_rows": 2861,
+      "log_loss": 0.6185,
+      "roc_auc": 0.7132
+    },
+    "tournament_frozen": {
+      "accuracy": 0.6571,
+      "brier_score": 0.2152,
+      "ece": 0.0287,
+      "held_out_rows": 2861,
+      "log_loss": 0.6182,
+      "roc_auc": 0.7135
+    }
+  },
+  "paired_tournament_block_bootstrap": {
+    "brier": {
+      "ci_95": [
+        -0.000708,
+        0.000431
+      ],
+      "mean_delta_frozen_minus_round_safe": -0.000145
+    },
+    "log_loss": {
+      "ci_95": [
+        -0.001646,
+        0.001022
+      ],
+      "mean_delta_frozen_minus_round_safe": -0.000314
+    }
+  },
+  "status": "research_only_no_promotion"
+}

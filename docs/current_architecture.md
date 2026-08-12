@@ -1,10 +1,10 @@
 # CourtIQ Current Architecture Audit
 
-Date: 2026-08-09
+Updated: 2026-08-12
 
 ## 1. Current architecture
 
-CourtIQ currently has two layers:
+CourtIQ has a static single-page frontend, a FastAPI application layer, and reproducible model/research tooling:
 
 ```text
 outputs/tennis-ai-app/
@@ -15,7 +15,12 @@ outputs/tennis-ai-app/
 
 backend/
   main.py
-  services/
+  app/api/
+  app/services/
+
+output/models/
+  courtiq_model_atp.json
+  courtiq_model_wta.json
 
 work/
   backtest_courtiq_model.js
@@ -23,9 +28,9 @@ work/
   tennis-data/
 ```
 
-The frontend is still the primary product surface. It is a static single-page app with a polished tennis UI, multiple pages, local storage, match predictor, puzzles, gear, training, compete and analysis flows.
+The frontend is the primary product surface. It is a static single-page app with local persistence, training, analysis, learning, puzzles and ATP/WTA prediction flows.
 
-The backend is an early scaffold. It contains the first real split of prediction services, Elo math and video-analysis math helpers, but it is not yet connected to a database or deployed as the source of truth.
+The backend serves the frontend and API from one origin, loads separate validated ATP/WTA artifacts, and exposes prediction, health, player and video-analysis routes. PostgreSQL remains the target schema; the deployed service currently uses file-backed artifacts and browser-local product persistence.
 
 ## 2. What functionality is real
 
@@ -33,62 +38,34 @@ The backend is an early scaffold. It contains the first real split of prediction
 - Walk-forward backtest runner design: predicts each match before updating ratings.
 - `player-stats.js` frontend data hook: allows real exported stats to replace demo fallback values.
 - Same-tour match guard in the predictor.
-- Basic backend API contract scaffold.
+- Versioned ATP/WTA prediction artifacts with schema and integrity validation.
+- FastAPI prediction, model-health, player-search and video-analysis endpoints.
 - Product-level UI flows for learning, training, prediction, gear, puzzles and analysis.
 
 ## 3. What is simulated/demo
 
-- Frontend player skill profiles when no `player-stats.js` data exists.
-- Video analysis report: currently a heuristic coaching report, not real computer vision.
-- Tournament discovery: links/placeholders, not a complete global event database.
-- Gear catalog/images: large product-like catalog, but exact verified product image coverage is incomplete.
-- Chatbot behavior: not connected to a true tennis knowledge backend.
+- Video analysis is a single-camera 2D pose estimate, not ball tracking or clinical biomechanics.
+- Plan/profile state is browser-local and is not synchronized to an account.
+- Gear catalog assets are preserved for future product work but are not loaded by the current public navigation.
 
 ## 4. Technical debt
 
 - `outputs/tennis-ai-app/app.js` is too large and should eventually split into modules/pages/services.
-- No persistent database yet.
-- No migrations yet.
-- No live API integration from frontend predictor yet.
-- No rigorous Python test suite before this phase.
-- No CI/Docker setup before this phase.
-- No model artifact/version registry yet.
+- No authenticated account or cloud persistence layer.
+- The checked-in database schema does not yet have an application migration runner.
+- Model artifacts are file-backed rather than managed through a model registry.
+- In-process rate limiting is single-instance only.
 
 ## 5. Files that should be refactored later
 
 - `outputs/tennis-ai-app/app.js`: split into frontend pages/services/components.
-- `work/backtest_courtiq_model.js`: keep as smoke-tool, but move production modeling to Python `ml/`.
-- `backend/services/*`: migrate to `backend/app/services/*` package.
-- Gear data inside `app.js`: eventually move into database/imported catalog.
+- `work/backtest_courtiq_model.js`: retain as a compatibility smoke tool; production training is Python-based.
+- Preserved Gear catalog assets: move to external/object storage before reactivating that product area.
 
-## 6. Migration plan
+## 6. Next production steps
 
-### Phase 1 — foundation
-
-- Preserve static frontend.
-- Add `backend/app` FastAPI architecture.
-- Add PostgreSQL schema.
-- Add tests for math/Elo/API contracts.
-- Add Docker/CI scaffolding.
-
-### Phase 2 — data
-
-- Import ATP/WTA CSV data using reproducible scripts.
-- Normalize players/tournaments/matches/stat rows.
-- Persist chronological Elo snapshots.
-
-### Phase 3 — models
-
-- Build feature pipeline with no future leakage.
-- Add ranking-only, overall Elo, surface Elo and logistic regression baselines.
-- Add walk-forward evaluation and calibration reports.
-
-### Phase 4 — integration
-
-- Connect frontend predictor to backend API.
-- Display real stats only when backend confirms data exists.
-
-### Phase 5+
-
-- Add tournament simulation, real CV video pipeline, deployment hardening.
-
+- Add authenticated accounts and server-side persistence where product requirements justify them.
+- Add a database migration runner and transactional ingestion jobs.
+- Move shared rate limiting and observability to managed infrastructure before multi-instance scaling.
+- Introduce a governed artifact registry and automated freshness checks.
+- Keep video claims bounded to what the 2D landmark pipeline actually measures.

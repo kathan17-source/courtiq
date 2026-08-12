@@ -1,10 +1,10 @@
 # CourtIQ production-readiness report
 
-Date: 2026-08-09
+Updated: 2026-08-12
 
 ## Verdict
 
-CourtIQ is a controlled local prototype, not a production-deployed service. It loads versioned ATP and WTA artifacts and exposes their held-out metrics, but it has no authenticated account system, shared persistence, production database, distributed rate limit or isolated media worker.
+CourtIQ is publicly deployed as a controlled prototype. It loads versioned ATP and WTA artifacts and exposes their held-out metrics, but it has no authenticated account system, shared persistence, production database, distributed rate limit or isolated media worker.
 
 ## Architecture summary
 
@@ -13,7 +13,7 @@ CourtIQ is a controlled local prototype, not a production-deployed service. It l
 - Database target: PostgreSQL with normalized players, tournaments, matches, point events, Elo history, model versions, model backtests and upload-job lifecycle tables.
 - ML target: chronological surface-Elo and tennis scoring math. Demo predictions are disabled by default unless explicitly requested.
 - Data import: CSV-oriented import/backtest path under `work/tennis-data` and `work/backtest_courtiq_model.js`.
-- Deployment foundation: Dockerfile, Docker Compose and GitHub Actions CI.
+- Deployment: Docker-based Render service with GitHub Actions CI.
 
 ## Security decisions added
 

@@ -1,24 +1,24 @@
 # CourtIQ demo guide
 
-This is the interview/recruiter demo path. It is intentionally short and honest: this checkout has the full app, backend scaffold, probability math, schema, validation and benchmark scripts, but no imported historical ATP/WTA CSV dataset yet. If match CSVs are added to `work/tennis-data`, the backtest script populates real backtest metrics and frontend player stats.
+This is a concise walkthrough of the public product and its technical foundations. The checked-in app includes separate validated ATP and WTA model artifacts, an API, a static frontend, training workflows, video-analysis support, tests, and reproducible research scripts.
 
-## 60-second recruiter demo
+## 60-second product walkthrough
 
 1. Open `outputs/tennis-ai-app/index.html`.
 2. Explain the product in one sentence: “CourtIQ is a tennis analytics platform that combines match prediction, player development, video-analysis UX and gear recommendations.”
 3. Go to **Match Predictor**.
 4. Select two same-tour players and a Grand Slam.
 5. Run the prediction.
-6. Point out the honesty boundary: demo predictions are labelled; the backend refuses unvalidated predictions unless demo mode is explicitly enabled.
-7. Open the repo files:
+6. Open the model view and point out that metrics come from the active held-out artifacts rather than a marketing estimate.
+7. For implementation details, see:
    - `backend/app/services/elo_service.py` for surface-aware Elo.
    - `backend/app/services/tennis_math.py` for game/set/match probability.
-   - `work/backtest_courtiq_model.js` for chronological backtesting once CSVs are present.
-8. Show `output/backtests/courtiq_backtest_report.json`. In this checkout it says `no_data`, which is intentional rather than faking accuracy.
+   - `scripts/train_models.py` for the reproducible ATP/WTA training entry point.
+8. Review the active artifacts in `output/models/`, including their explicit training cutoffs and held-out metrics.
 9. Show `output/benchmarks/core_benchmarks.json` and `output/benchmarks/simulation_benchmark.json` for measured local performance.
 10. If asked for a tournament simulation, show the measured `tournament_simulation_10k_brackets` benchmark in `core_benchmarks.json`; the current UI does not yet expose this as a full production endpoint.
 
-## 3-minute technical interview demo
+## 3-minute technical walkthrough
 
 ### 0:00–0:20 — Problem
 
@@ -30,7 +30,7 @@ Historical CSV data flows into an import/backtest pipeline, then into PostgreSQL
 
 ### 0:50–1:20 — Real data pipeline
 
-The repo expects public ATP/WTA-style match CSVs in `work/tennis-data`. The backtest script processes files named like `atp_matches_2025.csv` and `wta_matches_2025.csv`. The current local checkout has no CSVs, so the generated report correctly says `no_data`.
+The repo expects public ATP/WTA-style match CSVs in `work/tennis-data`. ATP and WTA are trained independently, with separate rating populations and versioned artifacts. Raw source data stays out of Git; the current production artifacts and their evaluation metadata are checked in.
 
 ### 1:20–1:50 — Elo methodology
 

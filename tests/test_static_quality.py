@@ -29,8 +29,8 @@ class StaticQualityTests(unittest.TestCase):
         self.assertIn("status TEXT NOT NULL CHECK", schema)
         self.assertIn("idx_uploaded_jobs_expires_at", schema)
 
-    def test_interview_docs_exist(self) -> None:
-        for relative_path in ("DEMO.md", "INTERVIEW_NOTES.md", "ALGORITHMS.md", "docs/interview_architecture.md"):
+    def test_public_project_docs_exist(self) -> None:
+        for relative_path in ("README.md", "DEMO.md", "ALGORITHMS.md", "DEPLOYMENT.md", "PRODUCTION_READINESS.md", "docs/current_architecture.md"):
             self.assertTrue((ROOT / relative_path).exists(), relative_path)
 
     def test_production_prediction_does_not_use_placeholder_rating(self) -> None:
