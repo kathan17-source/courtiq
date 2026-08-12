@@ -36,6 +36,8 @@ output/research/*
 !output/research/temporal_sensitivity/
 !output/research/temporal_sensitivity/METHODOLOGY.md
 !output/research/temporal_sensitivity/metrics.json
+!output/research/retired_models/
+!output/research/retired_models/legacy_leaky_baseline.md
 !output/research/tensor_v3/
 output/research/tensor_v3/*
 !output/research/tensor_v3/FINAL_RESEARCH_REPORT.md
