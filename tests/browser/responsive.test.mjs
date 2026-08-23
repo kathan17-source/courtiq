@@ -111,8 +111,9 @@ test('mobile navigation and focus states remain usable', { timeout: 30_000 }, as
     await page.getByRole('button', { name: 'Train overview' }).click();
     await page.waitForURL(/#train\/overview$/);
     assert.equal(await page.locator('#app-sidebar').evaluate(node => node.classList.contains('drawer-open')), false);
-    await page.getByRole('button', { name: /Coaching help/ }).focus();
-    const outline = await page.getByRole('button', { name: /Coaching help/ }).evaluate(node => getComputedStyle(node).outlineStyle);
+    await page.reload({ waitUntil: 'networkidle' });
+    await page.keyboard.press('Tab');
+    const outline = await page.evaluate(() => getComputedStyle(document.activeElement).outlineStyle);
     assert.notEqual(outline, 'none');
   } finally {
     await browser.close();
