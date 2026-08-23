@@ -53,19 +53,24 @@ button:disabled {
 
 .player-directory .row,
 .player-directory .row > button,
-.player-directory .row > span {
+.player-directory .row > span,
+.finder .row,
+.finder .row > button,
+.finder .row > span {
   min-width: 0;
   max-width: 100%;
 }
 
-.player-directory .row strong {
+.player-directory .row strong,
+.finder .row strong {
   overflow: visible;
   text-overflow: clip;
   white-space: normal;
   overflow-wrap: anywhere;
 }
 
-.player-directory .tag {
+.player-directory .tag,
+.finder .tag {
   width: auto;
   max-width: 100%;
   white-space: normal;
@@ -74,15 +79,18 @@ button:disabled {
 }
 
 @media (max-width: 480px) {
-  .player-directory .row {
+  .player-directory .row,
+  .finder .row {
     grid-template-columns: 1fr;
   }
 
-  .player-directory .row > span {
+  .player-directory .row > span,
+  .finder .row > span {
     width: 100%;
   }
 
-  .player-directory .row > span button {
+  .player-directory .row > span button,
+  .finder .row > span button {
     flex: 1;
     min-height: 44px;
   }
