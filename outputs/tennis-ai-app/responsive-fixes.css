@@ -24,6 +24,10 @@ button:disabled {
   color: var(--text-secondary);
 }
 
+.puzzle-options button em {
+  color: var(--accent-lime);
+}
+
 .feature-card h2,
 .feature-card h3,
 .feature-card b,
