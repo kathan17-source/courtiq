@@ -40,7 +40,7 @@ function pageAudit() {
     for (let depth = 0; node && depth < 6; depth += 1, node = node.parentElement) {
       const nodeStyle = getComputedStyle(node);
       const paint = `${nodeStyle.backgroundColor} ${nodeStyle.backgroundImage}`;
-      if (/rgba?\((215, 255, 49|216, 255, 69|205, 252, 57|247, 250, 239|246, 248, 241|245, 241, 232|255, 255, 255)/.test(paint)) return [];
+      if (/rgba?\((215, 255, 49|216, 255, 69|205, 252, 57|93, 240, 163|247, 250, 239|246, 248, 241|245, 241, 232|255, 255, 255)/.test(paint)) return [];
     }
     return [{ tag: element.tagName.toLowerCase(), className: String(element.className || '').slice(0, 100),
       text: element.textContent.trim().slice(0, 100), color: style.color }];
