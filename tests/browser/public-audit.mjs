@@ -91,7 +91,7 @@ assert.equal(await interactionPage.locator('.side.drawer-open').count(), 1);
 await interactionPage.getByRole('button', { name: 'Overview' }).first().click();
 assert.match(interactionPage.url(), /#train\/overview$/);
 await interactionPage.goto(`${baseUrl}#predict/match`, { waitUntil: 'networkidle' });
-const predictButton = interactionPage.getByRole('button', { name: 'Predict', exact: true });
+const predictButton = interactionPage.locator('#predict');
 if (await predictButton.isEnabled()) {
   await predictButton.click();
   await interactionPage.waitForTimeout(2_000);
