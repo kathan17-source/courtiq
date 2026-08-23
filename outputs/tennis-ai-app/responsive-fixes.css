@@ -38,6 +38,10 @@ button:disabled {
   color: var(--accent-lime);
 }
 
+.puzzle-options button:not(.correct):not(.incorrect) em {
+  color: var(--accent-lime) !important;
+}
+
 .feature-card h2,
 .feature-card h3,
 .feature-card b,
