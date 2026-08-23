@@ -34,10 +34,6 @@ button:disabled {
   color: var(--text-secondary);
 }
 
-.puzzle-options button em {
-  color: var(--accent-lime);
-}
-
 .puzzle-options button:not(.correct):not(.incorrect) em {
   color: var(--accent-lime) !important;
 }
