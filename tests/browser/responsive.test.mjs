@@ -87,16 +87,18 @@ test('all routes fit every supported viewport with readable dark surfaces', { ti
   const browser = await chromium.launch({ headless: true });
   try {
     const page = await browser.newPage();
+    const failures = [];
     for (const [width, height] of viewports) {
       await page.setViewportSize({ width, height });
       for (const route of routes) {
         await page.goto(`${baseUrl}#${route}`, { waitUntil: 'networkidle' });
         const audit = await page.evaluate(renderedLayoutAudit);
-        assert.ok(audit.scrollWidth <= width, `${route} at ${width}x${height} scrolls to ${audit.scrollWidth}px`);
-        assert.deepEqual(audit.outsideViewport, [], `${route} at ${width}x${height} has off-screen elements`);
-        assert.deepEqual(audit.darkTextOnDark, [], `${route} at ${width}x${height} has dark text on a dark surface`);
+        if (audit.scrollWidth > width) failures.push(`${route} at ${width}x${height} scrolls to ${audit.scrollWidth}px`);
+        if (audit.outsideViewport.length) failures.push(`${route} at ${width}x${height} off-screen: ${JSON.stringify(audit.outsideViewport)}`);
+        if (audit.darkTextOnDark.length) failures.push(`${route} at ${width}x${height} dark text: ${JSON.stringify(audit.darkTextOnDark)}`);
       }
     }
+    assert.deepEqual(failures, []);
   } finally {
     await browser.close();
   }
