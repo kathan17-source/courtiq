@@ -3,6 +3,16 @@
   overflow: visible;
 }
 
+#page > *,
+.model-lab,
+.model-terminal,
+.calibration-card,
+.calibration-chart,
+.calibration-chart svg {
+  min-width: 0;
+  max-width: 100%;
+}
+
 .tour-switch {
   max-width: 100%;
   background: rgba(246, 248, 241, .08);
@@ -105,5 +115,10 @@ button:disabled {
 
   .comparison-board article {
     padding-inline: .85rem;
+  }
+
+  .model-terminal,
+  .calibration-card {
+    padding-inline: 1rem;
   }
 }
