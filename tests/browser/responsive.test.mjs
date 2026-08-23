@@ -65,7 +65,7 @@ function renderedLayoutAudit() {
     for (let depth = 0; node && depth < 6; depth += 1, node = node.parentElement) {
       const nodeStyle = getComputedStyle(node);
       const paint = `${nodeStyle.backgroundColor} ${nodeStyle.backgroundImage}`;
-      if (/rgb\((215, 255, 49|216, 255, 69|205, 252, 57|247, 250, 239|246, 248, 241|245, 241, 232|255, 255, 255)\)/.test(paint)) brightSurface = true;
+      if (/rgba?\((215, 255, 49|216, 255, 69|205, 252, 57|247, 250, 239|246, 248, 241|245, 241, 232|255, 255, 255)/.test(paint)) brightSurface = true;
     }
     if (brightSurface) return [];
     return [{
