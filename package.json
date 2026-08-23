@@ -1,0 +1,10 @@
+{
+  "name": "courtiq-browser-regression",
+  "private": true,
+  "scripts": {
+    "test:browser": "node --test tests/browser/responsive.test.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.55.0"
+  }
+}

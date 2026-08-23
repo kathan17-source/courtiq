@@ -1,0 +1,85 @@
+/* Shared contrast and responsive corrections audited across every public route. */
+#page {
+  overflow: visible;
+}
+
+.tour-switch {
+  max-width: 100%;
+  background: rgba(246, 248, 241, .08);
+}
+
+.tour-switch button {
+  color: var(--text-secondary);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 1;
+  color: var(--text-secondary);
+  background: rgba(246, 248, 241, .08);
+  border-color: rgba(246, 248, 241, .2);
+}
+
+.comparison-board article > span {
+  color: var(--text-secondary);
+}
+
+.hero h1,
+.page-hero h1,
+.product-hero h1,
+.matchup-title b,
+.winner-block h2,
+.model-version,
+.entry-panel h1 {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.player-directory .row,
+.player-directory .row > button,
+.player-directory .row > span {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.player-directory .row strong {
+  overflow: visible;
+  text-overflow: clip;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.player-directory .tag {
+  width: auto;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: 1.35;
+}
+
+@media (max-width: 480px) {
+  .player-directory .row {
+    grid-template-columns: 1fr;
+  }
+
+  .player-directory .row > span {
+    width: 100%;
+  }
+
+  .player-directory .row > span button {
+    flex: 1;
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero h1,
+  .page-hero h1,
+  .predictor-page h1 {
+    font-size: clamp(2.25rem, 12vw, 2.75rem);
+  }
+
+  .comparison-board article {
+    padding-inline: .85rem;
+  }
+}
