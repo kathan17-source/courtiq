@@ -9,6 +9,30 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class StaticQualityTests(unittest.TestCase):
+    def test_repository_never_tracks_environment_files(self) -> None:
+        tracked = subprocess.run(
+            ["git", "ls-files"], cwd=ROOT, check=True, capture_output=True, text=True
+        ).stdout.splitlines()
+        self.assertFalse(
+            any(
+                (ROOT / path).exists()
+                and (Path(path).name == ".env" or ".env." in Path(path).name or path.endswith(".env"))
+                for path in tracked
+            )
+        )
+        gitignore = (ROOT / ".gitignore").read_text(encoding="utf-8")
+        for rule in (".env", ".env.*", "*.env", "*.env.*"):
+            self.assertIn(rule, gitignore)
+
+    def test_frontend_does_not_reference_server_secrets(self) -> None:
+        frontend = "\n".join(
+            path.read_text(encoding="utf-8")
+            for path in (ROOT / "outputs" / "tennis-ai-app").rglob("*")
+            if path.is_file() and path.suffix in {".html", ".js", ".css"}
+        )
+        for secret_name in ("GEMINI_API_KEY", "DATABASE_URL"):
+            self.assertNotIn(secret_name, frontend)
+
     def test_retired_gear_system_is_absent_from_public_frontend(self) -> None:
         app_js = (ROOT / "outputs/tennis-ai-app/app.js").read_text(encoding="utf-8")
         self.assertFalse((ROOT / "outputs/tennis-ai-app/assets/gear").exists())
@@ -29,7 +53,14 @@ class StaticQualityTests(unittest.TestCase):
         self.assertIn("idx_uploaded_jobs_expires_at", schema)
 
     def test_public_project_docs_exist(self) -> None:
-        for relative_path in ("README.md", "DEMO.md", "ALGORITHMS.md", "DEPLOYMENT.md", "PRODUCTION_READINESS.md", "docs/current_architecture.md"):
+        for relative_path in (
+            "README.md",
+            "DEMO.md",
+            "ALGORITHMS.md",
+            "DEPLOYMENT.md",
+            "PRODUCTION_READINESS.md",
+            "docs/current_architecture.md",
+        ):
             self.assertTrue((ROOT / relative_path).exists(), relative_path)
 
     def test_production_prediction_does_not_use_placeholder_rating(self) -> None:
@@ -64,7 +95,18 @@ class StaticQualityTests(unittest.TestCase):
     def test_puzzle_board_uses_tactical_geometry_not_placeholder_primitives(self) -> None:
         app_js = (ROOT / "outputs/tennis-ai-app/app.js").read_text(encoding="utf-8")
         css = (ROOT / "outputs/tennis-ai-app/styles.css").read_text(encoding="utf-8")
-        for expected in ("function puzzleGeometry", "puzzleTargetForOption", "court-tactical-svg", "incoming-trajectory", "preferred-trajectory", "recovery-trajectory", "decision-target", "athlete-marker", "precise-ball", "tactical-context"):
+        for expected in (
+            "function puzzleGeometry",
+            "puzzleTargetForOption",
+            "court-tactical-svg",
+            "incoming-trajectory",
+            "preferred-trajectory",
+            "recovery-trajectory",
+            "decision-target",
+            "athlete-marker",
+            "precise-ball",
+            "tactical-context",
+        ):
             self.assertIn(expected, app_js + css)
         board_source = app_js.split("function rallyCourtMarkup", 1)[1].split("function puzzlesPage", 1)[0]
         for removed in ("court-label", "ball-dot", "shot-line", "you-dot", "opponent-dot", "last-choice"):

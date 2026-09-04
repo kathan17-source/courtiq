@@ -21,7 +21,6 @@ def _cors_origins() -> tuple[str, ...]:
 class Settings:
     app_name: str = "CourtIQ Match Engine"
     environment: str = _env("COURTIQ_ENV", "ENVIRONMENT", "development")
-    database_url: str = getenv("DATABASE_URL", "postgresql+psycopg://courtiq:courtiq@localhost:5432/courtiq")
     model_version: str = getenv("COURTIQ_MODEL_VERSION", "courtiq-v2-surface-elo")
     model_artifact_path: Path = Path(getenv("COURTIQ_MODEL_ARTIFACT", "output/models/courtiq_model_atp.json"))
     allow_demo_predictions: bool = getenv("COURTIQ_ALLOW_DEMO", "false").lower() == "true"

@@ -56,4 +56,4 @@ The implemented CV piece is biomechanical helper math for joint angles plus a vi
 
 ### 2:50–3:00 — Engineering decisions
 
-The project is structured to be defensible: strict API schemas, standard error responses, request IDs, upload validation, PostgreSQL constraints, CI, Docker Compose, no fake metrics, and explicit known limitations.
+The project is structured to be defensible: strict API schemas, standard error responses, request IDs, upload validation, PostgreSQL constraints, CI, a production Dockerfile, no fake metrics, and explicit known limitations.

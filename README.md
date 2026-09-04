@@ -71,7 +71,7 @@ Latest local values:
 | Frontend JavaScript | Vanilla ES modules |
 | Database tables defined | 12 |
 | CI workflow present | yes |
-| Docker Compose present | yes |
+| Production container definition | root `Dockerfile` |
 
 ## Performance measurement
 
@@ -104,7 +104,7 @@ Architecture details: `docs/current_architecture.md` and `docs/architecture_diag
 - Database target: PostgreSQL
 - Data/ML foundation: chronological Elo, leakage-safe feature definitions, evaluation metrics
 - Testing/quality: Python unit tests, JavaScript syntax checks, GitHub Actions CI
-- Deployment foundation: Dockerfile and Docker Compose
+- Deployment foundation: root Dockerfile and Render Blueprint
 
 ## Data pipeline
 
@@ -168,7 +168,15 @@ Use `make run` to start the local app. `make check` runs the Python lint, JavaSc
 
 CourtIQ uses a desktop sidebar and a keyboard-accessible mobile navigation drawer. The current Train and Predict interfaces adapt through phone, tablet, and desktop layouts without a separate frontend build step. Privacy and Terms are available at `#privacy` and `#terms`.
 
-Optional coaching help is proxied only through the backend. Set `GEMINI_API_KEY` in the server environment; optional `COURTIQ_GEMINI_MODEL` and `COURTIQ_GEMINI_TIMEOUT_SECONDS` values are documented in `.env.example`. Never place the key in frontend files. Without a key, the UI reports that coaching help is not configured while the rest of CourtIQ continues normally.
+Optional coaching help is proxied only through the backend. Set `GEMINI_API_KEY` in Render's environment settings; never place it in frontend files or any committed environment file. Without a key, the UI reports that coaching help is not configured while the rest of CourtIQ continues normally.
+
+### Environment configuration
+
+No secret environment variable is required for the core application. Render supplies `PORT`, while `render.yaml` sets the required production controls `COURTIQ_ENV`, `COURTIQ_ALLOW_DEMO`, and `COURTIQ_CORS_ORIGINS`.
+
+Optional server-side variables are `GEMINI_API_KEY`, `COURTIQ_GEMINI_MODEL`, `COURTIQ_GEMINI_TIMEOUT_SECONDS`, `COURTIQ_MODEL_VERSION`, `COURTIQ_MODEL_ARTIFACT`, `COURTIQ_REQUEST_BODY_LIMIT_BYTES`, `COURTIQ_UPLOAD_LIMIT_BYTES`, `COURTIQ_VIDEO_MAX_DURATION_SECONDS`, `COURTIQ_VIDEO_MAX_PIXELS`, `COURTIQ_VIDEO_MAX_FRAMES`, `COURTIQ_VIDEO_MAX_FPS`, `COURTIQ_MAX_SIMULATIONS`, `COURTIQ_RATE_LIMIT_PER_MINUTE`, and `COURTIQ_LOG_LEVEL`.
+
+Secret values must be configured only in Render and must never be committed. Local developers may create an untracked `.env` for their own tooling, although CourtIQ itself reads process environment variables directly and does not require a committed environment file.
 
 Local development and verification:
 
@@ -235,10 +243,11 @@ python -m pip install -r requirements-dev.txt
 python scripts/run_courtiq.py
 ```
 
-Docker:
+Production container:
 
 ```bash
-docker compose up --build
+docker build -t courtiq .
+docker run --rm -p 8000:8000 -e PORT=8000 -e COURTIQ_ENV=production courtiq
 ```
 
 Tests and checks:
