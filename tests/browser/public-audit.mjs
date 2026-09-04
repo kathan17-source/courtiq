@@ -54,9 +54,15 @@ const releasePage = await browser.newPage();
 let released = false;
 for (let attempt = 0; attempt < 40; attempt += 1) {
   await releasePage.goto(`${baseUrl}?audit=${Date.now()}#predict/model-lab`, { waitUntil: 'networkidle' });
-  released = await releasePage.evaluate(() => getComputedStyle(document.querySelector('#page')).overflow === 'visible'
-    && getComputedStyle(document.querySelector('.calibration-card')).maxWidth === '100%'
-    && [...document.querySelectorAll('link[rel="stylesheet"]')].some(link => link.href.endsWith('responsive-fixes.css?v=4')));
+  released = await releasePage.evaluate(() => {
+    const page = document.querySelector('#page');
+    const calibrationCard = document.querySelector('.calibration-card');
+    return Boolean(page && calibrationCard)
+      && getComputedStyle(page).overflow === 'visible'
+      && getComputedStyle(calibrationCard).maxWidth === '100%'
+      && [...document.querySelectorAll('link[rel="stylesheet"]')]
+        .some(link => link.href.endsWith('responsive-fixes.css?v=4'));
+  });
   if (released) break;
   await releasePage.waitForTimeout(15_000);
 }
