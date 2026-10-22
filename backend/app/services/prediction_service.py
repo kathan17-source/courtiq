@@ -5,9 +5,14 @@ import math
 from backend.app.config import get_settings
 from backend.app.schemas.prediction import PredictionFactor, PredictionRequest, PredictionResponse
 from backend.app.services.elo_service import PlayerRating, blended_rating, expected_score
-from backend.app.services.model_store import ModelUnavailableError, get_player_record, load_tour_model
-from backend.app.services.tennis_math import clamp, game_win_probability, match_win_from_set, set_win_probability_from_hold, sigmoid
-
+from backend.app.services.model_store import get_player_record, load_tour_model
+from backend.app.services.tennis_math import (
+    clamp,
+    game_win_probability,
+    match_win_from_set,
+    set_win_probability_from_hold,
+    sigmoid,
+)
 
 EVENT_SURFACE = {
     "hard court": "hard",

@@ -3,7 +3,13 @@ from __future__ import annotations
 import unittest
 from datetime import date
 
-from scripts.final_modeling_pass import RawMatch, PlayerState, build_feature_rows, latent_exact_match_probability, latent_skill
+from scripts.final_modeling_pass import (
+    PlayerState,
+    RawMatch,
+    build_feature_rows,
+    latent_exact_match_probability,
+    latent_skill,
+)
 
 
 def synthetic_match(winner: str, loser: str, round_name: str) -> RawMatch:

@@ -10,7 +10,6 @@ from starlette.responses import JSONResponse, Response
 from backend.app.config import Settings
 from backend.app.services.security import RequestLimiter, safe_request_id
 
-
 LOGGER = logging.getLogger("courtiq.api")
 
 
@@ -31,6 +30,7 @@ class ProductionGuardMiddleware(BaseHTTPMiddleware):
             "/api/video/analyze": RequestLimiter(5),
             "/api/simulate/tournament": RequestLimiter(20),
             "/api/predict": RequestLimiter(60),
+            "/api/coaching/help": RequestLimiter(12),
         }
 
     def secure(self, response: Response, request_id: str, path: str) -> Response:

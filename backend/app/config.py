@@ -5,6 +5,7 @@ from functools import lru_cache
 from os import getenv
 from pathlib import Path
 
+
 def _env(primary: str, fallback: str, default: str) -> str:
     return getenv(primary) or getenv(fallback) or default
 
@@ -20,7 +21,6 @@ def _cors_origins() -> tuple[str, ...]:
 class Settings:
     app_name: str = "CourtIQ Match Engine"
     environment: str = _env("COURTIQ_ENV", "ENVIRONMENT", "development")
-    database_url: str = getenv("DATABASE_URL", "postgresql+psycopg://courtiq:courtiq@localhost:5432/courtiq")
     model_version: str = getenv("COURTIQ_MODEL_VERSION", "courtiq-v2-surface-elo")
     model_artifact_path: Path = Path(getenv("COURTIQ_MODEL_ARTIFACT", "output/models/courtiq_model_atp.json"))
     allow_demo_predictions: bool = getenv("COURTIQ_ALLOW_DEMO", "false").lower() == "true"
@@ -36,6 +36,9 @@ class Settings:
     allowed_video_extensions: tuple[str, ...] = (".mp4", ".mov", ".m4v", ".webm")
     allowed_video_mime_types: tuple[str, ...] = ("video/mp4", "video/quicktime", "video/x-m4v", "video/webm")
     log_level: str = getenv("COURTIQ_LOG_LEVEL", "INFO")
+    gemini_api_key: str = getenv("GEMINI_API_KEY", "")
+    gemini_model: str = getenv("COURTIQ_GEMINI_MODEL", "gemini-3.5-flash")
+    gemini_timeout_seconds: float = min(30.0, max(2.0, float(getenv("COURTIQ_GEMINI_TIMEOUT_SECONDS", "12"))))
 
 
 @lru_cache

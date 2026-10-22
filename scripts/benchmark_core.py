@@ -1,9 +1,9 @@
 from __future__ import annotations
 
 import json
+import sys
 from datetime import date, timedelta
 from pathlib import Path
-import sys
 from time import perf_counter
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -88,6 +88,7 @@ def benchmark_prediction() -> dict:
 def benchmark_api_prediction_endpoint() -> dict:
     try:
         from fastapi.testclient import TestClient
+
         from backend.app.main import app
     except ModuleNotFoundError as exc:
         return {"status": "skipped", "reason": f"optional dependency unavailable: {exc.name}"}

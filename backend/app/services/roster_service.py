@@ -1,8 +1,14 @@
 from __future__ import annotations
 
 from backend.app.schemas.players import PlayerSummary
-from backend.app.services.model_store import ModelUnavailableError, abbreviated_name_candidates, get_player_record, has_tour_model, load_current_model, load_tour_model
-
+from backend.app.services.model_store import (
+    ModelUnavailableError,
+    abbreviated_name_candidates,
+    get_player_record,
+    has_tour_model,
+    load_current_model,
+    load_tour_model,
+)
 
 CURRENT_ROSTERS = {
     "atp": [

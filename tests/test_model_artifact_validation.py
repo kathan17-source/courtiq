@@ -7,7 +7,6 @@ import pytest
 
 from backend.app.services.model_store import ModelUnavailableError, load_model_from_path
 
-
 ATP = Path("output/models/courtiq_model_atp.json")
 
 
