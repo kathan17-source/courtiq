@@ -4,7 +4,12 @@ import unittest
 
 try:
     from backend.app.schemas.prediction import PredictionRequest
-    from backend.app.services.model_store import ModelUnavailableError, clear_model_cache, get_player_record, load_tour_model
+    from backend.app.services.model_store import (
+        ModelUnavailableError,
+        clear_model_cache,
+        get_player_record,
+        load_tour_model,
+    )
     from backend.app.services.prediction_service import predict_match
 except ModuleNotFoundError:
     PredictionRequest = None

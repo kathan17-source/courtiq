@@ -4,7 +4,6 @@ import csv
 import sys
 from pathlib import Path
 
-
 REQUIRED_COLUMNS = {"winner", "loser", "tourney_name", "surface", "tourney_date"}
 
 

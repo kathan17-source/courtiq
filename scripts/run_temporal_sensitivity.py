@@ -11,8 +11,13 @@ if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
 from scripts.final_modeling_pass import (
-    ROOT, RUNTIME_COMPATIBLE_FEATURES, build_feature_rows, candidate_sets,
-    final_test_probabilities, load_matches, metrics,
+    ROOT,
+    RUNTIME_COMPATIBLE_FEATURES,
+    build_feature_rows,
+    candidate_sets,
+    final_test_probabilities,
+    load_matches,
+    metrics,
 )
 
 OUT = ROOT / "output/research/temporal_sensitivity"
@@ -52,7 +57,7 @@ def main():
     payload = {"status":"research_only_no_promotion","method":"same fixed enhanced_runtime_safe specification; train <=2023, calibrate 2024, test 2025","metrics":results,"paired_tournament_block_bootstrap":paired_delta(rp,fp,labels,rows)}
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "metrics.json").write_text(json.dumps(payload, indent=2, sort_keys=True))
-    (OUT / "METHODOLOGY.md").write_text("# ATP temporal sensitivity\n\nRound-safe updates player state only after every match in an earlier round has been snapshotted. Tournament-frozen snapshots every match in a tournament from player state at tournament entry and applies results only after all tournament predictions. Both modes use the identical fixed enhanced-runtime-safe feature specification, training years through 2023, 2024-only calibration, and the 2025 held-out benchmark. No production artifact is written or promoted.\n\nReproduce: `.venv/bin/python scripts/run_temporal_sensitivity.py`\n")
+    (OUT / "METHODOLOGY.md").write_text("# ATP temporal sensitivity\n\nRound-safe updates player state only after every match in an earlier round has been snapshotted. Tournament-frozen snapshots every match in a tournament from player state at tournament entry and applies results only after all tournament predictions. Both modes use the identical fixed enhanced-runtime-safe feature specification, training years through 2023, 2024-only calibration, and the 2025 held-out benchmark. No production artifact is written or promoted.\n\nThe evaluation uses the locally supplied ATP match CSVs in Jeff Sackmann's `tennis_atp` format, with `tourney_date` interpreted as the tournament start date.\n\nReproduce: `.venv/bin/python scripts/run_temporal_sensitivity.py`\n")
     print(json.dumps(payload, indent=2))
 
 

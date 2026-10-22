@@ -1,9 +1,9 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from itertools import combinations
 from random import Random
 from time import perf_counter
-from itertools import combinations
 
 from backend.app.services.tennis_math import clamp
 

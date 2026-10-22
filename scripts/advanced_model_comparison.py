@@ -10,7 +10,7 @@ import time
 from dataclasses import dataclass, field
 from datetime import UTC, date, datetime
 from pathlib import Path
-from typing import Any, Callable
+from typing import Any
 
 import numpy as np
 import pandas as pd
@@ -27,7 +27,6 @@ from scripts.final_modeling_pass import (
     build_feature_rows,
     calibrated_probs,
     candidate_sets,
-    ece,
     fit_logistic,
     fit_platt,
     load_matches,
@@ -36,7 +35,6 @@ from scripts.final_modeling_pass import (
     safe_logit,
     sigmoid,
 )
-
 
 REPORT_PATH = ROOT / "output/backtests/advanced_model_comparison_report.json"
 ROWS_PATH = ROOT / "output/backtests/advanced_model_feature_rows.csv"

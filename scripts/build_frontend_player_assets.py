@@ -5,7 +5,6 @@ import json
 from pathlib import Path
 from typing import Any
 
-
 ROOT = Path(__file__).resolve().parents[1]
 MODEL_PATHS = [
     ROOT / "output/models/courtiq_model_atp.json",

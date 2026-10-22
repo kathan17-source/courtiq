@@ -1,0 +1,37 @@
+name: Bug report
+description: Report a reproducible problem with CourtIQ
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for helping improve CourtIQ. Please omit private or sensitive data.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the problem and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open ...
+        2. Select ...
+        3. See ...
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Browser and operating system, or Python version for local/API issues.
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Additional details
+      description: Add relevant logs or screenshots, with secrets and personal data removed.

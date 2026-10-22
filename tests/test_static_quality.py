@@ -1,21 +1,44 @@
 from __future__ import annotations
 
-from pathlib import Path
 import subprocess
 import textwrap
 import unittest
-
+from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
 class StaticQualityTests(unittest.TestCase):
-    def test_gear_images_do_not_hotlink_unverified_products(self) -> None:
+    def test_repository_never_tracks_environment_files(self) -> None:
+        tracked = subprocess.run(
+            ["git", "ls-files"], cwd=ROOT, check=True, capture_output=True, text=True
+        ).stdout.splitlines()
+        self.assertFalse(
+            any(
+                (ROOT / path).exists()
+                and (Path(path).name == ".env" or ".env." in Path(path).name or path.endswith(".env"))
+                for path in tracked
+            )
+        )
+        gitignore = (ROOT / ".gitignore").read_text(encoding="utf-8")
+        for rule in (".env", ".env.*", "*.env", "*.env.*"):
+            self.assertIn(rule, gitignore)
+
+    def test_frontend_does_not_reference_server_secrets(self) -> None:
+        frontend = "\n".join(
+            path.read_text(encoding="utf-8")
+            for path in (ROOT / "outputs" / "tennis-ai-app").rglob("*")
+            if path.is_file() and path.suffix in {".html", ".js", ".css"}
+        )
+        for secret_name in ("GEMINI_API_KEY", "DATABASE_URL"):
+            self.assertNotIn(secret_name, frontend)
+
+    def test_retired_gear_system_is_absent_from_public_frontend(self) -> None:
         app_js = (ROOT / "outputs/tennis-ai-app/app.js").read_text(encoding="utf-8")
-        router_js = (ROOT / "outputs/tennis-ai-app/js/router.js").read_text(encoding="utf-8")
-        self.assertNotIn("VERIFIED_GEAR_IMAGES", app_js)
-        self.assertNotIn("tennis-warehouse.com", app_js)
-        self.assertNotIn("PRODUCT IMAGE PENDING", app_js)
+        self.assertFalse((ROOT / "outputs/tennis-ai-app/assets/gear").exists())
+        self.assertNotIn("GEAR_ITEMS", app_js)
+        self.assertNotIn("function gearPage", app_js)
+        self.assertNotIn("cqGearInterest", app_js)
 
     def test_no_duplicate_old_export_folder(self) -> None:
         self.assertFalse((ROOT / "outputs/CourtIQ_Tennis_App 2").exists())
@@ -30,7 +53,14 @@ class StaticQualityTests(unittest.TestCase):
         self.assertIn("idx_uploaded_jobs_expires_at", schema)
 
     def test_public_project_docs_exist(self) -> None:
-        for relative_path in ("README.md", "DEMO.md", "ALGORITHMS.md", "DEPLOYMENT.md", "PRODUCTION_READINESS.md", "docs/current_architecture.md"):
+        for relative_path in (
+            "README.md",
+            "DEMO.md",
+            "ALGORITHMS.md",
+            "DEPLOYMENT.md",
+            "PRODUCTION_READINESS.md",
+            "docs/current_architecture.md",
+        ):
             self.assertTrue((ROOT / relative_path).exists(), relative_path)
 
     def test_production_prediction_does_not_use_placeholder_rating(self) -> None:
@@ -49,11 +79,13 @@ class StaticQualityTests(unittest.TestCase):
         self.assertNotIn("headers: { 'Content-Type': 'multipart/form-data'", app_js)
         self.assertNotIn("addEventListener('click', buildLocalVideoReport)", app_js)
 
-    def test_video_picker_is_native_visible_and_preview_is_persistent(self) -> None:
+    def test_video_picker_uses_compact_metadata_summary_and_cleans_object_urls(self) -> None:
         app_js = (ROOT / "outputs/tennis-ai-app/app.js").read_text(encoding="utf-8")
         css = (ROOT / "outputs/tennis-ai-app/styles.css").read_text(encoding="utf-8")
         self.assertIn("native-video-upload", app_js)
-        self.assertIn("controls playsinline preload=\"metadata\"", app_js)
+        self.assertIn("compact-file-summary", app_js)
+        self.assertIn("document.createElement('video')", app_js)
+        self.assertNotIn('id="selected-video-preview"', app_js)
         self.assertIn("URL.createObjectURL(file)", app_js)
         self.assertIn("URL.revokeObjectURL(state.selectedVideoUrl)", app_js)
         self.assertIn("button.disabled = !file || Boolean(validationError)", app_js)
@@ -63,7 +95,18 @@ class StaticQualityTests(unittest.TestCase):
     def test_puzzle_board_uses_tactical_geometry_not_placeholder_primitives(self) -> None:
         app_js = (ROOT / "outputs/tennis-ai-app/app.js").read_text(encoding="utf-8")
         css = (ROOT / "outputs/tennis-ai-app/styles.css").read_text(encoding="utf-8")
-        for expected in ("function puzzleGeometry", "puzzleTargetForOption", "court-tactical-svg", "incoming-trajectory", "preferred-trajectory", "recovery-trajectory", "decision-target", "athlete-marker", "precise-ball", "tactical-context"):
+        for expected in (
+            "function puzzleGeometry",
+            "puzzleTargetForOption",
+            "court-tactical-svg",
+            "incoming-trajectory",
+            "preferred-trajectory",
+            "recovery-trajectory",
+            "decision-target",
+            "athlete-marker",
+            "precise-ball",
+            "tactical-context",
+        ):
             self.assertIn(expected, app_js + css)
         board_source = app_js.split("function rallyCourtMarkup", 1)[1].split("function puzzlesPage", 1)[0]
         for removed in ("court-label", "ball-dot", "shot-line", "you-dot", "opponent-dot", "last-choice"):
@@ -107,7 +150,7 @@ class StaticQualityTests(unittest.TestCase):
         app_js = (ROOT / "outputs/tennis-ai-app/app.js").read_text(encoding="utf-8")
         for expected in (
             "handleVideoInput",
-            "data-video-time",
+            "preview-analysis-video",
             "startTrainingSession",
             "completeTrainingSession",
             "updatePlanCompletion",
@@ -250,17 +293,15 @@ class StaticQualityTests(unittest.TestCase):
         )
         subprocess.run(["node", "-e", script], cwd=ROOT, check=True)
 
-    def test_gear_is_hidden_but_catalog_assets_are_preserved(self) -> None:
+    def test_public_prediction_copy_requires_real_backend_results(self) -> None:
         app_js = (ROOT / "outputs/tennis-ai-app/app.js").read_text(encoding="utf-8")
-        router_js = (ROOT / "outputs/tennis-ai-app/js/router.js").read_text(encoding="utf-8")
         index_html = (ROOT / "outputs/tennis-ai-app/index.html").read_text(encoding="utf-8")
-        gear_index = (ROOT / "outputs/tennis-ai-app/assets/gear/gear-index.js").read_text(encoding="utf-8")
-        self.assertNotIn("assets/gear/gear-index.js", index_html)
-        self.assertIn("window.COURTIQ_GEAR_INDEX", gear_index)
-        self.assertIn("bootstrap_seed.json", gear_index)
-        self.assertNotIn("['train/gear', 'gear'", app_js)
-        self.assertNotIn('data-page="train/gear"', index_html)
-        self.assertIn("raw === 'gear' || raw === 'train/gear'", router_js)
+        self.assertNotIn("51.1", app_js)
+        self.assertIn("Run a prediction to generate a matchup forecast.", app_js)
+        self.assertIn("/api/simulate/tournament", app_js)
+        self.assertIn("MODEL-SIMULATED CHAMPION PROBABILITY", app_js)
+        self.assertNotIn(">LIVE<", app_js)
+        self.assertNotIn("Local profile · kp", index_html)
 
     def test_profile_security_is_dark_compact_not_fake_settings(self) -> None:
         app_js = (ROOT / "outputs/tennis-ai-app/app.js").read_text(encoding="utf-8")

@@ -16,7 +16,7 @@ RUN pip install --no-cache-dir --upgrade pip \
     && pip install --no-cache-dir -r requirements.txt
 
 COPY backend ./backend
-COPY outputs/tennis-ai-app/index.html outputs/tennis-ai-app/app.js outputs/tennis-ai-app/styles.css ./outputs/tennis-ai-app/
+COPY outputs/tennis-ai-app/index.html outputs/tennis-ai-app/app.js outputs/tennis-ai-app/styles.css outputs/tennis-ai-app/responsive-fixes.css ./outputs/tennis-ai-app/
 COPY outputs/tennis-ai-app/favicon.svg outputs/tennis-ai-app/robots.txt ./outputs/tennis-ai-app/
 COPY outputs/tennis-ai-app/js ./outputs/tennis-ai-app/js
 COPY outputs/tennis-ai-app/assets/player-stats.js ./outputs/tennis-ai-app/assets/player-stats.js

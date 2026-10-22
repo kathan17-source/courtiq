@@ -4,14 +4,13 @@ import logging
 from pathlib import Path
 
 from fastapi import FastAPI, HTTPException, Request
-from fastapi.middleware.cors import CORSMiddleware
 from fastapi.exceptions import RequestValidationError
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, JSONResponse
 
 from backend.app.api.routes import router
 from backend.app.config import get_settings
 from backend.app.middleware import ProductionGuardMiddleware
-
 
 settings = get_settings()
 logging.basicConfig(level=settings.log_level)
@@ -45,7 +44,7 @@ FRONTEND_DIR = Path(__file__).resolve().parents[2] / "outputs" / "tennis-ai-app"
 FRONTEND_INDEX = FRONTEND_DIR / "index.html"
 
 
-PUBLIC_FRONTEND_FILES = {"app.js", "styles.css", "favicon.svg", "robots.txt"}
+PUBLIC_FRONTEND_FILES = {"app.js", "styles.css", "responsive-fixes.css", "favicon.svg", "robots.txt"}
 
 
 def frontend_file_response(path: str = "") -> FileResponse:

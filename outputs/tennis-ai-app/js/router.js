@@ -6,7 +6,8 @@ export const ROUTE_DEFINITIONS = [
   ['train/profile', 'profile', 'train', ['profile']], ['predict/overview', 'predict', 'predict', ['predict']],
   ['predict/match', 'quant', 'predict', ['quant', 'match']], ['predict/players', 'players', 'predict', ['players']],
   ['predict/compare', 'compare', 'predict', ['compare']], ['predict/tournaments', 'compete', 'predict', ['compete', 'tournaments']],
-  ['predict/simulation', 'simulation', 'predict', ['simulation']], ['predict/model-lab', 'model', 'predict', ['model', 'model-lab']]
+  ['predict/simulation', 'simulation', 'predict', ['simulation']], ['predict/model-lab', 'model', 'predict', ['model', 'model-lab']],
+  ['privacy', 'privacy', 'entry', []], ['terms', 'terms', 'entry', []]
 ].map(([id, page, product, aliases]) => ({ id, page, product, aliases }));
 
 export const ROUTE_BY_ID = new Map(ROUTE_DEFINITIONS.map(route => [route.id, route]));
