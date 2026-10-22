@@ -49,7 +49,7 @@ jobs:
         run: node tests/browser/public-audit.mjs
       - name: Upload public visual audit
         if: always()
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: public-visual-audit
           path: artifacts/public-audit
