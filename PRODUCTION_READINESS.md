@@ -29,7 +29,7 @@ CourtIQ is publicly deployed as a controlled prototype. It loads versioned ATP a
 | Upload validation | Video uploads validate MIME type, extension, size and supported container signature before decoding. Unsupported formats fail safely. |
 | Temp cleanup | Uploads stream to UUID-named temporary files and are deleted on success and error paths. Production should still isolate media work in a bounded worker. |
 | SQL safety | Current code does not build raw SQL from user input. The schema now includes constraints and indexes for upload-job lifecycle cleanup. |
-| Secrets | `.env.example` documents required config. Real secrets must not be committed. |
+| Secrets | Variable names are documented in the README and deployment guide. Values belong only in Render and environment files are never committed. |
 
 ## Production audit fixes
 

@@ -1,19 +1,61 @@
-.venv/
-.local-archives/
+# Environment and secret-bearing local configuration
 .env
 .env.*
-!.env.example
+*.env
+*.env.*
+.envrc
+.direnv/
+config.local.*
+*.local.yml
+*.local.yaml
+secrets/
+credentials/
+credentials.json
+service-account*.json
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Dependencies and virtual environments
+.venv/
+venv/
+env/
+.local-archives/
+node_modules/
+
+# Python caches, test output, and coverage
 __pycache__/
 *.py[cod]
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+.tox/
+.nox/
 .coverage
+.coverage.*
 coverage.xml
 htmlcov/
+
+# Build and packaging output
+build/
+dist/
+site/
+*.egg-info/
+
+# OS and editor metadata
 .DS_Store
+.AppleDouble
+.LSOverride
+.idea/
+.vscode/
+*.code-workspace
+Thumbs.db
+
+# Logs and temporary files
 tmp/
 temp/
+cache/
 *.log
 *.tmp
 *.temp
@@ -28,9 +70,30 @@ temp/
 *.swp
 *.swo
 *.pdf
+
+# Local data stores and uploaded media
+*.sqlite
+*.sqlite3
+*.db
+uploads/
+uploaded-media/
+media/uploads/
+*.mp4
+*.mov
+*.m4v
+*.webm
+
+# Browser-test artifacts
 screenshots/
+playwright-report/
+test-results/
+blob-report/
+traces/
+videos/
 review-bundles/
 external-review*/
+
+# Reproducible ML, benchmark, and research scratch output
 output/backtests/
 output/research/*
 !output/research/temporal_sensitivity/
@@ -46,4 +109,9 @@ output/research/tensor_v3/*
 output/benchmarks/
 output/pdf/
 output/reproducibility/
+output/training/
+output/checkpoints/
+*.ckpt
+*.joblib
+*.pkl
 work/tennis-data/

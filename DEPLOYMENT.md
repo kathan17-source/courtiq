@@ -31,6 +31,8 @@ Add a chosen domain in the hosting platform, create the DNS record it provides, 
 
 ## D. Environment variables
 
+No secret variable is required for the core application. Render supplies `PORT`; the Blueprint sets `COURTIQ_ENV`, `COURTIQ_ALLOW_DEMO`, and `COURTIQ_CORS_ORIGINS`. Optional coaching uses the server-only secret `GEMINI_API_KEY`. Optional tuning variables are listed below. Configure secret values only in Render—never in a committed environment file.
+
 | Variable | Production purpose | Default |
 |---|---|---|
 | `PORT` | Host-provided listening port | `8000` |
@@ -47,6 +49,9 @@ Add a chosen domain in the hosting platform, create the DNS record it provides, 
 | `COURTIQ_MAX_SIMULATIONS` | Public tournament simulation cap, never above 10,000 | `10000` |
 | `COURTIQ_RATE_LIMIT_PER_MINUTE` | Per-process client request cap | `120` |
 | `COURTIQ_LOG_LEVEL` | Server log level | `INFO` |
+| `GEMINI_API_KEY` | Optional server-only coaching integration | unset |
+| `COURTIQ_GEMINI_MODEL` | Optional coaching model selection | application default |
+| `COURTIQ_GEMINI_TIMEOUT_SECONDS` | Optional coaching request timeout | application default |
 
 Aliases `ENVIRONMENT`, `ALLOWED_ORIGINS`, `MAX_UPLOAD_BYTES`, `MAX_VIDEO_DURATION`, `MAX_VIDEO_PIXELS`, `MAX_VIDEO_FRAMES`, and `MAX_SIMULATIONS` are accepted when a platform uses generic names. No secrets are required by the current application.
 
