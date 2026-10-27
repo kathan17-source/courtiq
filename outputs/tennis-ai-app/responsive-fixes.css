@@ -122,3 +122,15 @@ button:disabled {
     padding-inline: 1rem;
   }
 }
+
+/* Unavailable evidence labels must remain readable without overflowing mobile cards. */
+.metric-wall b {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 480px) {
+  .metric-wall {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
