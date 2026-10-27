@@ -134,3 +134,12 @@ button:disabled {
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+.prediction-metrics .stat {
+  min-width: 0;
+}
+
+.prediction-metrics .stat b {
+  color: var(--text-primary);
+  overflow-wrap: anywhere;
+}

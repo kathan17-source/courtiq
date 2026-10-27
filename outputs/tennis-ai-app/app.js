@@ -1574,7 +1574,7 @@ function backendMetricCards() {
   if (!prediction) return '';
   const features = prediction.features || {};
   const p1Chance = Math.round(Number(prediction.player1_win_probability || 0) * 1000) / 10;
-  return `<section class="grid">
+  return `<section class="grid prediction-metrics">
     ${[
       ['P1 chance', `${p1Chance}%`],
       ['Surface Elo', `${features.p1_surface_elo ?? '—'} / ${features.p2_surface_elo ?? '—'}`],

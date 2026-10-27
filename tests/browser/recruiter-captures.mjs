@@ -10,6 +10,11 @@ const browser = await chromium.launch({ headless: true });
 try {
   const page = await browser.newPage({ viewport: { width: 1440, height: 1050 } });
   const errors = [];
+  async function capture(name) {
+    await page.waitForFunction(() => !document.querySelector('#toast') || getComputedStyle(document.querySelector('#toast')).opacity === '0');
+    await page.evaluate(() => document.fonts.ready);
+    await page.screenshot({ path: `${dir}/${name}.png`, fullPage: true, animations: 'disabled' });
+  }
   page.on('pageerror', error => errors.push(error.message));
   await page.goto(`${base}#predict/match`, { waitUntil: 'networkidle' });
   const predictionResponse = page.waitForResponse(r => r.url().endsWith('/api/predict') && r.request().method() === 'POST');
@@ -20,11 +25,19 @@ try {
   assert.equal(prediction.diagnostics.evaluation_status, 'unverified');
   await page.locator('.forecast-result').waitFor();
   assert.match(await page.locator('#prediction-result').innerText(), /unverified/);
-  await page.screenshot({ path: `${dir}/predict.png`, fullPage: true });
+  for (const width of [320, 390, 1440]) {
+    await page.setViewportSize({ width, height: 1050 });
+    assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+    assert.ok(await page.locator('.prediction-metrics .stat b').evaluateAll(nodes => nodes.every(node => {
+      const rgb = getComputedStyle(node).color.match(/\d+/g).slice(0, 3).map(Number);
+      return (.2126 * rgb[0] + .7152 * rgb[1] + .0722 * rgb[2]) / 255 > .32;
+    })));
+  }
+  await capture('predict');
 
   await page.goto(`${base}#train/analyze`, { waitUntil: 'networkidle' });
   assert.match(await page.locator('#page').innerText(), /Waiting for footage/);
-  await page.screenshot({ path: `${dir}/analyze.png`, fullPage: true });
+  await capture('analyze');
 
   await page.goto(`${base}#predict/simulation`, { waitUntil: 'networkidle' });
   const simulationResponse = page.waitForResponse(r => r.url().endsWith('/api/simulate/tournament') && r.request().method() === 'POST');
@@ -32,7 +45,7 @@ try {
   assert.equal((await simulationResponse).status(), 200);
   await page.locator('.champion-list i').first().waitFor();
   assert.match(await page.locator('#page').innerText(), /MODEL-SIMULATED CHAMPION PROBABILITY/);
-  await page.screenshot({ path: `${dir}/simulation.png`, fullPage: true });
+  await capture('simulation');
 
   await page.goto(`${base}#predict/model-lab`, { waitUntil: 'networkidle' });
   await page.waitForFunction(() => document.querySelector('.model-terminal')?.textContent.includes('Evaluation unverified'));
