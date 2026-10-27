@@ -23,7 +23,7 @@ try {
   await page.screenshot({ path: `${dir}/predict.png`, fullPage: true });
 
   await page.goto(`${base}#train/analyze`, { waitUntil: 'networkidle' });
-  assert.match(await page.locator('#page').innerText(), /No video selected/);
+  assert.match(await page.locator('#page').innerText(), /Waiting for footage/);
   await page.screenshot({ path: `${dir}/analyze.png`, fullPage: true });
 
   await page.goto(`${base}#predict/simulation`, { waitUntil: 'networkidle' });
