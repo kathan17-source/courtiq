@@ -20,15 +20,16 @@ def test_production_model_directory_contains_only_authoritative_artifacts() -> N
     assert names == ["courtiq_model_atp.json", "courtiq_model_wta.json"]
 
 
-def test_frontend_metrics_match_checked_in_artifacts() -> None:
+def test_frontend_metrics_are_api_owned_and_unverified_atp_values_are_not_hardcoded() -> None:
     source = APP_JS.read_text(encoding="utf-8")
-    for tour in ("atp", "wta"):
-        artifact = json.loads((ROOT / f"output/models/courtiq_model_{tour}.json").read_text(encoding="utf-8"))
-        metrics = artifact["metrics"]
-        assert artifact["model_version"] in source
-        assert f"{metrics['accuracy'] * 100:.2f}%" in source
-        assert f"{metrics['log_loss']:.4f}" in source
-        assert f"{metrics['brier_score']:.4f}" in source
+    assert "/api/model/metrics?tour=" in source
+    assert "Evaluation unverified or unavailable" in source
+    for value in ("65.50%", "0.7132", "0.6185", "0.2154", "0.0271"):
+        assert value not in source
+    assert "chart-observed" not in source  # No fabricated observed calibration curve.
+    artifact = json.loads((ROOT / "output/models/courtiq_model_atp.json").read_text())
+    assert artifact["evaluation_status"] == "unverified"
+    assert all(value is None for value in artifact["metrics"].values())
 
 
 def test_tournament_ui_uses_production_simulation_endpoint() -> None:
@@ -43,4 +44,3 @@ def test_public_shell_has_neutral_identity_and_no_favicon_social_preview() -> No
     assert "Device profile" in source
     assert "Local profile · kp" not in source
     assert 'property="og:image"' not in source
-

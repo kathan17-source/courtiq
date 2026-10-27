@@ -7,6 +7,7 @@
     "start_date": "2000-01-03"
   },
   "evaluation_period": "date == 2025",
+  "evaluation_status": "unverified",
   "feature_version": "courtiq_enhanced_runtime_safe_v1",
   "generated_at": "2026-08-09T15:44:49Z",
   "legacy_contaminated_metrics_retired": {
@@ -22,11 +23,11 @@
   },
   "matches_processed": 78091,
   "metrics": {
-    "accuracy": 0.655,
-    "brier_score": 0.2154,
-    "ece": 0.0271,
-    "log_loss": 0.6185,
-    "roc_auc": 0.7132
+    "accuracy": null,
+    "brier_score": null,
+    "ece": null,
+    "log_loss": null,
+    "roc_auc": null
   },
   "model": {
     "calibration": {
@@ -150562,5 +150563,16 @@
   },
   "temporal_policy_version": "atp_tournament_date_round_safe_v1",
   "tour": "atp",
-  "training_cutoff": "date <= 2023"
+  "training_cutoff": "date <= 2023",
+  "unverified_evaluation": {
+    "reason": "The cached-row scores reproduce the reported rounding, but raw feature regeneration and exact parameter refit do not match the available saved evaluation. This is a provenance gap, not proof of contamination.",
+    "report": "docs/evaluation/ATP_EVALUATION_REVIEW.md",
+    "reported_metrics": {
+      "accuracy": 0.655,
+      "brier_score": 0.2154,
+      "ece": 0.0271,
+      "log_loss": 0.6185,
+      "roc_auc": 0.7132
+    }
+  }
 }

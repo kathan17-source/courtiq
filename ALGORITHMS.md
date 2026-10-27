@@ -172,10 +172,10 @@ Method:
 
 Complexity: O(N) for N predictions.
 
-Current held-out artifact metrics:
+Current evaluation status:
 
-- ATP: accuracy 0.6550, log loss 0.6185 and Brier score 0.2154.
-- WTA: accuracy 0.6469, log loss 0.6232 and Brier score 0.2172.
+- ATP: evaluation metrics are unverified and withheld; see the [provenance audit](docs/evaluation/ATP_EVALUATION_REVIEW.md). Numerical agreement with cached rows does not establish exact training/evaluation provenance.
+- WTA: artifact-reported accuracy 0.6469, log loss 0.6232 and Brier score 0.2172; not independently reproduced in this ATP audit.
 
 Limitations:
 

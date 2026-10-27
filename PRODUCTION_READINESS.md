@@ -107,7 +107,7 @@ Current model state:
 
 - Separate checked-in ATP and WTA artifacts load at startup and are validated for schema, dimensions, finite parameters, calibration and tour consistency.
 - Training/evaluation/state cutoffs are returned with prediction diagnostics so freshness is visible.
-- ATP 2025 held-out metrics are accuracy 0.655, log loss 0.6185, Brier 0.2154 and ROC-AUC 0.7132; WTA metrics are 0.6469, 0.6232, 0.2172 and 0.7069.
+- ATP evaluation provenance is unverified: API/UI performance values are withheld. Model loading validates schema/numerical compatibility, not historical predictive accuracy. See the [audit](docs/evaluation/ATP_EVALUATION_REVIEW.md). WTA artifact-reported metrics remain separate and are not independently certified by this review.
 - Unknown event names require an explicit surface; they do not silently default to hard court.
 - Current-state artifacts cannot reconstruct a genuinely historical player snapshot for arbitrary `as_of` dates.
 
@@ -117,7 +117,7 @@ Requirements for future model releases:
 - Reject stale or incompatible artifacts.
 - Store feature-version metadata with predictions.
 - Run chronological walk-forward evaluation only.
-- Report accuracy, log loss, Brier score, ROC-AUC and calibration from saved backtest rows.
+- Bind independently reproduced metrics to the exact parameters, source content hashes, sample/date windows and temporal policy; saved metrics or status flags alone are insufficient.
 
 ## Monte Carlo validation
 

@@ -60,7 +60,7 @@ const DATA_STATUS = Object.keys(PLAYER_STATS).length
   }
   : {
     label: 'Local preview mode',
-    detail: 'Connect the prediction API for validated forecasts.',
+    detail: 'Connect the prediction API for model forecasts.',
     isDemo: true
   };
 
@@ -790,27 +790,20 @@ const PRODUCT_LABELS = {
 };
 
 const MODEL_METRICS = {
-  ATP: {
-    version: 'courtiq-real-20260809154449-enhanced_runtime_safe',
-    dataRange: 'ATP artifact · training cutoff 2023 · held-out 2025 evaluation',
-    matches: 78091,
-    accuracy: '65.50%',
-    auc: '0.7132',
-    logLoss: '0.6185',
-    brier: '0.2154',
-    ece: '0.0271'
-  },
-  WTA: {
-    version: 'courtiq-real-20260809153454',
-    dataRange: 'WTA artifact · chronological held-out evaluation',
-    matches: 45179,
-    accuracy: '64.69%',
-    auc: '0.7069',
-    logLoss: '0.6232',
-    brier: '0.2172',
-    ece: '0.0117'
-  }
+  ATP: { version: 'courtiq-real-20260809154449-enhanced_runtime_safe' },
+  WTA: { version: 'courtiq-real-20260809153454' }
 };
+const modelEvaluationCache = {};
+async function loadModelEvaluation(tour) {
+  if (modelEvaluationCache[tour]) return;
+  modelEvaluationCache[tour] = { status: 'loading' };
+  try {
+    modelEvaluationCache[tour] = await apiFetchJson(`/api/model/metrics?tour=${tour.toLowerCase()}`);
+  } catch {
+    modelEvaluationCache[tour] = { status: 'unavailable' };
+  }
+  if (state.page === 'model' && state.selectedTour === tour) render();
+}
 
 function escapeHtml(value) {
   return String(value ?? '')
@@ -1571,6 +1564,7 @@ function backendPredictionMarkup() {
     <section class="forecast-report">
       ${forecastBar(chance)}
       <div class="model-version">${escapeHtml(prediction.model_version || MODEL_METRICS[state.selectedTour].version)}</div>
+      ${prediction.diagnostics?.evaluation_status === 'unverified' ? '<p>ATP evaluation metrics are unverified. This is a model output, not validated predictive performance.</p>' : ''}
     </section>
   </div>`;
 }
@@ -1580,7 +1574,7 @@ function backendMetricCards() {
   if (!prediction) return '';
   const features = prediction.features || {};
   const p1Chance = Math.round(Number(prediction.player1_win_probability || 0) * 1000) / 10;
-  return `<section class="grid">
+  return `<section class="grid prediction-metrics">
     ${[
       ['P1 chance', `${p1Chance}%`],
       ['Surface Elo', `${features.p1_surface_elo ?? '—'} / ${features.p2_surface_elo ?? '—'}`],
@@ -1769,7 +1763,7 @@ function simulationPage() {
   return `${pageHeader('SIMULATION', 'Tournament projection.', 'A bracket-ready view for the selected tour and Grand Slam surface.')}
     ${tourSelectorMarkup()}
     <section class="simulation-board">
-      <article class="sim-control"><span class="eyebrow">${escapeHtml(selectedSlam().name)}</span><h2>${PRODUCT_LABELS.predict} simulation</h2><p>Runs 2,000 seeded brackets through the production ATP/WTA prediction service for this eight-player field.</p><button id="run-sim" class="primary-action" ${state.simulationLoading ? 'disabled' : ''}>${state.simulationLoading ? 'Running…' : 'Run simulation'}</button>${state.simulationError ? `<p class="api-error">${escapeHtml(state.simulationError)}</p>` : ''}</article>
+      <article class="sim-control"><span class="eyebrow">${escapeHtml(selectedSlam().name)}</span><h2>${PRODUCT_LABELS.predict} simulation</h2><p>Runs 2,000 seeded brackets through the ATP/WTA prediction service for this eight-player field. Model-simulated probabilities are not validated win-rate claims; ATP evaluation remains unverified.</p><button id="run-sim" class="primary-action" ${state.simulationLoading ? 'disabled' : ''}>${state.simulationLoading ? 'Running…' : 'Run simulation'}</button>${state.simulationError ? `<p class="api-error">${escapeHtml(state.simulationError)}</p>` : ''}</article>
       <article class="champion-list">
         <span class="eyebrow">${result ? 'MODEL-SIMULATED CHAMPION PROBABILITY' : 'SIMULATION OUTPUT'}</span>
         ${result ? ranked.map(([name, probability], index) => `<div><b>${index + 1}. ${escapeHtml(name)}</b><span>${(probability * 100).toFixed(1)}%</span><i style="width:${Math.round(probability * 100)}%"></i></div>`).join('') : '<div class="simulation-empty"><p>Run the production simulation to generate tournament probabilities.</p></div>'}
@@ -1778,36 +1772,36 @@ function simulationPage() {
 }
 
 function modelPage() {
-  const metrics = MODEL_METRICS[state.selectedTour];
-  return `${pageHeader('MODEL LAB', 'How CourtIQ predicts.', 'Transparent performance, real split boundaries and model quality without pretending every forecast is certain.')}
+  const metrics = modelEvaluationCache[state.selectedTour] || { status: 'loading' };
+  const metric = (key, percentage = false) => typeof metrics[key] === 'number'
+    ? (percentage ? `${(metrics[key] * 100).toFixed(2)}%` : metrics[key].toFixed(4)) : 'Unavailable';
+  const reproduced = metrics.status === 'independently_reproduced';
+  const reported = metrics.status === 'artifact_reported';
+  const notice = reproduced ? 'Independent reproduction is bound to this exact model and evaluation report.'
+    : reported ? 'Artifact-reported metrics; not independently reproduced in this review.'
+    : 'Evaluation unverified or unavailable. Loaded model parameters support inference, not a validated performance claim.';
+  return `${pageHeader('MODEL LAB', 'How CourtIQ predicts.', 'Inference availability and independently supported evaluation are separate.')}
     ${tourSelectorMarkup()}
     <section class="model-lab">
       <article class="model-terminal">
-        <span class="eyebrow">DEPLOYED ${state.selectedTour} MODEL</span>
-        <h2>${metrics.version}</h2>
-        <p>${metrics.dataRange}</p>
+        <span class="eyebrow">LOADED ${state.selectedTour} MODEL</span>
+        <h2>${escapeHtml(metrics.model_version || MODEL_METRICS[state.selectedTour].version)}</h2>
+        <p>${escapeHtml(notice)}</p>
         <div class="metric-wall">
-          <b><small>Matches</small>${metrics.matches.toLocaleString()}</b>
-          <b><small>Accuracy</small>${metrics.accuracy}</b>
-          <b><small>ROC-AUC</small>${metrics.auc}</b>
-          <b><small>Log loss</small>${metrics.logLoss}</b>
-          <b><small>Brier</small>${metrics.brier}</b>
-          <b><small>ECE</small>${metrics.ece}</b>
+          <b><small>Processed matches</small>${typeof metrics.matches_processed === 'number' ? metrics.matches_processed.toLocaleString() : 'Unavailable'}</b>
+          <b><small>Accuracy</small>${metric('accuracy', true)}</b>
+          <b><small>ROC-AUC</small>${metric('roc_auc')}</b>
+          <b><small>Log loss</small>${metric('log_loss')}</b>
+          <b><small>Brier</small>${metric('brier_score')}</b>
+          <b><small>ECE</small>${metric('ece')}</b>
         </div>
       </article>
       <article class="calibration-card">
-        <span class="eyebrow">CALIBRATION</span>
-        <div class="calibration-chart" role="img" aria-label="Calibration chart comparing predicted and observed probability">
-          <svg viewBox="0 0 360 250" preserveAspectRatio="xMidYMid meet">
-            <g class="chart-grid"><line x1="48" y1="24" x2="48" y2="208"/><line x1="48" y1="208" x2="336" y2="208"/><line x1="48" y1="116" x2="336" y2="116"/><line x1="192" y1="24" x2="192" y2="208"/></g>
-            <line class="chart-reference" x1="48" y1="208" x2="336" y2="24"/>
-            <polyline class="chart-observed" points="48,205 105,169 163,132 221,99 278,63 336,27"/>
-            ${[[48,205],[105,169],[163,132],[221,99],[278,63],[336,27]].map(([x,y]) => `<circle cx="${x}" cy="${y}" r="4"/>`).join('')}
-            <g class="chart-labels"><text x="48" y="228">0%</text><text x="185" y="228">50%</text><text x="321" y="228">100%</text><text x="20" y="211">0%</text><text x="12" y="119">50%</text><text x="5" y="29">100%</text><text x="160" y="246">Predicted probability</text></g>
-          </svg>
-          <div class="chart-legend"><span><i></i>Observed</span><span><i></i>Ideal</span></div>
-        </div>
-        <p>Evaluation is chronological: training through 2023, calibration on 2024, untouched final test on 2025.</p>
+        <span class="eyebrow">EVALUATION STATUS</span>
+        <h3>${reproduced ? 'Independently reproduced' : reported ? 'Artifact-reported' : 'Unverified / unavailable'}</h3>
+        <p>${escapeHtml(notice)}</p>
+        <p>Declared evaluation window: ${escapeHtml(metrics.evaluation_period || 'Not available')}.</p>
+        <p>No observed calibration-bin data is supplied for this view; a measured calibration curve is unavailable.</p>
       </article>
     </section>`;
 }
@@ -2941,6 +2935,7 @@ function render() {
     button.classList.toggle('active', normalizeRoute(button.dataset.page).id === state.route);
   });
   bindPageEvents();
+  if (state.page === 'model') loadModelEvaluation(state.selectedTour);
   if (state.page === 'analyze' && state.selectedVideo) handleVideoInput(state.selectedVideo, { silent: true });
 }
 

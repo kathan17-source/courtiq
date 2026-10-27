@@ -5,3 +5,5 @@ Round-safe updates player state only after every match in an earlier round has b
 The evaluation uses the locally supplied ATP match CSVs in Jeff Sackmann's `tennis_atp` format, with `tourney_date` interpreted as the tournament start date.
 
 Reproduce: `.venv/bin/python scripts/run_temporal_sensitivity.py`
+
+These are separate historical sensitivity experiments, not independent certification of current production metrics. The [ATP provenance review](../../../docs/evaluation/ATP_EVALUATION_REVIEW.md) leaves current production evaluation unverified; no sensitivity result is promoted or substituted for it.

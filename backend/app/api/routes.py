@@ -43,8 +43,9 @@ def model_version() -> dict:
         wta_model = load_tour_model("wta") if wta_loaded else None
         return {
             "model_version": atp_model.version,
-            "feature_version": "features-v2-walk-forward",
+            "feature_version": atp_model.feature_version,
             "training_status": "real historical artifact loaded",
+            "evaluation_status": atp_model.evaluation_status,
             "matches_processed": atp_model.matches_processed,
             "generated_at": atp_model.generated_at,
             "tours": {
@@ -53,12 +54,14 @@ def model_version() -> dict:
                     "model_version": atp_model.version,
                     "matches_processed": atp_model.matches_processed,
                     "players": len(atp_model.players),
+                    "evaluation_status": atp_model.evaluation_status,
                 },
                 "wta": {
                     "loaded": wta_model is not None,
                     "model_version": wta_model.version if wta_model else None,
                     "matches_processed": wta_model.matches_processed if wta_model else 0,
                     "players": len(wta_model.players) if wta_model else 0,
+                    "evaluation_status": wta_model.evaluation_status if wta_model else "unavailable",
                 },
             },
         }
@@ -70,16 +73,24 @@ def model_version() -> dict:
 
 
 @router.get("/model/metrics")
-def model_metrics() -> dict:
-    if has_current_model():
-        model = load_current_model()
-        return {"status": "ok", **model.metrics}
+def model_metrics(tour: str = Query(default="atp", pattern="^(atp|wta)$")) -> dict:
+    if has_tour_model(tour):
+        model = load_tour_model(tour)
+        return {
+            "status": model.evaluation_status,
+            "model_version": model.version,
+            "matches_processed": model.matches_processed,
+            "temporal_policy": model.temporal_policy,
+            "evaluation_period": model.evaluation_cutoff,
+            **model.metrics,
+        }
     return {
         "status": "pending_real_data",
         "accuracy": None,
         "roc_auc": None,
         "log_loss": None,
         "brier_score": None,
+        "ece": None,
         "calibration": [],
     }
 
@@ -232,7 +243,9 @@ async def analyze_video(request: Request, file: UploadFile = File(...)) -> dict:
     except SecurityValidationError as exc:
         raise HTTPException(status_code=400, detail=exc.message) from exc
     except Exception as exc:
-        raise HTTPException(status_code=422, detail="Video analysis failed safely. Try a shorter supported clip.") from exc
+        raise HTTPException(
+            status_code=422, detail="Video analysis failed safely. Try a shorter supported clip."
+        ) from exc
 
     return {
         "status": "processed",
@@ -273,8 +286,11 @@ async def tournament_simulation(payload: TournamentSimulationRequest) -> dict:
     try:
         return await asyncio.to_thread(
             simulate_tournament_draw,
-            players=payload.players, tour=payload.tour, event=payload.event,
-            simulations=payload.simulations, seed=payload.seed,
+            players=payload.players,
+            tour=payload.tour,
+            event=payload.event,
+            simulations=payload.simulations,
+            seed=payload.seed,
         )
     except ModelUnavailableError as exc:
         raise HTTPException(status_code=503, detail=str(exc)) from exc

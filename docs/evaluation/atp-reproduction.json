@@ -1,0 +1,112 @@
+{
+  "audited_at": "2026-10-27T06:40:21.329116+00:00",
+  "code_sha256": {
+    "backend/app/services/tennis_math.py": "57bbaf06ff68edc0b6985f99aa610eb96c4132bbb80e419c7138e5729b8e3764",
+    "scripts/final_modeling_pass.py": "7cf51acff371a575a9147c30dc259181b939ad11fe59a895a6c74111419ab364",
+    "scripts/verify_atp_evaluation.py": "9dcf651f7a1a57338d5bc3b6e11afe7a570a6b109093755cfadbf78ca16c44dc"
+  },
+  "environment": {
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "python": "3.12.15"
+  },
+  "limitations": [
+    "Retrospective tournament-start dates, not exact match timestamps or a new prospective holdout.",
+    "Round-safe partial order: prior rounds may update later rounds; same-round results are batched.",
+    "This reuses the original feature generator; independent metric formulas and parameter refit do not prove every source-data assumption.",
+    "Legacy equality is not itself proof of contamination. TENSOR candidates are separate and not promoted."
+  ],
+  "metrics": {
+    "accuracy": 0.655,
+    "brier_score": 0.2154,
+    "ece": 0.0271,
+    "log_loss": 0.6185,
+    "roc_auc": 0.7132
+  },
+  "model_sha256": "e131a269e7a750b2bc607c8b6ee275994ebf11d4c642ca57f2c9388da7c5a42e",
+  "model_version": "courtiq-real-20260809154449-enhanced_runtime_safe",
+  "raw_matches": 78091,
+  "reported_metrics": {
+    "accuracy": 0.655,
+    "brier_score": 0.2154,
+    "ece": 0.0271,
+    "log_loss": 0.6185,
+    "roc_auc": 0.7132
+  },
+  "source": "Locally supplied Jeff Sackmann ATP CSVs; raw rows are not redistributed",
+  "source_files_sha256": {
+    "atp_matches_2000.csv": "b40e3a6b3a862193e655a223c7d25d11fb870408055489ffaec5fea339f4fda8",
+    "atp_matches_2001.csv": "7aaaba9ad0b9c99afaa143da7d14443f786297bad66fb2f5b5c6e019c6ac364d",
+    "atp_matches_2002.csv": "bcabd793c2bb93454bc877d858253dfa92c7a257454f37d6c8ff7d58fb12da72",
+    "atp_matches_2003.csv": "cba4e727fda06fd40190fde5d82f3a778623139a3b23a32b1629b8087620871c",
+    "atp_matches_2004.csv": "7fa541327d6646c722ac54f2c1bf340438f97bd3e3e8d1b94a8de612a48ac8b6",
+    "atp_matches_2005.csv": "967a5c93e4a6bd1503f2b7e24642251be10af0ad450c20c12cf3f893c7d10ed9",
+    "atp_matches_2006.csv": "60bb6eac82ed31a0349ee91196260660654e99cbe891a1ee54eeb0c6e611db18",
+    "atp_matches_2007.csv": "d117dd7b20ef1645c3d779f53107e9bd57b338682c41c1270332df756ec8ede7",
+    "atp_matches_2008.csv": "91b823a170f4d58d3538f384c09996b2e613e717ec003511d09ab9f8f3f86459",
+    "atp_matches_2009.csv": "120465276575377ba4b7ebaaeeddc3ef5b849385b1878647abf74661da8f86d2",
+    "atp_matches_2010.csv": "83d9888229cd2e311dc36a1bc2917de77e34a410dfcfa0d34be2d54a6fc29d41",
+    "atp_matches_2011.csv": "968e0aff2dfbf94a7d1f27b4a1b2f43d83bb94a587d74134f498ee9cbbb63d17",
+    "atp_matches_2012.csv": "7e1c8f129526fe7abb780a9d18899fedca0ad7344481d05c74b6784cc241cda2",
+    "atp_matches_2013.csv": "c5f948ccb2f044189f36138a391f9d9d311201d2bc872a21c928379c56c576e9",
+    "atp_matches_2014.csv": "b702380d8fce08c48c9dfc9a2d5df06345694617fd398c252f4230c3277e65d9",
+    "atp_matches_2015.csv": "36e1868c2f31fb7c58d99948b3c544dd781ba3ec9c75ff94d437637d22eef56d",
+    "atp_matches_2016.csv": "28a106544a50184c742263eed43a49ca725be735cbf640143c51ab32e40e8588",
+    "atp_matches_2017.csv": "b55f12e9bf5220b694cd8954f65027f1b7e649ce4977da0316a1a3f4f2f20ea4",
+    "atp_matches_2018.csv": "5abc0e80e83ddab9f04f682b6e72fa062ad11d523c88f3c105f690a555bacc4a",
+    "atp_matches_2019.csv": "6821d93e92de9110b365cd3b4f8d30138c261bcf679de4a5ccaff6917c33335e",
+    "atp_matches_2020.csv": "3c97228abeede853db0139e4b49699aecbadafd2e7000acaaf9a449d38da202d",
+    "atp_matches_2021.csv": "80d570be31d778b143eb58380258243785bf3fcb18db144b42704bc6c56d941b",
+    "atp_matches_2022.csv": "d70036c6ee6c27dd3deda6e6c9ccd500b66e6e78106fb00794cb277e37353357",
+    "atp_matches_2023.csv": "9faaf53186ef908b3322d521a8dd2a717401167c0e400a99e1efddb23e13600f",
+    "atp_matches_2024.csv": "db27fb184b62bc1716ecc84c5a8365088e34e8e9a0101a59782ec7907f6e2de8",
+    "atp_matches_2025.csv": "a00f5f991b4949c2c6867637ac02a8c44b9058780da67aba8600e9140002f8d3",
+    "atp_matches_2026.csv": "8e9b756d1874e9e7866796b797273dd3b791d89eeb6b52aa6ee961a2c4c82c01"
+  },
+  "splits": {
+    "calibration": {
+      "first_tournament_start": "2024-01-01",
+      "last_tournament_start": "2024-12-29",
+      "rows": 3159
+    },
+    "evaluation": {
+      "first_tournament_start": "2025-01-06",
+      "last_tournament_start": "2025-12-22",
+      "rows": 2861
+    },
+    "training": {
+      "first_tournament_start": "2000-01-03",
+      "last_tournament_start": "2023-11-27",
+      "rows": 71934
+    }
+  },
+  "status": "unverified",
+  "temporal_policy_version": "atp_tournament_date_round_safe_v1",
+  "test_dates": [
+    "2025-01-06",
+    "2025-12-22"
+  ],
+  "test_sample_size": 2861,
+  "unrounded_metrics": {
+    "accuracy": 0.6550157287661657,
+    "brier_score": 0.2153604764906073,
+    "ece": 0.027066758251347082,
+    "log_loss": 0.6185255382907848,
+    "roc_auc": 0.7132048086790793
+  },
+  "verification": {
+    "cached_rows_match": false,
+    "calibration_matches": true,
+    "independent_pairwise_auc_and_metric_formulas": true,
+    "maximum_parameter_difference": 1.2376552696358872e-05,
+    "parameter_differences": {
+      "center": 0.0,
+      "coefficients": 1.2376552696358872e-05,
+      "intercept": 9.127209753614918e-08,
+      "scale": 1.674274866886316e-06
+    },
+    "refitted_parameters_match": false,
+    "regenerated_from_raw": true,
+    "rounded_metrics_match_reported": true
+  }
+}

@@ -25,6 +25,7 @@ OUT = ROOT / "output/research/tensor_v3"
 SEED = 20260810
 META = {"index", "date", "year", "tour", "tournament", "surface", "level", "round", "player1", "player2", "label"}
 
+# Historical rounded reference values, not independently verified production results.
 PRODUCTION_BENCHMARKS = {
     "atp": {"accuracy": 0.655, "roc_auc": 0.713, "log_loss": 0.619, "brier_score": 0.215},
     "wta": {"accuracy": 0.647, "roc_auc": 0.707, "log_loss": 0.623, "brier_score": 0.217},
@@ -223,7 +224,7 @@ def write_markdown_report(manifest: dict[str, object]) -> None:
     lines = [
         "# COURTIQ / TENSOR V3 Research Report",
         "",
-        "Production ATP/WTA artifacts were not modified. Model selection used pre-2024 walk-forward folds; 2024 was calibration-only and 2025 was an external benchmark.",
+        "Production artifacts were not modified. ATP production evaluation is unverified; historical rounded-reference deltas do not certify its performance. Candidate measurements are separate research results. Model selection used pre-2024 folds; 2024 was calibration-only and 2025 an external benchmark.",
         "",
         "## Final candidate table",
         "",

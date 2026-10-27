@@ -1,6 +1,6 @@
 # CourtIQ demo guide
 
-This is a concise walkthrough of the public product and its technical foundations. The checked-in app includes separate validated ATP and WTA model artifacts, an API, a static frontend, training workflows, video-analysis support, tests, and reproducible research scripts.
+This is a concise walkthrough of the public product and its technical foundations. The checked-in app includes separate loadable ATP and WTA model artifacts, an API, a static frontend, training workflows, video-analysis support, tests, and reproducible research scripts.
 
 ## 60-second product walkthrough
 
@@ -57,3 +57,7 @@ The implemented CV piece is biomechanical helper math for joint angles plus a vi
 ### 2:50–3:00 — Engineering decisions
 
 The project is structured to be defensible: strict API schemas, standard error responses, request IDs, upload validation, PostgreSQL constraints, CI, a production Dockerfile, no fake metrics, and explicit known limitations.
+
+## Evaluation status
+
+ATP inference works with the unchanged serialized parameters, but its performance metrics are unverified. Model Lab reads status/metrics from the API and does not draw an observed calibration curve without observed-bin data. Simulation probabilities are model outputs, not empirical win-rate claims. See the [evaluation audit](docs/evaluation/ATP_EVALUATION_REVIEW.md). WTA artifact-reported metrics and separate TENSOR candidate results are not independently certified by this ATP review.
