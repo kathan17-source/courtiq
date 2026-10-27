@@ -25,21 +25,114 @@ OUT = ROOT / "output/research/tensor_v3"
 SEED = 20260810
 META = {"index", "date", "year", "tour", "tournament", "surface", "level", "round", "player1", "player2", "label"}
 
+# Historical rounded reference values, not independently verified production results.
 PRODUCTION_BENCHMARKS = {
     "atp": {"accuracy": 0.655, "roc_auc": 0.713, "log_loss": 0.619, "brier_score": 0.215},
     "wta": {"accuracy": 0.647, "roc_auc": 0.707, "log_loss": 0.623, "brier_score": 0.217},
 }
 
 FAMILIES = [
-    ("M0", "leakage-safe rating/ranking baseline", ["overall_elo_diff", "surface_elo_diff", "surface_elo_shrunk_diff", "ranking_diff", "ranking_points_diff", "rank_known", "matches_diff"]),
-    ("M1", "uncertainty-aware surface rating", ["rating_rd_diff", "rating_uncertainty_sum", "surface_sample_diff", "match_count_log_diff"]),
-    ("M2", "shrunk first/second serve and opponent-adjusted return", ["serve_strength_diff", "return_strength_diff", "serve_return_edge", "first_in_diff", "first_won_diff", "second_won_diff", "ace_rate_diff", "df_rate_diff", "return_point_won_diff", "serve_point_won_diff", "stat_sample_diff", "latent_serve_skill_diff", "latent_return_skill_diff", "latent_surface_serve_skill_diff", "latent_surface_return_skill_diff", "latent_uncertainty_sum"]),
-    ("M3", "multi-timescale residual state", ["form_5_diff", "form_10_diff", "form_20_diff", "surface_form_diff", "residual_form_short_diff", "residual_form_medium_diff", "surface_residual_form_diff"]),
+    (
+        "M0",
+        "leakage-safe rating/ranking baseline",
+        [
+            "overall_elo_diff",
+            "surface_elo_diff",
+            "surface_elo_shrunk_diff",
+            "ranking_diff",
+            "ranking_points_diff",
+            "rank_known",
+            "matches_diff",
+        ],
+    ),
+    (
+        "M1",
+        "uncertainty-aware surface rating",
+        ["rating_rd_diff", "rating_uncertainty_sum", "surface_sample_diff", "match_count_log_diff"],
+    ),
+    (
+        "M2",
+        "shrunk first/second serve and opponent-adjusted return",
+        [
+            "serve_strength_diff",
+            "return_strength_diff",
+            "serve_return_edge",
+            "first_in_diff",
+            "first_won_diff",
+            "second_won_diff",
+            "ace_rate_diff",
+            "df_rate_diff",
+            "return_point_won_diff",
+            "serve_point_won_diff",
+            "stat_sample_diff",
+            "latent_serve_skill_diff",
+            "latent_return_skill_diff",
+            "latent_surface_serve_skill_diff",
+            "latent_surface_return_skill_diff",
+            "latent_uncertainty_sum",
+        ],
+    ),
+    (
+        "M3",
+        "multi-timescale residual state",
+        [
+            "form_5_diff",
+            "form_10_diff",
+            "form_20_diff",
+            "surface_form_diff",
+            "residual_form_short_diff",
+            "residual_form_medium_diff",
+            "surface_residual_form_diff",
+        ],
+    ),
     ("M4", "cached structural scoring expert", ["structural_match_logit", "latent_exact_match_logit", "best_of_5"]),
-    ("M5", "dominance and workload", ["score_dominance_diff", "set_dominance_diff", "tiebreak_strength_diff", "days_rest_diff", "recovery_curve_diff", "workload_3d_diff", "workload_7d_diff", "workload_14d_diff"]),
-    ("M6", "H2H surprise and common-opponent residual", ["h2h_prior_diff", "surface_h2h_prior_diff", "common_opponent_result_residual_diff", "common_opponent_serve_residual_diff", "common_opponent_return_residual_diff", "common_opponent_surface_residual_diff", "common_opponent_match_weight"]),
+    (
+        "M5",
+        "dominance and workload",
+        [
+            "score_dominance_diff",
+            "set_dominance_diff",
+            "tiebreak_strength_diff",
+            "days_rest_diff",
+            "recovery_curve_diff",
+            "workload_3d_diff",
+            "workload_7d_diff",
+            "workload_14d_diff",
+        ],
+    ),
+    (
+        "M6",
+        "H2H surprise and common-opponent residual",
+        [
+            "h2h_prior_diff",
+            "surface_h2h_prior_diff",
+            "common_opponent_result_residual_diff",
+            "common_opponent_serve_residual_diff",
+            "common_opponent_return_residual_diff",
+            "common_opponent_surface_residual_diff",
+            "common_opponent_match_weight",
+        ],
+    ),
     ("M7", "simple temporal graph", []),
-    ("M8", "retained structural ensemble", ["age_diff", "height_diff", "lefty_matchup", "same_hand", "is_indoor", "level_g", "level_m", "level_500", "level_250", "round_final", "round_sf", "round_qf", "data_strength_diff"]),
+    (
+        "M8",
+        "retained structural ensemble",
+        [
+            "age_diff",
+            "height_diff",
+            "lefty_matchup",
+            "same_hand",
+            "is_indoor",
+            "level_g",
+            "level_m",
+            "level_500",
+            "level_250",
+            "round_final",
+            "round_sf",
+            "round_qf",
+            "data_strength_diff",
+        ],
+    ),
 ]
 
 
@@ -74,7 +167,15 @@ def available_ladder(frame: pd.DataFrame) -> list[dict[str, object]]:
         available = [name for name in proposed if name in frame.columns and frame[name].abs().sum() > 0]
         missing = [name for name in proposed if name not in frame.columns or frame[name].abs().sum() == 0]
         cumulative.extend(name for name in available if name not in cumulative)
-        ladder.append({"model": model, "component": component, "added": available, "unavailable": missing, "features": list(cumulative)})
+        ladder.append(
+            {
+                "model": model,
+                "component": component,
+                "added": available,
+                "unavailable": missing,
+                "features": list(cumulative),
+            }
+        )
     return ladder
 
 
@@ -96,7 +197,9 @@ def fold_predictions(frame: pd.DataFrame, features: list[str], years=range(2019,
     return pd.concat(parts, ignore_index=True) if parts else pd.DataFrame()
 
 
-def block_bootstrap_delta(rows: pd.DataFrame, baseline: np.ndarray, candidate: np.ndarray, iterations: int = 600) -> dict[str, object]:
+def block_bootstrap_delta(
+    rows: pd.DataFrame, baseline: np.ndarray, candidate: np.ndarray, iterations: int = 600
+) -> dict[str, object]:
     labels = rows.label.to_numpy(dtype=int)
     blocks = rows.tournament.fillna("").astype(str) + "|" + rows.date.astype(str)
     groups = [np.flatnonzero((blocks == value).to_numpy()) for value in sorted(blocks.unique())]
@@ -108,10 +211,17 @@ def block_bootstrap_delta(rows: pd.DataFrame, baseline: np.ndarray, candidate: n
         lb = -(y * np.log(np.clip(b, 1e-6, 1 - 1e-6)) + (1 - y) * np.log(np.clip(1 - b, 1e-6, 1))).mean()
         lc = -(y * np.log(np.clip(c, 1e-6, 1 - 1e-6)) + (1 - y) * np.log(np.clip(1 - c, 1e-6, 1))).mean()
         values.append(float(lc - lb))
-    return {"definition": "candidate minus baseline; negative is better", "mean": round(float(np.mean(values)), 6), "ci95": [round(float(x), 6) for x in np.quantile(values, [0.025, 0.975])], "iterations": iterations}
+    return {
+        "definition": "candidate minus baseline; negative is better",
+        "mean": round(float(np.mean(values)), 6),
+        "ci95": [round(float(x), 6) for x in np.quantile(values, [0.025, 0.975])],
+        "iterations": iterations,
+    }
 
 
-def evaluate_ladder(frame: pd.DataFrame, ladder: list[dict[str, object]]) -> tuple[list[dict[str, object]], dict[str, pd.DataFrame]]:
+def evaluate_ladder(
+    frame: pd.DataFrame, ladder: list[dict[str, object]]
+) -> tuple[list[dict[str, object]], dict[str, pd.DataFrame]]:
     results = []
     predictions = {}
     prior = None
@@ -130,14 +240,20 @@ def evaluate_ladder(frame: pd.DataFrame, ladder: list[dict[str, object]]) -> tup
             result["decision"] = "KEEP_BASELINE"
         else:
             aligned = oof[["index", "date", "tournament", "player1", "player2", "label", "probability"]].merge(
-                prior[["index", "probability"]],
-                on=["index"], suffixes=("", "_previous"), validate="one_to_one"
+                prior[["index", "probability"]], on=["index"], suffixes=("", "_previous"), validate="one_to_one"
             )
-            delta = block_bootstrap_delta(aligned, aligned.probability_previous.to_numpy(), aligned.probability.to_numpy())
+            delta = block_bootstrap_delta(
+                aligned, aligned.probability_previous.to_numpy(), aligned.probability.to_numpy()
+            )
             previous_metrics = metrics(aligned.probability_previous.to_numpy(), aligned.label.to_numpy(dtype=int))
-            result["delta"] = {key: round(score[key] - previous_metrics[key], 6) for key in ("accuracy", "roc_auc", "log_loss", "brier_score", "ece")}
+            result["delta"] = {
+                key: round(score[key] - previous_metrics[key], 6)
+                for key in ("accuracy", "roc_auc", "log_loss", "brier_score", "ece")
+            }
             result["bootstrap_delta_log_loss"] = delta
-            result["decision"] = "KEEP" if score["log_loss"] < previous_metrics["log_loss"] and delta["mean"] < 0 else "DELETE"
+            result["decision"] = (
+                "KEEP" if score["log_loss"] < previous_metrics["log_loss"] and delta["mean"] < 0 else "DELETE"
+            )
         predictions[item["model"]] = oof
         prior = oof
         results.append(result)
@@ -169,7 +285,14 @@ def selective(rows: pd.DataFrame) -> list[dict[str, object]]:
     output = []
     for threshold in (0.55, 0.60, 0.65, 0.70, 0.75, 0.80):
         mask = confidence >= threshold
-        output.append({"threshold": threshold, "coverage": round(float(mask.mean()), 4), "rows": int(mask.sum()), **(metrics(p[mask], y[mask]) if mask.sum() else {})})
+        output.append(
+            {
+                "threshold": threshold,
+                "coverage": round(float(mask.mean()), 4),
+                "rows": int(mask.sum()),
+                **(metrics(p[mask], y[mask]) if mask.sum() else {}),
+            }
+        )
     return output
 
 
@@ -179,7 +302,10 @@ def strata(rows: pd.DataFrame) -> dict[str, object]:
         output[column] = {}
         for value, group in rows.groupby(column):
             if len(group) >= 50:
-                output[column][str(value)] = {"rows": len(group), **metrics(group.probability.to_numpy(), group.label.to_numpy(dtype=int))}
+                output[column][str(value)] = {
+                    "rows": len(group),
+                    **metrics(group.probability.to_numpy(), group.label.to_numpy(dtype=int)),
+                }
     return output
 
 
@@ -193,29 +319,57 @@ def run_tour(tour: str) -> dict[str, object]:
     external_metrics, external_rows, artifact = final_fit(frame, best_features)
     baseline_features = ladder[0]["features"]
     baseline_metrics, baseline_rows, _ = final_fit(frame, baseline_features)
-    comparison = external_rows.merge(baseline_rows[["index", "probability"]], on=["index"], suffixes=("", "_baseline"), validate="one_to_one")
-    bootstrap = block_bootstrap_delta(comparison, comparison.probability_baseline.to_numpy(), comparison.probability.to_numpy())
+    comparison = external_rows.merge(
+        baseline_rows[["index", "probability"]], on=["index"], suffixes=("", "_baseline"), validate="one_to_one"
+    )
+    bootstrap = block_bootstrap_delta(
+        comparison, comparison.probability_baseline.to_numpy(), comparison.probability.to_numpy()
+    )
     oof_path = OUT / f"{tour}_oof_predictions.csv"
     pd.concat([part.assign(model=name) for name, part in oof.items()], ignore_index=True).to_csv(oof_path, index=False)
     external_rows.to_csv(OUT / f"{tour}_external_2025_predictions.csv", index=False)
     candidate = {
-        "tour": tour.upper(), "model_version": f"tensor-v3-{tour}-{datetime.now(UTC).strftime('%Y%m%d%H%M%S')}",
-        "feature_version": "tensor_v3_cached_time_safe_v1", "dataset_fingerprint_sha256": fingerprint(source),
-        "training_cutoff": "2023-12-31", "calibration_period": "2024", "evaluation_period": "2025 external; not used for selection",
+        "tour": tour.upper(),
+        "model_version": f"tensor-v3-{tour}-{datetime.now(UTC).strftime('%Y%m%d%H%M%S')}",
+        "feature_version": "tensor_v3_cached_time_safe_v1",
+        "dataset_fingerprint_sha256": fingerprint(source),
+        "training_cutoff": "2023-12-31",
+        "calibration_period": "2024",
+        "evaluation_period": "2025 external; not used for selection",
         "temporal_policy": "cached leakage-safe feature rows; ATP round-safe tournament batching, WTA conservative same-date batching",
-        "random_seed": SEED, "selected_by": "mean pre-2024 walk-forward log loss, then Brier and ECE", "model": artifact,
+        "random_seed": SEED,
+        "selected_by": "mean pre-2024 walk-forward log loss, then Brier and ECE",
+        "model": artifact,
         "external_2025_metrics": external_metrics,
     }
     (OUT / f"candidate_{tour}.json").write_text(json.dumps(candidate, indent=2, sort_keys=True), encoding="utf-8")
-    improvement = {key: round(external_metrics[key] - PRODUCTION_BENCHMARKS[tour][key], 5) for key in ("accuracy", "roc_auc", "log_loss", "brier_score")}
+    improvement = {
+        key: round(external_metrics[key] - PRODUCTION_BENCHMARKS[tour][key], 5)
+        for key in ("accuracy", "roc_auc", "log_loss", "brier_score")
+    }
     recommend = bool(improvement["log_loss"] < 0 and improvement["brier_score"] <= 0 and bootstrap["ci95"][1] < 0)
     return {
-        "tour": tour.upper(), "source_rows": len(frame), "date_range": [str(frame.date.min().date()), str(frame.date.max().date())],
-        "data_limitations": {"point_level": "not present", "exact_match_chronology": "not present; conservative batching was used upstream", "first_second_serve": "available in cached rows" if any(name in frame for name in ("first_won_diff", "second_won_diff")) and frame.get("first_won_diff", pd.Series(dtype=float)).abs().sum() > 0 else "not supported by source"},
-        "ladder": results, "best_development_candidate": best["model"], "external_2025_metrics": external_metrics,
-        "production_benchmark": PRODUCTION_BENCHMARKS[tour], "external_delta_vs_production": improvement,
-        "bootstrap_candidate_vs_M0_2025": bootstrap, "selective_prediction": selective(external_rows), "subgroups": strata(external_rows),
-        "candidate_artifact": str(OUT / f"candidate_{tour}.json"), "recommend_promotion": recommend,
+        "tour": tour.upper(),
+        "source_rows": len(frame),
+        "date_range": [str(frame.date.min().date()), str(frame.date.max().date())],
+        "data_limitations": {
+            "point_level": "not present",
+            "exact_match_chronology": "not present; conservative batching was used upstream",
+            "first_second_serve": "available in cached rows"
+            if any(name in frame for name in ("first_won_diff", "second_won_diff"))
+            and frame.get("first_won_diff", pd.Series(dtype=float)).abs().sum() > 0
+            else "not supported by source",
+        },
+        "ladder": results,
+        "best_development_candidate": best["model"],
+        "external_2025_metrics": external_metrics,
+        "production_benchmark": PRODUCTION_BENCHMARKS[tour],
+        "external_delta_vs_production": improvement,
+        "bootstrap_candidate_vs_M0_2025": bootstrap,
+        "selective_prediction": selective(external_rows),
+        "subgroups": strata(external_rows),
+        "candidate_artifact": str(OUT / f"candidate_{tour}.json"),
+        "recommend_promotion": recommend,
     }
 
 
@@ -223,7 +377,7 @@ def write_markdown_report(manifest: dict[str, object]) -> None:
     lines = [
         "# COURTIQ / TENSOR V3 Research Report",
         "",
-        "Production ATP/WTA artifacts were not modified. Model selection used pre-2024 walk-forward folds; 2024 was calibration-only and 2025 was an external benchmark.",
+        "Production artifacts were not modified. ATP production evaluation is unverified; historical rounded-reference deltas do not certify its performance. Candidate measurements are separate research results. Model selection used pre-2024 folds; 2024 was calibration-only and 2025 an external benchmark.",
         "",
         "## Final candidate table",
         "",
@@ -234,31 +388,64 @@ def write_markdown_report(manifest: dict[str, object]) -> None:
     for tour in ("atp", "wta"):
         report = reports[tour]
         score = report["external_2025_metrics"]
-        test_n = next(item["rows"] for item in report["selective_prediction"] if item["threshold"] == 0.55) / report["selective_prediction"][0]["coverage"]
-        lines.append(f"| {tour.upper()} | {report['best_development_candidate']} | {score['accuracy']:.4f} | {score['roc_auc']:.4f} | {score['log_loss']:.4f} | {score['brier_score']:.4f} | {score['ece']:.4f} | {round(test_n)} | {'Recommend' if report['recommend_promotion'] else 'Do not promote'} |")
+        test_n = (
+            next(item["rows"] for item in report["selective_prediction"] if item["threshold"] == 0.55)
+            / report["selective_prediction"][0]["coverage"]
+        )
+        lines.append(
+            f"| {tour.upper()} | {report['best_development_candidate']} | {score['accuracy']:.4f} | {score['roc_auc']:.4f} | {score['log_loss']:.4f} | {score['brier_score']:.4f} | {score['ece']:.4f} | {round(test_n)} | {'Recommend' if report['recommend_promotion'] else 'Do not promote'} |"
+        )
     for tour in ("atp", "wta"):
         report = reports[tour]
-        lines += ["", f"## {tour.upper()} ablation ladder", "", "| Model | Added component | Accuracy | AUC | Log Loss | Brier | ECE | Δ Log Loss | 95% block-bootstrap CI | Decision |", "|---|---|---:|---:|---:|---:|---:|---:|---|---|"]
+        lines += [
+            "",
+            f"## {tour.upper()} ablation ladder",
+            "",
+            "| Model | Added component | Accuracy | AUC | Log Loss | Brier | ECE | Δ Log Loss | 95% block-bootstrap CI | Decision |",
+            "|---|---|---:|---:|---:|---:|---:|---:|---|---|",
+        ]
         for item in report["ladder"]:
             if item.get("status") != "evaluated":
                 continue
             delta = item.get("delta", {}).get("log_loss", 0.0)
             ci = item.get("bootstrap_delta_log_loss", {}).get("ci95", ["—", "—"])
-            lines.append(f"| {item['model']} | {item['component']} | {item['accuracy']:.4f} | {item['roc_auc']:.4f} | {item['log_loss']:.4f} | {item['brier_score']:.4f} | {item['ece']:.4f} | {delta:+.4f} | {ci[0]} to {ci[1]} | {item['decision']} |")
-        lines += ["", f"### {tour.upper()} confidence versus coverage", "", "| Threshold | Coverage | Accuracy | Log Loss | Brier |", "|---:|---:|---:|---:|---:|"]
+            lines.append(
+                f"| {item['model']} | {item['component']} | {item['accuracy']:.4f} | {item['roc_auc']:.4f} | {item['log_loss']:.4f} | {item['brier_score']:.4f} | {item['ece']:.4f} | {delta:+.4f} | {ci[0]} to {ci[1]} | {item['decision']} |"
+            )
+        lines += [
+            "",
+            f"### {tour.upper()} confidence versus coverage",
+            "",
+            "| Threshold | Coverage | Accuracy | Log Loss | Brier |",
+            "|---:|---:|---:|---:|---:|",
+        ]
         for row in report["selective_prediction"]:
-            lines.append(f"| {row['threshold']:.2f} | {row['coverage']:.4f} | {row.get('accuracy', 0):.4f} | {row.get('log_loss', 0):.4f} | {row.get('brier_score', 0):.4f} |")
-        lines += ["", f"### {tour.upper()} surface performance", "", "| Surface | N | Accuracy | AUC | Log Loss | Brier | ECE |", "|---|---:|---:|---:|---:|---:|---:|"]
+            lines.append(
+                f"| {row['threshold']:.2f} | {row['coverage']:.4f} | {row.get('accuracy', 0):.4f} | {row.get('log_loss', 0):.4f} | {row.get('brier_score', 0):.4f} |"
+            )
+        lines += [
+            "",
+            f"### {tour.upper()} surface performance",
+            "",
+            "| Surface | N | Accuracy | AUC | Log Loss | Brier | ECE |",
+            "|---|---:|---:|---:|---:|---:|---:|",
+        ]
         for surface, row in report["subgroups"]["surface"].items():
-            lines.append(f"| {surface} | {row['rows']} | {row['accuracy']:.4f} | {row['roc_auc']:.4f} | {row['log_loss']:.4f} | {row['brier_score']:.4f} | {row['ece']:.4f} |")
+            lines.append(
+                f"| {surface} | {row['rows']} | {row['accuracy']:.4f} | {row['roc_auc']:.4f} | {row['log_loss']:.4f} | {row['brier_score']:.4f} | {row['ece']:.4f} |"
+            )
     lines += [
-        "", "## Scientific decisions", "",
+        "",
+        "## Scientific decisions",
+        "",
         "- ATP M1 uncertainty-aware ratings, M2 shrunk serve/return, M4 scoring expert, M5 dominance/workload, M6 common-opponent/H2H residuals, and M8 contextual residuals survived pre-2024 walk-forward evaluation. Naive additional multi-timescale form was deleted.",
         "- WTA retained multi-timescale form and workload. Serve decomposition and point-process scoring were unavailable because the supplied WTA rows do not contain serve-point observations. H2H/common-opponent additions worsened development log loss and were deleted.",
         "- A separate exact point→game→tiebreak→set→match engine and posterior Beta propagation passed symmetry, antisymmetry, bounds, temporal-purity, and reproducibility tests. It was not mislabeled as a data ablation: the cached candidate rows contain an older structural-score feature, and regenerating exact pre-match service posteriors remains necessary before empirical promotion testing.",
         "- Simple temporal graph features were not available in the frozen feature rows. Therefore GNN, topology, sequence, and mixture-of-experts stages were not attempted.",
         "- ATP's external log-loss improvement is small and Brier is 0.0002 worse than the stated production benchmark. WTA's paired 2025 CI versus M0 includes zero. Neither candidate meets the promotion gate.",
-        "", "## Limitations", "",
+        "",
+        "## Limitations",
+        "",
         "Cold-start bins cannot be reconstructed exactly from the cached rows because only match-count differences—not each player's absolute pre-match history—were persisted. Point-level observations, exact match chronology, travel, altitude, duration, retirement flags, and WTA serve statistics are absent. These are recorded as unavailable rather than imputed.",
     ]
     (OUT / "FINAL_RESEARCH_REPORT.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
@@ -270,16 +457,43 @@ def main() -> int:
     OUT.mkdir(parents=True, exist_ok=True)
     reports = {tour: run_tour(tour) for tour in ("atp", "wta")}
     manifest = {
-        "program": "COURTIQ / TENSOR V3", "run_at": datetime.now(UTC).isoformat(), "seed": SEED,
-        "production_artifacts_modified": False, "selection_period": "walk-forward 2019-2023", "calibration_period": "2024", "external_benchmark": "2025", "prospective_2026": "descriptive only when available",
-        "legacy_70_percent_atp": "retired_invalid_same-tournament_temporal_leakage", "reports": reports,
-        "advanced_components": {"graph": "not retained: no precomputed time-safe graph feature exists", "GNN": "not attempted because simple graph prerequisite was not met", "sequence_model": "not attempted because lower-priority structural ladder did not justify added complexity", "posterior_sampling": "latent uncertainty feature evaluated for ATP; full posterior point-process sampling unavailable without point-level observations"},
+        "program": "COURTIQ / TENSOR V3",
+        "run_at": datetime.now(UTC).isoformat(),
+        "seed": SEED,
+        "production_artifacts_modified": False,
+        "selection_period": "walk-forward 2019-2023",
+        "calibration_period": "2024",
+        "external_benchmark": "2025",
+        "prospective_2026": "descriptive only when available",
+        "legacy_70_percent_atp": "retired_invalid_same-tournament_temporal_leakage",
+        "reports": reports,
+        "advanced_components": {
+            "graph": "not retained: no precomputed time-safe graph feature exists",
+            "GNN": "not attempted because simple graph prerequisite was not met",
+            "sequence_model": "not attempted because lower-priority structural ladder did not justify added complexity",
+            "posterior_sampling": "latent uncertainty feature evaluated for ATP; full posterior point-process sampling unavailable without point-level observations",
+        },
         "runtime_seconds": round(time.perf_counter() - started, 3),
     }
     (OUT / "experiment_manifest.json").write_text(json.dumps(manifest, indent=2, sort_keys=True), encoding="utf-8")
-    (OUT / "feature_definitions.json").write_text(json.dumps({item[0]: {"component": item[1], "candidate_features": item[2]} for item in FAMILIES}, indent=2), encoding="utf-8")
+    (OUT / "feature_definitions.json").write_text(
+        json.dumps({item[0]: {"component": item[1], "candidate_features": item[2]} for item in FAMILIES}, indent=2),
+        encoding="utf-8",
+    )
     write_markdown_report(manifest)
-    print(json.dumps({tour: {"best": report["best_development_candidate"], "metrics_2025": report["external_2025_metrics"], "recommend": report["recommend_promotion"]} for tour, report in reports.items()}, indent=2))
+    print(
+        json.dumps(
+            {
+                tour: {
+                    "best": report["best_development_candidate"],
+                    "metrics_2025": report["external_2025_metrics"],
+                    "recommend": report["recommend_promotion"],
+                }
+                for tour, report in reports.items()
+            },
+            indent=2,
+        )
+    )
     return 0
 
 

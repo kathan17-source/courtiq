@@ -31,6 +31,8 @@ The schema is designed for real player rosters, match results, point/match stati
 
 ## Model inference
 
-Production prediction loads the checked-in, separately validated ATP and WTA artifacts. It uses their chronological ratings and model coefficients; it does not use placeholder ratings. `COURTIQ_ALLOW_DEMO` remains disabled in production.
+Production prediction loads the checked-in ATP and WTA artifacts after schema/numerical validation. It uses their chronological ratings and model coefficients; it does not use placeholder ratings. `COURTIQ_ALLOW_DEMO` remains disabled in production.
+
+ATP evaluation metrics are unverified and withheld by `/api/model/metrics`; loadable parameters do not establish validated evaluation. See the [audit](../docs/evaluation/ATP_EVALUATION_REVIEW.md).
 
 PostgreSQL is a documented future persistence target, not a dependency of the currently deployed inference path.

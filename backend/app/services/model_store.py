@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Any
 
 from backend.app.config import get_settings
+from backend.app.services.evaluation_provenance import evaluation_presentation
 
 
 class ModelUnavailableError(RuntimeError):
@@ -52,6 +53,8 @@ class LoadedModel:
     evaluation_cutoff: str
     state_cutoff: str
     temporal_policy: str
+    evaluation_status: str
+    feature_version: str
 
 
 def normalize_player_key(name: str, tour: str) -> str:
@@ -122,12 +125,22 @@ def load_model_from_path(path: Path) -> LoadedModel:
             raise ModelUnavailableError(f"Model artifact {key} length does not match feature count.")
         if values and not all(math.isfinite(float(value)) for value in values):
             raise ModelUnavailableError(f"Model artifact {key} contains non-finite values.")
-    calibration = {str(key): float(value) for key, value in (model.get("calibration") or {}).items() if isinstance(value, (int, float))}
-    if calibration and (not math.isfinite(calibration.get("slope", 1.0)) or calibration.get("slope", 1.0) <= 0 or not math.isfinite(calibration.get("intercept", 0.0))):
+    calibration = {
+        str(key): float(value)
+        for key, value in (model.get("calibration") or {}).items()
+        if isinstance(value, (int, float))
+    }
+    if calibration and (
+        not math.isfinite(calibration.get("slope", 1.0))
+        or calibration.get("slope", 1.0) <= 0
+        or not math.isfinite(calibration.get("intercept", 0.0))
+    ):
         raise ModelUnavailableError("Model artifact calibration parameters are invalid.")
     if any(player.tour.lower() != tour for player in players.values()):
         raise ModelUnavailableError("Model artifact contains player records from the wrong tour.")
     state_cutoff = max((player.last_date or "" for player in players.values()), default="")
+
+    evaluation_status, displayed_metrics = evaluation_presentation(payload)
 
     return LoadedModel(
         path=path,
@@ -138,7 +151,7 @@ def load_model_from_path(path: Path) -> LoadedModel:
         intercept=float(model.get("intercept", 0.0)),
         calibration=calibration,
         ensemble=model.get("ensemble") or {"center": model.get("center") or [], "scale": model.get("scale") or []},
-        metrics=payload.get("metrics") or {},
+        metrics=displayed_metrics,
         generated_at=str(payload.get("generated_at") or ""),
         matches_processed=int(payload.get("matches_processed", 0)),
         players=players,
@@ -147,6 +160,8 @@ def load_model_from_path(path: Path) -> LoadedModel:
         evaluation_cutoff=str(payload.get("evaluation_period") or payload.get("calibration_period") or "not recorded"),
         state_cutoff=state_cutoff or "not recorded",
         temporal_policy=str(payload["temporal_policy_version"]),
+        evaluation_status=evaluation_status,
+        feature_version=str(payload.get("feature_version") or "not recorded"),
     )
 
 

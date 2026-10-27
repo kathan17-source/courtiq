@@ -45,7 +45,7 @@ Do not use the `file://` page for predictor testing; the HTTP launcher serves th
 
 - Uses chronological evaluation design instead of random train/test splitting.
 - Models player strength with overall Elo plus hard/clay/grass surface Elo.
-- Separates demo predictions from validated model metrics to avoid fake accuracy.
+- Separates working model inference from independently supported evaluation claims; unverified ATP metrics are withheld.
 - Implements tennis scoring math: point → game → set → match probability.
 - Includes deterministic Monte Carlo simulation with measured runtime.
 - Provides 2D pose-landmark geometry for coaching-oriented movement review; it is not lab-grade biomechanics.
@@ -64,7 +64,7 @@ Latest local values:
 | Metric | Value |
 |---|---:|
 | Historical matches processed in this checkout | 78,091 |
-| Backtest status | `ok` |
+| ATP evaluation provenance | Unverified; see the [audit](docs/evaluation/ATP_EVALUATION_REVIEW.md) |
 | Model features defined | 24 |
 | Automated tests | Run the canonical command below for the current count |
 | Python source files | 46 |
@@ -135,7 +135,8 @@ If WTA files are absent, the WTA command exits clearly instead of fabricating a 
 
 ## Model and product boundaries
 
-- The checked-in ATP artifact reports a 2025 held-out accuracy of 0.655, log loss 0.6185, Brier score 0.2154 and ROC-AUC 0.7132. The WTA artifact reports 0.6469, 0.6232, 0.2172 and 0.7069 respectively. These are artifact metadata, not guarantees for future matches.
+- **Current ATP evaluation metrics are unverified and withheld from API/UI performance displays.** Independent scoring reproduced the reported rounding, but exact raw-feature and parameter provenance could not be reconstructed. This is not proof that the model is contaminated. [Audit, dates, sample sizes and reproducible checks](docs/evaluation/ATP_EVALUATION_REVIEW.md) distinguish those findings. Model parameters and inference remain unchanged.
+- WTA artifact-reported metrics remain 0.6469 accuracy, 0.6232 log loss, 0.2172 Brier and 0.7069 ROC-AUC. They were not independently certified by this ATP audit. TENSOR candidate metrics remain separate, unchanged research results, not deployed replacement metrics.
 - The retired ~70% ATP result is invalid because same-tournament temporal leakage contaminated that evaluation. The final [TENSOR v3 report](output/research/tensor_v3/FINAL_RESEARCH_REPORT.md) and [temporal-sensitivity methodology](output/research/temporal_sensitivity/METHODOLOGY.md) preserve the authoritative research record.
 - Artifact state is serialized at a stated cutoff. An `as_of` request does not reconstruct historical player state; the API returns an explicit diagnostic when that limitation applies.
 - Live prediction cannot know pre-match rest, workload or head-to-head inputs from a player name alone. Those fields use documented neutral defaults rather than fabricated observations; see `docs/feature_availability.md`.
@@ -218,7 +219,7 @@ Implemented routes include:
 - `POST /api/video/validate-upload`
 - `POST /api/simulate/tournament`
 
-Without a validated historical model, `/api/predict` returns `503` by default. For UI testing only, send `allow_demo: true` or set `COURTIQ_ALLOW_DEMO=true`.
+Without a loadable historical model artifact, `/api/predict` returns `503` by default. A loaded artifact is not itself proof of independently validated evaluation. For UI testing only, send `allow_demo: true` or set `COURTIQ_ALLOW_DEMO=true`.
 
 ## Database architecture
 

@@ -49,13 +49,17 @@ def demo_rating(name: str, tour: str) -> PlayerRating:
 
 def _rating_from_record(name: str, tour: str) -> PlayerRating:
     record = get_player_record(name, tour)
-    rating = PlayerRating(overall=record.overall_elo, matches=record.matches, uncertainty=max(28.0, 90.0 / max(record.matches, 1) ** 0.35))
+    rating = PlayerRating(
+        overall=record.overall_elo, matches=record.matches, uncertainty=max(28.0, 90.0 / max(record.matches, 1) ** 0.35)
+    )
     for surface in ("hard", "clay", "grass"):
         rating.surface[surface] = record.surface_elo.get(surface, record.overall_elo)
     return rating
 
 
-def predict_from_ratings(p1: PlayerRating, p2: PlayerRating, surface: str, best_of: int) -> tuple[float, dict[str, float]]:
+def predict_from_ratings(
+    p1: PlayerRating, p2: PlayerRating, surface: str, best_of: int
+) -> tuple[float, dict[str, float]]:
     p1_rating = blended_rating(p1, surface)
     p2_rating = blended_rating(p2, surface)
     elo_prior = expected_score(p1_rating, p2_rating)
@@ -107,8 +111,12 @@ def predict_match(request: PredictionRequest) -> PredictionResponse:
         rd2 = float(advanced2.get("rd", 120.0))
         surface_matches1 = float((advanced1.get("surface_matches") or {}).get(surface, 0.0))
         surface_matches2 = float((advanced2.get("surface_matches") or {}).get(surface, 0.0))
-        shrunk_surface1 = shrink_surface_rating(record1.overall_elo, record1.surface_elo.get(surface, record1.overall_elo), surface_matches1)
-        shrunk_surface2 = shrink_surface_rating(record2.overall_elo, record2.surface_elo.get(surface, record2.overall_elo), surface_matches2)
+        shrunk_surface1 = shrink_surface_rating(
+            record1.overall_elo, record1.surface_elo.get(surface, record1.overall_elo), surface_matches1
+        )
+        shrunk_surface2 = shrink_surface_rating(
+            record2.overall_elo, record2.surface_elo.get(surface, record2.overall_elo), surface_matches2
+        )
         serve1 = service_point_from_stats(stat1)
         serve2 = service_point_from_stats(stat2)
         return1 = stat1.get("return_point_won", 0.365)
@@ -140,32 +148,45 @@ def predict_match(request: PredictionRequest) -> PredictionResponse:
             "df_rate_diff": record1.stat_averages.get("df_rate", 0.5) - record2.stat_averages.get("df_rate", 0.5),
             "first_in_diff": record1.stat_averages.get("first_in", 0.5) - record2.stat_averages.get("first_in", 0.5),
             "first_won_diff": record1.stat_averages.get("first_won", 0.5) - record2.stat_averages.get("first_won", 0.5),
-            "second_won_diff": record1.stat_averages.get("second_won", 0.5) - record2.stat_averages.get("second_won", 0.5),
+            "second_won_diff": record1.stat_averages.get("second_won", 0.5)
+            - record2.stat_averages.get("second_won", 0.5),
             "bp_save_diff": record1.stat_averages.get("bp_save", 0.5) - record2.stat_averages.get("bp_save", 0.5),
-            "bp_convert_diff": record1.stat_averages.get("bp_convert", 0.5) - record2.stat_averages.get("bp_convert", 0.5),
-            "return_point_won_diff": record1.stat_averages.get("return_point_won", 0.365) - record2.stat_averages.get("return_point_won", 0.365),
-            "serve_point_won_diff": record1.stat_averages.get("serve_point_won", 0.635) - record2.stat_averages.get("serve_point_won", 0.635),
-            "stat_sample_diff": record1.stat_averages.get("stat_sample", 0.0) - record2.stat_averages.get("stat_sample", 0.0),
+            "bp_convert_diff": record1.stat_averages.get("bp_convert", 0.5)
+            - record2.stat_averages.get("bp_convert", 0.5),
+            "return_point_won_diff": record1.stat_averages.get("return_point_won", 0.365)
+            - record2.stat_averages.get("return_point_won", 0.365),
+            "serve_point_won_diff": record1.stat_averages.get("serve_point_won", 0.635)
+            - record2.stat_averages.get("serve_point_won", 0.635),
+            "stat_sample_diff": record1.stat_averages.get("stat_sample", 0.0)
+            - record2.stat_averages.get("stat_sample", 0.0),
             "days_rest_diff": 0.0,
             "recovery_curve_diff": 0.0,
             "workload_3d_diff": 0.0,
             "workload_7d_diff": 0.0,
             "workload_14d_diff": 0.0,
-            "residual_form_short_diff": float(advanced1.get("residual_form_short", 0.0)) - float(advanced2.get("residual_form_short", 0.0)),
-            "residual_form_medium_diff": float(advanced1.get("residual_form_medium", 0.0)) - float(advanced2.get("residual_form_medium", 0.0)),
+            "residual_form_short_diff": float(advanced1.get("residual_form_short", 0.0))
+            - float(advanced2.get("residual_form_short", 0.0)),
+            "residual_form_medium_diff": float(advanced1.get("residual_form_medium", 0.0))
+            - float(advanced2.get("residual_form_medium", 0.0)),
             "surface_residual_form_diff": float((advanced1.get("surface_residual_form") or {}).get(surface, 0.0))
             - float((advanced2.get("surface_residual_form") or {}).get(surface, 0.0)),
-            "score_dominance_diff": float(advanced1.get("score_dominance", 0.0)) - float(advanced2.get("score_dominance", 0.0)),
-            "set_dominance_diff": float(advanced1.get("set_dominance", 0.0)) - float(advanced2.get("set_dominance", 0.0)),
-            "tiebreak_strength_diff": float(advanced1.get("tiebreak_strength", 0.0)) - float(advanced2.get("tiebreak_strength", 0.0)),
+            "score_dominance_diff": float(advanced1.get("score_dominance", 0.0))
+            - float(advanced2.get("score_dominance", 0.0)),
+            "set_dominance_diff": float(advanced1.get("set_dominance", 0.0))
+            - float(advanced2.get("set_dominance", 0.0)),
+            "tiebreak_strength_diff": float(advanced1.get("tiebreak_strength", 0.0))
+            - float(advanced2.get("tiebreak_strength", 0.0)),
             "h2h_prior_diff": 0.0,
             "surface_h2h_prior_diff": 0.0,
             "best_of_5": float(best_of == 5),
             "surface_sample_diff": (surface_matches1 - surface_matches2) / 80.0,
             "data_strength_diff": (
-                math.log1p(record1.matches) + math.log1p(stat1.get("stat_sample", 0.0) * 6000.0)
-                - math.log1p(record2.matches) - math.log1p(stat2.get("stat_sample", 0.0) * 6000.0)
-            ) / 10.0,
+                math.log1p(record1.matches)
+                + math.log1p(stat1.get("stat_sample", 0.0) * 6000.0)
+                - math.log1p(record2.matches)
+                - math.log1p(stat2.get("stat_sample", 0.0) * 6000.0)
+            )
+            / 10.0,
             "structural_match_logit": safe_logit(structural_probability),
         }
         logit = production_logit(model, engineered)
@@ -213,10 +234,22 @@ def predict_match(request: PredictionRequest) -> PredictionResponse:
             "requested_as_of": request.as_of.isoformat() if request.as_of else None,
             "training_cutoff": model.training_cutoff if model is not None else None,
             "evaluation_cutoff": model.evaluation_cutoff if model is not None else None,
+            "evaluation_status": model.evaluation_status if model is not None else "demo",
             "artifact_created_at": model.generated_at if model is not None else None,
             "temporal_policy": model.temporal_policy if model is not None else "demo",
             "feature_availability": "serialized latest player state; workload, rest, and H2H request-time features use explicit neutral defaults",
-            "warnings": (["Requested as-of state is not reconstructed; prediction uses the serialized artifact state."] if request.as_of else []),
+            "warnings": (
+                [
+                    "ATP evaluation metrics are unverified; loaded parameters do not establish validated predictive performance."
+                ]
+                if model is not None and model.evaluation_status == "unverified"
+                else []
+            )
+            + (
+                ["Requested as-of state is not reconstructed; prediction uses the serialized artifact state."]
+                if request.as_of
+                else []
+            ),
         },
     )
 
@@ -237,7 +270,9 @@ def production_logit(model: object, engineered: dict[str, float]) -> float:
         }
         stacker = ensemble.get("stacker") or {}
         logit = float(stacker.get("intercept", 0.0))
-        for coefficient, feature_name in zip(stacker.get("coefficients", []), stacker.get("feature_names", []), strict=False):
+        for coefficient, feature_name in zip(
+            stacker.get("coefficients", []), stacker.get("feature_names", []), strict=False
+        ):
             logit += float(coefficient) * meta_values.get(str(feature_name), 0.0)
     else:
         coefficients = getattr(model, "coefficients", [])
@@ -265,7 +300,9 @@ def safe_logit(probability: float) -> float:
     return log(p / (1.0 - p))
 
 
-def shrink_surface_rating(overall: float, surface_rating_value: float, surface_matches: float, k: float = 18.0) -> float:
+def shrink_surface_rating(
+    overall: float, surface_rating_value: float, surface_matches: float, k: float = 18.0
+) -> float:
     weight = surface_matches / (surface_matches + k) if surface_matches > 0 else 0.0
     return weight * surface_rating_value + (1.0 - weight) * overall
 

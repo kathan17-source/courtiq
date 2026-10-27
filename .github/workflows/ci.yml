@@ -43,6 +43,17 @@ jobs:
             sleep 1
           done
           npm run test:browser
+          node tests/browser/recruiter-captures.mjs
+      - name: Upload real local application screenshots
+        uses: actions/upload-artifact@v7
+        with:
+          name: recruiter-captures
+          path: |
+            artifacts/recruiter-captures/predict.png
+            artifacts/recruiter-captures/analyze.png
+            artifacts/recruiter-captures/simulation.png
+          retention-days: 3
+          if-no-files-found: error
       - name: Public Render visual audit
         env:
           PUBLIC_BASE_URL: https://courtiq-77cz.onrender.com/

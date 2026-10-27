@@ -2,6 +2,8 @@
 
 Production ATP/WTA artifacts were not modified. Model selection used pre-2024 walk-forward folds; 2024 was calibration-only and 2025 was an external benchmark.
 
+> **Current-production provenance note:** ATP production evaluation is unverified; [the independent audit](../../../docs/evaluation/ATP_EVALUATION_REVIEW.md) reproduces reported rounding but not the exact raw-feature/refit provenance. The candidate measurements below are separate historical research results and were not changed or promoted by that audit. The manifest's production deltas use fixed rounded reference values, not a verified exact-current-model comparison.
+
 ## Final candidate table
 
 | Tour | Candidate | Accuracy | ROC-AUC | Log Loss | Brier | ECE | Test N | Promotion |
@@ -81,7 +83,7 @@ Production ATP/WTA artifacts were not modified. Model selection used pre-2024 wa
 - WTA retained multi-timescale form and workload. Serve decomposition and point-process scoring were unavailable because the supplied WTA rows do not contain serve-point observations. H2H/common-opponent additions worsened development log loss and were deleted.
 - A separate exact point→game→tiebreak→set→match engine and posterior Beta propagation passed symmetry, antisymmetry, bounds, temporal-purity, and reproducibility tests. It was not mislabeled as a data ablation: the cached candidate rows contain an older structural-score feature, and regenerating exact pre-match service posteriors remains necessary before empirical promotion testing.
 - Simple temporal graph features were not available in the frozen feature rows. Therefore GNN, topology, sequence, and mixture-of-experts stages were not attempted.
-- ATP's external log-loss improvement is small and Brier is 0.0002 worse than the stated production benchmark. WTA's paired 2025 CI versus M0 includes zero. Neither candidate meets the promotion gate.
+- The historical ATP comparison used a rounded reference benchmark; its Brier/log-loss deltas must not be interpreted as evidence against the exact current production artifact. That artifact's evaluation provenance is unverified. WTA's paired 2025 CI versus M0 includes zero. Neither candidate is promoted; the candidate table and manifest values remain the original separate research record.
 
 ## Limitations
 
