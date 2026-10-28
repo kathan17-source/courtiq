@@ -3,6 +3,6 @@ starlette==1.6.0
 uvicorn[standard]==0.52.1
 pydantic==2.13.4
 python-multipart==0.0.32
-numpy==2.5.2
+numpy==2.5.4
 opencv-python-headless==4.10.0.84
 mediapipe==0.10.14
